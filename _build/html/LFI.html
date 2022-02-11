@@ -261,8 +261,30 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#methods">
-   Methods
+  <a class="reference internal nav-link" href="#finding-a-vulnerable-site">
+   Finding a vulnerable site
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#easy-methods">
+   Easy Methods
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-trivial-path">
+     The Trivial Path
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#directory-traversal">
+     Directory Traversal
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#harder-methods">
+   Harder Methods
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -298,8 +320,30 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#methods">
-   Methods
+  <a class="reference internal nav-link" href="#finding-a-vulnerable-site">
+   Finding a vulnerable site
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#easy-methods">
+   Easy Methods
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-trivial-path">
+     The Trivial Path
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#directory-traversal">
+     Directory Traversal
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#harder-methods">
+   Harder Methods
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -326,10 +370,35 @@
   <div class="tex2jax_ignore mathjax_ignore section" id="lfi">
 <h1>LFI<a class="headerlink" href="#lfi" title="Permalink to this headline">¶</a></h1>
 <p>LFI, or Local File Inclusion, is a web exploit, where you form a request in which the server passes back data it wasnt supposed to (this could be anything kept on the server, webfiles, stored passwords, local credentials etc). Normally the server runs checks on the requested resource, but there are options…</p>
-<p><img alt="image.png" src="attachment:07a2cfa3-7ecc-4855-a0c6-4a91348d4689.png" />
-source: <a class="reference external" href="https://tryhackme.com/room/fileinc">https://tryhackme.com/room/fileinc</a></p>
-<div class="section" id="methods">
-<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="finding-a-vulnerable-site">
+<h2>Finding a vulnerable site<a class="headerlink" href="#finding-a-vulnerable-site" title="Permalink to this headline">¶</a></h2>
+<p>This vulnerability could present in multiple ways. The most obvious is shown below and can be seen when examining the URL.
+Here, we are requesting a file “userCV.pdf”</p>
+<blockquote>
+<div><p>Note: This is a PHP vulnerability example, but an LFI vulnerability could be seen in other locations as well</p>
+</div></blockquote>
+<p><img alt="image.png" src="attachment:07a2cfa3-7ecc-4855-a0c6-4a91348d4689.png" /></p>
+<p>source: <a class="reference external" href="https://tryhackme.com/room/fileinc">https://tryhackme.com/room/fileinc</a></p>
+</div>
+<div class="section" id="easy-methods">
+<h2>Easy Methods<a class="headerlink" href="#easy-methods" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-trivial-path">
+<h3>The Trivial Path<a class="headerlink" href="#the-trivial-path" title="Permalink to this headline">¶</a></h3>
+<p>The most obvious path to try, is simply request a different file. Instead of “?file=userCV.pdf”, how about “?file=secret.txt”
+Tools like BurpSuite or gobuster could automate this process based on wordlists.</p>
+</div>
+<div class="section" id="directory-traversal">
+<h3>Directory Traversal<a class="headerlink" href="#directory-traversal" title="Permalink to this headline">¶</a></h3>
+<p>The next check, is if we can move “up a level”.</p>
+<p>Normally a linux box will host in “usr/var/www/pages”, but that doesnt mean we cant ‘ask’ for other files
+To move up a level, try “..”, “?file=../../../../” puts us in the root directory asking for a file.</p>
+<p>Windows hosts in “C:\inetpub\www”
+To move up a level, its still “..”, isnt consistency nice?</p>
+</div>
+</div>
+<div class="section" id="harder-methods">
+<h2>Harder Methods<a class="headerlink" href="#harder-methods" title="Permalink to this headline">¶</a></h2>
+<p>Now, LFI is a known issue, and there are ways to prevent it. Not all ‘fixes’ are created equal, and there are ways around many of them.</p>
 <div class="section" id="filter">
 <h3>Filter<a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h3>
 <p>Instead of asking for an executed file, pass a filter to prevent execution (file is stored in /resource)</p>
