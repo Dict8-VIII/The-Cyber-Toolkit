@@ -16,6 +16,8 @@ parts:
     - file: XSS
     - file: LFI
     - file: CyberChef
+    - file: NFS
+    - file: John
   - caption: Non Hacking Notes
     chapters:
     - file: FormattingNotes
