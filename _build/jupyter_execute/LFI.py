@@ -10,7 +10,7 @@
 # Here, we are requesting a file "userCV.pdf"
 # > Note: This is a PHP vulnerability example, but an LFI vulnerability could be seen in other locations as well
 # 
-# ![image.png](attachment:07a2cfa3-7ecc-4855-a0c6-4a91348d4689.png)
+# ![image.png](images/LFI_PHP_FORMAT.png)
 # 
 # source: https://tryhackme.com/room/fileinc
 # 

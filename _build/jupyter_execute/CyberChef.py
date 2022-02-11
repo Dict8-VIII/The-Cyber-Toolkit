@@ -9,4 +9,15 @@
 # 
 # 
 
-# <video controls src="videos/CyberChef.mp4" />
+# In[1]:
+
+
+from IPython.display import Video
+Video("videos/CyberChef.mp4")
+
+
+# In[ ]:
+
+
+
+
