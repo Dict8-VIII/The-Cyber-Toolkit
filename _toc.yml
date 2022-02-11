@@ -1,0 +1,22 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  #- caption: TryHackMe Rooms
+  - caption: Tools
+    chapters:
+    - file: Nmap
+    - file: Metasploit
+  - caption: Hacker Craft
+    chapters:
+    - file: Windows fun
+    - file: ssh
+    - file: XSS
+    - file: LFI
+    - file: CyberChef
+  - caption: Non Hacking Notes
+    chapters:
+    - file: FormattingNotes
+#- file: notebooks
