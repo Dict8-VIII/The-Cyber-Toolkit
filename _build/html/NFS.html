@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formatting Notes &#8212; The Cyber Toolkit</title>
+    <title>NFS &#8212; The Cyber Toolkit</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,7 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="John The Ripper" href="John.html" />
+    <link rel="next" title="John The Ripper" href="John.html" />
+    <link rel="prev" title="Cyberchef" href="CyberChef.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -117,7 +118,7 @@
   Hacker Craft
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Windows%20fun.html">
    Windows ‘fun’ stuff
@@ -143,8 +144,8 @@
    Cyberchef
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="NFS.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    NFS
   </a>
  </li>
@@ -159,9 +160,9 @@
   Non Hacking Notes
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="FormattingNotes.html">
    Formatting Notes
   </a>
  </li>
@@ -206,7 +207,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/FormattingNotes.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/NFS.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -226,7 +227,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FFormattingNotes.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FNFS.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -247,7 +248,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/FormattingNotes.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/NFS.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -264,6 +265,26 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#accessing-a-share-from-a-linux-box">
+   Accessing a Share from a Linux Box
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#samba">
+     Samba
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -271,59 +292,52 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Formatting Notes</h1>
+                <h1>NFS</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#accessing-a-share-from-a-linux-box">
+   Accessing a Share from a Linux Box
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#samba">
+     Samba
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="formatting-notes">
-<h1>Formatting Notes<a class="headerlink" href="#formatting-notes" title="Permalink to this headline">¶</a></h1>
-<h3>Headings</h3><p>&lt;h1&gt;Header 1,title&lt;h1&gt; <br>
-&lt;h2&gt;Header 2,major headings&lt;h2&gt; <br>
-&lt;h3&gt;Header 3,subheadings&lt;h3&gt; <br>
-&lt;h4&gt;Header 4&lt;h4&gt; <br>
-&lt;h5&gt;Header 5&lt;h5&gt; <br>
-&lt;h6&gt;Header 6&lt;h6&gt; <br></p>
-<h3>Adding Code</h3><p>```Python <br>
-str = “This is block level code” <br>
-print(str) <br></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<h3>General Formatting</h3><p>&lt;b&gt;This is bold text </b> <br>
-** This is bold text<br>
-__ This is bold text<br></p>
-<p>&lt;i&gt;This is italic text </i><br>
-* This is italic text<br>
-_ This is italic text<br></p>
-<p>Horizontal Lines:<br>
-‘—’<br>
-&lt;hr&gt;<br></p>
-<p>Ordered List: <br>
-&lt;ol&gt; <br>
-&lt;li&gt;Fish</li> <br>
-&lt;li&gt;Eggs</li> <br>
-&lt;li&gt;Cheese</li> <br>
-&lt;/ol&gt; <br>
-OR [n dot space] ‘1. ‘ <br></p>
-<p>UnOrdered List: <br>
-&lt;ul&gt; <br>
-&lt;li&gt;Fish</li><br>
-&lt;li&gt;Eggs</li><br>
-&lt;li&gt;Cheese</li><br>
-&lt;/ul&gt;<br>
-OR -[space] or *[space]</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Its from here: https://www.datacamp.com/community/tutorials/markdown-in-jupyter-notebook</span>
-</pre></div>
-</div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="nfs">
+<h1>NFS<a class="headerlink" href="#nfs" title="Permalink to this headline">¶</a></h1>
+<p>Network file shares (NFS) are a key component of modern enviroments. Files need to be shared, resources accessed and memes reposted. OK, maybe that last one isnt a key part, but you get the point.</p>
+<div class="section" id="accessing-a-share-from-a-linux-box">
+<h2>Accessing a Share from a Linux Box<a class="headerlink" href="#accessing-a-share-from-a-linux-box" title="Permalink to this headline">¶</a></h2>
+<p>First, you need to create a directory where the NFS will be mounted locally</p>
+<blockquote>
+<div><p>mkdir /tmp/mount</p>
+</div></blockquote>
+<p>Next, mount the remote directory at this location</p>
+<blockquote>
+<div><p>sudo mount -f nfs [IP]:[Share] /tmp/mount -nolock</p>
+</div></blockquote>
+<div class="section" id="samba">
+<h3>Samba<a class="headerlink" href="#samba" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 </div>
@@ -353,12 +367,19 @@ OR -[space] or *[space]</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="John.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="CyberChef.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">John The Ripper</p>
+            <p class="prev-next-title">Cyberchef</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="John.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">John The Ripper</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             
