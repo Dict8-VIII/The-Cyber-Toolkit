@@ -24,7 +24,7 @@
 # \** This is bold text<br>
 # \__ This is bold text<br>
 # 
-# \<i>This is italic text </i><br>
+# \<i>This is italic text <br>
 # \* This is italic text<br>
 # \_ This is italic text<br>
 # 

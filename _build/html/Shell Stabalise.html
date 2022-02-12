@@ -275,6 +275,29 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#method-1-linux-w-python">
+   Method 1 - Linux w/ Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#method-2-rlwrap">
+   Method 2 - rlwrap
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#method-3-socat">
+   Method 3 - socat
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -287,6 +310,29 @@
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#method-1-linux-w-python">
+   Method 1 - Linux w/ Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#method-2-rlwrap">
+   Method 2 - rlwrap
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#method-3-socat">
+   Method 3 - socat
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -300,6 +346,56 @@
 <li><p>It doesn’t have autofill</p></li>
 <li><p>CTRL+C will kill the listener (cant kill a launched program)</p></li>
 </ul>
+<div class="section" id="method-1-linux-w-python">
+<h2>Method 1 - Linux w/ Python<a class="headerlink" href="#method-1-linux-w-python" title="Permalink to this headline">¶</a></h2>
+<p>The easiest method (if you can do it), is to simply launch a new shell on the remote machine
+Being easy, it also has some requirements</p>
+<ul class="simple">
+<li><p>Python needs to be installed on the remote machine</p></li>
+<li><p>This method is the LINUX version, because linux tends to come with python already installed</p></li>
+</ul>
+<p>On the remote shell, spawn a new shell
+NOTE: This may need to be python3 launched instead, depending on what is installed remotely</p>
+<blockquote>
+<div><p>python -c ‘import pty; pty.spawn(“/bin/bash”)’</p>
+</div></blockquote>
+<p>Set Environment?</p>
+<blockquote>
+<div><p>export TERM=xterm</p>
+</div></blockquote>
+<p>Background the ‘nested’ shell so we can make some changes to our main one</p>
+<blockquote>
+<div><p>CTRL+z</p>
+</div></blockquote>
+<p>Turn off echo on the ‘main’ shell, then jump back to the ‘nested’ shell</p>
+<blockquote>
+<div><p>stty raw -echo; fg</p>
+</div></blockquote>
+<p>NOTE: Our own echo is gone now, if you want it back, run ‘reset’</p>
+</div>
+<div class="section" id="method-2-rlwrap">
+<h2>Method 2 - rlwrap<a class="headerlink" href="#method-2-rlwrap" title="Permalink to this headline">¶</a></h2>
+<p>Only slightly harder than above, rlwrap needs to be installed locally (and doest come with most distros)</p>
+<p>Once its installed, instead of listening direct with Netcat, just pass it as an arguement to rlwrap</p>
+<blockquote>
+<div><p>rlwrap nc -lvnp [port]</p>
+</div></blockquote>
+<p>You will still need to disable local echo, same steps as above</p>
+<p><i>Background the ‘nested’ shell so we can make some changes to our main one<br></p>
+<blockquote>
+<div><p>CTRL+z</p>
+</div></blockquote>
+<p><i>Turn off echo on the ‘main’ shell, then jump back to the ‘nested’ shell<br></p>
+<blockquote>
+<div><p>stty raw -echo; fg</p>
+</div></blockquote>
+</div>
+<div class="section" id="method-3-socat">
+<h2>Method 3 - socat<a class="headerlink" href="#method-3-socat" title="Permalink to this headline">¶</a></h2>
+<p>Even harder than the other 2, as you need to install software remotely (socat). If you can install software remotely, you probably already made the machine your b***h…</p>
+<p>Copy the SOCAT binary to the remote machine (normally via a remote webserver)
+Follow your nose</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
