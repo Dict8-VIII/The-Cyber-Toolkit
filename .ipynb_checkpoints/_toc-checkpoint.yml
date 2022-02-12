@@ -9,15 +9,18 @@ parts:
     chapters:
     - file: Nmap
     - file: Metasploit
+    - file: CyberChef
+    - file: NFS
+    - file: John
+    - file: Netcat
   - caption: Hacker Craft
     chapters:
     - file: Windows fun
     - file: ssh
     - file: XSS
     - file: LFI
-    - file: CyberChef
-    - file: NFS
-    - file: John
+    - file: DHCP
+    - file: Shell Stabalise
   - caption: Non Hacking Notes
     chapters:
     - file: FormattingNotes

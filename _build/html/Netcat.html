@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>John The Ripper &#8212; The Cyber Toolkit</title>
+    <title>Netcat &#8212; The Cyber Toolkit</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Netcat" href="Netcat.html" />
-    <link rel="prev" title="NFS" href="NFS.html" />
+    <link rel="next" title="Windows ‘fun’ stuff" href="Windows%20fun.html" />
+    <link rel="prev" title="John The Ripper" href="John.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -122,13 +122,13 @@
    NFS
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="John.html">
    John The Ripper
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Netcat.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Netcat
   </a>
  </li>
@@ -217,7 +217,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/John.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/Netcat.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -237,7 +237,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FJohn.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FNetcat.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -258,7 +258,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/John.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Netcat.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -275,6 +275,19 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up-a-listener">
+   Setting up a Listener
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -282,26 +295,46 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>John The Ripper</h1>
+                <h1>Netcat</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up-a-listener">
+   Setting up a Listener
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="john-the-ripper">
-<h1>John The Ripper<a class="headerlink" href="#john-the-ripper" title="Permalink to this headline">¶</a></h1>
-<p>While the namesake is famous for terrorising London, John is just as well known in the Cyber Security space. It is an amazingly versatile tool used for cracking hashes.</p>
-<p>The typical format is:</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="netcat">
+<h1>Netcat<a class="headerlink" href="#netcat" title="Permalink to this headline">¶</a></h1>
+<p>Another one of the very versatile fundamentals of exploitation, netcat is one of those programs that becomes second nature to an Ethical Hacker.</p>
+<div class="section" id="setting-up-a-listener">
+<h2>Setting up a Listener<a class="headerlink" href="#setting-up-a-listener" title="Permalink to this headline">¶</a></h2>
+<p>A number of exploits create a ‘reverse shell’, in which the exploited machine calls back to the attacker. Part of this, is that you must set up a listener to recieve this call.</p>
 <blockquote>
-<div><p>john –wordlist=[wordlist] [file]</p>
+<div><p>nc -lvnp [port]</p>
 </div></blockquote>
-<p>Unfortunately, yes, you have to pass a file containing your hash(s), one per line if you have multiple.
-How the file is formatted depends on what you want to crack</p>
+<ul class="simple">
+<li><p>l -&gt; Listen</p></li>
+<li><p>v -&gt; verbose logging</p></li>
+<li><p>n -&gt; dont resolve DNS</p></li>
+<li><p>p -&gt; next arguement is the port to listen on</p></li>
+</ul>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -329,17 +362,17 @@ How the file is formatted depends on what you want to crack</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="NFS.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="John.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">NFS</p>
+            <p class="prev-next-title">John The Ripper</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Netcat.html" title="next page">
+    <a class='right-next' id="next-link" href="Windows%20fun.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Netcat</p>
+        <p class="prev-next-title">Windows ‘fun’ stuff</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
