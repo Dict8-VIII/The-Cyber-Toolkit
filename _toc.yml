@@ -6,7 +6,9 @@ root: intro
 parts:
   - caption: TryHackMe Rooms / Walkthrough
     chapters:
-    - file: HoloLive
+    - file: HoloLive/HoloLive
+      sections:
+      - file: HoloLive/HoloLive_Task8
   - caption: Tools
     chapters:
     - file: Nmap
