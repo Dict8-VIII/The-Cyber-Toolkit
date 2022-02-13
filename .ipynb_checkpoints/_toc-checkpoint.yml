@@ -4,7 +4,9 @@
 format: jb-book
 root: intro
 parts:
-  #- caption: TryHackMe Rooms
+  - caption: TryHackMe Rooms / Walkthrough
+    chapters:
+    - file: HoloLive
   - caption: Tools
     chapters:
     - file: Nmap

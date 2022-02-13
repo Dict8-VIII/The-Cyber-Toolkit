@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Metasploit Framework &#8212; The Cyber Toolkit</title>
+    <title>HoloLive Walkthrough &#8212; The Cyber Toolkit</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Cyberchef" href="CyberChef.html" />
-    <link rel="prev" title="Nmap" href="Nmap.html" />
+    <link rel="next" title="Nmap" href="Nmap.html" />
+    <link rel="prev" title="The Cyber Toolkit" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -101,9 +101,9 @@
   TryHackMe Rooms / Walkthrough
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="HoloLive.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    HoloLive Walkthrough
   </a>
  </li>
@@ -113,14 +113,14 @@
   Tools
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Nmap.html">
    Nmap
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Metasploit.html">
    Metasploit Framework
   </a>
  </li>
@@ -234,7 +234,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/Metasploit.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/HoloLive.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -254,7 +254,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FMetasploit.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FHoloLive.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -275,7 +275,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Metasploit.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/HoloLive.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -298,36 +298,9 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#launching">
-   Launching
+  <a class="reference internal nav-link" href="#task-8-initial-recon">
+   Task 8 - Initial Recon
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#initial-steps">
-   Initial steps
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fun-exploits">
-   Fun exploits
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#eternal-blue">
-     Eternal Blue
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hashdump">
-     Hashdump
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#crack-windows">
-     Crack Windows
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -339,7 +312,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Metasploit Framework</h1>
+                <h1>HoloLive Walkthrough</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -350,36 +323,9 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#launching">
-   Launching
+  <a class="reference internal nav-link" href="#task-8-initial-recon">
+   Task 8 - Initial Recon
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#initial-steps">
-   Initial steps
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fun-exploits">
-   Fun exploits
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#eternal-blue">
-     Eternal Blue
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hashdump">
-     Hashdump
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#crack-windows">
-     Crack Windows
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -390,63 +336,29 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="metasploit-framework">
-<h1>Metasploit Framework<a class="headerlink" href="#metasploit-framework" title="Permalink to this headline">¶</a></h1>
-<p>The MetaSploitFramework (msf / Metasploit) is a collection of exploits, payloads, scripts, enum tools,  has its own custom shell, nmap and will probably even walk the dog if you asked nicely enough.</p>
-<p>It also installs a postgresSQL instance, where it stores your history, which must also be running when you launch it.</p>
-<div class="section" id="launching">
-<h2>Launching<a class="headerlink" href="#launching" title="Permalink to this headline">¶</a></h2>
-<p>If you need to start the postgress instance manually</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="hololive-walkthrough">
+<h1>HoloLive Walkthrough<a class="headerlink" href="#hololive-walkthrough" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="task-8-initial-recon">
+<h2>Task 8 - Initial Recon<a class="headerlink" href="#task-8-initial-recon" title="Permalink to this headline">¶</a></h2>
+<p>Now for the actual question. First we are asked to scan the network, on the scoped ranges “10.200.x.0/24 and 192.168.100.0/24”. We cant scan a ‘x’ however, so how do we know what range to look for? This isnt easier than it sounds, its given in the image at the top of the page, in my case 10.200.129.0/24. This also gives the answer to the first octet (.33 in my case).</p>
+<p><img alt="Hololive-Task8_NetworkMap.png" src="_images/Hololive-Task8_NetworkMap.png" /></p>
+<p>To get the octet the RIGHT way however, you should rely on the network scan. Following the provided details, it looks like this for me</p>
+<p><img alt="Hololive - Task8 nmap scan.png" src="_images/Hololive-Task8_NmapScan.png" /></p>
+<p>Once the scan starts, you’ll quickly find the open ports found. By now, you should know that 80 is the standard HTTP port</p>
+<p><img alt="Hololive - Task8 nmap ports found.png" src="_images/Hololive-Task8_NmapPortsFound.png" /></p>
 <blockquote>
-<div><p>sudo service start postgressql</p>
+<div><p>Note: If you arent finding anything with your scan, even though you are sure the syntax is correct, you may have made the same dumb mistake I did, check your network is running <img alt="Hololive - Task8 NetworkState.png" src="_images/Hololive-Task8_NetworkState.png" /></p>
 </div></blockquote>
-<p>Launching the Console</p>
-<blockquote>
-<div><p>msfconsole</p>
-</div></blockquote>
+<p>Now that we have our webserver, theres no point running the full scan we had for the whole subnet. Kill the existing scan and run a much more focused one.</p>
+<p><img alt="Hololive - Task8 nmap scan targeted.png" src="_images/Hololive-Task8_NmapScanTargeted.png" /></p>
+<p>This is going to take a while, why not take a break? Source: <a class="reference external" href="https://xkcd.com/303/">https://xkcd.com/303/</a></p>
+<div class="cell tag_remove_input docutils container">
+<div class="cell_output docutils container">
+<img alt="_images/HoloLive_2_0.png" src="_images/HoloLive_2_0.png" />
 </div>
-<div class="section" id="initial-steps">
-<h2>Initial steps<a class="headerlink" href="#initial-steps" title="Permalink to this headline">¶</a></h2>
-<p>search for an exploit (includes scanning and post exploit ‘exploits’)</p>
-<blockquote>
-<div><p>search Eternal_Blue
-search CVE-2017-0144
-select # (your number from the list)</p>
-</div></blockquote>
-<p>determine which paramaters need to be set</p>
-<blockquote>
-<div><p>options</p>
-</div></blockquote>
-<p>Set the paramaters’ value (this includes the default payload as described)</p>
-<blockquote>
-<div><p>set Lhost 127.0.0.1
-set Rhosts 127.0.0.2</p>
-</div></blockquote>
 </div>
-<div class="section" id="fun-exploits">
-<h2>Fun exploits<a class="headerlink" href="#fun-exploits" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="eternal-blue">
-<h3>Eternal Blue<a class="headerlink" href="#eternal-blue" title="Permalink to this headline">¶</a></h3>
-<p>This one is easy, if youre running windows 7 and have SMB enabled (spoiler, they all do), you’re screwed</p>
-<blockquote>
-<div><p>search Eternal_Blue</p>
-</div></blockquote>
-</div>
-<div class="section" id="hashdump">
-<h3>Hashdump<a class="headerlink" href="#hashdump" title="Permalink to this headline">¶</a></h3>
-<p>Dumps all the hashes in an exploited windows box, stores in Metasploit DB.</p>
-<blockquote>
-<div><p>search post/windows/gather/hashdump</p>
-</div></blockquote>
-</div>
-<div class="section" id="crack-windows">
-<h3>Crack Windows<a class="headerlink" href="#crack-windows" title="Permalink to this headline">¶</a></h3>
-<p>Follows on from the above hashdump, try to crack the passwords we have… borrowed…
-If its a good password, this is gonna take a while…. use John instead</p>
-<blockquote>
-<div><p>auxiliary/analyze/crack_windows</p>
-</div></blockquote>
-</div>
+<p>Now that we’re done with that, jump back through your logs to see what we found. Here you can see another port hiding in the non-standard range. Count your open ports for the server to get your next answer</p>
+<p><img alt="Hololive-Task8_ExtraPort.png" src="_images/Hololive-Task8_ExtraPort.png" /></p>
 </div>
 </div>
 
@@ -475,17 +387,17 @@ If its a good password, this is gonna take a while…. use John instead</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="Nmap.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Nmap</p>
+            <p class="prev-next-title">The Cyber Toolkit</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="CyberChef.html" title="next page">
+    <a class='right-next' id="next-link" href="Nmap.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Cyberchef</p>
+        <p class="prev-next-title">Nmap</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
