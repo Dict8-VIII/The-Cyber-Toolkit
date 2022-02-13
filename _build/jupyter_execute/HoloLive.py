@@ -37,6 +37,20 @@ display.Image("https://imgs.xkcd.com/comics/compiling.png")
 # 
 # ![Hololive-Task8_ExtraPort.png](images/Hololive-Task8_ExtraPort.png)
 
+# Awesome, now we have scanned all the things, time to answer some specific questions
+# We're asked about the CME (Content Management Environment) of the web server. We know this sits on port 80, so lets take an agressive look at it specifically.
+# Note: this is also in the previous scan, but if you killed it already, this is a shorter scan for the single port
+# 
+# ![Hololive-Task8_NetworkMap.png](images/Hololive-Task8_Port80.png)
+# 
+# This gives us a nice block of data on the webserver
+# 
+# ![Hololive-Task8_NetworkMap.png](images/Hololive-Task8_Port80Results.png)
+# 
+# Extract out your data to answer each of the 3 next questions
+
+# ---
+
 # In[ ]:
 
 
