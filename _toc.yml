@@ -9,23 +9,26 @@ parts:
     - file: HoloLive/HoloLive
       sections:
       - file: HoloLive/HoloLive_Task8
+      - file: HoloLive/HoloLive_Task9
   - caption: Tools
     chapters:
-    - file: Nmap
-    - file: Metasploit
-    - file: CyberChef
-    - file: NFS
-    - file: John
-    - file: Netcat
+    - file: Tools/Nmap
+    - file: Tools/Metasploit
+    - file: Tools/CyberChef
+    - file: Tools/NFS
+    - file: Tools/John
+    - file: Tools/Netcat
+    - file: Tools/GoBuster
+    - file: Tools/Nikto
+    - file: Tools/HashCat
   - caption: Hacker Craft
     chapters:
-    - file: Windows fun
-    - file: ssh
-    - file: XSS
-    - file: LFI
-    - file: DHCP
-    - file: Shell Stabalise
+    - file: Craft/Windows fun
+    - file: Craft/ssh
+    - file: Craft/XSS
+    - file: Craft/LFI
+    - file: Craft/DHCP
+    - file: Craft/Shell Stabalise
   - caption: Non Hacking Notes
     chapters:
-    - file: FormattingNotes
-#- file: notebooks
+    - file: Other/FormattingNotes
