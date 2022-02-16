@@ -13,7 +13,7 @@
 
 
 from IPython.display import Video
-Video("videos/CyberChef.mp4")
+Video("../videos/CyberChef.mp4", embed=True,html_attributes="muted controls autoplay loop", width=800, height=600)
 
 
 # In[ ]:

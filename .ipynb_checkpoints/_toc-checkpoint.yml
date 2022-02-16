@@ -10,6 +10,9 @@ parts:
       sections:
       - file: HoloLive/HoloLive_Task8
       - file: HoloLive/HoloLive_Task9
+    - file: JnrPenTester/JnrPenTester
+      sections:
+      - file: JnrPenTester/FileInclusion
   - caption: Tools
     chapters:
     - file: Tools/Nmap
