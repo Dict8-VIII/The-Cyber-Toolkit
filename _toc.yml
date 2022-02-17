@@ -24,6 +24,9 @@ parts:
     - file: Tools/GoBuster
     - file: Tools/Nikto
     - file: Tools/HashCat
+    - file: Tools/LinEnum
+    - file: Tools/LinPeas
+    - file: Tools/LES
   - caption: Hacker Craft
     chapters:
     - file: Craft/Windows fun

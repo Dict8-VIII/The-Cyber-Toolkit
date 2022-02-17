@@ -48,6 +48,10 @@
 # Follows on from the above hashdump, try to crack the passwords we have... borrowed...
 # If its a good password, this is gonna take a while.... use John instead
 # > auxiliary/analyze/crack_windows
+# 
+# ### Escalation Suggester
+# One of the built in tools for PrivEx. Requires a session to be created already. I havent had much luck with this though
+# > multi/recon/local_exploit_suggester
 
 # In[ ]:
 

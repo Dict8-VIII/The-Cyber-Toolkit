@@ -51,7 +51,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Windows ‘fun’ stuff" href="../Craft/Windows%20fun.html" />
+    <link rel="next" title="LinEnum" href="LinEnum.html" />
     <link rel="prev" title="Nikto" href="Nikto.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -191,6 +191,21 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Hashcat
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="LinEnum.html">
+   LinEnum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="LinPeas.html">
+   LinPeas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="LES.html">
+   Linux Exploit Suggester
   </a>
  </li>
 </ul>
@@ -345,7 +360,29 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="hashcat">
 <h1>Hashcat<a class="headerlink" href="#hashcat" title="Permalink to this headline">¶</a></h1>
-<p>Similar to John The Ripper, Hashcat is used for well… hashes….</p>
+<p>Similar to John The Ripper, Hashcat is used for well… hashes….
+Unlike John however, hashcat requires that you define the mode (hash type) and attack method.</p>
+<blockquote>
+<div><p>hashcat -m [the mode number] -a [the attack method] [the file with hashes listed]</p>
+</div></blockquote>
+<p>The file could include salts as well, depending on the mode number defined.</p>
+<p>There are a LOT of modes (hash types) that can be cracked. To see the list</p>
+<blockquote>
+<div><p>hashcat -h</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>0:      MD5</p></li>
+<li><p>100:    SHA1</p></li>
+<li><p>1800:   sha512crypt ( $6$ hashes)</p></li>
+</ul>
+<p>The attack modes are easier, theres only 5</p>
+<ul class="simple">
+<li><p>0 : Straight</p></li>
+<li><p>1 : Combination</p></li>
+<li><p>3 : Brute-Force</p></li>
+<li><p>6 : Hybrid Wordlist + Mask</p></li>
+<li><p>7 : Hybrid Mask + Wordlist</p></li>
+</ul>
 </div>
 
     <script type="text/x-thebe-config">
@@ -380,10 +417,10 @@
             <p class="prev-next-title">Nikto</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../Craft/Windows%20fun.html" title="next page">
+    <a class='right-next' id="next-link" href="LinEnum.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Windows ‘fun’ stuff</p>
+        <p class="prev-next-title">LinEnum</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
