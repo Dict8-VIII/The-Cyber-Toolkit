@@ -10,11 +10,17 @@ parts:
       sections:
       - file: HoloLive/HoloLive_Task8
       - file: HoloLive/HoloLive_Task9
+      - file: HoloLive/HoloLive_Task10
     - file: JnrPenTester/JnrPenTester
       sections:
       - file: JnrPenTester/FileInclusion
   - caption: Tools
     chapters:
+    - file: Tools/PriveligeEscalation/PriveligeEscalation
+      sections:
+      - file: Tools/PriveligeEscalation/LinEnum
+      - file: Tools/PriveligeEscalation/LinPeas
+      - file: Tools/PriveligeEscalation/LES
     - file: Tools/Nmap
     - file: Tools/Metasploit
     - file: Tools/CyberChef
@@ -24,9 +30,7 @@ parts:
     - file: Tools/GoBuster
     - file: Tools/Nikto
     - file: Tools/HashCat
-    - file: Tools/LinEnum
-    - file: Tools/LinPeas
-    - file: Tools/LES
+    
   - caption: Hacker Craft
     chapters:
     - file: Craft/Windows fun
@@ -38,3 +42,4 @@ parts:
   - caption: Non Hacking Notes
     chapters:
     - file: Other/FormattingNotes
+    - file: Other/ThingsToDo
