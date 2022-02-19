@@ -216,6 +216,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Wfuzz.html">
+   WFUZZ
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../Tools/Nikto.html">
    Nikto
   </a>
@@ -362,6 +367,19 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#i-didnt-actually-do-it-this-way">
+   I didnt actually do it this way….
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -374,6 +392,19 @@
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#i-didnt-actually-do-it-this-way">
+   I didnt actually do it this way….
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -389,6 +420,24 @@ Fuzzing has a few definitions, depending on who you ask.</p>
 <li><p>Brutforce subdomains on a website. From “<a class="reference external" href="http://google.com">google.com</a>”; try “<a class="reference external" href="http://admin.google.com">admin.google.com</a>”, “<a class="reference external" href="http://dev.google.com">dev.google.com</a>”, “<a class="reference external" href="http://dev.admin.google.com">dev.admin.google.com</a>” etc</p></li>
 </ul>
 <p>For this room, the second option is our goal</p>
+<hr>
+<p>Lets spin up a terminal and see what we can find</p>
+<p>GoBuster Syntax:
+<img alt="GoBuster-DirectoryScanpng.png" src="../_images/GoBuster-DirectoryScanpng.png" /></p>
+<p>Wfuzz Syntax:</p>
+<p><img alt="WFuzz-Example.png" src="../_images/WFuzz-Example.png" /></p>
+<p>While gobuster returned inital results faster, the file we are after was found first by GoBuster. Wfuzz did find it eventually…..</p>
+<p><img alt="Hololive-Task10_robotsFound.png" src="../_images/Hololive-Task10_robotsFound.png" />
+<img alt="Hololive-Task10_wfuzzrobots.png" src="../_images/Hololive-Task10_wfuzzrobots.png" /></p>
+<p>If we open the robots.txt file, theres a whole load of files listed, they look like directories. Guess we have found our first answer :-)</p>
+<p><img alt="Hololive-Task10_robots.txt.png" src="../_images/Hololive-Task10_robots.txt.png" /></p>
+<hr>
+<p>Apparently we now have and admin domain to find….. fortunately we have just the tool for that.</p>
+<div class="section" id="i-didnt-actually-do-it-this-way">
+<h2>I didnt actually do it this way….<a class="headerlink" href="#i-didnt-actually-do-it-this-way" title="Permalink to this headline">¶</a></h2>
+<p>So, that was (probably) how the author wanted you to answer the questions. I didnt use GoBuster or WFuzz to start with. Having run into problems with both in the past, I actually ran Nikto first. It didnt give a nice list of files found, but it got the robots file pretty quick….</p>
+<p><img alt="Hololive-Task10_niktoScan.png" src="../_images/Hololive-Task10_niktoScan.png" /></p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">

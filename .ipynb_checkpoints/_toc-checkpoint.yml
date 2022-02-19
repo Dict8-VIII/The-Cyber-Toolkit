@@ -28,6 +28,7 @@ parts:
     - file: Tools/John
     - file: Tools/Netcat
     - file: Tools/GoBuster
+    - file: Tools/Wfuzz
     - file: Tools/Nikto
     - file: Tools/HashCat
     

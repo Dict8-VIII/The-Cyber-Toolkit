@@ -16,6 +16,8 @@
 # For files
 # > gobuster dir -u http://\[IP] -w \[wordlist] -x \[extensions]
 # * -x: Extension to search for. Can be a comma separated list
+# 
+# ![GoBuster-DirectoryScanpng.png](../images/GoBuster-DirectoryScanpng.png)
 
 # ### Mode: Webserver vHosts
 # A vHost is a second 'virtual' website hosted on your one server. I think technically the first host is a vHost as well, but dont quote me on that... Something to find out....
