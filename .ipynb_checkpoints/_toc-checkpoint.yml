@@ -34,6 +34,7 @@ parts:
     
   - caption: Hacker Craft
     chapters:
+    - file: Craft/TheBasics
     - file: Craft/Windows fun
     - file: Craft/ssh
     - file: Craft/XSS

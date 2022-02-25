@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HoloLive Walkthrough - Task 10 &#8212; The Cyber Toolkit</title>
+    <title>The Basics &#8212; The Cyber Toolkit</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Jr Pen Tester Path" href="../JnrPenTester/JnrPenTester.html" />
-    <link rel="prev" title="HoloLive Walkthrough - Task 9" href="HoloLive_Task9.html" />
+    <link rel="next" title="Windows ‘fun’ stuff" href="Windows%20fun.html" />
+    <link rel="prev" title="Hashcat" href="../Tools/HashCat.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -101,29 +101,29 @@
   TryHackMe Rooms / Walkthrough
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="HoloLive.html">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../HoloLive/HoloLive.html">
    HoloLive
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="HoloLive_Task8.html">
+    <a class="reference internal" href="../HoloLive/HoloLive_Task8.html">
      HoloLive Walkthrough - Task 8
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="HoloLive_Task9.html">
+    <a class="reference internal" href="../HoloLive/HoloLive_Task9.html">
      HoloLive Walkthrough - Task 9
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../HoloLive/HoloLive_Task10.html">
      HoloLive Walkthrough - Task 10
     </a>
    </li>
@@ -236,39 +236,39 @@
   Hacker Craft
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/TheBasics.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    The Basics
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/Windows%20fun.html">
+  <a class="reference internal" href="Windows%20fun.html">
    Windows ‘fun’ stuff
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/ssh.html">
+  <a class="reference internal" href="ssh.html">
    SSH
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/XSS.html">
+  <a class="reference internal" href="XSS.html">
    XSS
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/LFI.html">
+  <a class="reference internal" href="LFI.html">
    LFI
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/DHCP.html">
+  <a class="reference internal" href="DHCP.html">
    DHCP
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/Shell%20Stabalise.html">
+  <a class="reference internal" href="Shell%20Stabalise.html">
    Stabalising a shell
   </a>
  </li>
@@ -330,7 +330,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/HoloLive/HoloLive_Task10.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/Craft/TheBasics.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -355,7 +355,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/HoloLive/HoloLive_Task10.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Craft/TheBasics.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -378,8 +378,35 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#i-didnt-actually-do-it-this-way">
-   I didnt actually do it this way….
+  <a class="reference internal nav-link" href="#why-is-cyber-security-important">
+   Why Is Cyber Security Important?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-of-hackers">
+   Types of Hackers
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#white-hat">
+     White Hat
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#black-hat">
+     Black Hat
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grey-hat">
+     Grey Hat
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-of-attacks">
+   Types of Attacks
   </a>
  </li>
 </ul>
@@ -392,7 +419,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>HoloLive Walkthrough - Task 10</h1>
+                <h1>The Basics</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -403,8 +430,35 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#i-didnt-actually-do-it-this-way">
-   I didnt actually do it this way….
+  <a class="reference internal nav-link" href="#why-is-cyber-security-important">
+   Why Is Cyber Security Important?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-of-hackers">
+   Types of Hackers
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#white-hat">
+     White Hat
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#black-hat">
+     Black Hat
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grey-hat">
+     Grey Hat
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-of-attacks">
+   Types of Attacks
   </a>
  </li>
 </ul>
@@ -416,32 +470,33 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="hololive-walkthrough-task-10">
-<h1>HoloLive Walkthrough - Task 10<a class="headerlink" href="#hololive-walkthrough-task-10" title="Permalink to this headline">¶</a></h1>
-<p>So, its time to fuzz some directories. But what does that mean?
-Fuzzing has a few definitions, depending on who you ask.</p>
-<ul class="simple">
-<li><p>From a known string, modify some characters and try again. This is normally password related in our context. From “Password123”; try “password123”, “P&#64;ssw0rd123” etc</p></li>
-<li><p>Brutforce subdomains on a website. From “<a class="reference external" href="http://google.com">google.com</a>”; try “<a class="reference external" href="http://admin.google.com">admin.google.com</a>”, “<a class="reference external" href="http://dev.google.com">dev.google.com</a>”, “<a class="reference external" href="http://dev.admin.google.com">dev.admin.google.com</a>” etc</p></li>
-</ul>
-<p>For this room, the second option is our goal</p>
-<hr>
-<p>Lets spin up a terminal and see what we can find</p>
-<p>GoBuster Syntax:
-<img alt="GoBuster-DirectoryScanpng.png" src="../_images/GoBuster-DirectoryScanpng.png" /></p>
-<p>Wfuzz Syntax:</p>
-<p><img alt="WFuzz-Example.png" src="../_images/WFuzz-Example.png" /></p>
-<p>While gobuster returned inital results faster, the file we are after was found first by GoBuster. Wfuzz did find it eventually…..</p>
-<p><img alt="Hololive-Task10_robotsFound.png" src="../_images/Hololive-Task10_robotsFound.png" />
-<img alt="Hololive-Task10_wfuzzrobots.png" src="../_images/Hololive-Task10_wfuzzrobots.png" /></p>
-<p>If we open the robots.txt file, theres a whole load of files listed, they look like directories. Guess we have found our first answer :-)</p>
-<p><img alt="Hololive-Task10_robots.txt.png" src="../_images/Hololive-Task10_robots.txt.png" /></p>
-<hr>
-<p>Apparently we now have and admin domain to find….. fortunately we have just the tool for that.</p>
-<div class="section" id="i-didnt-actually-do-it-this-way">
-<h2>I didnt actually do it this way….<a class="headerlink" href="#i-didnt-actually-do-it-this-way" title="Permalink to this headline">¶</a></h2>
-<p>So, that was (probably) how the author wanted you to answer the questions. I didnt use GoBuster or WFuzz to start with. Having run into problems with both in the past, I actually ran Nikto first. It didnt give a nice list of files found, but it got the robots file pretty quick….</p>
-<p><img alt="Hololive-Task10_niktoScan.png" src="../_images/Hololive-Task10_niktoScan.png" /></p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="the-basics">
+<h1>The Basics<a class="headerlink" href="#the-basics" title="Permalink to this headline">¶</a></h1>
+<p>So, you’ve decided to start your path in Cyber Security, or more likely, hacking sounds fun. Great! It can be! But there is more to it then getting a hoodie and balaclava and hunching over a laptop (in the dark obviously). Hacking is a career path, regardless of what popular media tells you about hackers.</p>
+<p><img alt="hackerinhoodie.jpg" src="../_images/hackerinhoodie.jpg" /></p>
+<div class="section" id="why-is-cyber-security-important">
+<h2>Why Is Cyber Security Important?<a class="headerlink" href="#why-is-cyber-security-important" title="Permalink to this headline">¶</a></h2>
+<hr></div>
+<div class="section" id="types-of-hackers">
+<h2>Types of Hackers<a class="headerlink" href="#types-of-hackers" title="Permalink to this headline">¶</a></h2>
+<p>So that leads us to the first note, what kind of hackers are there? Hackers can be divided by 2 metrics, their knowledge and their motives. The most clearly defined is the motives;</p>
+<div class="section" id="white-hat">
+<h3>White Hat<a class="headerlink" href="#white-hat" title="Permalink to this headline">¶</a></h3>
+<p>These are the professionals who operate within the scope of law and regulation. They work for a business (or are contracted to one) to engage in a range of cyber security tasks. They have permission from an entity to perform task on a system that they own, within a ‘scope’ of engagement. They have well defined documentation of what they are permitted to do on a system and follow this to the letter.</p>
+<p>An example would be a Pen Test (Penetration Test) where an airport contracts a security company to test their publicly exposed network to attempt to gain access. They are only permitted to operate within a defined target range and DDoS attacks are not permitted.</p>
+<p>Their motive is purely professional and within agreed terms. Any findings are reported professionally and remediation is advised.</p>
+</div>
+<div class="section" id="black-hat">
+<h3>Black Hat<a class="headerlink" href="#black-hat" title="Permalink to this headline">¶</a></h3>
+<p>The opposite of a White Hat is a Black Hat. They operation with no permission and their motivation is purely personal. This could range from a child sitting at home trying to guess Mum’s facebook password, to a fully underground network of hackers who operation on a global scale. Their motivation could be financial, political, anarchist or simply because they want to know if they can. The KEY definiton of a Black Hat is that they attack a system without permission.</p>
+</div>
+<div class="section" id="grey-hat">
+<h3>Grey Hat<a class="headerlink" href="#grey-hat" title="Permalink to this headline">¶</a></h3>
+<p>There is a 3rd type, however personally it should be considered a Black Hat. A Grey hat is a Black Hat who is hacking with a positive motive but no permission. An example would be someone who hacks a website without permission, but shares the method of entry with the owner of the site, with the hope they will fix it (or they ask for $$$ before they will share the method). They “Grey Hat” title should be handled with caution, I Am Not A Lawyer, but if you are caught your motivation is irrelivant and you will likely be considered a “Black Hat”.</p>
+<hr></div>
+</div>
+<div class="section" id="types-of-attacks">
+<h2>Types of Attacks<a class="headerlink" href="#types-of-attacks" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -458,7 +513,7 @@ Fuzzing has a few definitions, depending on who you ask.</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./HoloLive"
+            path: "./Craft"
         },
         predefinedOutput: true
     }
@@ -470,17 +525,17 @@ Fuzzing has a few definitions, depending on who you ask.</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="HoloLive_Task9.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../Tools/HashCat.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">HoloLive Walkthrough - Task 9</p>
+            <p class="prev-next-title">Hashcat</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../JnrPenTester/JnrPenTester.html" title="next page">
+    <a class='right-next' id="next-link" href="Windows%20fun.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Jr Pen Tester Path</p>
+        <p class="prev-next-title">Windows ‘fun’ stuff</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
