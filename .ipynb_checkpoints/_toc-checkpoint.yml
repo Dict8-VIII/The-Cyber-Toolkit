@@ -39,6 +39,7 @@ parts:
     - file: Craft/ssh
     - file: Craft/XSS
     - file: Craft/LFI
+    - file: Craft/UploadVulns
     - file: Craft/DHCP
     - file: Craft/Shell Stabalise
   - caption: Non Hacking Notes

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HoloLive Walkthrough - Task 8 &#8212; The Cyber Toolkit</title>
+    <title>Upload Vulnerabilities &#8212; The Cyber Toolkit</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="HoloLive Walkthrough - Task 9" href="HoloLive_Task9.html" />
-    <link rel="prev" title="HoloLive" href="HoloLive.html" />
+    <link rel="next" title="DHCP" href="DHCP.html" />
+    <link rel="prev" title="LFI" href="LFI.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -101,29 +101,29 @@
   TryHackMe Rooms / Walkthrough
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="HoloLive.html">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../HoloLive/HoloLive.html">
    HoloLive
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../HoloLive/HoloLive_Task8.html">
      HoloLive Walkthrough - Task 8
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="HoloLive_Task9.html">
+    <a class="reference internal" href="../HoloLive/HoloLive_Task9.html">
      HoloLive Walkthrough - Task 9
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="HoloLive_Task10.html">
+    <a class="reference internal" href="../HoloLive/HoloLive_Task10.html">
      HoloLive Walkthrough - Task 10
     </a>
    </li>
@@ -236,44 +236,44 @@
   Hacker Craft
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/TheBasics.html">
+  <a class="reference internal" href="TheBasics.html">
    The Basics
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/Windows%20fun.html">
+  <a class="reference internal" href="Windows%20fun.html">
    Windows ‘fun’ stuff
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/ssh.html">
+  <a class="reference internal" href="ssh.html">
    SSH
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/XSS.html">
+  <a class="reference internal" href="XSS.html">
    XSS
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/LFI.html">
+  <a class="reference internal" href="LFI.html">
    LFI
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/UploadVulns.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Upload Vulnerabilities
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/DHCP.html">
+  <a class="reference internal" href="DHCP.html">
    DHCP
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/Shell%20Stabalise.html">
+  <a class="reference internal" href="Shell%20Stabalise.html">
    Stabalising a shell
   </a>
  </li>
@@ -335,7 +335,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/HoloLive/HoloLive_Task8.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/Craft/UploadVulns.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -360,7 +360,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/HoloLive/HoloLive_Task8.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Craft/UploadVulns.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -383,8 +383,13 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-8-initial-recon">
-   Task 8 - Initial Recon
+  <a class="reference internal nav-link" href="#check-based-on-file-extension">
+   Check based on file extension
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#magic-numbers">
+   Magic Numbers
   </a>
  </li>
 </ul>
@@ -397,7 +402,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>HoloLive Walkthrough - Task 8</h1>
+                <h1>Upload Vulnerabilities</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -408,8 +413,13 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-8-initial-recon">
-   Task 8 - Initial Recon
+  <a class="reference internal nav-link" href="#check-based-on-file-extension">
+   Check based on file extension
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#magic-numbers">
+   Magic Numbers
   </a>
  </li>
 </ul>
@@ -421,37 +431,25 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="hololive-walkthrough-task-8">
-<h1>HoloLive Walkthrough - Task 8<a class="headerlink" href="#hololive-walkthrough-task-8" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="task-8-initial-recon">
-<h2>Task 8 - Initial Recon<a class="headerlink" href="#task-8-initial-recon" title="Permalink to this headline">¶</a></h2>
-<p>Now for the actual question. First we are asked to scan the network, on the scoped ranges “10.200.x.0/24 and 192.168.100.0/24”. We cant scan a ‘x’ however, so how do we know what range to look for? This is easier than it sounds, it’s given in the image at the top of the page; in my case 10.200.129.0/24. This also gives the answer to the first octet (.33 in my case).</p>
-<p><img alt="Hololive-Task8_NetworkMap.png" src="../_images/Hololive-Task8_NetworkMap.png" /></p>
-<p>To get the octet the RIGHT way however, you should rely on the network scan. Following the provided details, it looks like this for me</p>
-<p><img alt="Hololive - Task8 nmap scan.png" src="../_images/Hololive-Task8_NmapScan.png" /></p>
-<p>Once the scan starts, you’ll quickly find the open ports found. By now, you should know that 80 is the standard HTTP port</p>
-<p><img alt="Hololive - Task8 nmap ports found.png" src="../_images/Hololive-Task8_NmapPortsFound.png" /></p>
-<blockquote>
-<div><p>Note: If you arent finding anything with your scan, even though you are sure the syntax is correct, you may have made the same dumb mistake I did, check your network is running <img alt="Hololive - Task8 NetworkState.png" src="../_images/Hololive-Task8_NetworkState.png" /></p>
-</div></blockquote>
-<p>Now that we have our webserver, theres no point running the full scan we had for the whole subnet. Kill the existing scan and run a much more focused one.</p>
-<p><img alt="Hololive - Task8 nmap scan targeted.png" src="../_images/Hololive-Task8_NmapScanTargeted.png" /></p>
-<p>This is going to take a while, why not take a break? Source: <a class="reference external" href="https://xkcd.com/303/">https://xkcd.com/303/</a></p>
-<div class="cell tag_remove_input docutils container">
-<div class="cell_output docutils container">
-<img alt="../_images/HoloLive_Task8_2_0.png" src="../_images/HoloLive_Task8_2_0.png" />
-</div>
-</div>
-<p>Now that we’re done with that, jump back through your logs to see what we found. Here you can see another port hiding in the non-standard range. Count your open ports for the server to get your next answer</p>
-<p><img alt="Hololive-Task8_ExtraPort.png" src="../_images/Hololive-Task8_ExtraPort.png" /></p>
-<p>Awesome, now we have scanned all the things, time to answer some specific questions
-We’re asked about the CME (Content Management Environment? Is this supposed to be CMS?) of the web server. We know this sits on port 80, so lets take an agressive look at it specifically.
-Note: this is also in the previous scan, but if you killed it already, this is a shorter scan for the single port</p>
-<p><img alt="Hololive-Task8_NetworkMap.png" src="../_images/Hololive-Task8_Port80.png" /></p>
-<p>This gives us a nice block of data on the webserver</p>
-<p><img alt="Hololive-Task8_NetworkMap.png" src="../_images/Hololive-Task8_Port80Results.png" /></p>
-<p>Extract out your data to answer each of the 3 next questions</p>
-<hr class="docutils" />
+  <div class="tex2jax_ignore mathjax_ignore section" id="upload-vulnerabilities">
+<h1>Upload Vulnerabilities<a class="headerlink" href="#upload-vulnerabilities" title="Permalink to this headline">¶</a></h1>
+<p>Upload vulnerabilities are when a site requests an upload from the user (for example a profile picture) and the file inputs are not restricted. Why would a profile picture upload allow a PHP file for example?</p>
+<p>There are many checks than can be performed, some are better than others, and there are workarounds for many.</p>
+<div class="section" id="check-based-on-file-extension">
+<h2>Check based on file extension<a class="headerlink" href="#check-based-on-file-extension" title="Permalink to this headline">¶</a></h2>
+<p>The most trivial is simply to check the extension. A profile picture should be a PNG, JPG, JPEG, BMP etc.</p>
+<p>How this is implimented can vary however. Listing what is allowed (like I have done above) is a whitelist (or allow list), while picking others to block, such as PHP, would be a blacklist/blocklist (or deny list). Whitelists are easier to implement but can be annoying for a legitimate user. Blacklists require you to list all extensions you want to block but you can easily miss some as listed.</p>
+<ol class="simple">
+<li><p>Try an alternate file extension. The obvious one to block on a PHP server is the .PHP extension. However PHP can exist in other extensions. PHP3,PHP4,PHP5,PHP7,PHP-S,PHAR,PHTML etc. <br></p></li>
+<li><p>You may be thinking “OK, blocklists arent a good way to go, I’ll just allow files containing my extensions”. Sure, what if I presented a file “file.PNG.PHP”. If youre just looking to allow extensions, would this pass your filter? It contains the allowed extension but is still a .PHP file. <br></p></li>
+<li><p>“Fine! Easy fix, I’ll only allow files that have a .PHP then nothing afterwards.” What about a file name “file.PNG .PHP”? Does a space terminate your filter? <br></p></li>
+<li><p>“HA! I’ve got you now! I’ll just make a filter where the last 4 characters must be .PNG!”. Ok, ignoring the fact that you can have extensions larger than 3 characters, filters based on positions can also be fooled sometimes. If you’ve already looked at LFI then you will know about the NULL Byte. With this we can create a file like “file.PNG%00.PHP”. If your filter is terminated by the NULL byte, then this will pass but the file is STILL a .PHP.</p></li>
+</ol>
+<p>If you’re thinking this is getting a bit silly, I couldn’t agree more.</p>
+<p><img alt="biggerGuns.gif" src="../_images/biggerGuns.gif" /></p>
+<hr></div>
+<div class="section" id="magic-numbers">
+<h2>Magic Numbers<a class="headerlink" href="#magic-numbers" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -468,7 +466,7 @@ Note: this is also in the previous scan, but if you killed it already, this is a
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./HoloLive"
+            path: "./Craft"
         },
         predefinedOutput: true
     }
@@ -480,17 +478,17 @@ Note: this is also in the previous scan, but if you killed it already, this is a
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="HoloLive.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="LFI.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">HoloLive</p>
+            <p class="prev-next-title">LFI</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="HoloLive_Task9.html" title="next page">
+    <a class='right-next' id="next-link" href="DHCP.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">HoloLive Walkthrough - Task 9</p>
+        <p class="prev-next-title">DHCP</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
