@@ -17,4 +17,5 @@
 # * Remove the default Links
 # * Explore "Hack the Box", add here
 # * Add my "TryHackMe" account
-# * Dark Mode
+# * Dark Mode (done, but looks like its broken in the current JupyterBook version, there is a bug logged)
+# * I'm sure the google analytics ID is wrong

@@ -7,9 +7,5 @@
 # Client <- Offer    <- Server <br>
 # Client -> Request  -> Server <br>
 # Client <- ACK      <- Server <br>
-
-# In[ ]:
-
-
-
-
+# 
+# The names of the different DHCP messages

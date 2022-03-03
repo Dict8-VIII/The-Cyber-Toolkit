@@ -31,7 +31,7 @@
 # 
 # ### A Bit about Me
 # 
-# <a href="www.linkedin.com/in/paul-williams-234a6180">My Linked-In Page</a>
+# <a href="http://linkedin.com/in/paul-williams-234a6180">My Linked-In Page</a>
 # 
 # My interest in Cyber Security started when my work purchased a PluralSight subscription and gave me an account. The work stuff wasn't very interesting, but I also found the Ethical Hacking Path run by Dale Meredith. It really captured my interest and I'd recommend it to anyone else who has a subscription (and also enjoys Dale's sense of humour). I only got to start Troy Hunt's one before my account ended though...
 # 

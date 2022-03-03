@@ -1,0 +1,12 @@
+
+/* Make all images more 'dark mode' friendly */
+
+body img {
+  filter: brightness(.8) contrast(1.2);
+}
+
+/* Define a background colour */
+body {background-color: "#121212"}
+
+/* Define a text colour */
+body {color: "#FFFFFF"}
