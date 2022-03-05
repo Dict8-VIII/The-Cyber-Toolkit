@@ -444,6 +444,30 @@
 <hr></div>
 <div class="section" id="magic-numbers">
 <h2>Magic Numbers<a class="headerlink" href="#magic-numbers" title="Permalink to this headline">¶</a></h2>
+<p>If the previous section has left you thinking this is a bit all over the place; youre not alone. Wouldnt it be great if there was something in the file we could look at to determine what file type it is? Well thats exactly what ‘Magic Numbers’ are. These are some bits at the start of a file that anyone can inspect to determine what file type its SUPPOSED to be…. notice the supposed to be…. Some examples are</p>
+<ul class="simple">
+<li><p>.PNG      -&gt; a .png file (0x 2E 50 4E 47)</p></li>
+<li><p>JPEG      -&gt; a .jpeg file (0x 4A 50 45 47)</p></li>
+<li><p>&lt;?php      -&gt; a .php file (0x 3C 3F 70 68 70)</p></li>
+</ul>
+<blockquote>
+<div><p>These are normally the first bits in the file (offset 0) but not always.</p>
+</div></blockquote>
+<p>Heres why my PHP file looks like under a hex editor. On the left we can see the offset &amp; raw values, on the right is the decoding of the file.</p>
+<p><img alt="Craft-UploadVulns_phpHEX.png" src="../_images/Craft-UploadVulns_phpHEX.png" /></p>
+<p>So, thats great. The file is defined by its contents, thats nice and secure, no issues of playing with the file name any more. Bugger, you’ve outsmarted me….</p>
+<p><img alt="Craft-UploadVulns_outsmarted.png" src="../_images/Craft-UploadVulns_outsmarted.png" /></p>
+<p>yea…. of course we have a way around this too. You see, while the magic number can be used for verifying a file, once the file is verified, the program just reads an executes the content. If we ‘update’ the magic number of a PHP file to be an image, a PHP server will still read the file and find its a .PHP file, and execute it. But we’re getting ahead of ourselves. How do we update the magic numbers?</p>
+<ol class="simple">
+<li><p>Work out what we want our extension to be. In my case, I will turn a .PHP into a .PNG.</p></li>
+<li><p>As we are working with a PHP file, open it and insert 4 characters into the start of the file (ABCD in mine)
+<img alt="Craft-UploadVulns_Magic1.png" src="../_images/Craft-UploadVulns_Magic1.png" /></p></li>
+<li><p>Open the file with a Hexeditor (hexeditor comes pre-installed in Kali)
+<img alt="Craft-UploadVulns_Magic2.png" src="../_images/Craft-UploadVulns_Magic2.png" /></p></li>
+<li><p>Update the first 4 bytes (2x4 HEX chars) to the type we want. The updated values are GREEN
+<img alt="Craft-UploadVulns_Magic3.png" src="../_images/Craft-UploadVulns_Magic3.png" /></p></li>
+<li><p>Save the file and upload :-)</p></li>
+</ol>
 </div>
 </div>
 
