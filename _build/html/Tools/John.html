@@ -371,6 +371,36 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-can-we-crack">
+   What can we crack?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linux-logins">
+     Linux Logins
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zip-rar">
+     Zip &amp; Rar
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ssh">
+     SSH
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -383,6 +413,36 @@
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-can-we-crack">
+   What can we crack?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linux-logins">
+     Linux Logins
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zip-rar">
+     Zip &amp; Rar
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ssh">
+     SSH
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -397,7 +457,38 @@
 <div><p>john –wordlist=[wordlist] [file]</p>
 </div></blockquote>
 <p>Unfortunately, yes, you have to pass a file containing your hash(s), one per line if you have multiple.
-How the file is formatted depends on what you want to crack</p>
+How the file is formatted depends on what you want to crack.. which leads us to….</p>
+<div class="section" id="what-can-we-crack">
+<h2>What can we crack?<a class="headerlink" href="#what-can-we-crack" title="Permalink to this headline">¶</a></h2>
+<p>Well, a lot. Following the above format, pretty much any hash thats in your wordlist. For some hash types, they need to be converted to the format that john expects.</p>
+<div class="section" id="linux-logins">
+<h3>Linux Logins<a class="headerlink" href="#linux-logins" title="Permalink to this headline">¶</a></h3>
+<p>So, youve got a low level account and want to escalate. As linux stores its credentails across 2 files, theres a process to merge them. Oddly enough, as they are in the shadow file, the program is called ‘unshadow’</p>
+<blockquote>
+<div><p>unshadow [/etc/passwd file] [/etc/shadow file] &gt; johnready</p>
+</div></blockquote>
+<p>you can now pass the “johnready” file to john as per standard</p>
+<hr>
+</div>
+<div class="section" id="zip-rar">
+<h3>Zip &amp; Rar<a class="headerlink" href="#zip-rar" title="Permalink to this headline">¶</a></h3>
+<p>These 2 have been thrown together as they are basically the same thing. Samae as with Linux passwords, they need to be converted</p>
+<blockquote>
+<div><p>zip2john [options] [zip file] &gt; johnready <br>
+rar2john [options] [rar file] &gt; johnready</p>
+</div></blockquote>
+<p>Again, the “johnready” file can now be passed to john directly</p>
+<hr>
+</div>
+<div class="section" id="ssh">
+<h3>SSH<a class="headerlink" href="#ssh" title="Permalink to this headline">¶</a></h3>
+<p>This should be looking familiar by now, we have zip2john, rar2john, and now ssh2john. This one doesnt come standard though (unless you’re on kali). Its also a python script (run in the python environment) so you’ll need to have python installed too… which I’m sure you do by now. If you’re on kali, its here:</p>
+<blockquote>
+<div><p>python /usr/share/john/ssh2john.py [id_rsa file]</p>
+</div></blockquote>
+<p>This gives the passPHRASE, not passWORD.</p>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
