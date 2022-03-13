@@ -7,6 +7,7 @@
 # 
 # * Linpeas/Linenum/LES expand on
 # * Finish "The Basics"
+# ** Add attacks in a separate sections
 # * HackerCraft: Add the general process (OSINT, Info Gathering, expl, escalation, covering/maintaining)
 # * JNR Pen tester page is empty
 # * Mention more on HoloLive

