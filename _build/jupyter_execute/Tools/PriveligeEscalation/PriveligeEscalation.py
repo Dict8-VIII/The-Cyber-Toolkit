@@ -95,10 +95,20 @@
 # - <i>rwxrwsr-x – SGID bit set and the binary is executable</i>
 # - <i>rwxrwSr-x – SGID bit set and the binary is not executable</i>
 # 
+# <hr>
+# 
 # #### How to find files with SUID set
 # 
-# Great thing linux has a search function huh
-#     
+# Great thing linux has a search function, huh?
+# > find / -perm -u=s -type f 2>/dev/null
+# - Find: What it says
+# - /: whole directory
+# - -perm -u=s: with permission SUID (-g=s for SGID)
+# - -type f: of type file
+# - 2>/dev/null: linux speak for "send erros to the null box" (ignore errors)
+# 
+# 
+# <hr>
 
 # In[ ]:
 

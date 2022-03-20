@@ -575,10 +575,21 @@ Source: <a class="reference external" href="https://tenor.com/view/futurama-you-
 <li><p><i>rwxrwsr-x – SGID bit set and the binary is executable</i></p></li>
 <li><p><i>rwxrwSr-x – SGID bit set and the binary is not executable</i></p></li>
 </ul>
+<hr>
 <div class="section" id="how-to-find-files-with-suid-set">
 <h4>How to find files with SUID set<a class="headerlink" href="#how-to-find-files-with-suid-set" title="Permalink to this headline">¶</a></h4>
-<p>Great thing linux has a search function huh</p>
-</div>
+<p>Great thing linux has a search function, huh?</p>
+<blockquote>
+<div><p>find / -perm -u=s -type f 2&gt;/dev/null</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Find: What it says</p></li>
+<li><p>/: whole directory</p></li>
+<li><p>-perm -u=s: with permission SUID (-g=s for SGID)</p></li>
+<li><p>-type f: of type file</p></li>
+<li><p>2&gt;/dev/null: linux speak for “send erros to the null box” (ignore errors)</p></li>
+</ul>
+<hr></div>
 </div>
 </div>
 <div class="toctree-wrapper compound">
