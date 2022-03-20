@@ -259,6 +259,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../../Craft/SQLinjection.html">
+   SQL Injection
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../../Craft/ssh.html">
    SSH
   </a>
@@ -286,6 +291,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../../Craft/Shell%20Stabalise.html">
    Stabalising a shell
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Craft/FileTransfer.html">
+   File Transfer to Machines
   </a>
  </li>
 </ul>
@@ -380,6 +390,37 @@
   <a class="reference internal nav-link" href="#trivial-checks">
    Trivial Checks
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sudo-list">
+     Sudo List
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#users-list">
+   Users List
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linux-user-rights-the-suid-bit">
+   Linux User Rights &amp; the SUID bit
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-suid-bit">
+     The SUID bit
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#how-to-find-files-with-suid-set">
+       How to find files with SUID set
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -405,6 +446,37 @@
   <a class="reference internal nav-link" href="#trivial-checks">
    Trivial Checks
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sudo-list">
+     Sudo List
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#users-list">
+   Users List
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linux-user-rights-the-suid-bit">
+   Linux User Rights &amp; the SUID bit
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-suid-bit">
+     The SUID bit
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#how-to-find-files-with-suid-set">
+       How to find files with SUID set
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -423,7 +495,10 @@
 <p>There are 2 forms of privelige escalation, vertical and horizontal. A vertical escalation is moving to more rights (user -&gt; admin for example), while a horizontal escalation is to move to the same level (we’re both in helpdesk, but they have passwords saved on their desktop). Most of the time our goal is vertical movement, but horizonal movement may help get us there.</p>
 <div class="section" id="trivial-checks">
 <h2>Trivial Checks<a class="headerlink" href="#trivial-checks" title="Permalink to this headline">¶</a></h2>
-<p>There are some checks that can be done easily. The first is linux specific.</p>
+<p>There are some checks that can be done easily.</p>
+<div class="section" id="sudo-list">
+<h3>Sudo List<a class="headerlink" href="#sudo-list" title="Permalink to this headline">¶</a></h3>
+<p>The first is linux specific.</p>
 <blockquote>
 <div><p>sudo -l</p>
 </div></blockquote>
@@ -432,7 +507,80 @@
 <div><p>sudo /bin/su</p>
 </div></blockquote>
 <p>then your terminal will suddenly have sudo rights. Obviously this is also one of the first things locked down in a system.</p>
-<hr></div>
+<hr>
+</div>
+</div>
+<div class="section" id="users-list">
+<h2>Users List<a class="headerlink" href="#users-list" title="Permalink to this headline">¶</a></h2>
+<p>A good check to run is to check the users list. On linux this can be done by printing the users file to the terminal:</p>
+<blockquote>
+<div><p>cat /etc/passwd</p>
+</div></blockquote>
+<p>For windows its a bit harder. Assuming you are trying to check stored passwords on the local machine; these are stored in the SAM file (and isnt the hardest thing to crack). Metasploit has methods to grab these (such as the hash dump) or your can try mimikatz. The files themselves can be found in C:\windows\system32\Config but this requires decent access already.</p>
+<hr>
+</div>
+<div class="section" id="linux-user-rights-the-suid-bit">
+<h2>Linux User Rights &amp; the SUID bit<a class="headerlink" href="#linux-user-rights-the-suid-bit" title="Permalink to this headline">¶</a></h2>
+<p>All files (and folders) in linux have rights which can be represented by 3 digits. Each digit corresponds to an access group. <br>
+For the representation “123”:</p>
+<ol class="simple">
+<li><p>The ‘user’ who owns the file (the owner)</p></li>
+<li><p>The ‘group’ who owns the file (</p></li>
+<li><p>Everyone Else</p></li>
+</ol>
+<p>Now, lets break down where the value of the position comes from. Keep in mind, this is how the value for each position is determined. There are 3 rights that can be assigned to each group; Read, Write and eXecute. Each of these rights is assigned a value (if permitted) and the sum of these values its the single digit of the group. For “all rights”, the values are shown below. Note the order of groups and right is always the same.</p>
+<blockquote>
+<div><p>rwx <br>
+421</p>
+</div></blockquote>
+<p>Summing these gives the value for that group (with the max being 7). Relating this to the larger 3 groups, 700 would mean the owner has all rights to the file, and no-one else does. A few more examples are below for the full mapping:</p>
+<blockquote>
+<div><p>rwx-r..-r..<br>
+421-4..-4..<br>
+744</p>
+</div></blockquote>
+<p>744 means the owner has full rights, everyone else can only read</p>
+<blockquote>
+<div><p>rwx-r.x-r.x<br>
+421-4.1-4.1<br>
+755</p>
+</div></blockquote>
+<p>755 means the owner has full rights, others can only read and execute.</p>
+<blockquote>
+<div><p>rwx-…-…<br>
+42.-…-…<br>
+600</p>
+</div></blockquote>
+<p>600 means the owner can only read &amp; write (but not execute), no-one else can do anything.</p>
+<hr>
+<div class="section" id="the-suid-bit">
+<h3>The SUID bit<a class="headerlink" href="#the-suid-bit" title="Permalink to this headline">¶</a></h3>
+<p>So, all the above makes sense (I hope). If not, read it again before this sections.<br>
+The SUID, or Set User ID is a special case in linux. When this is set, the file is executed with the ‘current’ user, but uses the rights of the owner. Unless you dive quite far into this, its probably easier to just think that the file is being run as the owner.</p>
+<p><img alt="technicallycorrect.gif" src="../../_images/technicallycorrect.gif" /><br>
+Source: <a class="reference external" href="https://tenor.com/view/futurama-you-are-technically-correct-technically-correct-the-best-kind-of-correct-correct-gif-4979933">https://tenor.com/view/futurama-you-are-technically-correct-technically-correct-the-best-kind-of-correct-correct-gif-4979933</a></p>
+<p>This may sound weird and insecure, but its actually a necessity for a number of tasks. For example, the average user cant modify the passwords file, but when they change their own password they need to. There is also a SGID bit, which is the same for groups. <br></p>
+<p>So, how is this represented? We’ve filled in all the spots in our permission set? Simply, we just steal the execute bit (in the owner for SUID, in the group for GUID).</p>
+<p>So, if the SUID bit is set, 755 becomes</p>
+<blockquote>
+<div><p>rws-r.x-r.x<br>
+421-4.1-4.1<br>
+755</p>
+</div></blockquote>
+<p>So the value doesnt change, just the representation. This is also where the case comes into play as well. All of the letter so far have been lower case, but its actually case sensitive. To quote <a class="reference external" href="https://tbhaxor.com/demystifying-suid-and-sgid-bits/">tbhaxor</a>:</p>
+<p><i>The translation would look like</i></p>
+<ul class="simple">
+<li><p><i>rwsrw-r-x – SUID bit set and the binary is executable</i></p></li>
+<li><p><i>rwSrw-r-x – SUID bit set and the binary is not executable</i></p></li>
+<li><p><i>rwxrwsr-x – SGID bit set and the binary is executable</i></p></li>
+<li><p><i>rwxrwSr-x – SGID bit set and the binary is not executable</i></p></li>
+</ul>
+<div class="section" id="how-to-find-files-with-suid-set">
+<h4>How to find files with SUID set<a class="headerlink" href="#how-to-find-files-with-suid-set" title="Permalink to this headline">¶</a></h4>
+<p>Great thing linux has a search function huh</p>
+</div>
+</div>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </div>

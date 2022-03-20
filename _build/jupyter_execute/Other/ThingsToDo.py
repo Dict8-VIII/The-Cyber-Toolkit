@@ -6,9 +6,11 @@
 # ## FINISH GETTING THE NOTES UP FIRST!!!
 # 
 # * Linpeas/Linenum/LES expand on
+# * add last modified to sections
 # * Finish "The Basics"
 # ** Add attacks in a separate sections
 # * HackerCraft: Add the general process (OSINT, Info Gathering, expl, escalation, covering/maintaining)
+# * write python program for SQL injection
 # * JNR Pen tester page is empty
 # * Mention more on HoloLive
 # * Add intro page about WHY cyber security is important

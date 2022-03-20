@@ -2,6 +2,7 @@
 # coding: utf-8
 
 # # SQL Injection
+# Source: https://tryhackme.com/room/sqlinjectionlm
 # 
 # ## The Basics of SQL
 # SQL, or "structured query language" is a scripting language used where quering a database.<br>
@@ -24,6 +25,8 @@
 # ### How Do We Test for Injection?
 # A SQL injection is when you can modify a query for a purpose it wasnt intended for. Therefore, the test for an Injection vulnerability is to add something that will break a normal query. This could be a single quote \', Double quote \" or a semicolon early \;
 # 
+# > In general, all of you injections should end with ';--'. The semicolon instructs the server to run the command, and the -- comments out the rest of the line
+# 
 # <hr>
 # 
 # ## Types of SQL Injection - In Band
@@ -45,19 +48,18 @@
 # 
 # > https://amazon.com/shopping?product=1337 UNION SELECT 1
 # 
-# The chances are there is more than one column in the 'products' table, we would just keep adding more columns until we got no more errors
+# This query is used to determine the number of columns in the guessed 'products' table above. 1 is simply a placeholder for how many columns we have (as the first column). The chances are there is more than one column in the 'products' table, we would just keep adding more columns until we there were no more errors.
 # 
 # > https://amazon.com/shopping?product=1337 UNION SELECT 1,2,3,4,5,6
 # 
-# Etc, Etc, Etc. Once we have the correct number of columns, we dont get errors any more and can proceed to add fun things. First we need to make sure the original query fails so only our injection is shown (especially if the site only uses the first response). I've just set it to 0 here
+# Etc, Etc, Etc. Once we have the correct number of columns we won't get the error any more and can proceed to add fun things. First we need to make sure the original query fails so only our injection is shown (especially if the site only uses the first response). I've just set it to 0 here
 # 
 # > https://amazon.com/shopping?product=0 UNION SELECT 1,2,3,4,5,database()
 # 
-# With this injection, wherever the data from column 6 would be, we would instead have our Database schema type.
+# With this injection, wherever the data from column 6 would be, we would instead have our Database schema type. You could also just add this for all the column placeholders.
 # 
 # 
 # #### Fun Unions
-# 
 # 
 # > 0 UNION SELECT 1,2,group_concat(table_name) FROM information_schema.tables WHERE table_schema = \'sqli_one\'
 # 
@@ -70,6 +72,45 @@
 # >  0 UNION SELECT 1,2,group_concat(username,':',password SEPARATOR '<br>') FROM staff_users
 # 
 # If you're lucky enough to find passwords stored in the DB, this union will help you extract them. The concat function just adds strings together, and the SEPARATOR changes concat's delimiter, in this case making it a HTML break (new line)
+# 
+# <hr>
+# 
+# ### Binary/Boolean Injection
+# 
+# A Boolean injection case exists when we can modify the response we recieve, based on if an injected query succeeds or fails. It is called binary/boolean as we can only change the response in one way, a yes/no, true/false, etc etc. An example would be if we try to create a user, and we get back a 'user already exists'.
+# 
+# 
+# Continuing down the username path. Without knowing any information about the database, we can now enumerate to determine this. How? By combining the 'like' comparitor and itterating through all possible values, one at a time. The basic format is
+# 
+# > UNION select [1,2,3,n...] from [standard info] where [known info] and [unknown info] like 'x%'
+# 
+# - [1,2.3,n...], This is the same as the unions we have above, where we are just completing our select statement. Not sure why you cant just use a * here...
+# - [standard info], Standard SQL queries
+# - [known info], pretty straight forward, something we already know
+# - [unknown info], as above. More on these below
+# 
+# #### General Process
+# 
+# So, we know what we need to run, but what info do we know and need? Below is the format to 'drill down' into databases. Remember to end the injections with ";--"
+# 
+# 1. The database name. This one is an exception to the above where we dont know the database name but also dont need any 'known info'. We also dont need to. The database is our first step <br>
+# UNION SELECT [1,2,3] where [database() like '%']
+# 
+# 2. Once we have a database name (or names), our next step is to iterate the tables. <br>
+# UNION SELECT [1,2,3] FROM [information_schema.tables WHERE table_schema = '\<db name here>'] and [table_name like '%']
+# 
+# 3. After tables comes the columns <br>
+# UNION SELECT [1,2,3] FROM [information_schema.COLUMNS WHERE TABLE_SCHEMA='\<db name here>' and TABLE_NAME='\<table name here>'] and [COLUMN_NAME like '%']
+# 
+# 4. Once we have the columns, the queries get easier again. We are stil following the process now, but instead of enumerating the structure, we can now query data. <br>
+# UNION SELECT [1,2,3] from [\<table name here>] where [\<column name here> like 'a%]
+# 
+# 5. With many fields, we will want to match these by rows as well. Knowing a user and password isnt much help if you dont know which one belongs to which. An example for a users table with the columns 'user' and 'password'<br>
+# UNION SELECT [1,2,3] from [users] where [user] = 'admin' and password like '%'
+# 
+# <hr>
+# 
+# 
 
 # In[ ]:
 
