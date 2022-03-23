@@ -35,14 +35,15 @@ parts:
   - caption: Hacker Craft
     chapters:
     - file: Craft/TheBasics
-    - file: Craft/Windows fun
+    - file: Craft/LinuxFun
+    - file: Craft/WindowsFun
     - file: Craft/SQLinjection
     - file: Craft/ssh
     - file: Craft/XSS
     - file: Craft/LFI
     - file: Craft/UploadVulns
     - file: Craft/DHCP
-    - file: Craft/Shell Stabalise
+    - file: Craft/ShellStabalise
     - file: Craft/FileTransfer
   - caption: Non Hacking Notes
     chapters:

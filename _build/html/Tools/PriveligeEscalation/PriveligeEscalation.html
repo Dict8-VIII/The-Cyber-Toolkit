@@ -254,7 +254,12 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../Craft/Windows%20fun.html">
+  <a class="reference internal" href="../../Craft/LinuxFun.html">
+   Linux Fun
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Craft/WindowsFun.html">
    Windows ‘fun’ stuff
   </a>
  </li>
@@ -289,7 +294,7 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../Craft/Shell%20Stabalise.html">
+  <a class="reference internal" href="../../Craft/ShellStabalise.html">
    Stabalising a shell
   </a>
  </li>
@@ -420,6 +425,11 @@
      </li>
     </ul>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exploting-a-service-linux">
+     Exploting a Service - Linux
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -476,6 +486,11 @@
      </li>
     </ul>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exploting-a-service-linux">
+     Exploting a Service - Linux
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -489,9 +504,9 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="privelige-escalation">
 <h1>Privelige Escalation<a class="headerlink" href="#privelige-escalation" title="Permalink to this headline">¶</a></h1>
-<p>There are any number of exploits that can get you access to a machine (and ideally a shell), but if a developer is even semi-competent, the service will only be running as a low privelige user. For full pwn-age however, a local root, local admin or Domain Admin are the real prizes. At the end of the day, privelige escalation is like giving yourself a promotion.
+<p>There are any number of exploits that can get you access to a machine (and ideally a shell), but if a developer is even semi-competent, the service will only be running as a low privelige user. For full pwn-age however, a local root, local admin or Domain Admin are the real prizes. At the end of the day, privelige escalation is like giving yourself a promotion.<br>
 <img alt="PrivEsc-self_promotions.jpg" src="../../_images/PrivEsc-self_promotions.jpg" /></p>
-<p>Note: Privelige escalation isnt a purely remote situation. It is also an internal threat, whereas an employee may want to gain access to information they arent supposed to have (a helpdesk operator shouldn have access to finance details however, but a domain admin could probably get to it).</p>
+<p>Note: Privelige escalation isnt a purely remote situation. It is also an internal threat, whereas an employee may want to gain access to information they arent supposed to have (a helpdesk operator shouldn have access to finance details, but a domain admin could probably get to it).</p>
 <p>There are 2 forms of privelige escalation, vertical and horizontal. A vertical escalation is moving to more rights (user -&gt; admin for example), while a horizontal escalation is to move to the same level (we’re both in helpdesk, but they have passwords saved on their desktop). Most of the time our goal is vertical movement, but horizonal movement may help get us there.</p>
 <div class="section" id="trivial-checks">
 <h2>Trivial Checks<a class="headerlink" href="#trivial-checks" title="Permalink to this headline">¶</a></h2>
@@ -590,6 +605,15 @@ Source: <a class="reference external" href="https://tenor.com/view/futurama-you-
 <li><p>2&gt;/dev/null: linux speak for “send erros to the null box” (ignore errors)</p></li>
 </ul>
 <hr></div>
+</div>
+<div class="section" id="exploting-a-service-linux">
+<h3>Exploting a Service - Linux<a class="headerlink" href="#exploting-a-service-linux" title="Permalink to this headline">¶</a></h3>
+<p>Sometimes you may be able to create services to be executed as root (such as with cron). Write your script in a text file and save it as [name].service. The below steps will then register the service for you.</p>
+<ul class="simple">
+<li><p>systemd-analyze verify [name].service</p></li>
+<li><p>systemctl link /xxx/yyy/[name].service (this must be an absolute path)</p></li>
+<li><p>systemctl start [name].service</p></li>
+</ul>
 </div>
 </div>
 <div class="toctree-wrapper compound">
