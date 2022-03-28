@@ -21,8 +21,11 @@ parts:
       - file: Tools/PriveligeEscalation/LinEnum
       - file: Tools/PriveligeEscalation/LinPeas
       - file: Tools/PriveligeEscalation/LES
+      - file: Tools/PriveligeEscalation/Powerup
     - file: Tools/Nmap
     - file: Tools/Metasploit
+      sections:
+      - file: Tools/Msfvenom
     - file: Tools/CyberChef
     - file: Tools/NFS
     - file: Tools/John
@@ -31,7 +34,6 @@ parts:
     - file: Tools/Wfuzz
     - file: Tools/Nikto
     - file: Tools/HashCat
-    
   - caption: Hacker Craft
     chapters:
     - file: Craft/TheBasics
@@ -45,6 +47,11 @@ parts:
     - file: Craft/DHCP
     - file: Craft/ShellStabalise
     - file: Craft/FileTransfer
+  - caption: The Cyber Killchain
+    chapters:
+    - file: KillChain/Killchain_Overview
+      sections:
+      - file: KillChain_InfoGathering
   - caption: Non Hacking Notes
     chapters:
     - file: Other/FormattingNotes
