@@ -22,6 +22,10 @@ parts:
       - file: Tools/PriveligeEscalation/LinPeas
       - file: Tools/PriveligeEscalation/LES
       - file: Tools/PriveligeEscalation/Powerup
+    - file: Tools/BurpSuite/Burp
+      sections:
+      - file: Tools/BurpSuite/BurpRepeater
+      - file: Tools/BurpSuite/BurpIntruder
     - file: Tools/Nmap
     - file: Tools/Metasploit
       sections:
