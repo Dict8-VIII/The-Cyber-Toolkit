@@ -3,7 +3,7 @@
 
 # # Things to Do
 # 
-# ## FINISH GETTING THE NOTES UP FIRST!!!
+# ~~FINISH GETTING THE NOTES UP FIRST!!!~~
 # 
 # * Linpeas/Linenum/LES expand on
 # * add last modified to sections
@@ -22,3 +22,4 @@
 # * Add my "TryHackMe" account
 # * Dark Mode (done, but looks like its broken in the current JupyterBook version, there is a bug logged)
 # * I'm sure the google analytics ID is wrong
+# * Mitre's ATT&CK looks interesting...

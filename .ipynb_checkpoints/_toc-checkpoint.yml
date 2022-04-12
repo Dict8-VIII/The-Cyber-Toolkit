@@ -14,6 +14,7 @@ parts:
     - file: JnrPenTester/JnrPenTester
       sections:
       - file: JnrPenTester/FileInclusion
+      - file: JnrPenTester/JnrPenTester_BurpSuite
   - caption: Tools
     chapters:
     - file: Tools/PriveligeEscalation/PriveligeEscalation
@@ -55,7 +56,7 @@ parts:
     chapters:
     - file: KillChain/Killchain_Overview
       sections:
-      - file: KillChain_InfoGathering
+      - file: KillChain/Killchain_InfoGathering
   - caption: Non Hacking Notes
     chapters:
     - file: Other/FormattingNotes

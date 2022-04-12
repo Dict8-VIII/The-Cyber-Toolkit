@@ -52,6 +52,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Formatting Notes" href="../Other/FormattingNotes.html" />
+    <link rel="prev" title="Killchain Overview" href="Killchain_Overview.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -151,6 +153,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../JnrPenTester/FileInclusion.html">
      File Inclusion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../JnrPenTester/JnrPenTester_BurpSuite.html">
+     Burp Suite
     </a>
    </li>
   </ul>
@@ -346,17 +353,22 @@
   The Cyber Killchain
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="Killchain_Overview.html">
    Killchain Overview
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Killchain - Info Gathering
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -442,6 +454,74 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dorking-google">
+   Dorking (Google)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#favicon">
+   Favicon
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crt-sh-cert-domain-history">
+   crt.sh (cert domain history)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dns-recon">
+   DNS Recon
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sublist3r">
+   Sublist3r
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ffuf">
+   FFuf??
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#whois">
+   WhoIs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ns-lookup">
+   NS Lookup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dig">
+   dig
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dnsdumpster">
+   DNSDumpster
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#shodan-io">
+   Shodan.io
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#social-media">
+   Social Media
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -454,6 +534,74 @@
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dorking-google">
+   Dorking (Google)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#favicon">
+   Favicon
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crt-sh-cert-domain-history">
+   crt.sh (cert domain history)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dns-recon">
+   DNS Recon
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sublist3r">
+   Sublist3r
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ffuf">
+   FFuf??
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#whois">
+   WhoIs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ns-lookup">
+   NS Lookup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dig">
+   dig
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dnsdumpster">
+   DNSDumpster
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#shodan-io">
+   Shodan.io
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#social-media">
+   Social Media
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -462,8 +610,92 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="killchain-info-gathering">
 <h1>Killchain - Info Gathering<a class="headerlink" href="#killchain-info-gathering" title="Permalink to this headline">¶</a></h1>
-<p>The first step in the Killchain process is Information Gathering. This centres around investigating a target using publicly available data. As a rule of thumb, if you’re accessing the target then your in the next step already.<br>
-So, what can we do without hitting the target? Well a lot actually.</p>
+<p>The first step in the Killchain process is Information Gathering. This centres around investigating a target using publicly available data. As a rule of thumb, if you’re accessing the target then your in the next step already. Gathering data without hitting the target is also known as “Passive” reconnaissance.<br>
+Why do we need to do reconnaissance?</p>
+<ul class="simple">
+<li><p>We need to know our target</p></li>
+<li><p>Publicly available data can be used for some attacks</p></li>
+<li><p>Hidden endpoints arent so hidden</p></li>
+<li><p>Old information can be valuable</p></li>
+</ul>
+<p>So, what can we do without hitting the target? Well a lot actually.</p>
+<div class="section" id="dorking-google">
+<h2>Dorking (Google)<a class="headerlink" href="#dorking-google" title="Permalink to this headline">¶</a></h2>
+<p>How’s your google-fu? Google is a great source for public data and it’s free. What more could you want? Theres a few options with Dorking</p>
+<ul class="simple">
+<li><p>site:*.domain - This will return all sites Google’s spider has with the domain. Pairing this with “password” could possibly return password files on the site. Remember if you then connect to the site to retrieve the file/page, then you are now in “active” recon.</p></li>
+<li><p>Searching for Job applications. These tend to include the infrastructure the site runs on (i.e. Must have excellent knowledge in Windows SERVER 2019 and PHP).</p></li>
+</ul>
+</div>
+<div class="section" id="favicon">
+<h2>Favicon<a class="headerlink" href="#favicon" title="Permalink to this headline">¶</a></h2>
+<p>This is a weird one, the little icon on the site’s URL can also be used to determine the OS running behind the server. This is ACTIVE.</p>
+</div>
+<div class="section" id="crt-sh-cert-domain-history">
+<h2><a class="reference external" href="http://crt.sh">crt.sh</a> (cert domain history)<a class="headerlink" href="#crt-sh-cert-domain-history" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="dns-recon">
+<h2>DNS Recon<a class="headerlink" href="#dns-recon" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="sublist3r">
+<h2>Sublist3r<a class="headerlink" href="#sublist3r" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="ffuf">
+<h2>FFuf??<a class="headerlink" href="#ffuf" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="whois">
+<h2>WhoIs<a class="headerlink" href="#whois" title="Permalink to this headline">¶</a></h2>
+<p>WHOIS is a RFC3912 request to a nameserver (Port43) that can be used to determine information about the domain name including who it was registered to, when it was registered and the contact details of the registration. You can also see who hosts the nameserver. This can be used for some social engineering attacks or understanding possible WAFs. For Linux, this is a built in command:</p>
+<blockquote>
+<div><p>WHOIS <a class="reference external" href="http://google.com">google.com</a></p>
+</div></blockquote>
+</div>
+<div class="section" id="ns-lookup">
+<h2>NS Lookup<a class="headerlink" href="#ns-lookup" title="Permalink to this headline">¶</a></h2>
+<p>nslookup (or name server lookup) queries a domain for its name servers (DNS). It can be used to query the site’s DNS server for possible records. While this is considered passive, I’d list this in the ACTIVE group of commands. The basic format is:</p>
+<blockquote>
+<div><p>nslookup [options] [<a class="reference external" href="http://domain.com">domain.com</a>]</p>
+</div></blockquote>
+<p>The options are:</p>
+<ul class="simple">
+<li><p>TYPE=A: IPv4 Addresses</p></li>
+<li><p>TYPE=AAAA: IPv6 Addresses</p></li>
+<li><p>TYPE=CNAME: Canonical Name</p></li>
+<li><p>TYPE=MX: Mail Exchange</p></li>
+<li><p>TYPE=SOA: Start of Authority</p></li>
+<li><p>TYPE=TXT: TXT records… gasp!</p></li>
+</ul>
+</div>
+<div class="section" id="dig">
+<h2>dig<a class="headerlink" href="#dig" title="Permalink to this headline">¶</a></h2>
+<p>DIG is basically the same as NSLOOKUP, but returns some more data. The format is</p>
+<blockquote>
+<div><p>dig [options] [domain] [type]</p>
+</div></blockquote>
+<p>Options are:</p>
+<ul class="simple">
+<li><p>&#64;10.10.10.10 : Ask 10.10.10.10 for the records</p></li>
+</ul>
+<p>Types are the same as NSLookup, the DNS record types.</p>
+</div>
+<div class="section" id="dnsdumpster">
+<h2>DNSDumpster<a class="headerlink" href="#dnsdumpster" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://dnsdumpster.com/">DNSDumpster</a> is a website that combines all of the above DNS queries, and also puts them in easy to read formats tables and graphs. It can be used to discover extra subdomains and tries to resolve all names, IPs and even geo location. It looks quite helpful…</p>
+</div>
+<div class="section" id="shodan-io">
+<h2><a class="reference external" href="http://Shodan.io">Shodan.io</a><a class="headerlink" href="#shodan-io" title="Permalink to this headline">¶</a></h2>
+<p>A great website for analysing a target. Shodan builds a collection of device properties in the same way that a search engine builds a collection of pages. It pulls data such as:</p>
+<ul class="simple">
+<li><p>Server Builds &amp; Versions</p></li>
+<li><p>Server Ports</p></li>
+<li><p>GeoLocation</p></li>
+<li><p>Hardware Type</p></li>
+</ul>
+</div>
+<div class="section" id="social-media">
+<h2>Social Media<a class="headerlink" href="#social-media" title="Permalink to this headline">¶</a></h2>
+<p>Facebook, Linked in, Job searches etc</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -490,7 +722,21 @@ So, what can we do without hitting the target? Well a lot actually.</p>
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Killchain_Overview.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Killchain Overview</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../Other/FormattingNotes.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Formatting Notes</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>
