@@ -10,6 +10,14 @@
 # 1. ["The Cyber Killchain"](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html), by Lockhead Martin
 # 
 # 2. ["The Unified Kill Chain"](https://www.unifiedkillchain.com/assets/The-Unified-Kill-Chain.pdf), by Paul Pols
+# 
+# This section is based around a simplified Killchain that bas been used in [TryHackMe](https://tryhackme.com/room/pentestingfundamentals). The sections are:
+# 
+# 1. Information Gathering
+# 2. Ennumeration / Scanning
+# 3. Exploitation
+# 4. Privilege Escalation
+# 5. Post Exploitation
 
 # In[ ]:
 

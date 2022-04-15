@@ -363,7 +363,12 @@
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="simple">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../KillChain/Killchain_InfoGathering.html">
+     Killchain - Info Gathering
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -459,6 +464,35 @@
    Syntax
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-so-many-scan-options">
+   Why so many scan options?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#discovery">
+     Discovery
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pr">
+       -PR
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pe-pp-pm">
+       -PE -PP -PM
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ps-pa">
+       -PS -PA
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
 </ul>
 
             </nav>
@@ -483,6 +517,35 @@
   <a class="reference internal nav-link" href="#syntax">
    Syntax
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-so-many-scan-options">
+   Why so many scan options?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#discovery">
+     Discovery
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pr">
+       -PR
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pe-pp-pm">
+       -PE -PP -PM
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ps-pa">
+       -PS -PA
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -513,17 +576,47 @@
 <ul>
 <li><p>-sV is to try determine what is running behind the ports</p></li>
 <li><p>-sS sneaky stealth scan</p></li>
-<li><p>-sA is to try determine OS version</p></li>
+<li><p>-sA is to try determine OS version (as well as other things, A=Agressive)</p></li>
+<li><p>-sL \t List the targets that will be scanned, without scanning them. Commonly used with -n</p></li>
+<li><p>-sn dont port scan (can be combined with -PR)</p></li>
 </ul>
 </li>
 <li><p>[arguements]</p>
 <ul>
 <li><p>–script [Nmap script]</p></li>
 <li><p>vuln [ip] \t try determine known exploits</p></li>
+<li><p>-n \t Dont resolve DNS</p></li>
+<li><p>-PR \t ARP request only (better be on the same subnet)</p></li>
+<li><p>-PE \t Use ICMP Echo to discover hosts</p></li>
+<li><p>-PP \t Use ICMP timestamp instead of echo, useful if echo is blocked</p></li>
+<li><p>-PM \t Use ICMP address mask instead of echo, useful if echo is blocked</p></li>
+<li><p>-PS \t Uses TCP SYN to discover hosts. Can add a port or range (without spaces), default is on Port80</p></li>
+<li><p>-PA \t Uses TCP ACK to discover hosts (they should respond with a RST)</p></li>
+<li><p>-PU \t Uses a UDP PING</p></li>
+<li><p>-R \t Lookup DNS names for offline devices</p></li>
 </ul>
 </li>
 <li><p>-vv : VeryVerbose, stops you going crazy wondering if its working</p></li>
 </ul>
+</div>
+<div class="section" id="why-so-many-scan-options">
+<h2>Why so many scan options?<a class="headerlink" href="#why-so-many-scan-options" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="discovery">
+<h3>Discovery<a class="headerlink" href="#discovery" title="Permalink to this headline">¶</a></h3>
+<p>These are the scan types for target discovery (is there something on this IP worth investigating).</p>
+<div class="section" id="pr">
+<h4>-PR<a class="headerlink" href="#pr" title="Permalink to this headline">¶</a></h4>
+<p>This arguement send a broadcast ARP request only. This is a great one to use as it’s not blocked by any firewalls (as it’s part of maintaining a network), but it requires you to be on the same subnet as your targets.</p>
+</div>
+<div class="section" id="pe-pp-pm">
+<h4>-PE -PP -PM<a class="headerlink" href="#pe-pp-pm" title="Permalink to this headline">¶</a></h4>
+<p>These are ICMP Echo, Timestamp and Mask respectively. All run in the ICMP domain and are ways to work around a firewall. Echo tends to be blocked (and is by default most times). Timestamp and Mask requests are alternatives.</p>
+</div>
+<div class="section" id="ps-pa">
+<h4>-PS -PA<a class="headerlink" href="#ps-pa" title="Permalink to this headline">¶</a></h4>
+<p>These are TCP discovery methods. -PS Uses a SYN request (on port 80 by default) and if it recieved back a response (SYNACK or RST) then treats the IP as active. It just waits for the response if run as priveliged user, or completes the handshake if not. -PA is an ACK message which will recieve a RST if the target is active (as its not part of an established message), and can only be run as priveliged user (otherwise it will run a SYN).</p>
+</div>
+</div>
 </div>
 </div>
 
