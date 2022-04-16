@@ -491,6 +491,28 @@
      </li>
     </ul>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#port-connect">
+     Port Connect
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#st">
+       -sT
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ss">
+       -sS
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#su">
+       -sU
+      </a>
+     </li>
+    </ul>
+   </li>
   </ul>
  </li>
 </ul>
@@ -545,6 +567,28 @@
      </li>
     </ul>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#port-connect">
+     Port Connect
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#st">
+       -sT
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ss">
+       -sS
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#su">
+       -sU
+      </a>
+     </li>
+    </ul>
+   </li>
   </ul>
  </li>
 </ul>
@@ -575,10 +619,12 @@
 <li><p>[scan method] : -s[something], there can be a number of arguements here</p>
 <ul>
 <li><p>-sV is to try determine what is running behind the ports</p></li>
-<li><p>-sS sneaky stealth scan</p></li>
+<li><p>-sS sneaky stealth scan. Better known as a TCP SYN scan</p></li>
 <li><p>-sA is to try determine OS version (as well as other things, A=Agressive)</p></li>
 <li><p>-sL \t List the targets that will be scanned, without scanning them. Commonly used with -n</p></li>
 <li><p>-sn dont port scan (can be combined with -PR)</p></li>
+<li><p>-sT TCP Connect scan</p></li>
+<li><p>-sU UDP Connect Scan</p></li>
 </ul>
 </li>
 <li><p>[arguements]</p>
@@ -594,11 +640,14 @@
 <li><p>-PA \t Uses TCP ACK to discover hosts (they should respond with a RST)</p></li>
 <li><p>-PU \t Uses a UDP PING</p></li>
 <li><p>-R \t Lookup DNS names for offline devices</p></li>
+<li><p>-F \t Fast mode, only scan best 100, not 1000</p></li>
+<li><p>-r \t Scan ports in order</p></li>
+<li><p>-t<n>\t The speed of the scan (for IDS evassion). 3 is normal, 1 is SLOW and 5 is ‘insane’</p></li>
 </ul>
 </li>
 <li><p>-vv : VeryVerbose, stops you going crazy wondering if its working</p></li>
 </ul>
-</div>
+<hr></div>
 <div class="section" id="why-so-many-scan-options">
 <h2>Why so many scan options?<a class="headerlink" href="#why-so-many-scan-options" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="discovery">
@@ -615,6 +664,31 @@
 <div class="section" id="ps-pa">
 <h4>-PS -PA<a class="headerlink" href="#ps-pa" title="Permalink to this headline">¶</a></h4>
 <p>These are TCP discovery methods. -PS Uses a SYN request (on port 80 by default) and if it recieved back a response (SYNACK or RST) then treats the IP as active. It just waits for the response if run as priveliged user, or completes the handshake if not. -PA is an ACK message which will recieve a RST if the target is active (as its not part of an established message), and can only be run as priveliged user (otherwise it will run a SYN).</p>
+<hr></div>
+</div>
+<div class="section" id="port-connect">
+<h3>Port Connect<a class="headerlink" href="#port-connect" title="Permalink to this headline">¶</a></h3>
+<p>Now that we know what targets to hit, we now have to decide how to confirm a port is open or closed. Because of annoying things like firewalls however, theres more to it. There are 6 possible states of a port scan. This is copied directly from <a class="reference external" href="https://tryhackme.com/room/nmap02">TryHackMe’s nmap02 Room</a></p>
+<ol class="simple">
+<li><p>Open: indicates that a service is listening on the specified port.</p></li>
+<li><p>Closed: indicates that no service is listening on the specified port, although the port is accessible. By accessible, we mean that it is reachable and is not blocked by a firewall or other security appliances/programs.</p></li>
+<li><p>Filtered: means that Nmap cannot determine if the port is open or closed because the port is not accessible. This state is usually due to a firewall preventing Nmap from reaching that port. Nmap’s packets may be blocked from reaching the port; alternatively, the responses are blocked from reaching Nmap’s host.</p></li>
+<li><p>Unfiltered: means that Nmap cannot determine if the port is open or closed, although the port is accessible. This state is encountered when using an ACK scan -sA.</p></li>
+<li><p>Open|Filtered: This means that Nmap cannot determine whether the port is open or filtered.</p></li>
+<li><p>Closed|Filtered: This means that Nmap cannot decide whether a port is closed or filtered.</p></li>
+</ol>
+<div class="section" id="st">
+<h4>-sT<a class="headerlink" href="#st" title="Permalink to this headline">¶</a></h4>
+<p>The sT scan is a TCP connect scan. Simply, Nmap attempts a full TCP 3way Handshake for each scanned port (and then kill it with a RST ACK if it completes). This is the only scan that doesnt require a priveliged account.</p>
+</div>
+<div class="section" id="ss">
+<h4>-sS<a class="headerlink" href="#ss" title="Permalink to this headline">¶</a></h4>
+<p>The Sneaky Stealth Scan, or more accurately, the SYN scan. This requires a priveliged user and is mroe sneaky as it doesnt complete a connection (so is less likely to be logged). It starts with the SYN, Recieves a SYNACK and then sends a RST to kill the handshake. As you can guess, this is only more stealthy, but could still be logged.</p>
+</div>
+<div class="section" id="su">
+<h4>-sU<a class="headerlink" href="#su" title="Permalink to this headline">¶</a></h4>
+<p>The sU scan is a UDP scan, which sort of runs opposite to the TCP scans. As UDP is stateless, we would expect no response if the port is open (as UDP ‘packets’ dont have a session or give a response, they are fire and forget).<br>
+A closed port however should give a ICMP “Destination Unreachable” response.</p>
 </div>
 </div>
 </div>
