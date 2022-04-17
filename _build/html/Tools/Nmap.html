@@ -563,6 +563,11 @@
        Custom Scan
       </a>
      </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#si">
+       -sI
+      </a>
+     </li>
     </ul>
    </li>
   </ul>
@@ -585,6 +590,11 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fragmentation-f">
      Fragmentation -f
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zombie-scan-si">
+     Zombie Scan (-sI)
     </a>
    </li>
   </ul>
@@ -696,6 +706,11 @@
        Custom Scan
       </a>
      </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#si">
+       -sI
+      </a>
+     </li>
     </ul>
    </li>
   </ul>
@@ -718,6 +733,11 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#fragmentation-f">
      Fragmentation -f
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zombie-scan-si">
+     Zombie Scan (-sI)
     </a>
    </li>
   </ul>
@@ -757,6 +777,7 @@
 <li><p>-sX is an XMAS scan, it sets FIN, PSH and URG. Shiny….</p></li>
 <li><p>-sM is the Maimon scan, used against a particular OS (BSD, Berkley Software Distribution). It’s discontinued… but you never know.</p></li>
 <li><p>-sW is a Window Scan, it reads the response of a RST flag.</p></li>
+<li><p>-sI is an idle (zombie) scan. It requires a very specific case</p></li>
 <li><p>-sL \t List the targets that will be scanned, without scanning them. Commonly used with -n</p></li>
 <li><p>-sn dont port scan (can be combined with -PR)</p></li>
 <li><p>-sT TCP Connect scan</p></li>
@@ -860,6 +881,19 @@ A closed port however should give a ICMP “Destination Unreachable” response.
 <div><p>for example: sudo nmap 127.0.0.1 –scanflags SYNACKURG</p>
 </div></blockquote>
 <p>Naturally, you will need to understand how to interpret these results yourself however.</p>
+</div>
+<div class="section" id="si">
+<h4>-sI<a class="headerlink" href="#si" title="Permalink to this headline">¶</a></h4>
+<p>This is the idle scan and is a scan method that is used when trying to evade detection. I requires a ‘zombie’ machine which is Idle on the network. What this means is that it is transmitting NO data during the scan time, other than what we trigger. There are a few steps to this scan, but it is basically a masked TCP Connect (-sT) scan.</p>
+<ol class="simple">
+<li><p>Send a SYNACK to the idle machine, from this we get back the current packet number ID of the zombie.</p></li>
+<li><p>Send a SYN packet to the target machine, with a spoofed IP of the zombie.</p></li>
+<li><p>The target will then communicate with the zombie based on its port state.</p></li>
+<li><p>Query the zombie again with a SYNACK, and compare the new packet number to the old one.</p></li>
+</ol>
+<p>If the port was closed on the target, it would have sent a RST packet to the zombie, which doesnt increase its counter. When we query the zombie again, it would have only increased its counter by 1 (us sending the SYNACK a second time).<br>
+If the port was open on the target, it would have sent a SYNACK to the zombie, which wouldh have responded to the target with a RST and increased its own counter. Would would have seen the counter increase by 2 on our second SYNACK. <br>
+If a firewall was blocking the port, we would have the same response as a closed port.</p>
 <hr></div>
 </div>
 </div>
@@ -884,7 +918,12 @@ A closed port however should give a ICMP “Destination Unreachable” response.
 <div class="section" id="fragmentation-f">
 <h3>Fragmentation -f<a class="headerlink" href="#fragmentation-f" title="Permalink to this headline">¶</a></h3>
 <p>Fragmentation is a way to split up packets to make things more difficult for some firewalls, IDS and IPS. Adding a -f will split the packet into 8byte fragments and transmit these seperately. -ff will make it 16 bytes instead.</p>
-<hr></div>
+<hr>
+</div>
+<div class="section" id="zombie-scan-si">
+<h3>Zombie Scan (-sI)<a class="headerlink" href="#zombie-scan-si" title="Permalink to this headline">¶</a></h3>
+<p>A zombie scan is a method that uses an “idle zombie” to communicate with the target, while spoofing your own IP to make the request appear to be coming from the idle host. More details are in the scan types above.</p>
+</div>
 </div>
 </div>
 

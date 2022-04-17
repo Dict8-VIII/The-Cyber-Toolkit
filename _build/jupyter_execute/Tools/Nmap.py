@@ -24,6 +24,7 @@
 #     - -sX is an XMAS scan, it sets FIN, PSH and URG. Shiny....
 #     - -sM is the Maimon scan, used against a particular OS (BSD, Berkley Software Distribution). It's discontinued... but you never know.
 #     - -sW is a Window Scan, it reads the response of a RST flag.
+#     - -sI is an idle (zombie) scan. It requires a very specific case
 #     - -sL \t List the targets that will be scanned, without scanning them. Commonly used with -n
 #     - -sn dont port scan (can be combined with -PR)
 #     - -sT TCP Connect scan
@@ -111,6 +112,17 @@
 # 
 # Naturally, you will need to understand how to interpret these results yourself however.
 # 
+# #### -sI
+# This is the idle scan and is a scan method that is used when trying to evade detection. I requires a 'zombie' machine which is Idle on the network. What this means is that it is transmitting NO data during the scan time, other than what we trigger. There are a few steps to this scan, but it is basically a masked TCP Connect (-sT) scan.
+# 1. Send a SYNACK to the idle machine, from this we get back the current packet number ID of the zombie.
+# 2. Send a SYN packet to the target machine, with a spoofed IP of the zombie.
+# 3. The target will then communicate with the zombie based on its port state.
+# 4. Query the zombie again with a SYNACK, and compare the new packet number to the old one.
+# 
+# If the port was closed on the target, it would have sent a RST packet to the zombie, which doesnt increase its counter. When we query the zombie again, it would have only increased its counter by 1 (us sending the SYNACK a second time).<br>
+# If the port was open on the target, it would have sent a SYNACK to the zombie, which wouldh have responded to the target with a RST and increased its own counter. Would would have seen the counter increase by 2 on our second SYNACK. <br>
+# If a firewall was blocking the port, we would have the same response as a closed port.
+# 
 # <hr>
 
 # ## Evasion
@@ -133,6 +145,9 @@
 # Fragmentation is a way to split up packets to make things more difficult for some firewalls, IDS and IPS. Adding a -f will split the packet into 8byte fragments and transmit these seperately. -ff will make it 16 bytes instead.
 # 
 # <hr>
+# 
+# ### Zombie Scan (-sI)
+# A zombie scan is a method that uses an "idle zombie" to communicate with the target, while spoofing your own IP to make the request appear to be coming from the idle host. More details are in the scan types above.
 
 # In[ ]:
 
