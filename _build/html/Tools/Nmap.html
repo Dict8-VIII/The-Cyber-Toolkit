@@ -511,7 +511,54 @@
        -sU
       </a>
      </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sn">
+       -sN
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sf">
+       -sF
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sx">
+       -sX
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sm">
+       -sM
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sa">
+       -sA
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sw">
+       -sW
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#custom-scan">
+       Custom Scan
+      </a>
+     </li>
     </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#evasion">
+   Evasion
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spoof-ip-s">
+     Spoof IP -S
+    </a>
    </li>
   </ul>
  </li>
@@ -587,7 +634,54 @@
        -sU
       </a>
      </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sn">
+       -sN
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sf">
+       -sF
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sx">
+       -sX
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sm">
+       -sM
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sa">
+       -sA
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sw">
+       -sW
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#custom-scan">
+       Custom Scan
+      </a>
+     </li>
     </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#evasion">
+   Evasion
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spoof-ip-s">
+     Spoof IP -S
+    </a>
    </li>
   </ul>
  </li>
@@ -620,7 +714,12 @@
 <ul>
 <li><p>-sV is to try determine what is running behind the ports</p></li>
 <li><p>-sS sneaky stealth scan. Better known as a TCP SYN scan</p></li>
-<li><p>-sA is to try determine OS version (as well as other things, A=Agressive)</p></li>
+<li><p>-sA is a ACK scan. This is more for understanding firewall rules.</p></li>
+<li><p>-sN is a NULL scan, set all flags ‘0’</p></li>
+<li><p>-sF is a FIN scan, and sets the FIN flag only</p></li>
+<li><p>-sX is an XMAS scan, it sets FIN, PSH and URG. Shiny….</p></li>
+<li><p>-sM is the Maimon scan, used against a particular OS (BSD, Berkley Software Distribution). It’s discontinued… but you never know.</p></li>
+<li><p>-sW is a Window Scan, it reads the response of a RST flag.</p></li>
 <li><p>-sL \t List the targets that will be scanned, without scanning them. Commonly used with -n</p></li>
 <li><p>-sn dont port scan (can be combined with -PR)</p></li>
 <li><p>-sT TCP Connect scan</p></li>
@@ -643,6 +742,9 @@
 <li><p>-F \t Fast mode, only scan best 100, not 1000</p></li>
 <li><p>-r \t Scan ports in order</p></li>
 <li><p>-t<n>\t The speed of the scan (for IDS evassion). 3 is normal, 1 is SLOW and 5 is ‘insane’</p></li>
+<li><p>-S \t for spoofing IP addresses</p></li>
+<li><p>-D \t for creating Decoys</p></li>
+<li><p>-f \t for fragmenting packets into 8bytes (or -ff for 16 bytes)</p></li>
 </ul>
 </li>
 <li><p>-vv : VeryVerbose, stops you going crazy wondering if its working</p></li>
@@ -688,9 +790,59 @@
 <div class="section" id="su">
 <h4>-sU<a class="headerlink" href="#su" title="Permalink to this headline">¶</a></h4>
 <p>The sU scan is a UDP scan, which sort of runs opposite to the TCP scans. As UDP is stateless, we would expect no response if the port is open (as UDP ‘packets’ dont have a session or give a response, they are fire and forget).<br>
-A closed port however should give a ICMP “Destination Unreachable” response.</p>
+A closed port however should give a ICMP “Destination Unreachable” response. This still searches for a TCP port, not UDP.</p>
+</div>
+<div class="section" id="sn">
+<h4>-sN<a class="headerlink" href="#sn" title="Permalink to this headline">¶</a></h4>
+<p>The NULL scan sets all the flag bits to zero. If a port is open, we would expect no response, but if it’s closed then we would recieve a RST. A firewall would also give no response, so Nmap treats this as Open | Filtered.</p>
+</div>
+<div class="section" id="sf">
+<h4>-sF<a class="headerlink" href="#sf" title="Permalink to this headline">¶</a></h4>
+<p>The FIN scan sends only the FIN flag in a port connect. Similar to the null scan, it is looking for no response to indicate an open port. Once again this can only return Open | Filtered.</p>
+</div>
+<div class="section" id="sx">
+<h4>-sX<a class="headerlink" href="#sx" title="Permalink to this headline">¶</a></h4>
+<p>The XMAS scan is named after the lights on a christmas tree, it sets the FIN, PSH and URG flags (All the special case flags). If you had a warning system in the TCP protocol, it would light up everything. As with a NULL and FIN scan, it’s looking for no response, and gives Open | Filtered.</p>
+</div>
+<div class="section" id="sm">
+<h4>-sM<a class="headerlink" href="#sm" title="Permalink to this headline">¶</a></h4>
+<p>The Maimon scan is a special case, but we like them. This sends a FIN/ACK message. On most OS, this will return a RST if the port is open or closed, not so helpful. Some BSD (Berkely Software Distribution) OS’ drop the packet however if the port is open. The BSD OS isnt widely used, but there are some interesting ones on <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_BSD_operating_systems">wikipedia</a>, such as FreeNAS and the PS3.</p>
+</div>
+<div class="section" id="sa">
+<h4>-sA<a class="headerlink" href="#sa" title="Permalink to this headline">¶</a></h4>
+<p>This is an ACK scan, and by itself an ACK scan doesnt show much. It sets the ACK flag and a host should return RST whether the port is open or closed. However if there is a firewall in between, it will drop the packet. Therefore this scan is used for understanding what is allowed through a firewall. This scan returns an Unfiltered state for ‘allowed’ ports.</p>
+</div>
+<div class="section" id="sw">
+<h4>-sW<a class="headerlink" href="#sw" title="Permalink to this headline">¶</a></h4>
+<p>A window (not WINDOWS) scan is similar to an ACK scan, however it examines the RST reponse to try determine more information about the port (such as if it’s open).</p>
+</div>
+<div class="section" id="custom-scan">
+<h4>Custom Scan<a class="headerlink" href="#custom-scan" title="Permalink to this headline">¶</a></h4>
+<p>You can also create a custom scan, –scanflags [flags to set]</p>
+<blockquote>
+<div><p>for example: sudo nmap 127.0.0.1 –scanflags SYNACKURG</p>
+</div></blockquote>
+<p>Naturally, you will need to understand how to interpret these results yourself however.</p>
+<hr></div>
 </div>
 </div>
+<div class="section" id="evasion">
+<h2>Evasion<a class="headerlink" href="#evasion" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="spoof-ip-s">
+<h3>Spoof IP -S<a class="headerlink" href="#spoof-ip-s" title="Permalink to this headline">¶</a></h3>
+<p>Nmap supports spoofing the source IP of a packet scan, which sounds great but comes with a few requirements. First, you need to be able to listen to the responses to the Spoofed IP. Second, you will likely need to specify the network interface to use. If you want to spoof your MAC, this only makes sense if youre already on the subnet too.</p>
+<blockquote>
+<div><p>nmap -e [Net Interface] –spoof-mac [spoofed MAC] -S [spoofed IP] [target IP]</p>
+</div></blockquote>
+<hr>
+### Decoys -D
+Decoys are another way to hide the source of the traffic. You list a group of IPs to show where the traffic is coming from, and NMAP will run these in parallel. You can also use RND which will randomly create an IP.
+<blockquote>
+<div><p>nmap -D [fake IP1],[fake IP2],[real IP (ME)],[fake IP3]….many more</p>
+</div></blockquote>
+<hr>
+### Fragmentation -f
+Fragmentation is a way to split up packets to make things more difficult for some firewalls, IDS and IPS. Adding a -f will split the packet into 8byte fragments and transmit these seperately. -ff will make it 16 bytes instead.</div>
 </div>
 </div>
 

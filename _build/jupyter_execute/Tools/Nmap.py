@@ -18,7 +18,12 @@
 # - [scan method] : -s[something], there can be a number of arguements here
 #     - -sV is to try determine what is running behind the ports
 #     - -sS sneaky stealth scan. Better known as a TCP SYN scan
-#     - -sA is to try determine OS version (as well as other things, A=Agressive)
+#     - -sA is a ACK scan. This is more for understanding firewall rules.
+#     - -sN is a NULL scan, set all flags '0'
+#     - -sF is a FIN scan, and sets the FIN flag only
+#     - -sX is an XMAS scan, it sets FIN, PSH and URG. Shiny....
+#     - -sM is the Maimon scan, used against a particular OS (BSD, Berkley Software Distribution). It's discontinued... but you never know.
+#     - -sW is a Window Scan, it reads the response of a RST flag.
 #     - -sL \t List the targets that will be scanned, without scanning them. Commonly used with -n
 #     - -sn dont port scan (can be combined with -PR)
 #     - -sT TCP Connect scan
@@ -39,9 +44,11 @@
 #     - -F \t Fast mode, only scan best 100, not 1000
 #     - -r \t Scan ports in order
 #     - -t<n>\t The speed of the scan (for IDS evassion). 3 is normal, 1 is SLOW and 5 is 'insane'
+#     - -S \t for spoofing IP addresses
+#     - -D \t for creating Decoys
+#     - -f \t for fragmenting packets into 8bytes (or -ff for 16 bytes)
 #     
 # - -vv : VeryVerbose, stops you going crazy wondering if its working
-# 
 # 
 # <hr>
 
@@ -78,10 +85,47 @@
 # 
 # #### -sU
 # The sU scan is a UDP scan, which sort of runs opposite to the TCP scans. As UDP is stateless, we would expect no response if the port is open (as UDP 'packets' dont have a session or give a response, they are fire and forget).<br>
-# A closed port however should give a ICMP "Destination Unreachable" response.
+# A closed port however should give a ICMP "Destination Unreachable" response. This still searches for a TCP port, not UDP.
+# 
+# #### -sN
+# The NULL scan sets all the flag bits to zero. If a port is open, we would expect no response, but if it's closed then we would recieve a RST. A firewall would also give no response, so Nmap treats this as Open | Filtered.
+# 
+# #### -sF
+# The FIN scan sends only the FIN flag in a port connect. Similar to the null scan, it is looking for no response to indicate an open port. Once again this can only return Open | Filtered.
+# 
+# #### -sX
+# The XMAS scan is named after the lights on a christmas tree, it sets the FIN, PSH and URG flags (All the special case flags). If you had a warning system in the TCP protocol, it would light up everything. As with a NULL and FIN scan, it's looking for no response, and gives Open | Filtered.
+# 
+# #### -sM
+# The Maimon scan is a special case, but we like them. This sends a FIN/ACK message. On most OS, this will return a RST if the port is open or closed, not so helpful. Some BSD (Berkely Software Distribution) OS' drop the packet however if the port is open. The BSD OS isnt widely used, but there are some interesting ones on [wikipedia](https://en.wikipedia.org/wiki/List_of_BSD_operating_systems), such as FreeNAS and the PS3.
+# 
+# #### -sA
+# This is an ACK scan, and by itself an ACK scan doesnt show much. It sets the ACK flag and a host should return RST whether the port is open or closed. However if there is a firewall in between, it will drop the packet. Therefore this scan is used for understanding what is allowed through a firewall. This scan returns an Unfiltered state for 'allowed' ports.
+# 
+# #### -sW
+# A window (not WINDOWS) scan is similar to an ACK scan, however it examines the RST reponse to try determine more information about the port (such as if it's open).
+# 
+# #### Custom Scan
+# You can also create a custom scan, --scanflags [flags to set]
+# > for example: sudo nmap 127.0.0.1 --scanflags SYNACKURG
+# 
+# Naturally, you will need to understand how to interpret these results yourself however.
+# 
+# <hr>
 
-# In[ ]:
-
-
-
-
+# ## Evasion
+# 
+# ### Spoof IP -S
+# Nmap supports spoofing the source IP of a packet scan, which sounds great but comes with a few requirements. First, you need to be able to listen to the responses to the Spoofed IP. Second, you will likely need to specify the network interface to use. If you want to spoof your MAC, this only makes sense if youre already on the subnet too.
+# 
+# > nmap -e [Net Interface] --spoof-mac [spoofed MAC] -S [spoofed IP] [target IP]
+# 
+# <hr>
+# ### Decoys -D
+# Decoys are another way to hide the source of the traffic. You list a group of IPs to show where the traffic is coming from, and NMAP will run these in parallel. You can also use RND which will randomly create an IP.
+# 
+# > nmap -D [fake IP1],[fake IP2],[real IP (ME)],[fake IP3]....many more
+# 
+# <hr>
+# ### Fragmentation -f
+# Fragmentation is a way to split up packets to make things more difficult for some firewalls, IDS and IPS. Adding a -f will split the packet into 8byte fragments and transmit these seperately. -ff will make it 16 bytes instead.
