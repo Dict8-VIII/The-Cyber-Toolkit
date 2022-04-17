@@ -121,11 +121,21 @@
 # > nmap -e [Net Interface] --spoof-mac [spoofed MAC] -S [spoofed IP] [target IP]
 # 
 # <hr>
+# 
 # ### Decoys -D
 # Decoys are another way to hide the source of the traffic. You list a group of IPs to show where the traffic is coming from, and NMAP will run these in parallel. You can also use RND which will randomly create an IP.
 # 
 # > nmap -D [fake IP1],[fake IP2],[real IP (ME)],[fake IP3]....many more
 # 
 # <hr>
+# 
 # ### Fragmentation -f
 # Fragmentation is a way to split up packets to make things more difficult for some firewalls, IDS and IPS. Adding a -f will split the packet into 8byte fragments and transmit these seperately. -ff will make it 16 bytes instead.
+# 
+# <hr>
+
+# In[ ]:
+
+
+
+

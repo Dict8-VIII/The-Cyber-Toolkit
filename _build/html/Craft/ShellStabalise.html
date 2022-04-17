@@ -449,6 +449,23 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Dict8-VIII/The-Cyber-Toolkit/master?urlpath=tree/Craft/ShellStabalise.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -525,7 +542,7 @@
 <li><p>It doesn’t have autofill</p></li>
 <li><p>CTRL+C will kill the listener (cant kill a launched program)</p></li>
 </ul>
-<div class="section" id="method-1-linux-w-python">
+<hr><div class="section" id="method-1-linux-w-python">
 <h2>Method 1 - Linux w/ Python<a class="headerlink" href="#method-1-linux-w-python" title="Permalink to this headline">¶</a></h2>
 <p>The easiest method (if you can do it), is to simply launch a new shell on the remote machine
 Being easy, it also has some requirements</p>
@@ -551,7 +568,7 @@ NOTE: This may need to be python3 launched instead, depending on what is install
 <div><p>stty raw -echo; fg</p>
 </div></blockquote>
 <p>NOTE: Our own echo is gone now, if you want it back, run ‘reset’</p>
-</div>
+<hr></div>
 <div class="section" id="method-2-rlwrap">
 <h2>Method 2 - rlwrap<a class="headerlink" href="#method-2-rlwrap" title="Permalink to this headline">¶</a></h2>
 <p>Only slightly harder than above, rlwrap needs to be installed locally (and doest come with most distros)</p>
@@ -568,13 +585,13 @@ NOTE: This may need to be python3 launched instead, depending on what is install
 <blockquote>
 <div><p>stty raw -echo; fg</p>
 </div></blockquote>
-</div>
+<hr></div>
 <div class="section" id="method-3-socat">
 <h2>Method 3 - socat<a class="headerlink" href="#method-3-socat" title="Permalink to this headline">¶</a></h2>
-<p>Even harder than the other 2, as you need to install software remotely (socat). If you can install software remotely, you probably already made the machine your b***h…</p>
+<p>Even harder than the other 2, as you need to install software remotely (socat). If you can install software remotely, you’ve probably already got some level of access</p>
 <p>Copy the SOCAT binary to the remote machine (normally via a remote webserver)
 Follow your nose</p>
-</div>
+<hr></div>
 </div>
 
     <script type="text/x-thebe-config">

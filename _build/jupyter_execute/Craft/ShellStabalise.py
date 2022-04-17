@@ -7,8 +7,10 @@
 # 
 # * It doesn't have autofill
 # * CTRL+C will kill the listener (cant kill a launched program)
+# 
+# <hr>
 
-# ### Method 1 - Linux w/ Python
+# ## Method 1 - Linux w/ Python
 # 
 # The easiest method (if you can do it), is to simply launch a new shell on the remote machine
 # Being easy, it also has some requirements
@@ -30,8 +32,9 @@
 # > stty raw -echo; fg
 # 
 # NOTE: Our own echo is gone now, if you want it back, run 'reset'
+# <hr>
 
-# ### Method 2 - rlwrap
+# ## Method 2 - rlwrap
 # 
 # Only slightly harder than above, rlwrap needs to be installed locally (and doest come with most distros)
 # 
@@ -49,13 +52,15 @@
 # 
 # > stty raw -echo; fg
 # 
+# <hr>
 
-# ### Method 3 - socat
+# ## Method 3 - socat
 # 
-# Even harder than the other 2, as you need to install software remotely (socat). If you can install software remotely, you probably already made the machine your b***h...
+# Even harder than the other 2, as you need to install software remotely (socat). If you can install software remotely, you've probably already got some level of access
 # 
 # Copy the SOCAT binary to the remote machine (normally via a remote webserver)
 # Follow your nose
+# <hr>
 
 # In[ ]:
 

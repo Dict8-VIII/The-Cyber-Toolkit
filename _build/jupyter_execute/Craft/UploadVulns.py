@@ -7,7 +7,7 @@
 # 
 # There are many checks than can be performed, some are better than others, and there are workarounds for many.
 # 
-# ### Check based on file extension
+# ## Check based on file extension
 # The most trivial is simply to check the extension. A profile picture should be a PNG, JPG, JPEG, BMP etc.
 # 
 # How this is implimented can vary however. Listing what is allowed (like I have done above) is a whitelist (or allow list), while picking others to block, such as PHP, would be a blacklist/blocklist (or deny list). Whitelists are easier to implement but can be annoying for a legitimate user. Blacklists require you to list all extensions you want to block but you can easily miss some as listed.
@@ -26,7 +26,7 @@
 # 
 # <hr>
 
-# ### Magic Numbers
+# ## Magic Numbers
 # 
 # If the previous section has left you thinking this is a bit all over the place; youre not alone. Wouldnt it be great if there was something in the file we could look at to determine what file type it is? Well thats exactly what 'Magic Numbers' are. These are some bits at the start of a file that anyone can inspect to determine what file type its SUPPOSED to be.... notice the supposed to be.... Some examples are
 # 
@@ -59,9 +59,7 @@
 # 
 # 5. Save the file and upload :-)
 # 
-# 
-# 
-# 
+# <hr>
 
 # In[ ]:
 

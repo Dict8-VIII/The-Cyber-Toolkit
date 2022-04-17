@@ -21,7 +21,7 @@
 # 
 # I'm still studying & learning, and this book will follow my own process so may not be the most logical for you. That being said, I've designed this book to be a collection of tools which stand alone as much as possible. There is no need to start at the beginning or read everything I have on a topic before moving on; the search button is there for a reason. Promise I wont take it personally.
 # 
-# ### The Boring Stuff
+# ## The Boring Stuff
 # I have written this book during my ETHICAL hacking study. Notice the key word there. If it’s not clear
 # 
 # > ETHICAL!!!!!
@@ -29,7 +29,7 @@
 # I can't stop you misusing any information you gather here, but my expectation of you (and a condition of access to this information) is that you will be the definition of a "White-Hat" hacker. No "little bit of grey hat". Bleach even. So white that Netflix has a restraining order...
 # 
 # 
-# ### A Bit about Me
+# ## A Bit about Me
 # 
 # <a href="http://linkedin.com/in/paul-williams-234a6180">My Linked-In Page</a>
 # 
@@ -41,6 +41,7 @@
 # 
 # Lastly, Abby, who is smiling on every page. She is far more stubborn than any room, tool, or application I've ever wrestled with. "Thanks".  She has shown me how dedicated I can be to a topic and how fulfilling it is to see them succeed, which is why she has been chosen as this book's logo. Besides, what dad doesn’t like showing off his daughter?
 # 
+# <hr>
 
 # In[ ]:
 

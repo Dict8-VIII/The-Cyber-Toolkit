@@ -8,7 +8,7 @@
 # ![hackerinhoodie.jpg](../images/hackerinhoodie.jpg)
 # 
 
-# ### Why Is Cyber Security Important?
+# ## Why Is Cyber Security Important?
 # 
 # <hr>
 
@@ -87,7 +87,7 @@
 # 
 # #### Phishing & Spearphising
 # 
-# 
+# <hr>
 
 # In[ ]:
 

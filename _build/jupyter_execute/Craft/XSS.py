@@ -9,12 +9,12 @@
 # - Cant Remeber
 # - Right now
 # 
-# ### Type 1 - The one where you install javascript on a form
+# ## Type 1 - The one where you install javascript on a form
 # 
 # Example Payload
 # > \<script>fetch(/settings?new_password="That persons new password");\</script>
 
-# ### Modifying a DIV tag via ID
+# ## Modifying a DIV tag via ID
 # In HTML, elements can be referenced by their ID (normally a DIV tag). To modify one when you can inject scripts, insert the below between \<script> tags
 # >document.getElementById("The ID goes here").innerHTML="What I want the cell to be";
 

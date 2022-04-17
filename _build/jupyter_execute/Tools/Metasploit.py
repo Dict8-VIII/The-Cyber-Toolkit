@@ -7,7 +7,7 @@
 # 
 # It also installs a postgresSQL instance, where it stores your history, which must also be running when you launch it.
 # 
-# ### Launching
+# ## Launching
 # 
 # If you need to start the postgress instance manually
 # 
@@ -17,7 +17,7 @@
 # 
 # > msfconsole
 # 
-# ### Initial steps
+# ## Initial steps
 # 
 # search for an exploit (includes scanning and post exploit 'exploits')
 # 
@@ -52,6 +52,8 @@
 # ### Escalation Suggester
 # One of the built in tools for PrivEx. Requires a session to be created already. I havent had much luck with this though
 # > multi/recon/local_exploit_suggester
+# 
+# <hr>
 
 # In[ ]:
 

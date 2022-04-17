@@ -3,7 +3,7 @@
 
 # # HoloLive Walkthrough - Task 8
 
-# ### Task 8 - Initial Recon
+# ## Task 8 - Initial Recon
 # 
 # Now for the actual question. First we are asked to scan the network, on the scoped ranges "10.200.x.0/24 and 192.168.100.0/24". We cant scan a 'x' however, so how do we know what range to look for? This is easier than it sounds, it's given in the image at the top of the page; in my case 10.200.129.0/24. This also gives the answer to the first octet (.33 in my case).
 # 

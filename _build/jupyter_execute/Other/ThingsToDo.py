@@ -6,10 +6,11 @@
 # ~~FINISH GETTING THE NOTES UP FIRST!!!~~
 # 
 # * Linpeas/Linenum/LES expand on
+# * XSS looks quite empty
 # * add last modified to sections
 # * Finish "The Basics"
 # ** Add attacks in a separate sections
-# * HackerCraft: Add the general process (OSINT, Info Gathering, expl, escalation, covering/maintaining)
+# ~~* HackerCraft: Add the general process (OSINT, Info Gathering, expl, escalation, covering/maintaining)~~ Removed as working on Killchain now
 # * write python program for SQL injection
 # * JNR Pen tester page is empty
 # * Mention more on HoloLive
@@ -20,6 +21,6 @@
 # * Remove the default Links
 # * Explore "Hack the Box", add here
 # * Add my "TryHackMe" account
-# * Dark Mode (done, but looks like its broken in the current JupyterBook version, there is a bug logged)
+# * Dark Mode
 # * I'm sure the google analytics ID is wrong
 # * Mitre's ATT&CK looks interesting...

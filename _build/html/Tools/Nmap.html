@@ -449,6 +449,23 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Dict8-VIII/The-Cyber-Toolkit/master?urlpath=tree/Tools/Nmap.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -558,6 +575,16 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#spoof-ip-s">
      Spoof IP -S
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#decoys-d">
+     Decoys -D
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fragmentation-f">
+     Fragmentation -f
     </a>
    </li>
   </ul>
@@ -681,6 +708,16 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#spoof-ip-s">
      Spoof IP -S
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#decoys-d">
+     Decoys -D
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fragmentation-f">
+     Fragmentation -f
     </a>
    </li>
   </ul>
@@ -835,14 +872,19 @@ A closed port however should give a ICMP “Destination Unreachable” response.
 <div><p>nmap -e [Net Interface] –spoof-mac [spoofed MAC] -S [spoofed IP] [target IP]</p>
 </div></blockquote>
 <hr>
-### Decoys -D
-Decoys are another way to hide the source of the traffic. You list a group of IPs to show where the traffic is coming from, and NMAP will run these in parallel. You can also use RND which will randomly create an IP.
+</div>
+<div class="section" id="decoys-d">
+<h3>Decoys -D<a class="headerlink" href="#decoys-d" title="Permalink to this headline">¶</a></h3>
+<p>Decoys are another way to hide the source of the traffic. You list a group of IPs to show where the traffic is coming from, and NMAP will run these in parallel. You can also use RND which will randomly create an IP.</p>
 <blockquote>
 <div><p>nmap -D [fake IP1],[fake IP2],[real IP (ME)],[fake IP3]….many more</p>
 </div></blockquote>
 <hr>
-### Fragmentation -f
-Fragmentation is a way to split up packets to make things more difficult for some firewalls, IDS and IPS. Adding a -f will split the packet into 8byte fragments and transmit these seperately. -ff will make it 16 bytes instead.</div>
+</div>
+<div class="section" id="fragmentation-f">
+<h3>Fragmentation -f<a class="headerlink" href="#fragmentation-f" title="Permalink to this headline">¶</a></h3>
+<p>Fragmentation is a way to split up packets to make things more difficult for some firewalls, IDS and IPS. Adding a -f will split the packet into 8byte fragments and transmit these seperately. -ff will make it 16 bytes instead.</p>
+<hr></div>
 </div>
 </div>
 
