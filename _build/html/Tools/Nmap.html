@@ -599,6 +599,11 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nse-nmap-scripting-engine">
+   NSE (Nmap Scripting Engine)
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -742,6 +747,11 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nse-nmap-scripting-engine">
+   NSE (Nmap Scripting Engine)
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -769,7 +779,7 @@
 <li><p>[ip] : The target server IP address</p></li>
 <li><p>[scan method] : -s[something], there can be a number of arguements here</p>
 <ul>
-<li><p>-sV is to try determine what is running behind the ports</p></li>
+<li><p>-sV \t try to determine the service (and version)running behind the port. You can also add a –version-intensity [n 0-9] to decide how agressively to run this chec. This starts as a -sT</p></li>
 <li><p>-sS sneaky stealth scan. Better known as a TCP SYN scan</p></li>
 <li><p>-sA is a ACK scan. This is more for understanding firewall rules.</p></li>
 <li><p>-sN is a NULL scan, set all flags ‘0’</p></li>
@@ -789,6 +799,7 @@
 <li><p>–script [Nmap script]</p></li>
 <li><p>vuln [ip] \t try determine known exploits</p></li>
 <li><p>-n \t Dont resolve DNS</p></li>
+<li><p>-O \t Try detect the OS of the target</p></li>
 <li><p>-PR \t ARP request only (better be on the same subnet)</p></li>
 <li><p>-PE \t Use ICMP Echo to discover hosts</p></li>
 <li><p>-PP \t Use ICMP timestamp instead of echo, useful if echo is blocked</p></li>
@@ -803,6 +814,7 @@
 <li><p>-S \t for spoofing IP addresses</p></li>
 <li><p>-D \t for creating Decoys</p></li>
 <li><p>-f \t for fragmenting packets into 8bytes (or -ff for 16 bytes)</p></li>
+<li><p>-sC \t run default scripts (or –script=default)</p></li>
 </ul>
 </li>
 <li><p>-vv : VeryVerbose, stops you going crazy wondering if its working</p></li>
@@ -924,6 +936,31 @@ If a firewall was blocking the port, we would have the same response as a closed
 <h3>Zombie Scan (-sI)<a class="headerlink" href="#zombie-scan-si" title="Permalink to this headline">¶</a></h3>
 <p>A zombie scan is a method that uses an “idle zombie” to communicate with the target, while spoofing your own IP to make the request appear to be coming from the idle host. More details are in the scan types above.</p>
 </div>
+</div>
+<div class="section" id="nse-nmap-scripting-engine">
+<h2>NSE (Nmap Scripting Engine)<a class="headerlink" href="#nse-nmap-scripting-engine" title="Permalink to this headline">¶</a></h2>
+<p>Nmap comes with a lot of built in scripts for extending functionality (almost 600 at the time of writing). These are in the nmap share by default (/usr/share/nmap/scripts) and are named starting with the service/protocol they target. <br>
+You can run a category of scripts with –script=[category]. The defaults ones are</p>
+<ul class="simple">
+<li><p>auth (authenication related)</p></li>
+<li><p>broadcast (host discovery)</p></li>
+<li><p>brute (bruteforce password auditing… whatever that means)</p></li>
+<li><p>default (run the default scripts, also -sC)</p></li>
+<li><p>discovery (peforms some enumeration, such as DB tables and DNS)</p></li>
+<li><p>dos (detect if vulnerable to DoS)</p></li>
+<li><p>exploit (attempt to exploit services with known exploits)</p></li>
+<li><p>external (uses 3rd party services… I should look into this)</p></li>
+<li><p>fuzzer (runs fuzzing attacks)</p></li>
+<li><p>intrusive (runs agressing scripts like bruteforce and exploit)</p></li>
+<li><p>malware (scan for back doors… I like this)</p></li>
+<li><p>safe (safe to use on targets without crashing them?)</p></li>
+<li><p>version (more version detection)</p></li>
+<li><p>vuln (detect vulnerable services)</p></li>
+</ul>
+<p>If you want to run a single script, the format is slightly different</p>
+<blockquote>
+<div><p>nmap [ip] –script “script name.nse” -vv</p>
+</div></blockquote>
 </div>
 </div>
 

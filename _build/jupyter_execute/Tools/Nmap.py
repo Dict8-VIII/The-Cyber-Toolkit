@@ -16,7 +16,7 @@
 # 
 # - [ip] : The target server IP address
 # - [scan method] : -s[something], there can be a number of arguements here
-#     - -sV is to try determine what is running behind the ports
+#     - -sV \t try to determine the service (and version)running behind the port. You can also add a --version-intensity [n 0-9] to decide how agressively to run this chec. This starts as a -sT
 #     - -sS sneaky stealth scan. Better known as a TCP SYN scan
 #     - -sA is a ACK scan. This is more for understanding firewall rules.
 #     - -sN is a NULL scan, set all flags '0'
@@ -34,6 +34,7 @@
 #     - --script [Nmap script]
 #     - vuln [ip] \t try determine known exploits
 #     - -n \t Dont resolve DNS
+#     - -O \t Try detect the OS of the target
 #     - -PR \t ARP request only (better be on the same subnet)
 #     - -PE \t Use ICMP Echo to discover hosts
 #     - -PP \t Use ICMP timestamp instead of echo, useful if echo is blocked
@@ -48,6 +49,7 @@
 #     - -S \t for spoofing IP addresses
 #     - -D \t for creating Decoys
 #     - -f \t for fragmenting packets into 8bytes (or -ff for 16 bytes)
+#     - -sC \t run default scripts (or --script=default)
 #     
 # - -vv : VeryVerbose, stops you going crazy wondering if its working
 # 
@@ -148,6 +150,27 @@
 # 
 # ### Zombie Scan (-sI)
 # A zombie scan is a method that uses an "idle zombie" to communicate with the target, while spoofing your own IP to make the request appear to be coming from the idle host. More details are in the scan types above.
+
+# ## NSE (Nmap Scripting Engine)
+# Nmap comes with a lot of built in scripts for extending functionality (almost 600 at the time of writing). These are in the nmap share by default (/usr/share/nmap/scripts) and are named starting with the service/protocol they target. <br>
+# You can run a category of scripts with --script=[category]. The defaults ones are
+# - auth (authenication related)
+# - broadcast (host discovery)
+# - brute (bruteforce password auditing... whatever that means)
+# - default (run the default scripts, also -sC)
+# - discovery (peforms some enumeration, such as DB tables and DNS)
+# - dos (detect if vulnerable to DoS)
+# - exploit (attempt to exploit services with known exploits)
+# - external (uses 3rd party services... I should look into this)
+# - fuzzer (runs fuzzing attacks)
+# - intrusive (runs agressing scripts like bruteforce and exploit)
+# - malware (scan for back doors... I like this)
+# - safe (safe to use on targets without crashing them?)
+# - version (more version detection)
+# - vuln (detect vulnerable services)
+# 
+# If you want to run a single script, the format is slightly different
+# > nmap [ip] --script "script name.nse" -vv
 
 # In[ ]:
 
