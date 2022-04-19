@@ -11,12 +11,13 @@
 # - Running Nmap scripts for specific enum
 # 
 # ## Syntax
+# The general syntax of a nmap scan is:
+# > nmap \[ip\] \[scan method\] \[MANY arguements\] -vv
 # 
-# > nmap \[ip] [scan method] [MANY arguements] -vv
-# 
-# - [ip] : The target server IP address
-# - [scan method] : -s[something], there can be a number of arguements here
-#     - -sV \t try to determine the service (and version)running behind the port. You can also add a --version-intensity [n 0-9] to decide how agressively to run this chec. This starts as a -sT
+# - \[ip\] : The target server IP address
+# - \[scan method\] : -s\[something\], there can be a number of arguements here
+#     - -sT TCP Connect scan
+#     - -sU UDP Connect Scan
 #     - -sS sneaky stealth scan. Better known as a TCP SYN scan
 #     - -sA is a ACK scan. This is more for understanding firewall rules.
 #     - -sN is a NULL scan, set all flags '0'
@@ -24,32 +25,32 @@
 #     - -sX is an XMAS scan, it sets FIN, PSH and URG. Shiny....
 #     - -sM is the Maimon scan, used against a particular OS (BSD, Berkley Software Distribution). It's discontinued... but you never know.
 #     - -sW is a Window Scan, it reads the response of a RST flag.
+#     - -sV \t try to determine the service (and version)running behind the port. You can also add a --version-intensity [n 0-9] to decide how agressively to run this chec. This starts as a -sT
 #     - -sI is an idle (zombie) scan. It requires a very specific case
 #     - -sL \t List the targets that will be scanned, without scanning them. Commonly used with -n
 #     - -sn dont port scan (can be combined with -PR)
-#     - -sT TCP Connect scan
-#     - -sU UDP Connect Scan
 #     
 # - [arguements]
 #     - --script [Nmap script]
-#     - vuln [ip] \t try determine known exploits
-#     - -n \t Dont resolve DNS
-#     - -O \t Try detect the OS of the target
-#     - -PR \t ARP request only (better be on the same subnet)
-#     - -PE \t Use ICMP Echo to discover hosts
-#     - -PP \t Use ICMP timestamp instead of echo, useful if echo is blocked
-#     - -PM \t Use ICMP address mask instead of echo, useful if echo is blocked
-#     - -PS \t Uses TCP SYN to discover hosts. Can add a port or range (without spaces), default is on Port80
-#     - -PA \t Uses TCP ACK to discover hosts (they should respond with a RST)
-#     - -PU \t Uses a UDP PING
-#     - -R \t Lookup DNS names for offline devices
-#     - -F \t Fast mode, only scan best 100, not 1000
-#     - -r \t Scan ports in order
-#     - -t<n>\t The speed of the scan (for IDS evassion). 3 is normal, 1 is SLOW and 5 is 'insane'
-#     - -S \t for spoofing IP addresses
-#     - -D \t for creating Decoys
-#     - -f \t for fragmenting packets into 8bytes (or -ff for 16 bytes)
-#     - -sC \t run default scripts (or --script=default)
+#     - vuln [ip] Try determine known exploits
+#     - -n Dont resolve DNS
+#     - -O Try detect the OS of the target
+#     - -PR ARP request only (better be on the same subnet)
+#     - -PE Use ICMP Echo to discover hosts
+#     - -PP Use ICMP timestamp instead of echo, useful if echo is blocked
+#     - -PM Use ICMP address mask instead of echo, useful if echo is blocked
+#     - -PS Uses TCP SYN to discover hosts. Can add a port or range (without spaces), default is on Port80
+#     - -PA Uses TCP ACK to discover hosts (they should respond with a RST)
+#     - -PU Uses a UDP PING
+#     - -R Lookup DNS names for offline devices
+#     - -F Fast mode, only scan best 100, not 1000
+#     - -r Scan ports in order
+#     - -t <n> The speed of the scan (for IDS evassion). 3 is normal, 1 is SLOW and 5 is 'insane'
+#     - -S For spoofing IP addresses
+#     - -D For creating Decoys
+#     - -f For fragmenting packets into 8bytes (or -ff for 16 bytes)
+#     - -sC Run default scripts (or --script=default)
+#     - -A An agressive scan. Is the same as "-sV -O -sC --traceroute"
 #     
 # - -vv : VeryVerbose, stops you going crazy wondering if its working
 # 
@@ -171,9 +172,20 @@
 # 
 # If you want to run a single script, the format is slightly different
 # > nmap [ip] --script "script name.nse" -vv
+# 
+# <hr>
+# 
 
-# In[ ]:
-
-
-
-
+# ## Logging
+# 
+# When it gets messy, logs are a great thing to have. Theres a few modes for Nmap logging.
+# 
+# - -oN Normal
+# - -oG Grepable
+# - -oX XML
+# - -oA All of the above (separate files)
+# 
+# - -oS Script kiddie
+# We dont to that here
+# 
+# <hr>

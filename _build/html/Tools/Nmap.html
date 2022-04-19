@@ -347,6 +347,16 @@
    File Transfer to Machines
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/Telnet.html">
+   Telnet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/HTTP.html">
+   HTTP
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -604,6 +614,11 @@
    NSE (Nmap Scripting Engine)
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#logging">
+   Logging
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -752,6 +767,11 @@
    NSE (Nmap Scripting Engine)
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#logging">
+   Logging
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -772,6 +792,7 @@
 </ul>
 <div class="section" id="syntax">
 <h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<p>The general syntax of a nmap scan is:</p>
 <blockquote>
 <div><p>nmap [ip] [scan method] [MANY arguements] -vv</p>
 </div></blockquote>
@@ -779,7 +800,8 @@
 <li><p>[ip] : The target server IP address</p></li>
 <li><p>[scan method] : -s[something], there can be a number of arguements here</p>
 <ul>
-<li><p>-sV \t try to determine the service (and version)running behind the port. You can also add a –version-intensity [n 0-9] to decide how agressively to run this chec. This starts as a -sT</p></li>
+<li><p>-sT TCP Connect scan</p></li>
+<li><p>-sU UDP Connect Scan</p></li>
 <li><p>-sS sneaky stealth scan. Better known as a TCP SYN scan</p></li>
 <li><p>-sA is a ACK scan. This is more for understanding firewall rules.</p></li>
 <li><p>-sN is a NULL scan, set all flags ‘0’</p></li>
@@ -787,34 +809,34 @@
 <li><p>-sX is an XMAS scan, it sets FIN, PSH and URG. Shiny….</p></li>
 <li><p>-sM is the Maimon scan, used against a particular OS (BSD, Berkley Software Distribution). It’s discontinued… but you never know.</p></li>
 <li><p>-sW is a Window Scan, it reads the response of a RST flag.</p></li>
+<li><p>-sV \t try to determine the service (and version)running behind the port. You can also add a –version-intensity [n 0-9] to decide how agressively to run this chec. This starts as a -sT</p></li>
 <li><p>-sI is an idle (zombie) scan. It requires a very specific case</p></li>
 <li><p>-sL \t List the targets that will be scanned, without scanning them. Commonly used with -n</p></li>
 <li><p>-sn dont port scan (can be combined with -PR)</p></li>
-<li><p>-sT TCP Connect scan</p></li>
-<li><p>-sU UDP Connect Scan</p></li>
 </ul>
 </li>
 <li><p>[arguements]</p>
 <ul>
 <li><p>–script [Nmap script]</p></li>
-<li><p>vuln [ip] \t try determine known exploits</p></li>
-<li><p>-n \t Dont resolve DNS</p></li>
-<li><p>-O \t Try detect the OS of the target</p></li>
-<li><p>-PR \t ARP request only (better be on the same subnet)</p></li>
-<li><p>-PE \t Use ICMP Echo to discover hosts</p></li>
-<li><p>-PP \t Use ICMP timestamp instead of echo, useful if echo is blocked</p></li>
-<li><p>-PM \t Use ICMP address mask instead of echo, useful if echo is blocked</p></li>
-<li><p>-PS \t Uses TCP SYN to discover hosts. Can add a port or range (without spaces), default is on Port80</p></li>
-<li><p>-PA \t Uses TCP ACK to discover hosts (they should respond with a RST)</p></li>
-<li><p>-PU \t Uses a UDP PING</p></li>
-<li><p>-R \t Lookup DNS names for offline devices</p></li>
-<li><p>-F \t Fast mode, only scan best 100, not 1000</p></li>
-<li><p>-r \t Scan ports in order</p></li>
-<li><p>-t<n>\t The speed of the scan (for IDS evassion). 3 is normal, 1 is SLOW and 5 is ‘insane’</p></li>
-<li><p>-S \t for spoofing IP addresses</p></li>
-<li><p>-D \t for creating Decoys</p></li>
-<li><p>-f \t for fragmenting packets into 8bytes (or -ff for 16 bytes)</p></li>
-<li><p>-sC \t run default scripts (or –script=default)</p></li>
+<li><p>vuln [ip] Try determine known exploits</p></li>
+<li><p>-n Dont resolve DNS</p></li>
+<li><p>-O Try detect the OS of the target</p></li>
+<li><p>-PR ARP request only (better be on the same subnet)</p></li>
+<li><p>-PE Use ICMP Echo to discover hosts</p></li>
+<li><p>-PP Use ICMP timestamp instead of echo, useful if echo is blocked</p></li>
+<li><p>-PM Use ICMP address mask instead of echo, useful if echo is blocked</p></li>
+<li><p>-PS Uses TCP SYN to discover hosts. Can add a port or range (without spaces), default is on Port80</p></li>
+<li><p>-PA Uses TCP ACK to discover hosts (they should respond with a RST)</p></li>
+<li><p>-PU Uses a UDP PING</p></li>
+<li><p>-R Lookup DNS names for offline devices</p></li>
+<li><p>-F Fast mode, only scan best 100, not 1000</p></li>
+<li><p>-r Scan ports in order</p></li>
+<li><p>-t <n> The speed of the scan (for IDS evassion). 3 is normal, 1 is SLOW and 5 is ‘insane’</p></li>
+<li><p>-S For spoofing IP addresses</p></li>
+<li><p>-D For creating Decoys</p></li>
+<li><p>-f For fragmenting packets into 8bytes (or -ff for 16 bytes)</p></li>
+<li><p>-sC Run default scripts (or –script=default)</p></li>
+<li><p>-A An agressive scan. Is the same as “-sV -O -sC –traceroute”</p></li>
 </ul>
 </li>
 <li><p>-vv : VeryVerbose, stops you going crazy wondering if its working</p></li>
@@ -961,7 +983,20 @@ You can run a category of scripts with –script=[category]. The defaults ones a
 <blockquote>
 <div><p>nmap [ip] –script “script name.nse” -vv</p>
 </div></blockquote>
+<hr>
 </div>
+<div class="section" id="logging">
+<h2>Logging<a class="headerlink" href="#logging" title="Permalink to this headline">¶</a></h2>
+<p>When it gets messy, logs are a great thing to have. Theres a few modes for Nmap logging.</p>
+<ul class="simple">
+<li><p>-oN Normal</p></li>
+<li><p>-oG Grepable</p></li>
+<li><p>-oX XML</p></li>
+<li><p>-oA All of the above (separate files)</p></li>
+<li><p>-oS Script kiddie
+We dont to that here</p></li>
+</ul>
+<hr></div>
 </div>
 
     <script type="text/x-thebe-config">
