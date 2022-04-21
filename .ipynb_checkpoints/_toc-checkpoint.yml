@@ -54,6 +54,7 @@ parts:
     - file: Craft/FileTransfer
     - file: Craft/Telnet
     - file: Craft/HTTP
+    - file: Craft/FTP
   - caption: The Cyber Killchain
     chapters:
     - file: KillChain/Killchain_Overview

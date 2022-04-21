@@ -95,7 +95,7 @@
 # - -s : Change the size of the packet
 # 
 # ### NMAP
-# Theres a whole page on this one, its right [here](../Tools/Nmap.html)
+# Theres a whole page on this one, its right [here](../Tools/Nmap.ipynb)
 # 
 
 # In[ ]:

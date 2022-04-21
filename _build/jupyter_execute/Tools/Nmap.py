@@ -186,6 +186,13 @@
 # - -oA All of the above (separate files)
 # 
 # - -oS Script kiddie
+# 
 # We dont to that here
 # 
 # <hr>
+
+# In[ ]:
+
+
+
+
