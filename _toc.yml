@@ -55,6 +55,7 @@ parts:
     - file: Craft/Telnet
     - file: Craft/HTTP
     - file: Craft/FTP
+    - file: Craft/EmailProtocol
   - caption: The Cyber Killchain
     chapters:
     - file: KillChain/Killchain_Overview
