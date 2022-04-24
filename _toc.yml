@@ -27,6 +27,9 @@ parts:
       sections:
       - file: Tools/BurpSuite/BurpRepeater
       - file: Tools/BurpSuite/BurpIntruder
+    - file: Tools/Wireshark/Wireshark
+      sections:
+      
     - file: Tools/Nmap
     - file: Tools/Metasploit
       sections:
@@ -56,6 +59,7 @@ parts:
     - file: Craft/HTTP
     - file: Craft/FTP
     - file: Craft/EmailProtocol
+    - file: Craft/TCPDump
   - caption: The Cyber Killchain
     chapters:
     - file: KillChain/Killchain_Overview
