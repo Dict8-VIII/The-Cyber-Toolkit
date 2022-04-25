@@ -224,6 +224,11 @@
   </ul>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Wireshark/Wireshark.html">
+   Wireshark
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../Tools/Nmap.html">
    Nmap
   </a>
@@ -285,6 +290,16 @@
    Hashcat
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/TCPDump.html">
+   TCPDump
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Ettercap.html">
+   Ettercap &amp; Bettercap
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -295,6 +310,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="TheBasics.html">
    The Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="TheOSIModel.html">
+   The OSI Model
   </a>
  </li>
  <li class="toctree-l1">
@@ -524,6 +544,13 @@
   <a class="reference internal nav-link" href="#imap">
    IMAP
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#connecting-imap">
+     Connecting IMAP
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -573,6 +600,13 @@
   <a class="reference internal nav-link" href="#imap">
    IMAP
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#connecting-imap">
+     Connecting IMAP
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -633,6 +667,18 @@ The mail message is ended by “&lt; CR &gt;&lt; LF &gt;.&lt; CR &gt;&lt; LF &gt
 </div>
 <div class="section" id="imap">
 <h2>IMAP<a class="headerlink" href="#imap" title="Permalink to this headline">¶</a></h2>
+<p>IMAP, or Internet Message Access Protocol, is the next evolution of POP3. It enables syncing of email states across devices so that a ‘read’ email on your phone also shows up as ‘read’ on your laptop. It runs on port 143 by default.</p>
+<div class="section" id="connecting-imap">
+<h3>Connecting IMAP<a class="headerlink" href="#connecting-imap" title="Permalink to this headline">¶</a></h3>
+<p>Once again, we will show the connection process in TELNET. We’re not going to use this in the real world but it’s a good example. All IMAP commands must be preceeded by a unique value to allow tracking of replies. It can be anything (realistic) but its easier if we just use a standard. m1, m2, m3 etc make sense.</p>
+<blockquote>
+<div><p>Telnet [IP] 143 <br>
+m1 LOGIN [user] [password] <br>
+m2 LIST “” “*” <br>
+m3 EXAMINE [folder from LIST]: Example m3 EXAMINE INBOX <br>
+m4 LOGOUT</p>
+</div></blockquote>
+<hr></div>
 </div>
 </div>
 

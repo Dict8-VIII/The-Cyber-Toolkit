@@ -28,7 +28,7 @@ parts:
       - file: Tools/BurpSuite/BurpRepeater
       - file: Tools/BurpSuite/BurpIntruder
     - file: Tools/Wireshark/Wireshark
-      sections:
+     # sections:
       
     - file: Tools/Nmap
     - file: Tools/Metasploit

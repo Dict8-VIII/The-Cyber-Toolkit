@@ -55,3 +55,21 @@
 
 # ## IMAP
 # 
+# IMAP, or Internet Message Access Protocol, is the next evolution of POP3. It enables syncing of email states across devices so that a 'read' email on your phone also shows up as 'read' on your laptop. It runs on port 143 by default.
+# 
+# ### Connecting IMAP
+# Once again, we will show the connection process in TELNET. We're not going to use this in the real world but it's a good example. All IMAP commands must be preceeded by a unique value to allow tracking of replies. It can be anything (realistic) but its easier if we just use a standard. m1, m2, m3 etc make sense.
+# 
+# > Telnet [IP] 143 <br>
+# > m1 LOGIN [user] [password] <br>
+# > m2 LIST "" "\*" <br>
+# > m3 EXAMINE [folder from LIST]: Example m3 EXAMINE INBOX <br>
+# > m4 LOGOUT
+# 
+# <hr>
+
+# In[ ]:
+
+
+
+
