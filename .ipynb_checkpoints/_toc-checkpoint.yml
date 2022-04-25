@@ -42,9 +42,12 @@ parts:
     - file: Tools/Wfuzz
     - file: Tools/Nikto
     - file: Tools/HashCat
+    - file: Tools/TCPDump
+    - file: Tools/Ettercap
   - caption: Hacker Craft
     chapters:
     - file: Craft/TheBasics
+    - file: Craft/TheOSIModel
     - file: Craft/LinuxFun
     - file: Craft/WindowsFun
     - file: Craft/SQLinjection
@@ -59,7 +62,7 @@ parts:
     - file: Craft/HTTP
     - file: Craft/FTP
     - file: Craft/EmailProtocol
-    - file: Craft/TCPDump
+    
   - caption: The Cyber Killchain
     chapters:
     - file: KillChain/Killchain_Overview
