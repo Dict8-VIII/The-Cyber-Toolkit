@@ -42,6 +42,7 @@ parts:
     - file: Tools/Wfuzz
     - file: Tools/Nikto
     - file: Tools/HashCat
+    - file: Tools/Hydra
     - file: Tools/TCPDump
     - file: Tools/Ettercap
   - caption: Hacker Craft
