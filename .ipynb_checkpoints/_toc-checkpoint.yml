@@ -34,6 +34,7 @@ parts:
     - file: Tools/Metasploit
       sections:
       - file: Tools/Msfvenom
+      - file: Tools/SearchSploit
     - file: Tools/CyberChef
     - file: Tools/NFS
     - file: Tools/John
@@ -45,6 +46,7 @@ parts:
     - file: Tools/Hydra
     - file: Tools/TCPDump
     - file: Tools/Ettercap
+    - file: Tools/Nessus
   - caption: Hacker Craft
     chapters:
     - file: Craft/TheBasics

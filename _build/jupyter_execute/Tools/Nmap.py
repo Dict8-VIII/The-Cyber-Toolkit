@@ -30,6 +30,11 @@
 #     - -sL \t List the targets that will be scanned, without scanning them. Commonly used with -n
 #     - -sn dont port scan (can be combined with -PR)
 #     
+# - [scope] (this is optional, default is first 1000 ports at T3)
+#     - -p- scan all 65536 ports
+#     - p1-1337 scan ports 1-1337 inclusive
+#     - T0-5 The scan speed. 0 being the slowest and 5 being 'insane'. 4 is good for CTF, 1 in 'actual'
+#     
 # - [arguements]
 #     - --script [Nmap script]
 #     - vuln [ip] Try determine known exploits

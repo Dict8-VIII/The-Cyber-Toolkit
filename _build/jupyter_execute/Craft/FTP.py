@@ -30,7 +30,7 @@
 # ### FTP Client
 # The far more useful method is to use an FTP client, Linux has one built int
 # 
-# 1. ftp [IP]
+# 1. ftp [IP] [port] (port is optional)
 # 2. Name: [username]
 # 3. Password: [the password]
 # 

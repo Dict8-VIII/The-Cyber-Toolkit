@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Metasploit Framework &#8212; The Cyber Toolkit</title>
+    <title>Hydra &#8212; The Cyber Toolkit</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -52,8 +52,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Msfvenom" href="Msfvenom.html" />
-    <link rel="prev" title="Nmap" href="Nmap.html" />
+    <link rel="next" title="TCPDump" href="TCPDump.html" />
+    <link rel="prev" title="Hashcat" href="HashCat.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -233,11 +233,11 @@
    Nmap
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Metasploit.html">
    Metasploit Framework
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
@@ -295,8 +295,8 @@
    Hashcat
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Hydra.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Hydra
   </a>
  </li>
@@ -484,7 +484,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Tools/Metasploit.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/Tools/Hydra.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -509,7 +509,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/Dict8-VIII/The-Cyber-Toolkit/master?urlpath=tree/Tools/Metasploit.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Dict8-VIII/The-Cyber-Toolkit/master?urlpath=tree/Tools/Hydra.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -532,38 +532,13 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#launching">
-   Launching
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#initial-steps">
-   Initial steps
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fun-exploits">
-   Fun exploits
+  <a class="reference internal nav-link" href="#examples">
+   Examples
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#eternal-blue">
-     Eternal Blue
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hashdump">
-     Hashdump
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#crack-windows">
-     Crack Windows
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#escalation-suggester">
-     Escalation Suggester
+    <a class="reference internal nav-link" href="#imap">
+     IMAP
     </a>
    </li>
   </ul>
@@ -578,7 +553,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Metasploit Framework</h1>
+                <h1>Hydra</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -589,38 +564,13 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#launching">
-   Launching
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#initial-steps">
-   Initial steps
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fun-exploits">
-   Fun exploits
+  <a class="reference internal nav-link" href="#examples">
+   Examples
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#eternal-blue">
-     Eternal Blue
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hashdump">
-     Hashdump
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#crack-windows">
-     Crack Windows
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#escalation-suggester">
-     Escalation Suggester
+    <a class="reference internal nav-link" href="#imap">
+     IMAP
     </a>
    </li>
   </ul>
@@ -634,72 +584,40 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="metasploit-framework">
-<h1>Metasploit Framework<a class="headerlink" href="#metasploit-framework" title="Permalink to this headline">¶</a></h1>
-<p>The MetaSploitFramework (msf / Metasploit) is a collection of exploits, payloads, scripts, enum tools,  has its own custom shell, nmap and will probably even walk the dog if you asked nicely enough.</p>
-<p>It also installs a postgresSQL instance, where it stores your history, which must also be running when you launch it.</p>
-<div class="section" id="launching">
-<h2>Launching<a class="headerlink" href="#launching" title="Permalink to this headline">¶</a></h2>
-<p>If you need to start the postgress instance manually</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="hydra">
+<h1>Hydra<a class="headerlink" href="#hydra" title="Permalink to this headline">¶</a></h1>
+<p>If youre trying to brute force a login, (THC) Hydra is the place to be. It supports MANY protocols, is very efficient and amazingly versatile.</p>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>The basic structure of attacks doesnt really change unless youre doing something special.</p>
 <blockquote>
-<div><p>sudo service start postgressql</p>
+<div><p>hydra -l OR -L [login or list of logins] -p OR -P [password or list of passwords] [target] [protocol] [arguements]</p>
 </div></blockquote>
-<p>Launching the Console</p>
+<p>Arguement options:</p>
+<ul class="simple">
+<li><p>-t n : use n threads, 16 is high</p></li>
+<li><p>-s n : use this port if non-standard</p></li>
+<li><p>-I : dont use the restore file, and it’s ok to override</p></li>
+</ul>
+<p>It looks complicated, but it’s actually quite simple. Some examples</p>
+<div class="section" id="imap">
+<h3>IMAP<a class="headerlink" href="#imap" title="Permalink to this headline">¶</a></h3>
+<p>This example is taken from the <a class="reference external" href="https://tryhackme.com/room/protocolsandservers2">TryHackMe “Protocols and Servers 2” room</a>.</p>
 <blockquote>
-<div><p>msfconsole</p>
+<div><p>hydra -l lazie -P /home/kali/rockyou.txt 10.10.206.48 imap -t 16 -I</p>
 </div></blockquote>
-</div>
-<div class="section" id="initial-steps">
-<h2>Initial steps<a class="headerlink" href="#initial-steps" title="Permalink to this headline">¶</a></h2>
-<p>search for an exploit (includes scanning and post exploit ‘exploits’)</p>
-<blockquote>
-<div><p>search Eternal_Blue
-search CVE-2017-0144
-select # (your number from the list)</p>
-</div></blockquote>
-<p>determine which paramaters need to be set</p>
-<blockquote>
-<div><p>options</p>
-</div></blockquote>
-<p>Set the paramaters’ value (this includes the default payload as described)</p>
-<blockquote>
-<div><p>set Lhost 127.0.0.1
-set Rhosts 127.0.0.2</p>
-</div></blockquote>
-</div>
-<div class="section" id="fun-exploits">
-<h2>Fun exploits<a class="headerlink" href="#fun-exploits" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="eternal-blue">
-<h3>Eternal Blue<a class="headerlink" href="#eternal-blue" title="Permalink to this headline">¶</a></h3>
-<p>This one is easy, if youre running windows 7 and have SMB enabled (spoiler, they all do), you’re screwed</p>
-<blockquote>
-<div><p>search Eternal_Blue</p>
-</div></blockquote>
-</div>
-<div class="section" id="hashdump">
-<h3>Hashdump<a class="headerlink" href="#hashdump" title="Permalink to this headline">¶</a></h3>
-<p>Dumps all the hashes in an exploited windows box, stores in Metasploit DB.</p>
-<blockquote>
-<div><p>search post/windows/gather/hashdump</p>
-</div></blockquote>
-</div>
-<div class="section" id="crack-windows">
-<h3>Crack Windows<a class="headerlink" href="#crack-windows" title="Permalink to this headline">¶</a></h3>
-<p>Follows on from the above hashdump, try to crack the passwords we have… borrowed…
-If its a good password, this is gonna take a while…. use John instead</p>
-<blockquote>
-<div><p>auxiliary/analyze/crack_windows</p>
-</div></blockquote>
-</div>
-<div class="section" id="escalation-suggester">
-<h3>Escalation Suggester<a class="headerlink" href="#escalation-suggester" title="Permalink to this headline">¶</a></h3>
-<p>One of the built in tools for PrivEx. Requires a session to be created already. I havent had much luck with this though</p>
-<blockquote>
-<div><p>multi/recon/local_exploit_suggester</p>
-</div></blockquote>
+<p><img alt="Tools-Hydra_IMAP.png" src="../_images/Tools-Hydra_IMAP.png" /></p>
+<p>Breaking this down, we have</p>
+<ul class="simple">
+<li><p>hydra : run hydra</p></li>
+<li><p>-l : use this specific login for all attempts</p></li>
+<li><p>-P : use this list of passwords to itterate through</p></li>
+<li><p>10.10.206.48 : my target IP</p></li>
+<li><p>imap : attack the IMAP service (default port 143)</p></li>
+<li><p>-t 16 : use 16 threads</p></li>
+<li><p>-I : dont wait, just override the restore file</p></li>
+</ul>
 <hr></div>
-</div>
-<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -728,17 +646,17 @@ If its a good password, this is gonna take a while…. use John instead</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="Nmap.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="HashCat.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Nmap</p>
+            <p class="prev-next-title">Hashcat</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Msfvenom.html" title="next page">
+    <a class='right-next' id="next-link" href="TCPDump.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Msfvenom</p>
+        <p class="prev-next-title">TCPDump</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
