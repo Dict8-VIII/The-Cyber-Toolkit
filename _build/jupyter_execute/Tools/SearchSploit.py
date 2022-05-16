@@ -3,7 +3,7 @@
 
 # # Searchsploit 
 # 
-# The 'offline' database of exploits. I think its metasploits?
+# The 'offline' database of exploits. I think it's metasploit's?
 # 
 # ## Commands
 # 
@@ -17,7 +17,7 @@
 # ### Copy an exploit to PWD
 # Because you dont want to break the working one while testing.
 # 
-# > searchsploit -m 47887.py /php/webapps/47887.py
+# > searchsploit -m 47887.py
 # 
 # ![Tools-SearchSploit_copy.png](../images/Tools-SearchSploit_copy.png)
 # 

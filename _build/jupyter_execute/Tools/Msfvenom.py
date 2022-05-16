@@ -3,6 +3,6 @@
 
 # # Msfvenom
 # 
-# A component of Metasploit, this software can be used to create payloads for either meterpreter or other injection points.
+# A component of Metasploit, this software can be used to create payloads.
 # 
 # 
