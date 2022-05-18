@@ -24,6 +24,9 @@
 # 
 # then your terminal will suddenly have sudo rights. Obviously this is also one of the first things locked down in a system.
 # 
+# ### GTFO Bins
+# So, we have some things we can run as sudo... great. How can we use this? Enter [GTFOBins](https://gtfobins.github.io/gtfobins/nano/). This is a great page that includes so many ways to turn sudo rights on a program to sudo rights in a shell. So much fun.
+# 
 # <hr>
 # 
 
@@ -105,10 +108,12 @@
 # - /: whole directory
 # - -perm -u=s: with permission SUID (-g=s for SGID)
 # - -type f: of type file
-# - 2>/dev/null: linux speak for "send erros to the null box" (ignore errors)
+# - 2>/dev/null: linux speak for "send errors to the null box" (ignore errors)
 # 
-# 
+# An example of this can be found in the [JnrPenTester Path LinuxPrivEsc Page](../../JnrPenTester/LinuxPrivEsc_task9.ipynb)
 # <hr>
+
+# 
 
 # ### Exploting a Service - Linux
 # Sometimes you may be able to create services to be executed as root (such as with cron). Write your script in a text file and save it as [name].service. The below steps will then register the service for you.
@@ -116,6 +121,16 @@
 # - systemd-analyze verify [name].service
 # - systemctl link /xxx/yyy/[name].service (this must be an absolute path)
 # - systemctl start [name].service
+
+# ## Tools
+# 
+# LinPeas: https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS
+# LinEnum: https://github.com/rebootuser/LinEnum
+# LES (Linux Exploit Suggester): https://github.com/mzet-/linux-exploit-suggester
+# Linux Smart Enumeration: https://github.com/diego-treitos/linux-smart-enumeration
+# Linux Priv Checker: https://github.com/linted/linuxprivchecker
+# 
+# <hr>
 
 # In[ ]:
 

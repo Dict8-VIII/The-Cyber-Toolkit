@@ -15,6 +15,7 @@ parts:
       sections:
       - file: JnrPenTester/FileInclusion
       - file: JnrPenTester/JnrPenTester_BurpSuite
+      - file: JnrPenTester/LinuxPrivEsc_task8
   - caption: Tools
     chapters:
     - file: Tools/PriveligeEscalation/PriveligeEscalation

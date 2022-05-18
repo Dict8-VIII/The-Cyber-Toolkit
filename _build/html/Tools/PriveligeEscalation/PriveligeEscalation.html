@@ -53,7 +53,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="LinEnum" href="LinEnum.html" />
-    <link rel="prev" title="Burp Suite" href="../../JnrPenTester/JnrPenTester_BurpSuite.html" />
+    <link rel="prev" title="Exploiting the SUID Bit" href="../../JnrPenTester/LinuxPrivEsc_task8.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -160,6 +160,11 @@
      Burp Suite
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../JnrPenTester/LinuxPrivEsc_task8.html">
+     Exploiting the SUID Bit
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -248,6 +253,11 @@
      Msfvenom
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../SearchSploit.html">
+     Searchsploit
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -291,6 +301,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../Hydra.html">
+   Hydra
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../TCPDump.html">
    TCPDump
   </a>
@@ -298,6 +313,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../Ettercap.html">
    Ettercap &amp; Bettercap
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Nessus.html">
+   Nessus
   </a>
  </li>
 </ul>
@@ -526,6 +546,11 @@
      Sudo List
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gtfo-bins">
+     GTFO Bins
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -556,6 +581,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tools">
+   Tools
+  </a>
  </li>
 </ul>
 
@@ -587,6 +617,11 @@
      Sudo List
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gtfo-bins">
+     GTFO Bins
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -618,6 +653,11 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tools">
+   Tools
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -647,6 +687,10 @@
 <div><p>sudo /bin/su</p>
 </div></blockquote>
 <p>then your terminal will suddenly have sudo rights. Obviously this is also one of the first things locked down in a system.</p>
+</div>
+<div class="section" id="gtfo-bins">
+<h3>GTFO Bins<a class="headerlink" href="#gtfo-bins" title="Permalink to this headline">¶</a></h3>
+<p>So, we have some things we can run as sudo… great. How can we use this? Enter <a class="reference external" href="https://gtfobins.github.io/gtfobins/nano/">GTFOBins</a>. This is a great page that includes so many ways to turn sudo rights on a program to sudo rights in a shell. So much fun.</p>
 <hr>
 </div>
 </div>
@@ -727,8 +771,9 @@ Source: <a class="reference external" href="https://tenor.com/view/futurama-you-
 <li><p>/: whole directory</p></li>
 <li><p>-perm -u=s: with permission SUID (-g=s for SGID)</p></li>
 <li><p>-type f: of type file</p></li>
-<li><p>2&gt;/dev/null: linux speak for “send erros to the null box” (ignore errors)</p></li>
+<li><p>2&gt;/dev/null: linux speak for “send errors to the null box” (ignore errors)</p></li>
 </ul>
+<p>An example of this can be found in the <span class="xref myst">JnrPenTester Path LinuxPrivEsc Page</span></p>
 <hr></div>
 </div>
 <div class="section" id="exploting-a-service-linux">
@@ -741,6 +786,14 @@ Source: <a class="reference external" href="https://tenor.com/view/futurama-you-
 </ul>
 </div>
 </div>
+<div class="section" id="tools">
+<h2>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<p>LinPeas: <a class="reference external" href="https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS">https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS</a>
+LinEnum: <a class="reference external" href="https://github.com/rebootuser/LinEnum">https://github.com/rebootuser/LinEnum</a>
+LES (Linux Exploit Suggester): <a class="reference external" href="https://github.com/mzet-/linux-exploit-suggester">https://github.com/mzet-/linux-exploit-suggester</a>
+Linux Smart Enumeration: <a class="reference external" href="https://github.com/diego-treitos/linux-smart-enumeration">https://github.com/diego-treitos/linux-smart-enumeration</a>
+Linux Priv Checker: <a class="reference external" href="https://github.com/linted/linuxprivchecker">https://github.com/linted/linuxprivchecker</a></p>
+<hr></div>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -770,11 +823,11 @@ Source: <a class="reference external" href="https://tenor.com/view/futurama-you-
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../../JnrPenTester/JnrPenTester_BurpSuite.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../../JnrPenTester/LinuxPrivEsc_task8.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Burp Suite</p>
+            <p class="prev-next-title">Exploiting the SUID Bit</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="LinEnum.html" title="next page">
