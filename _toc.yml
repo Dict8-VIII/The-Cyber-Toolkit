@@ -20,10 +20,14 @@ parts:
     chapters:
     - file: Tools/PriveligeEscalation/PriveligeEscalation
       sections:
-      - file: Tools/PriveligeEscalation/LinEnum
-      - file: Tools/PriveligeEscalation/LinPeas
-      - file: Tools/PriveligeEscalation/LES
-      - file: Tools/PriveligeEscalation/Powerup
+      - file: Tools/PriveligeEscalation/LinuxPrivEsc
+        sections:
+        - file: Tools/PriveligeEscalation/LinEnum
+        - file: Tools/PriveligeEscalation/LinPeas
+        - file: Tools/PriveligeEscalation/LES
+      - file: Tools/PriveligeEscalation/WindowsPrivEsc
+        sections:
+        - file: Tools/PriveligeEscalation/Powerup
     - file: Tools/BurpSuite/Burp
       sections:
       - file: Tools/BurpSuite/BurpRepeater

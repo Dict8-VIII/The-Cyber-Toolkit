@@ -52,7 +52,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="LinEnum" href="LinEnum.html" />
+    <link rel="next" title="Linux Privelige Escalation" href="LinuxPrivEsc.html" />
     <link rel="prev" title="Exploiting the SUID Bit" href="../../JnrPenTester/LinuxPrivEsc_task8.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -184,25 +184,49 @@
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="LinEnum.html">
-     LinEnum
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="LinuxPrivEsc.html">
+     Linux Privelige Escalation
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="LinEnum.html">
+       LinEnum
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="LinPeas.html">
+       LinPeas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="LES.html">
+       Linux Exploit Suggester
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="LinPeas.html">
-     LinPeas
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="WindowsPrivEsc.html">
+     Windows PrivEsc
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="LES.html">
-     Linux Exploit Suggester
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Powerup.html">
-     Powerup
-    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Powerup.html">
+       Powerup
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -210,8 +234,8 @@
   <a class="reference internal" href="../BurpSuite/Burp.html">
    Burp Suite
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -242,8 +266,8 @@
   <a class="reference internal" href="../Metasploit.html">
    Metasploit Framework
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -418,8 +442,8 @@
   <a class="reference internal" href="../../KillChain/Killchain_Overview.html">
    Killchain Overview
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -531,65 +555,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#trivial-checks">
-   Trivial Checks
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sudo-list">
-     Sudo List
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#gtfo-bins">
-     GTFO Bins
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#users-list">
-   Users List
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#linux-user-rights-the-suid-bit">
-   Linux User Rights &amp; the SUID bit
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-suid-bit">
-     The SUID bit
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#how-to-find-files-with-suid-set">
-       How to find files with SUID set
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exploting-a-service-linux">
-     Exploting a Service - Linux
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tools">
-   Tools
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -602,65 +567,6 @@
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#trivial-checks">
-   Trivial Checks
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sudo-list">
-     Sudo List
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#gtfo-bins">
-     GTFO Bins
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#users-list">
-   Users List
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#linux-user-rights-the-suid-bit">
-   Linux User Rights &amp; the SUID bit
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-suid-bit">
-     The SUID bit
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#how-to-find-files-with-suid-set">
-       How to find files with SUID set
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exploting-a-service-linux">
-     Exploting a Service - Linux
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tools">
-   Tools
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -673,128 +579,7 @@
 <img alt="PrivEsc-self_promotions.jpg" src="../../_images/PrivEsc-self_promotions.jpg" /></p>
 <p>Note: Privelige escalation isnt a purely remote situation. It is also an internal threat, whereas an employee may want to gain access to information they arent supposed to have (a helpdesk operator shouldn have access to finance details, but a domain admin could probably get to it).</p>
 <p>There are 2 forms of privelige escalation, vertical and horizontal. A vertical escalation is moving to more rights (user -&gt; admin for example), while a horizontal escalation is to move to the same level (we’re both in helpdesk, but they have passwords saved on their desktop). Most of the time our goal is vertical movement, but horizonal movement may help get us there.</p>
-<div class="section" id="trivial-checks">
-<h2>Trivial Checks<a class="headerlink" href="#trivial-checks" title="Permalink to this headline">¶</a></h2>
-<p>There are some checks that can be done easily.</p>
-<div class="section" id="sudo-list">
-<h3>Sudo List<a class="headerlink" href="#sudo-list" title="Permalink to this headline">¶</a></h3>
-<p>The first is linux specific.</p>
-<blockquote>
-<div><p>sudo -l</p>
-</div></blockquote>
-<p>While not an escalation itself, it lists what can be run as ‘sudo’ rights. Sudo is linux specific where a user can use admin priveliges for a task. This function lists what can be run as ‘sudo’. An example would be /bin/su. If it is listed and you execute</p>
-<blockquote>
-<div><p>sudo /bin/su</p>
-</div></blockquote>
-<p>then your terminal will suddenly have sudo rights. Obviously this is also one of the first things locked down in a system.</p>
-</div>
-<div class="section" id="gtfo-bins">
-<h3>GTFO Bins<a class="headerlink" href="#gtfo-bins" title="Permalink to this headline">¶</a></h3>
-<p>So, we have some things we can run as sudo… great. How can we use this? Enter <a class="reference external" href="https://gtfobins.github.io/gtfobins/nano/">GTFOBins</a>. This is a great page that includes so many ways to turn sudo rights on a program to sudo rights in a shell. So much fun.</p>
-<hr>
-</div>
-</div>
-<div class="section" id="users-list">
-<h2>Users List<a class="headerlink" href="#users-list" title="Permalink to this headline">¶</a></h2>
-<p>A good check to run is to check the users list. On linux this can be done by printing the users file to the terminal:</p>
-<blockquote>
-<div><p>cat /etc/passwd</p>
-</div></blockquote>
-<p>For windows its a bit harder. Assuming you are trying to check stored passwords on the local machine; these are stored in the SAM file (and isnt the hardest thing to crack). Metasploit has methods to grab these (such as the hash dump) or your can try mimikatz. The files themselves can be found in C:\windows\system32\Config but this requires decent access already.</p>
-<hr>
-</div>
-<div class="section" id="linux-user-rights-the-suid-bit">
-<h2>Linux User Rights &amp; the SUID bit<a class="headerlink" href="#linux-user-rights-the-suid-bit" title="Permalink to this headline">¶</a></h2>
-<p>All files (and folders) in linux have rights which can be represented by 3 digits. Each digit corresponds to an access group. <br>
-For the representation “123”:</p>
-<ol class="simple">
-<li><p>The ‘user’ who owns the file (the owner)</p></li>
-<li><p>The ‘group’ who owns the file (</p></li>
-<li><p>Everyone Else</p></li>
-</ol>
-<p>Now, lets break down where the value of the position comes from. Keep in mind, this is how the value for each position is determined. There are 3 rights that can be assigned to each group; Read, Write and eXecute. Each of these rights is assigned a value (if permitted) and the sum of these values its the single digit of the group. For “all rights”, the values are shown below. Note the order of groups and right is always the same.</p>
-<blockquote>
-<div><p>rwx <br>
-421</p>
-</div></blockquote>
-<p>Summing these gives the value for that group (with the max being 7). Relating this to the larger 3 groups, 700 would mean the owner has all rights to the file, and no-one else does. A few more examples are below for the full mapping:</p>
-<blockquote>
-<div><p>rwx-r..-r..<br>
-421-4..-4..<br>
-744</p>
-</div></blockquote>
-<p>744 means the owner has full rights, everyone else can only read</p>
-<blockquote>
-<div><p>rwx-r.x-r.x<br>
-421-4.1-4.1<br>
-755</p>
-</div></blockquote>
-<p>755 means the owner has full rights, others can only read and execute.</p>
-<blockquote>
-<div><p>rwx-…-…<br>
-42.-…-…<br>
-600</p>
-</div></blockquote>
-<p>600 means the owner can only read &amp; write (but not execute), no-one else can do anything.</p>
-<hr>
-<div class="section" id="the-suid-bit">
-<h3>The SUID bit<a class="headerlink" href="#the-suid-bit" title="Permalink to this headline">¶</a></h3>
-<p>So, all the above makes sense (I hope). If not, read it again before this sections.<br>
-The SUID, or Set User ID is a special case in linux. When this is set, the file is executed with the ‘current’ user, but uses the rights of the owner. Unless you dive quite far into this, its probably easier to just think that the file is being run as the owner.</p>
-<p><img alt="technicallycorrect.gif" src="../../_images/technicallycorrect.gif" /><br>
-Source: <a class="reference external" href="https://tenor.com/view/futurama-you-are-technically-correct-technically-correct-the-best-kind-of-correct-correct-gif-4979933">https://tenor.com/view/futurama-you-are-technically-correct-technically-correct-the-best-kind-of-correct-correct-gif-4979933</a></p>
-<p>This may sound weird and insecure, but its actually a necessity for a number of tasks. For example, the average user cant modify the passwords file, but when they change their own password they need to. There is also a SGID bit, which is the same for groups. <br></p>
-<p>So, how is this represented? We’ve filled in all the spots in our permission set? Simply, we just steal the execute bit (in the owner for SUID, in the group for GUID).</p>
-<p>So, if the SUID bit is set, 755 becomes</p>
-<blockquote>
-<div><p>rws-r.x-r.x<br>
-421-4.1-4.1<br>
-755</p>
-</div></blockquote>
-<p>So the value doesnt change, just the representation. This is also where the case comes into play as well. All of the letter so far have been lower case, but its actually case sensitive. To quote <a class="reference external" href="https://tbhaxor.com/demystifying-suid-and-sgid-bits/">tbhaxor</a>:</p>
-<p><i>The translation would look like</i></p>
-<ul class="simple">
-<li><p><i>rwsrw-r-x – SUID bit set and the binary is executable</i></p></li>
-<li><p><i>rwSrw-r-x – SUID bit set and the binary is not executable</i></p></li>
-<li><p><i>rwxrwsr-x – SGID bit set and the binary is executable</i></p></li>
-<li><p><i>rwxrwSr-x – SGID bit set and the binary is not executable</i></p></li>
-</ul>
-<hr>
-<div class="section" id="how-to-find-files-with-suid-set">
-<h4>How to find files with SUID set<a class="headerlink" href="#how-to-find-files-with-suid-set" title="Permalink to this headline">¶</a></h4>
-<p>Great thing linux has a search function, huh?</p>
-<blockquote>
-<div><p>find / -perm -u=s -type f 2&gt;/dev/null</p>
-</div></blockquote>
-<ul class="simple">
-<li><p>Find: What it says</p></li>
-<li><p>/: whole directory</p></li>
-<li><p>-perm -u=s: with permission SUID (-g=s for SGID)</p></li>
-<li><p>-type f: of type file</p></li>
-<li><p>2&gt;/dev/null: linux speak for “send errors to the null box” (ignore errors)</p></li>
-</ul>
-<p>An example of this can be found in the <span class="xref myst">JnrPenTester Path LinuxPrivEsc Page</span></p>
-<hr></div>
-</div>
-<div class="section" id="exploting-a-service-linux">
-<h3>Exploting a Service - Linux<a class="headerlink" href="#exploting-a-service-linux" title="Permalink to this headline">¶</a></h3>
-<p>Sometimes you may be able to create services to be executed as root (such as with cron). Write your script in a text file and save it as [name].service. The below steps will then register the service for you.</p>
-<ul class="simple">
-<li><p>systemd-analyze verify [name].service</p></li>
-<li><p>systemctl link /xxx/yyy/[name].service (this must be an absolute path)</p></li>
-<li><p>systemctl start [name].service</p></li>
-</ul>
-</div>
-</div>
-<div class="section" id="tools">
-<h2>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
-<p>LinPeas: <a class="reference external" href="https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS">https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS</a>
-LinEnum: <a class="reference external" href="https://github.com/rebootuser/LinEnum">https://github.com/rebootuser/LinEnum</a>
-LES (Linux Exploit Suggester): <a class="reference external" href="https://github.com/mzet-/linux-exploit-suggester">https://github.com/mzet-/linux-exploit-suggester</a>
-Linux Smart Enumeration: <a class="reference external" href="https://github.com/diego-treitos/linux-smart-enumeration">https://github.com/diego-treitos/linux-smart-enumeration</a>
-Linux Priv Checker: <a class="reference external" href="https://github.com/linted/linuxprivchecker">https://github.com/linted/linuxprivchecker</a></p>
-<hr></div>
-<div class="toctree-wrapper compound">
+<hr><div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -830,10 +615,10 @@ Linux Priv Checker: <a class="reference external" href="https://github.com/linte
             <p class="prev-next-title">Exploiting the SUID Bit</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="LinEnum.html" title="next page">
+    <a class='right-next' id="next-link" href="LinuxPrivEsc.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">LinEnum</p>
+        <p class="prev-next-title">Linux Privelige Escalation</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
