@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Metasploit Framework &#8212; The Cyber Toolkit</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,37 +20,36 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/.ipynb_checkpoints/custom-checkpoint.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -71,7 +72,21 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -80,9 +95,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -100,14 +116,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   The Cyber Toolkit
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    The Cyber Toolkit
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   TryHackMe Rooms / Walkthrough
  </span>
@@ -403,7 +420,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../Craft/ShellStabalise.html">
-   Stabalising a shell
+   Stabilizing a shell
   </a>
  </li>
  <li class="toctree-l1">
@@ -475,91 +492,164 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Tools/Metasploit.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/Dict8-VIII/The-Cyber-Toolkit/master?urlpath=tree/Tools/Metasploit.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/Dict8-VIII/The-Cyber-Toolkit/master?urlpath=tree/Tools/Metasploit.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Tools/Metasploit.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#components">
    Components
@@ -674,12 +764,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Metasploit Framework</h1>
@@ -810,21 +899,22 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="metasploit-framework">
-<h1>Metasploit Framework<a class="headerlink" href="#metasploit-framework" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="metasploit-framework">
+<h1>Metasploit Framework<a class="headerlink" href="#metasploit-framework" title="Permalink to this headline">#</a></h1>
 <p>The MetaSploitFramework (msf / Metasploit) is a collection of exploits, payloads, scripts, enum tools,  has its own custom shell, nmap and will probably even walk the dog if you asked nicely enough. <br>
 This page is centred around the free version, which is terminal only.</p>
-<div class="section" id="components">
-<h2>Components<a class="headerlink" href="#components" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="msfconsole">
-<h3>msfconsole<a class="headerlink" href="#msfconsole" title="Permalink to this headline">¶</a></h3>
+<section id="components">
+<h2>Components<a class="headerlink" href="#components" title="Permalink to this headline">#</a></h2>
+<section id="msfconsole">
+<h3>msfconsole<a class="headerlink" href="#msfconsole" title="Permalink to this headline">#</a></h3>
 <p>This is the terminal interface for the free version of metasploit. It also installs a postgresSQL instance, where it stores your history, which must also be running when you launch it.</p>
-</div>
-<div class="section" id="modules">
-<h3>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="modules">
+<h3>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">#</a></h3>
 <p>The componets of Metasploit that can be used for a wide variety of tasks. These are further grouped by the purpose, and these can be listed. They are found in</p>
 <blockquote>
 <div><p>opt/metasploit-framework-5101/modules/</p>
@@ -849,16 +939,16 @@ This page is centred around the free version, which is terminal only.</p>
 <li><p>Evasion: More active methods to evade AV</p></li>
 <li><p>Post</p></li>
 </ol>
-</div>
-<div class="section" id="tools">
-<h3>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="tools">
+<h3>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">#</a></h3>
 <p>There are a few built in tools for metasploit. The biggest of these is MSFVenom. This is covered in <a class="reference internal" href="Msfvenom.html"><span class="doc std std-doc">another page</span></a></p>
-<hr></div>
-</div>
-<div class="section" id="the-basics">
-<h2>The Basics<a class="headerlink" href="#the-basics" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="launching">
-<h3>Launching<a class="headerlink" href="#launching" title="Permalink to this headline">¶</a></h3>
+<hr></section>
+</section>
+<section id="the-basics">
+<h2>The Basics<a class="headerlink" href="#the-basics" title="Permalink to this headline">#</a></h2>
+<section id="launching">
+<h3>Launching<a class="headerlink" href="#launching" title="Permalink to this headline">#</a></h3>
 <p>If you need to start the postgress instance manually</p>
 <blockquote>
 <div><p>sudo service start postgressql</p>
@@ -868,14 +958,14 @@ This page is centred around the free version, which is terminal only.</p>
 <div><p>msfconsole</p>
 </div></blockquote>
 <hr>
-</div>
-</div>
-<div class="section" id="functional-commands">
-<h2>Functional Commands<a class="headerlink" href="#functional-commands" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="functional-commands">
+<h2>Functional Commands<a class="headerlink" href="#functional-commands" title="Permalink to this headline">#</a></h2>
 <p>SET, OPTIONS, EXPLOIT, SEARCH
 SETG, clearG, BACK, USE</p>
-<div class="section" id="simple-example">
-<h3>Simple Example<a class="headerlink" href="#simple-example" title="Permalink to this headline">¶</a></h3>
+<section id="simple-example">
+<h3>Simple Example<a class="headerlink" href="#simple-example" title="Permalink to this headline">#</a></h3>
 <p>search for an exploit (includes scanning and post exploit ‘exploits’)</p>
 <blockquote>
 <div><p>search Eternal_Blue <br>
@@ -891,10 +981,10 @@ select # (your number from the list)</p>
 <div><p>set Lhost 127.0.0.1 <br>
 set Rhosts 127.0.0.2 <br></p>
 </div></blockquote>
-<hr></div>
-</div>
-<div class="section" id="working-with-databases">
-<h2>Working with databases<a class="headerlink" href="#working-with-databases" title="Permalink to this headline">¶</a></h2>
+<hr></section>
+</section>
+<section id="working-with-databases">
+<h2>Working with databases<a class="headerlink" href="#working-with-databases" title="Permalink to this headline">#</a></h2>
 <p>In the ‘real world’ we arent just attacking a single target, but a whole scope of targets. To facilitate this, metasploit has the option to create DB workspaces to separate scope. <br></p>
 <p>To use this feature, you must start the SQL server using</p>
 <blockquote>
@@ -908,8 +998,8 @@ set Rhosts 127.0.0.2 <br></p>
 <blockquote>
 <div><p>db_status</p>
 </div></blockquote>
-<div class="section" id="workspaces">
-<h3>Workspaces<a class="headerlink" href="#workspaces" title="Permalink to this headline">¶</a></h3>
+<section id="workspaces">
+<h3>Workspaces<a class="headerlink" href="#workspaces" title="Permalink to this headline">#</a></h3>
 <p>A workspace is an ‘environment’ where tasks can be run. This is similar to an env (in python) where the tasks are in a separate enviroment to other workspaces. Isolated isnt quite the right word, but it gives a good impression.</p>
 <ul class="simple">
 <li><p>Running the command workspace gives your current workspace</p></li>
@@ -918,13 +1008,13 @@ set Rhosts 127.0.0.2 <br></p>
 <li><p>workspace [name] swaps to the workspace (“default” is default)</p></li>
 <li><p>workspace -h lists the help</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="db-functions">
-<h2>DB Functions<a class="headerlink" href="#db-functions" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="db-functions">
+<h2>DB Functions<a class="headerlink" href="#db-functions" title="Permalink to this headline">#</a></h2>
 <p>Some metasploit functions also have db equivalent functions. These write the data to the db as well as the terminal.</p>
-<div class="section" id="db-nmap-example">
-<h3>db_nmap example<a class="headerlink" href="#db-nmap-example" title="Permalink to this headline">¶</a></h3>
+<section id="db-nmap-example">
+<h3>db_nmap example<a class="headerlink" href="#db-nmap-example" title="Permalink to this headline">#</a></h3>
 <p>You can run an nmap scan using</p>
 <blockquote>
 <div><p>db_nmap [arguements]</p>
@@ -939,9 +1029,9 @@ set Rhosts 127.0.0.2 <br></p>
 services -S ‘value’ searches the services for a name</p>
 </div></blockquote>
 <hr>
-</div>
-<div class="section" id="eternal-blue-example">
-<h3>Eternal Blue example<a class="headerlink" href="#eternal-blue-example" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="eternal-blue-example">
+<h3>Eternal Blue example<a class="headerlink" href="#eternal-blue-example" title="Permalink to this headline">#</a></h3>
 <ol class="simple">
 <li><p>Scan for machines using db_nmap</p></li>
 <li><p>Use auxiliary/scanner/smb/smb_ms17_010</p></li>
@@ -949,19 +1039,19 @@ services -S ‘value’ searches the services for a name</p>
 <li><p>run the exploit with “exploit” or “run”</p></li>
 </ol>
 <p>This will then run the scan against all recorded IPs and return those which may be vulnerable.</p>
-<hr></div>
-</div>
-<div class="section" id="sessions">
-<h2>Sessions<a class="headerlink" href="#sessions" title="Permalink to this headline">¶</a></h2>
+<hr></section>
+</section>
+<section id="sessions">
+<h2>Sessions<a class="headerlink" href="#sessions" title="Permalink to this headline">#</a></h2>
 <p>Sessions are ‘open connections’ which tend to be created after a successful exploit.</p>
 <ul class="simple">
 <li><p>bg: background the current session</p></li>
 <li><p>sessions [i]: swap to session 1</p></li>
 <li><p>sessions: list all current sessions</p></li>
 </ul>
-<hr></div>
-<div class="section" id="meterpreter-shell">
-<h2>Meterpreter Shell<a class="headerlink" href="#meterpreter-shell" title="Permalink to this headline">¶</a></h2>
+<hr></section>
+<section id="meterpreter-shell">
+<h2>Meterpreter Shell<a class="headerlink" href="#meterpreter-shell" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>help : uhh….</p></li>
 </ul>
@@ -984,42 +1074,42 @@ services -S ‘value’ searches the services for a name</p>
 <li><p>hashdump : dumps the (windows) hashes</p></li>
 <li><p>sysinfo : name, build, domain etc</p></li>
 </ul>
-<hr></div>
-<div class="section" id="fun-exploits">
-<h2>Fun exploits<a class="headerlink" href="#fun-exploits" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="eternal-blue">
-<h3>Eternal Blue<a class="headerlink" href="#eternal-blue" title="Permalink to this headline">¶</a></h3>
+<hr></section>
+<section id="fun-exploits">
+<h2>Fun exploits<a class="headerlink" href="#fun-exploits" title="Permalink to this headline">#</a></h2>
+<section id="eternal-blue">
+<h3>Eternal Blue<a class="headerlink" href="#eternal-blue" title="Permalink to this headline">#</a></h3>
 <p>This one is easy, if youre running windows 7 and have SMB enabled (spoiler, they all do), you’re screwed</p>
 <blockquote>
 <div><p>search Eternal_Blue</p>
 </div></blockquote>
-</div>
-<div class="section" id="hashdump">
-<h3>Hashdump<a class="headerlink" href="#hashdump" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="hashdump">
+<h3>Hashdump<a class="headerlink" href="#hashdump" title="Permalink to this headline">#</a></h3>
 <p>Dumps all the hashes in an exploited windows box, stores in Metasploit DB.</p>
 <blockquote>
 <div><p>search post/windows/gather/hashdump</p>
 </div></blockquote>
-</div>
-<div class="section" id="crack-windows">
-<h3>Crack Windows<a class="headerlink" href="#crack-windows" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="crack-windows">
+<h3>Crack Windows<a class="headerlink" href="#crack-windows" title="Permalink to this headline">#</a></h3>
 <p>Follows on from the above hashdump, try to crack the passwords we have… borrowed…
 If its a good password, this is gonna take a while…. use John instead</p>
 <blockquote>
 <div><p>auxiliary/analyze/crack_windows</p>
 </div></blockquote>
-</div>
-<div class="section" id="escalation-suggester">
-<h3>Escalation Suggester<a class="headerlink" href="#escalation-suggester" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="escalation-suggester">
+<h3>Escalation Suggester<a class="headerlink" href="#escalation-suggester" title="Permalink to this headline">#</a></h3>
 <p>One of the built in tools for PrivEx. Requires a session to be created already. I havent had much luck with this though</p>
 <blockquote>
 <div><p>multi/recon/local_exploit_suggester</p>
 </div></blockquote>
-<hr></div>
-</div>
+<hr></section>
+</section>
 <div class="toctree-wrapper compound">
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1043,9 +1133,11 @@ If its a good password, this is gonna take a while…. use John instead</p>
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="Nmap.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1061,24 +1153,28 @@ If its a good password, this is gonna take a while…. use John instead</p>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Paul Williams<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Paul Williams<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

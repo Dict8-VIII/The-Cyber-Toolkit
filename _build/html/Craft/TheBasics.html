@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>The Basics &#8212; The Cyber Toolkit</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,40 +20,39 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/.ipynb_checkpoints/custom-checkpoint.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="The OSI Model" href="TheOSIModel.html" />
@@ -73,7 +74,21 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -82,9 +97,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -102,14 +118,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   The Cyber Toolkit
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    The Cyber Toolkit
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   TryHackMe Rooms / Walkthrough
  </span>
@@ -405,7 +422,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="ShellStabalise.html">
-   Stabalising a shell
+   Stabilizing a shell
   </a>
  </li>
  <li class="toctree-l1">
@@ -477,91 +494,164 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Craft/TheBasics.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/Dict8-VIII/The-Cyber-Toolkit/master?urlpath=tree/Craft/TheBasics.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/Dict8-VIII/The-Cyber-Toolkit/master?urlpath=tree/Craft/TheBasics.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Craft/TheBasics.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#why-is-cyber-security-important">
    Why Is Cyber Security Important?
@@ -589,75 +679,76 @@
      </li>
     </ul>
    </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-of-hackers-by-knowledge">
+   Types of Hackers (by Knowledge)
+  </a>
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#types-of-hackers-by-knowledge">
-     Types of Hackers (by Knowledge)
+    <a class="reference internal nav-link" href="#script-kiddie">
+     “Script Kiddie”
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#script-kiddie">
-       “Script Kiddie”
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#hacking-group">
-       Hacking Group
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#professional-hackers">
-       Professional Hackers
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#apts-nsas">
-       APTs &amp; NSAs
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#an-automated-tool">
-       An Automated Tool
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#types-of-attacks">
-     Types of Attacks
+    <a class="reference internal nav-link" href="#hacking-group">
+     Hacking Group
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dos-and-ddos">
-       DoS (and DDoS)
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#man-in-the-middle">
-       Man In The Middle
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#social-engineering">
-       Social Engineering
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#phishing-spearphising">
-       Phishing &amp; Spearphising
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#professional-hackers">
+     Professional Hackers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apts-nsas">
+     APTs &amp; NSAs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#an-automated-tool">
+     An Automated Tool
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-of-attacks">
+   Types of Attacks
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dos-and-ddos">
+     DoS (and DDoS)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#man-in-the-middle">
+     Man In The Middle
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#social-engineering">
+   Social Engineering
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#phishing-spearphising">
+     Phishing &amp; Spearphising
+    </a>
    </li>
   </ul>
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>The Basics</h1>
@@ -697,64 +788,66 @@
      </li>
     </ul>
    </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-of-hackers-by-knowledge">
+   Types of Hackers (by Knowledge)
+  </a>
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#types-of-hackers-by-knowledge">
-     Types of Hackers (by Knowledge)
+    <a class="reference internal nav-link" href="#script-kiddie">
+     “Script Kiddie”
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#script-kiddie">
-       “Script Kiddie”
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#hacking-group">
-       Hacking Group
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#professional-hackers">
-       Professional Hackers
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#apts-nsas">
-       APTs &amp; NSAs
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#an-automated-tool">
-       An Automated Tool
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#types-of-attacks">
-     Types of Attacks
+    <a class="reference internal nav-link" href="#hacking-group">
+     Hacking Group
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dos-and-ddos">
-       DoS (and DDoS)
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#man-in-the-middle">
-       Man In The Middle
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#social-engineering">
-       Social Engineering
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#phishing-spearphising">
-       Phishing &amp; Spearphising
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#professional-hackers">
+     Professional Hackers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apts-nsas">
+     APTs &amp; NSAs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#an-automated-tool">
+     An Automated Tool
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-of-attacks">
+   Types of Attacks
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dos-and-ddos">
+     DoS (and DDoS)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#man-in-the-middle">
+     Man In The Middle
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#social-engineering">
+   Social Engineering
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#phishing-spearphising">
+     Phishing &amp; Spearphising
+    </a>
    </li>
   </ul>
  </li>
@@ -764,93 +857,95 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="the-basics">
-<h1>The Basics<a class="headerlink" href="#the-basics" title="Permalink to this headline">¶</a></h1>
-<p>So, you’ve decided to start your path in Cyber Security, or more likely, hacking sounds fun. Great! It can be! But there is more to it then getting a hoodie and balaclava and hunching over a laptop (in the dark obviously). Hacking is a career path, regardless of what popular media tells you about hackers.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="the-basics">
+<h1>The Basics<a class="headerlink" href="#the-basics" title="Permalink to this headline">#</a></h1>
+<p>So, you’ve decided to start your path in Cyber Security, or more likely, hacking sounds fun. Great! It can be! But there is more to it than getting a hoodie and balaclava and hunching over a laptop (in the dark obviously). Hacking is a career path, regardless of what popular media tells you about hackers.</p>
 <p><img alt="hackerinhoodie.jpg" src="../_images/hackerinhoodie.jpg" /></p>
-<div class="section" id="why-is-cyber-security-important">
-<h2>Why Is Cyber Security Important?<a class="headerlink" href="#why-is-cyber-security-important" title="Permalink to this headline">¶</a></h2>
-<hr><div class="section" id="types-of-hackers-by-motive">
-<h3>Types of Hackers (By Motive)<a class="headerlink" href="#types-of-hackers-by-motive" title="Permalink to this headline">¶</a></h3>
-<p>So that leads us to the first note, what kind of hackers are there? Hackers can be divided by 2 metrics, their knowledge/threat level and their motives. The most clearly defined is the motives;</p>
-<div class="section" id="white-hat">
-<h4>White Hat<a class="headerlink" href="#white-hat" title="Permalink to this headline">¶</a></h4>
+<section id="why-is-cyber-security-important">
+<h2>Why Is Cyber Security Important?<a class="headerlink" href="#why-is-cyber-security-important" title="Permalink to this headline">#</a></h2>
+<section id="types-of-hackers-by-motive">
+<h3>Types of Hackers (By Motive)<a class="headerlink" href="#types-of-hackers-by-motive" title="Permalink to this headline">#</a></h3>
+<p>So that leads us to the first note, what kind of hackers are there? Hackers can be divided by 2 metrics, their knowledge/threat level and their motives. The most clearly defined is the motives.</p>
+<section id="white-hat">
+<h4>White Hat<a class="headerlink" href="#white-hat" title="Permalink to this headline">#</a></h4>
 <p>These are the professionals who operate within the scope of law and regulation. They work for a business (or are contracted to one) to engage in a range of cyber security tasks. They have permission from an entity to perform task on a system that they own, within a ‘scope’ of engagement. They have well defined documentation of what they are permitted to do on a system and follow this to the letter.</p>
 <p>An example would be a Pen Test (Penetration Test) where an airport contracts a security company to test their publicly exposed network to attempt to gain access. They are only permitted to operate within a defined target range and DDoS attacks are not permitted.</p>
-<p>Their motive is purely professional and within agreed terms. Any findings are reported professionally and remediation is advised.</p>
-</div>
-<div class="section" id="black-hat">
-<h4>Black Hat<a class="headerlink" href="#black-hat" title="Permalink to this headline">¶</a></h4>
+<p>Their motive is purely professional and within agreed terms. Any findings are reported professionally, and remediation is advised.</p>
+</section>
+<section id="black-hat">
+<h4>Black Hat<a class="headerlink" href="#black-hat" title="Permalink to this headline">#</a></h4>
 <p>The opposite of a White Hat is a Black Hat. They operation with no permission and their motivation is purely personal. This could range from a child sitting at home trying to guess Mum’s Facebook password, to a fully underground network of hackers who operation on a global scale. Their motivation could be financial, political, anarchist or simply because they want to know if they can. The KEY definition of a Black Hat is that they attack a system without permission.</p>
-</div>
-<div class="section" id="grey-hat">
-<h4>Grey Hat<a class="headerlink" href="#grey-hat" title="Permalink to this headline">¶</a></h4>
-<p>There is a 3rd type, however personally I think it should be considered a Black Hat. A Grey hat is a Black Hat who is hacking with a positive motive but no permission. An example would be someone who hacks a website without permission, but shares the method of entry with the owner of the site, with the hope they will fix it (or they ask for $$$ before they will share the method). The “Grey Hat” title should be handled with caution, I Am Not A Lawyer, but if you are caught your motivation is irrelevant and you will likely be considered a “Black Hat”.</p>
+</section>
+<section id="grey-hat">
+<h4>Grey Hat<a class="headerlink" href="#grey-hat" title="Permalink to this headline">#</a></h4>
+<p>There is a 3rd type, however personally I think it should be considered a Black Hat. A Grey hat is a Black Hat who is hacking with a positive motive but no permission. An example would be someone who hacks a website without permission but shares the method of entry with the owner of the site, with the hope they will fix it (or they ask for $$$ before they will share the method). The “Grey Hat” title should be handled with caution, I Am Not A Lawyer, but if you are caught your motivation is irrelevant and you will likely be considered a “Black Hat”.</p>
 <p>Some may put ‘hacktivists’ in this category. A ‘hacktivist’ is an activist using hacking to threaten a business. This could be from a DDoS using LOIC to defacing a website. None of this is legal in the physical world, it’s not online either.</p>
 <hr>
-</div>
-</div>
-<div class="section" id="types-of-hackers-by-knowledge">
-<h3>Types of Hackers (by Knowledge)<a class="headerlink" href="#types-of-hackers-by-knowledge" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+</section>
+<section id="types-of-hackers-by-knowledge">
+<h2>Types of Hackers (by Knowledge)<a class="headerlink" href="#types-of-hackers-by-knowledge" title="Permalink to this headline">#</a></h2>
 <p>The second metric is the knowledge of the hacker. While not clearly defined, there are levels of threat and considerations must be made for all to some extent. The below is a less -&gt; more threat level as I see it.</p>
 <blockquote>
-<div><p>Note: some sites define 7 levels, example: <a class="reference external" href="https://blog.knowbe4.com/the-7-levels-of-hackers">https://blog.knowbe4.com/the-7-levels-of-hackers</a>. I feel even this comes short as a “hacktivists” could also a “Script Kiddie” or a “Skilled Hacking Group”.</p>
+<div><p>Note: some sites define 7 levels, example: <a class="reference external" href="https://blog.knowbe4.com/the-7-levels-of-hackers">https://blog.knowbe4.com/the-7-levels-of-hackers</a>. I feel even this comes short as a “hacktivist” could also a “Script Kiddie” or a “Skilled Hacking Group”.</p>
 </div></blockquote>
-<div class="section" id="script-kiddie">
-<h4>“Script Kiddie”<a class="headerlink" href="#script-kiddie" title="Permalink to this headline">¶</a></h4>
-<p>Even the name is an insult to many hackers. A ‘script kiddie’ is stereotyped as the 10yr old sitting on the family computer trying to ‘hack facebook’. Another example would be a ‘hacktavist’ who learned hacking from a twitter post (did someone say LOIC?). Its not a sophisticated attack, but one of the things about some attacks is you don’t need to be. Enough people doing something simple at the same time can still be a massive headache (see DDoS below).</p>
-</div>
-<div class="section" id="hacking-group">
-<h4>Hacking Group<a class="headerlink" href="#hacking-group" title="Permalink to this headline">¶</a></h4>
-<p>Probably the most vague group in this list, a skilled hacking group could be many things. I would define it as “an individual or groups of hackers who have enough knowledge to be dangerous”. This could range from a well co-ordinated group of script kiddies to “Anonymous”. These are the people who are hacking as a semi-serious hobby and don’t have the finances to mount full attacks.</p>
-</div>
-<div class="section" id="professional-hackers">
-<h4>Professional Hackers<a class="headerlink" href="#professional-hackers" title="Permalink to this headline">¶</a></h4>
-<p>These are the people who are skilled enough to do this as a job (legitimate or not). They are skilled with any number of attacks and are likely aware of any new or emerging exploit. They have the time and experience to be a real threat to a majority of business.</p>
-</div>
-<div class="section" id="apts-nsas">
-<h4>APTs &amp; NSAs<a class="headerlink" href="#apts-nsas" title="Permalink to this headline">¶</a></h4>
-<p>I’ve thrown these together, as most APTs are NSAs. An APT is an “Advanced Persistent Threat”. These are the people who are incredibly skilled and have all the time in the world to find a way in. The majority of these are NSAs, or “Nation State Actors”, the government branches who fight wars behind a computer. If you are targeted by one of these you have 2 options.</p>
+<section id="script-kiddie">
+<h3>“Script Kiddie”<a class="headerlink" href="#script-kiddie" title="Permalink to this headline">#</a></h3>
+<p>Even the name is an insult to many hackers. A ‘script kiddie’ is stereotyped as the 10yr old sitting on the family computer trying to ‘hack Facebook’. Another example would be a ‘hacktivist’ who learned hacking from a twitter post (did someone say LOIC?). It’s not a sophisticated attack, but one of the things about some attacks is you don’t need to be. Enough people doing something simple at the same time can still be a massive headache (see DDoS below).</p>
+</section>
+<section id="hacking-group">
+<h3>Hacking Group<a class="headerlink" href="#hacking-group" title="Permalink to this headline">#</a></h3>
+<p>Probably the vaguest group in this list, a skilled hacking group could be many things. I would define it as “an individual or groups of hackers who have enough knowledge to be dangerous”. This could range from a well-co-ordinated group of script kiddies to “Anonymous”; (though “Anonymous” could be a group of script kiddies too). These are the people who are hacking as a semi-serious hobby and don’t have the finances to mount full attacks.</p>
+</section>
+<section id="professional-hackers">
+<h3>Professional Hackers<a class="headerlink" href="#professional-hackers" title="Permalink to this headline">#</a></h3>
+<p>These are the people who are skilled enough to do this as a job (legitimate or not). They are skilled with any number of attacks and are likely aware of any new or emerging exploit. They have the time and experience to be a real threat to most businesses.</p>
+</section>
+<section id="apts-nsas">
+<h3>APTs &amp; NSAs<a class="headerlink" href="#apts-nsas" title="Permalink to this headline">#</a></h3>
+<p>I’ve thrown these together, as most APTs are NSAs. An APT is an “Advanced Persistent Threat”. These are the people who are incredibly skilled and have all the time in the world to find a way in. The majority of these are NSAs, or “Nation State Actors”, the government branches who fight wars behind a computer. If you are targeted by one of these, you have 2 options.</p>
 <ol class="simple">
 <li><p>Disconnect yourself from the internet entirely, shut down all your devices and leave them in a tin foil safe in the bottom of the ocean.</p></li>
-<li><p>Accept that sooner or later, the chances are they will find a way in. No computer is perfectly secure and because of things like Zero Days, you don’t even know what you need to protect against. We all thought Windows 7 was secure when it came out and even during support. That was destroyed overnight by “Eternal Blue”, CVE-2017-0144. If you think the NSA didn’t have that one for years before we knew about it, you havent been paying attention…</p></li>
+<li><p>Accept that sooner or later, the chances are they will find a way in. No computer is perfectly secure and because of things like Zero Days, you don’t even know what you need to protect against. We all thought Windows 7 was secure when it came out and even during support. That was destroyed overnight by “Eternal Blue”, CVE-2017-0144. If you think the NSA didn’t have that one for years before we knew about it, you haven’t been paying attention…</p></li>
 </ol>
 <p>You have one lifeline though. APTs don’t target randomly, just remember that nothing on the internet is ever truly secure.</p>
-</div>
-<div class="section" id="an-automated-tool">
-<h4>An Automated Tool<a class="headerlink" href="#an-automated-tool" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="an-automated-tool">
+<h3>An Automated Tool<a class="headerlink" href="#an-automated-tool" title="Permalink to this headline">#</a></h3>
 <p>This is one I came across while forming my groups and I can appreciate the addition. An automated tool is ‘theoretical’ software that contains the skill of an APT. The reason this is more of a threat is that a well scripted tool could be run by any of the previous groups. Imagine being able to take a current MetaSploit version back to 2016 before Microsoft had been disclosed “Eternal Blue”. Suddenly you have a tool that gets you Admin access on (practically) any networked Windows 7 box. Ouch.</p>
-<hr></div>
-</div>
-<div class="section" id="types-of-attacks">
-<h3>Types of Attacks<a class="headerlink" href="#types-of-attacks" title="Permalink to this headline">¶</a></h3>
-<p>There are many types of attacks that can be employed by a hacker. While technologies come and go, the fundamentals dont change. Many of these have been ‘resolved’ in certain circumstances, but understanding of these attacks can still form a basis for a cyber security mindset. These are also a basic overview of the attacks, and more detail can be found in other sections.</p>
-<p>There aren’t really any clearly defined categories for attacks. Some people have tried, but I feel many fall down in a larger scope. The attacks below are listed as independant but in the real world there will be many types deployed to be successful.</p>
-<div class="section" id="dos-and-ddos">
-<h4>DoS (and DDoS)<a class="headerlink" href="#dos-and-ddos" title="Permalink to this headline">¶</a></h4>
+<hr></section>
+</section>
+<section id="types-of-attacks">
+<h2>Types of Attacks<a class="headerlink" href="#types-of-attacks" title="Permalink to this headline">#</a></h2>
+<p>There are many types of attacks that can be employed by a hacker. While technologies come and go, the fundamentals don’t change. Many of these have been ‘resolved’ in certain circumstances but understanding of these attacks can still form a basis for a cyber security mindset. These are also a basic overview of the attacks, and more detail can be found in other sections.</p>
+<p>There aren’t really any clearly defined categories for attacks. Some people have tried, but I feel many fall in a larger scope. The attacks below are listed as independent but in the real world there will be many types deployed together to be successful.</p>
+<section id="dos-and-ddos">
+<h3>DoS (and DDoS)<a class="headerlink" href="#dos-and-ddos" title="Permalink to this headline">#</a></h3>
 <p>A DoS, or Denial of Service attack is a very simple attack that can also be very powerful. While a DoS attack is technically any attack with the purpose of making a service unavailable, the most common method of this is by simply overloading the service with ‘fake’ data. Every service has a limit to how much data it can handle, and if we can overload this, then the service becomes unavailable to legitimate users. For a web site, this could prevent a legitimate user from accessing the site. <br></p>
-<p>As you could imagine, web servers are designed to handle a lot of traffic. A site like google could be handling tens of thousands of requests every second during normal operation, you’re not going to be able to take it down from you home computer &amp; internet connection. This is where a Distributed Denial of Service comes in. Instead of a single device trying to overload the site, you have multiple devices in multiple locations pushing data to the same server. While each machine itself might not be able to take the service down, with a large enough colleciton of devices, a lot more damage can be done.</p>
+<p>As you could imagine, web servers are designed to handle a lot of traffic. A site like google could be handling tens of thousands of requests every second during normal operation, you’re not going to be able to take it down from you home computer &amp; internet connection. This is where a Distributed Denial of Service comes in (DDoS). Instead of a single device trying to overload the site, you have multiple devices in multiple locations pushing data to the same server. While each machine itself might not be able to take the service down, with a large enough collection of devices, a lot more damage can be done.</p>
 <blockquote>
 <div><p>You’re probably still not going to be able to take down google… sorry</p>
 </div></blockquote>
-</div>
-<div class="section" id="man-in-the-middle">
-<h4>Man In The Middle<a class="headerlink" href="#man-in-the-middle" title="Permalink to this headline">¶</a></h4>
-<p>A “Man in the Middle” attack is when data is intercepted in transit and relayed on. A good analogy would be using the mail system to send cash (theres a reason they tell you not to do this). You might want to send a birthday letter to a niece/nephew on the other side of the country and throw in some birthday money. You drop it at the post office with <span class="math notranslate nohighlight">\(50 inside but someone heard there was cash inside. After you send the letter, the postman opens your letter, takes out the \)</span>50 and replaces it with $5, then sends the letter on its way. The letter still reaches the destination, but has been modifed. Unless someone verifies the amount, no-one is going to know 90% of the value was lost. <br></p>
-<p>Now, with data being what it is, you dont always need to remove data from the package. Simply knowing what data was in the package is enough in some circumstances. If you brought something online with a Credit Card and passed this data through, the attacker doesnt need to modify the letter, they can just grab the info and pass this on.</p>
-</div>
-<div class="section" id="social-engineering">
-<h4>Social Engineering<a class="headerlink" href="#social-engineering" title="Permalink to this headline">¶</a></h4>
-</div>
-<div class="section" id="phishing-spearphising">
-<h4>Phishing &amp; Spearphising<a class="headerlink" href="#phishing-spearphising" title="Permalink to this headline">¶</a></h4>
-<hr></div>
-</div>
-</div>
-</div>
+</section>
+<section id="man-in-the-middle">
+<h3>Man In The Middle<a class="headerlink" href="#man-in-the-middle" title="Permalink to this headline">#</a></h3>
+<p>A “Man in the Middle” attack is when data is intercepted in transit and relayed on. A good analogy would be using the mail system to send cash (there’s a reason they tell you not to do this). You might want to send a birthday letter to a niece/nephew on the other side of the country and throw in some birthday money. You drop it at the post office with <span class="math notranslate nohighlight">\(50 inside but someone heard there was cash inside. After you send the letter, the postman opens your letter, takes out the \)</span>50 and replaces it with $5, then sends the letter on its way. The letter still reaches the destination but has been modified. Unless someone verifies the amount, no-one is going to know 90% of the value was lost. <br></p>
+<p>Now, with data being what it is, you don’t always need to remove data from the package. Simply knowing what data was in the package is enough in some circumstances. If you brought something online with a Credit Card and passed this data through, the attacker doesn’t need to modify the letter, they can just grab the info and pass this on.</p>
+<hr>
+</section>
+</section>
+<section id="social-engineering">
+<h2>Social Engineering<a class="headerlink" href="#social-engineering" title="Permalink to this headline">#</a></h2>
+<section id="phishing-spearphising">
+<h3>Phishing &amp; Spearphising<a class="headerlink" href="#phishing-spearphising" title="Permalink to this headline">#</a></h3>
+<hr></section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -874,9 +969,11 @@
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../Tools/Nessus.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -892,24 +989,28 @@
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Paul Williams<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Paul Williams<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

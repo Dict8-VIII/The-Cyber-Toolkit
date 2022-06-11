@@ -3,7 +3,7 @@
 
 # # The OSI Model
 # 
-# The OSI model is one of the fundamental understandings of how networks work. It is a model of 7 layers (or 5 if you're lucky), with the top layer being the most human-readable, and the bottom layer being purely electronics. When data is transfered across a network, it is all done at the bottom level, but having multiple layers allow us to encapsulate (down) or deencapsulate (up) data whereby we dont need to understand how every layer works.
+# The OSI model is one of the fundamental understandings of how networks work. It is a model of 7 layers (or 5 if you're lucky), with the top layer being the most human-readable, and the bottom layer being purely electronics. When data is transferred across a network, it is all done at the bottom level, but having multiple layers allow us to encapsulate (down) or decapsulate (up) data whereby we don’t need to understand how every layer works.
 # 
 # ## The Layers
 # As mentioned above, there are 7 layers in the OSI model. From top - down, these are:
@@ -40,8 +40,9 @@
 # MAC, ARP
 # 
 # ### Physical layer
-# Ethernet, Wifi, Fibre, Pigeon etc
+# Ethernet, Wi-Fi, Fibre, Pigeon etc
 # 1,0,1,1,0,1,0,0
+# 
 
 # In[ ]:
 

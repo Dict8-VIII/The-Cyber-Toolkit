@@ -4,9 +4,9 @@
 # # Email Protocols
 # 
 # ## SMTP
-# SMTP, or Simple Mail Transfer Protocol is a common mail transfer method. It can be used offline but in the large majority of cases it is used between web servers. It is hosted on port 25 by default.
+# SMTP, or Simple Mail Transfer Protocol is a common mail transfer method. It can be used offline but in most cases it is used between web servers. It is hosted on port 25 by default.
 # 
-# A number of acrynoms are used with SMTP
+# Several acronyms are used with SMTP
 # 
 # - MSA: Mail Submission Agent, who the email is first passed to, and the forwards to the MTA.
 # - MTA: Mail Transmission Agent, the server in between the MSA and MDA
@@ -45,20 +45,21 @@
 # 1. telnet [IP] 110
 # 2. USER [username to authenticate]
 # 3. Password [password for the user]
-# 4. STAT, you will recieve back "+OK nn mm". nn is the emails to sync, mm is the size of the inbox in octets.
+# 4. STAT, you will receive back "+OK nn mm". nn is the emails to sync, mm is the size of the inbox in octets.
 # 5. LIST, lists the messages in the inbox
 # 6. RETR 1, give me the first email in the inbox
 # 
-# ![JnrPenTester-EMAIL_POP3.png](../images/JnrPenTester-EMAIL_POP3.png)
+# ![EMAIL_POP3.png](../images/HackerCraft/EMAIL_POP3.png)
 # 
 # <hr>
+# 
 
 # ## IMAP
 # 
 # IMAP, or Internet Message Access Protocol, is the next evolution of POP3. It enables syncing of email states across devices so that a 'read' email on your phone also shows up as 'read' on your laptop. It runs on port 143 by default.
 # 
 # ### Connecting IMAP
-# Once again, we will show the connection process in TELNET. We're not going to use this in the real world but it's a good example. All IMAP commands must be preceeded by a unique value to allow tracking of replies. It can be anything (realistic) but its easier if we just use a standard. m1, m2, m3 etc make sense.
+# Once again, we will show the connection process in TELNET. We're not going to use this in the real world but it's a good example. All IMAP commands must be preceded by a unique value to allow tracking of replies. It can be anything (realistic) but its easier if we just use a standard. m1, m2, m3 etc make sense.
 # 
 # > Telnet [IP] 143 <br>
 # > m1 LOGIN [user] [password] <br>
@@ -67,6 +68,7 @@
 # > m4 LOGOUT
 # 
 # <hr>
+# 
 
 # In[ ]:
 

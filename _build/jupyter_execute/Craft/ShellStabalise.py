@@ -1,22 +1,22 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Stabalising a shell
+# # Stabilizing a shell
 # 
-# The problem with a number of exploits, is that the reverse shell isnt the most stable medium
+# The problem with certain exploits, is that the reverse shell isn’t the most stable medium
 # 
 # * It doesn't have autofill
 # * CTRL+C will kill the listener (cant kill a launched program)
 # 
 # <hr>
+# 
 
 # ## Method 1 - Linux w/ Python
 # 
-# The easiest method (if you can do it), is to simply launch a new shell on the remote machine
-# Being easy, it also has some requirements
+# The easiest method (if you can do it), is to simply launch a new shell on the remote machine. Being easy, it also has some requirements
 # 
 # * Python needs to be installed on the remote machine
-# * This method is the LINUX version, because linux tends to come with python already installed
+# * This method is the LINUX version, because Linux tends to come with python already installed
 # 
 # On the remote shell, spawn a new shell
 # NOTE: This may need to be python3 launched instead, depending on what is installed remotely
@@ -33,12 +33,13 @@
 # 
 # NOTE: Our own echo is gone now, if you want it back, run 'reset'
 # <hr>
+# 
 
 # ## Method 2 - rlwrap
 # 
-# Only slightly harder than above, rlwrap needs to be installed locally (and doest come with most distros)
+# Only slightly harder than above, rlwrap needs to be installed locally (and doesn’t come with most distros)
 # 
-# Once its installed, instead of listening direct with Netcat, just pass it as an arguement to rlwrap
+# Once its installed, instead of listening direct with Netcat, just pass it as an argument to rlwrap
 # 
 # > rlwrap nc -lvnp \[port]
 # 
@@ -53,6 +54,7 @@
 # > stty raw -echo; fg
 # 
 # <hr>
+# 
 
 # ## Method 3 - socat
 # 

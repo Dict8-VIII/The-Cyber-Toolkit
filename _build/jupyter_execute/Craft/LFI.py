@@ -3,18 +3,16 @@
 
 # # LFI
 # 
-# LFI, or Local File Inclusion, is a web exploit, where you form a request in which the server passes back data it wasnt supposed to (this could be anything kept on the server, webfiles, stored passwords, local credentials etc). Normally the server runs checks on the requested resource, but there are options...
+# LFI, or Local File Inclusion, is a web exploit, where you form a request in which the server passes back data it wasn’t supposed to (this could be anything kept on the server, web files, stored passwords, local credentials etc). Normally the server runs checks on the requested resource, but there are options...
 # 
 # ## Finding a vulnerable site
 # This vulnerability could present in multiple ways. The most obvious is shown below and can be seen when examining the URL.
 # Here, we are requesting a file "userCV.pdf"
 # > Note: This is a PHP vulnerability example, but an LFI vulnerability could be seen in other locations as well
 # 
-# ![image.png](../images/LFI_PHP_FORMAT.png)
+# ![image.png](../images/HackerCraft/LFI_PHP_FORMAT.png)
 # 
 # source: https://tryhackme.com/room/fileinc
-# 
-# 
 # 
 
 # ## Easy Methods
@@ -24,14 +22,17 @@
 # Tools like BurpSuite or gobuster could automate this process based on wordlists.
 # 
 # ### Directory Traversal
-# The next check, is if we can move "up a level". 
+# The next check is if we can move "up a level". 
 # 
-# Normally a linux box will host in "usr/var/www/pages", but that doesnt mean we cant 'ask' for other files
+# Normally a Linux box will host in "usr/var/www/pages", but that doesn’t mean we can’t 'ask' for other files
 # To move up a level, try "..", "?file=../../../../" puts us in the root directory asking for a file.
 # 
 # Windows hosts in "C:\inetpub\www"
-# To move up a level, its still "..", isnt consistency nice?
+# To move up a level, it’s still "..", isn’t consistency nice?
 # 
+# <hr>
+# 
+
 # ## Harder Methods
 # Now, LFI is a known issue, and there are ways to prevent it. Not all 'fixes' are created equal, and there are ways around many of them.
 # 
@@ -43,7 +44,7 @@
 # Can be used instead of filter (file is stored in /resource)
 # >convert.base64-encode/resource="file.ext"
 # 
-# 
+# <hr>
 
 # In[ ]:
 

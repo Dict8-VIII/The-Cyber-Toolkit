@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Nmap &#8212; The Cyber Toolkit</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,37 +20,36 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/.ipynb_checkpoints/custom-checkpoint.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -71,7 +72,21 @@
                     </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -80,9 +95,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -100,14 +116,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   The Cyber Toolkit
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    The Cyber Toolkit
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   TryHackMe Rooms / Walkthrough
  </span>
@@ -403,7 +420,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../Craft/ShellStabalise.html">
-   Stabalising a shell
+   Stabilizing a shell
   </a>
  </li>
  <li class="toctree-l1">
@@ -475,91 +492,164 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Tools/Nmap.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/Dict8-VIII/The-Cyber-Toolkit/master?urlpath=tree/Tools/Nmap.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/Dict8-VIII/The-Cyber-Toolkit/master?urlpath=tree/Tools/Nmap.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Tools/Nmap.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#syntax">
    Syntax
@@ -695,12 +785,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Nmap</h1>
@@ -852,11 +941,12 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="nmap">
-<h1>Nmap<a class="headerlink" href="#nmap" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="nmap">
+<h1>Nmap<a class="headerlink" href="#nmap" title="Permalink to this headline">#</a></h1>
 <p>Nmap is a Scanning tool used for the enumeration stage of Pen Testing. It is very versatile and industry standard.</p>
 <p>Common usages</p>
 <ul class="simple">
@@ -864,8 +954,8 @@
 <li><p>Service Enum</p></li>
 <li><p>Running Nmap scripts for specific enum</p></li>
 </ul>
-<div class="section" id="syntax">
-<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<section id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">#</a></h2>
 <p>The general syntax of a nmap scan is:</p>
 <blockquote>
 <div><p>nmap [ip] [scan method] [MANY arguements] -vv</p>
@@ -922,27 +1012,27 @@
 </li>
 <li><p>-vv : VeryVerbose, stops you going crazy wondering if its working</p></li>
 </ul>
-<hr></div>
-<div class="section" id="why-so-many-scan-options">
-<h2>Why so many scan options?<a class="headerlink" href="#why-so-many-scan-options" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="discovery">
-<h3>Discovery<a class="headerlink" href="#discovery" title="Permalink to this headline">¶</a></h3>
+<hr></section>
+<section id="why-so-many-scan-options">
+<h2>Why so many scan options?<a class="headerlink" href="#why-so-many-scan-options" title="Permalink to this headline">#</a></h2>
+<section id="discovery">
+<h3>Discovery<a class="headerlink" href="#discovery" title="Permalink to this headline">#</a></h3>
 <p>These are the scan types for target discovery (is there something on this IP worth investigating).</p>
-<div class="section" id="pr">
-<h4>-PR<a class="headerlink" href="#pr" title="Permalink to this headline">¶</a></h4>
+<section id="pr">
+<h4>-PR<a class="headerlink" href="#pr" title="Permalink to this headline">#</a></h4>
 <p>This arguement send a broadcast ARP request only. This is a great one to use as it’s not blocked by any firewalls (as it’s part of maintaining a network), but it requires you to be on the same subnet as your targets.</p>
-</div>
-<div class="section" id="pe-pp-pm">
-<h4>-PE -PP -PM<a class="headerlink" href="#pe-pp-pm" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="pe-pp-pm">
+<h4>-PE -PP -PM<a class="headerlink" href="#pe-pp-pm" title="Permalink to this headline">#</a></h4>
 <p>These are ICMP Echo, Timestamp and Mask respectively. All run in the ICMP domain and are ways to work around a firewall. Echo tends to be blocked (and is by default most times). Timestamp and Mask requests are alternatives.</p>
-</div>
-<div class="section" id="ps-pa">
-<h4>-PS -PA<a class="headerlink" href="#ps-pa" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="ps-pa">
+<h4>-PS -PA<a class="headerlink" href="#ps-pa" title="Permalink to this headline">#</a></h4>
 <p>These are TCP discovery methods. -PS Uses a SYN request (on port 80 by default) and if it recieved back a response (SYNACK or RST) then treats the IP as active. It just waits for the response if run as priveliged user, or completes the handshake if not. -PA is an ACK message which will recieve a RST if the target is active (as its not part of an established message), and can only be run as priveliged user (otherwise it will run a SYN).</p>
-<hr></div>
-</div>
-<div class="section" id="port-connect">
-<h3>Port Connect<a class="headerlink" href="#port-connect" title="Permalink to this headline">¶</a></h3>
+<hr></section>
+</section>
+<section id="port-connect">
+<h3>Port Connect<a class="headerlink" href="#port-connect" title="Permalink to this headline">#</a></h3>
 <p>Now that we know what targets to hit, we now have to decide how to confirm a port is open or closed. Because of annoying things like firewalls however, theres more to it. There are 6 possible states of a port scan. This is copied directly from <a class="reference external" href="https://tryhackme.com/room/nmap02">TryHackMe’s nmap02 Room</a></p>
 <ol class="simple">
 <li><p>Open: indicates that a service is listening on the specified port.</p></li>
@@ -952,53 +1042,53 @@
 <li><p>Open|Filtered: This means that Nmap cannot determine whether the port is open or filtered.</p></li>
 <li><p>Closed|Filtered: This means that Nmap cannot decide whether a port is closed or filtered.</p></li>
 </ol>
-<div class="section" id="st">
-<h4>-sT<a class="headerlink" href="#st" title="Permalink to this headline">¶</a></h4>
+<section id="st">
+<h4>-sT<a class="headerlink" href="#st" title="Permalink to this headline">#</a></h4>
 <p>The sT scan is a TCP connect scan. Simply, Nmap attempts a full TCP 3way Handshake for each scanned port (and then kill it with a RST ACK if it completes). This is the only scan that doesnt require a priveliged account.</p>
-</div>
-<div class="section" id="ss">
-<h4>-sS<a class="headerlink" href="#ss" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="ss">
+<h4>-sS<a class="headerlink" href="#ss" title="Permalink to this headline">#</a></h4>
 <p>The Sneaky Stealth Scan, or more accurately, the SYN scan. This requires a priveliged user and is mroe sneaky as it doesnt complete a connection (so is less likely to be logged). It starts with the SYN, Recieves a SYNACK and then sends a RST to kill the handshake. As you can guess, this is only more stealthy, but could still be logged.</p>
-</div>
-<div class="section" id="su">
-<h4>-sU<a class="headerlink" href="#su" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="su">
+<h4>-sU<a class="headerlink" href="#su" title="Permalink to this headline">#</a></h4>
 <p>The sU scan is a UDP scan, which sort of runs opposite to the TCP scans. As UDP is stateless, we would expect no response if the port is open (as UDP ‘packets’ dont have a session or give a response, they are fire and forget).<br>
 A closed port however should give a ICMP “Destination Unreachable” response. This still searches for a TCP port, not UDP.</p>
-</div>
-<div class="section" id="sn">
-<h4>-sN<a class="headerlink" href="#sn" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="sn">
+<h4>-sN<a class="headerlink" href="#sn" title="Permalink to this headline">#</a></h4>
 <p>The NULL scan sets all the flag bits to zero. If a port is open, we would expect no response, but if it’s closed then we would recieve a RST. A firewall would also give no response, so Nmap treats this as Open | Filtered.</p>
-</div>
-<div class="section" id="sf">
-<h4>-sF<a class="headerlink" href="#sf" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="sf">
+<h4>-sF<a class="headerlink" href="#sf" title="Permalink to this headline">#</a></h4>
 <p>The FIN scan sends only the FIN flag in a port connect. Similar to the null scan, it is looking for no response to indicate an open port. Once again this can only return Open | Filtered.</p>
-</div>
-<div class="section" id="sx">
-<h4>-sX<a class="headerlink" href="#sx" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="sx">
+<h4>-sX<a class="headerlink" href="#sx" title="Permalink to this headline">#</a></h4>
 <p>The XMAS scan is named after the lights on a christmas tree, it sets the FIN, PSH and URG flags (All the special case flags). If you had a warning system in the TCP protocol, it would light up everything. As with a NULL and FIN scan, it’s looking for no response, and gives Open | Filtered.</p>
-</div>
-<div class="section" id="sm">
-<h4>-sM<a class="headerlink" href="#sm" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="sm">
+<h4>-sM<a class="headerlink" href="#sm" title="Permalink to this headline">#</a></h4>
 <p>The Maimon scan is a special case, but we like them. This sends a FIN/ACK message. On most OS, this will return a RST if the port is open or closed, not so helpful. Some BSD (Berkely Software Distribution) OS’ drop the packet however if the port is open. The BSD OS isnt widely used, but there are some interesting ones on <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_BSD_operating_systems">wikipedia</a>, such as FreeNAS and the PS3.</p>
-</div>
-<div class="section" id="sa">
-<h4>-sA<a class="headerlink" href="#sa" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="sa">
+<h4>-sA<a class="headerlink" href="#sa" title="Permalink to this headline">#</a></h4>
 <p>This is an ACK scan, and by itself an ACK scan doesnt show much. It sets the ACK flag and a host should return RST whether the port is open or closed. However if there is a firewall in between, it will drop the packet. Therefore this scan is used for understanding what is allowed through a firewall. This scan returns an Unfiltered state for ‘allowed’ ports.</p>
-</div>
-<div class="section" id="sw">
-<h4>-sW<a class="headerlink" href="#sw" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="sw">
+<h4>-sW<a class="headerlink" href="#sw" title="Permalink to this headline">#</a></h4>
 <p>A window (not WINDOWS) scan is similar to an ACK scan, however it examines the RST reponse to try determine more information about the port (such as if it’s open).</p>
-</div>
-<div class="section" id="custom-scan">
-<h4>Custom Scan<a class="headerlink" href="#custom-scan" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="custom-scan">
+<h4>Custom Scan<a class="headerlink" href="#custom-scan" title="Permalink to this headline">#</a></h4>
 <p>You can also create a custom scan, –scanflags [flags to set]</p>
 <blockquote>
 <div><p>for example: sudo nmap 127.0.0.1 –scanflags SYNACKURG</p>
 </div></blockquote>
 <p>Naturally, you will need to understand how to interpret these results yourself however.</p>
-</div>
-<div class="section" id="si">
-<h4>-sI<a class="headerlink" href="#si" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="si">
+<h4>-sI<a class="headerlink" href="#si" title="Permalink to this headline">#</a></h4>
 <p>This is the idle scan and is a scan method that is used when trying to evade detection. I requires a ‘zombie’ machine which is Idle on the network. What this means is that it is transmitting NO data during the scan time, other than what we trigger. There are a few steps to this scan, but it is basically a masked TCP Connect (-sT) scan.</p>
 <ol class="simple">
 <li><p>Send a SYNACK to the idle machine, from this we get back the current packet number ID of the zombie.</p></li>
@@ -1009,39 +1099,39 @@ A closed port however should give a ICMP “Destination Unreachable” response.
 <p>If the port was closed on the target, it would have sent a RST packet to the zombie, which doesnt increase its counter. When we query the zombie again, it would have only increased its counter by 1 (us sending the SYNACK a second time).<br>
 If the port was open on the target, it would have sent a SYNACK to the zombie, which wouldh have responded to the target with a RST and increased its own counter. Would would have seen the counter increase by 2 on our second SYNACK. <br>
 If a firewall was blocking the port, we would have the same response as a closed port.</p>
-<hr></div>
-</div>
-</div>
-<div class="section" id="evasion">
-<h2>Evasion<a class="headerlink" href="#evasion" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="spoof-ip-s">
-<h3>Spoof IP -S<a class="headerlink" href="#spoof-ip-s" title="Permalink to this headline">¶</a></h3>
+<hr></section>
+</section>
+</section>
+<section id="evasion">
+<h2>Evasion<a class="headerlink" href="#evasion" title="Permalink to this headline">#</a></h2>
+<section id="spoof-ip-s">
+<h3>Spoof IP -S<a class="headerlink" href="#spoof-ip-s" title="Permalink to this headline">#</a></h3>
 <p>Nmap supports spoofing the source IP of a packet scan, which sounds great but comes with a few requirements. First, you need to be able to listen to the responses to the Spoofed IP. Second, you will likely need to specify the network interface to use. If you want to spoof your MAC, this only makes sense if youre already on the subnet too.</p>
 <blockquote>
 <div><p>nmap -e [Net Interface] –spoof-mac [spoofed MAC] -S [spoofed IP] [target IP]</p>
 </div></blockquote>
 <hr>
-</div>
-<div class="section" id="decoys-d">
-<h3>Decoys -D<a class="headerlink" href="#decoys-d" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="decoys-d">
+<h3>Decoys -D<a class="headerlink" href="#decoys-d" title="Permalink to this headline">#</a></h3>
 <p>Decoys are another way to hide the source of the traffic. You list a group of IPs to show where the traffic is coming from, and NMAP will run these in parallel. You can also use RND which will randomly create an IP.</p>
 <blockquote>
 <div><p>nmap -D [fake IP1],[fake IP2],[real IP (ME)],[fake IP3]….many more</p>
 </div></blockquote>
 <hr>
-</div>
-<div class="section" id="fragmentation-f">
-<h3>Fragmentation -f<a class="headerlink" href="#fragmentation-f" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="fragmentation-f">
+<h3>Fragmentation -f<a class="headerlink" href="#fragmentation-f" title="Permalink to this headline">#</a></h3>
 <p>Fragmentation is a way to split up packets to make things more difficult for some firewalls, IDS and IPS. Adding a -f will split the packet into 8byte fragments and transmit these seperately. -ff will make it 16 bytes instead.</p>
 <hr>
-</div>
-<div class="section" id="zombie-scan-si">
-<h3>Zombie Scan (-sI)<a class="headerlink" href="#zombie-scan-si" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="zombie-scan-si">
+<h3>Zombie Scan (-sI)<a class="headerlink" href="#zombie-scan-si" title="Permalink to this headline">#</a></h3>
 <p>A zombie scan is a method that uses an “idle zombie” to communicate with the target, while spoofing your own IP to make the request appear to be coming from the idle host. More details are in the scan types above.</p>
-</div>
-</div>
-<div class="section" id="nse-nmap-scripting-engine">
-<h2>NSE (Nmap Scripting Engine)<a class="headerlink" href="#nse-nmap-scripting-engine" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="nse-nmap-scripting-engine">
+<h2>NSE (Nmap Scripting Engine)<a class="headerlink" href="#nse-nmap-scripting-engine" title="Permalink to this headline">#</a></h2>
 <p>Nmap comes with a lot of built in scripts for extending functionality (almost 600 at the time of writing). These are in the nmap share by default (/usr/share/nmap/scripts) and are named starting with the service/protocol they target. <br>
 You can run a category of scripts with –script=[category]. The defaults ones are</p>
 <ul class="simple">
@@ -1065,9 +1155,9 @@ You can run a category of scripts with –script=[category]. The defaults ones a
 <div><p>nmap [ip] –script “script name.nse” -vv</p>
 </div></blockquote>
 <hr>
-</div>
-<div class="section" id="logging">
-<h2>Logging<a class="headerlink" href="#logging" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="logging">
+<h2>Logging<a class="headerlink" href="#logging" title="Permalink to this headline">#</a></h2>
 <p>When it gets messy, logs are a great thing to have. Theres a few modes for Nmap logging.</p>
 <ul class="simple">
 <li><p>-oN Normal</p></li>
@@ -1077,8 +1167,8 @@ You can run a category of scripts with –script=[category]. The defaults ones a
 <li><p>-oS Script kiddie</p></li>
 </ul>
 <p>We dont to that here</p>
-<hr></div>
-</div>
+<hr></section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1102,9 +1192,11 @@ You can run a category of scripts with –script=[category]. The defaults ones a
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="Wireshark/Wireshark.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1120,24 +1212,28 @@ You can run a category of scripts with –script=[category]. The defaults ones a
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Paul Williams<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Paul Williams<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

@@ -35,8 +35,13 @@
 # 
 # <hr>
 
-# In[ ]:
-
-
-
-
+# ## Web Forms
+# 
+# We can also use hydra to attack a web form login (instead of the time limited burpsuite). Unfortunately we can only use 1 wordlist though so its a 'sniper' attack. We can swap the user/password to use a wordlist but it's for the user here.
+# 
+# > hydra -L < file> -p < known password> [ip] http-post-form "/url.ext:log=^USER^&pwd=theknownpassword:Invalid username" -t 30
+# 
+# - ^USER^ is where the defined username will be put
+# - ^PASS^ is where the defind password will be put
+# 
+# So, why did we do all of this? In this case it is an attack where the browser reports back if the user or password is invalid. As we are iteratting through users, its the invalid username response we care about (if it changes).

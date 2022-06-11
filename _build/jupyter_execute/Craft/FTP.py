@@ -12,7 +12,7 @@
 # ## Connection Methods
 # 
 # ### Telnet
-# Connecting via telnet uses multiple commands and it cant be used alone. You could probably try hosting a seperate listener but I havent tried this... would be good to do.
+# Connecting via telnet uses multiple commands and it cant be used alone. You could probably try hosting a separate listener but I haven’t tried this... would be good to do.
 # 
 # 1. telnet [IP] 21
 # 2. USER [the username]
@@ -41,9 +41,13 @@
 # - exit: wanna guess?
 # 
 # Below is an example, with my commands highlighted GREEN
-# ![JnrPen-FTP_Example.png](../images/JnrPen-FTP_Example.png)
-# It should be noted that the files will be coppied to your PWD, so launch FTP from the correct location or enter a path when you 'download'
+# 
+# ![FTP_Example.png](../images/HackerCraft/FTP_Example.png)
+# 
+# It should be noted that the files will be copied to your PWD, so launch FTP from the correct location or enter a path when you 'download'
+# 
 # <hr>
+# 
 
 # In[ ]:
 
