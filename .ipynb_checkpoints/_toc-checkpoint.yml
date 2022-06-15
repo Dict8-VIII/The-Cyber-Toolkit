@@ -52,6 +52,9 @@ parts:
     - file: Tools/TCPDump
     - file: Tools/Ettercap
     - file: Tools/Nessus
+    - file: Tools/Impacket
+    - file: Tools/BloodHound
+    - file: Tools/Kerbrute
   - caption: Hacker Craft
     chapters:
     - file: Craft/TheBasics
