@@ -55,6 +55,7 @@ parts:
     - file: Tools/Impacket
     - file: Tools/BloodHound
     - file: Tools/Kerbrute
+    - file: Tools/Evil-WinRM
   - caption: Hacker Craft
     chapters:
     - file: Craft/TheBasics
