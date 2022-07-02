@@ -16,6 +16,8 @@ parts:
       - file: JnrPenTester/FileInclusion
       - file: JnrPenTester/JnrPenTester_BurpSuite
       - file: JnrPenTester/LinuxPrivEsc_task8
+    - file: PracticeRooms/AgentSudo
+    - file: PracticeRooms/MrRobot
   - caption: Tools
     chapters:
     - file: Tools/PriveligeEscalation/PriveligeEscalation
