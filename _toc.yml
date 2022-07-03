@@ -18,6 +18,7 @@ parts:
       - file: JnrPenTester/LinuxPrivEsc_task8
     - file: PracticeRooms/AgentSudo
     - file: PracticeRooms/MrRobot
+    - file: PracticeRooms/Terminator
   - caption: Tools
     chapters:
     - file: Tools/PriveligeEscalation/PriveligeEscalation
