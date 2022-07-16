@@ -62,6 +62,12 @@ parts:
     - file: Tools/Binwalk
   - caption: Hacker Craft
     chapters:
+    - file: Craft/MITRE/MITRE
+      sections:
+      - file: Craft/MITRE/MITRE_ATT&CK
+      - file: Craft/MITRE/MITRE_CAR
+      - file: Craft/MITRE/MITRE_Defend
+      - file: Craft/MITRE/MITRE_Enagage
     - file: Craft/TheBasics
     - file: Craft/TheOSIModel
     - file: Craft/LinuxFun
