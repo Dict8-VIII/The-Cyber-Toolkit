@@ -87,6 +87,7 @@ parts:
     - file: Craft/FTP
     - file: Craft/EmailProtocol
     - file: Craft/Steganography
+    - file: Craft/Kali
     
   - caption: The Cyber Killchain
     chapters:
