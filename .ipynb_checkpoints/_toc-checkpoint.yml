@@ -19,6 +19,7 @@ parts:
     - file: PracticeRooms/AgentSudo
     - file: PracticeRooms/MrRobot
     - file: PracticeRooms/Terminator
+    - file: PracticeRooms/Overpass
   - caption: Tools
     chapters:
     - file: Tools/PriveligeEscalation/PriveligeEscalation
@@ -60,6 +61,7 @@ parts:
     - file: Tools/Kerbrute
     - file: Tools/Evil-WinRM
     - file: Tools/Binwalk
+    - file: Tools/Yara
   - caption: Hacker Craft
     chapters:
     - file: Craft/MITRE/MITRE
