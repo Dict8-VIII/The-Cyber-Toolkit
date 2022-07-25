@@ -9,15 +9,15 @@
 # You can use GoBuster in the Enum stage for directories, as well as files.
 # 
 # For Directories
-# > gobuster dir -u http://\[IP] -w [wordlist]
+# > gobuster dir -u http://[IP] -w [wordlist]
 # * -u: The URL
 # * -w: Path to a wordlist of directories
 # 
 # For files
-# > gobuster dir -u http://\[IP] -w \[wordlist] -x \[extensions]
+# > gobuster dir -u http://[IP] -w \[wordlist] -x \[extensions]
 # * -x: Extension to search for. Can be a comma separated list
 # 
-# ![GoBuster-DirectoryScanpng.png](../images/GoBuster-DirectoryScanpng.png)
+# ![GoBuster_DirectoryScan.png](../images/Tools/GoBuster_DirectoryScan.png)
 # 
 # <hr>
 

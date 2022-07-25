@@ -4,6 +4,8 @@
 # # Hydra
 # If youre trying to brute force a login, (THC) Hydra is the place to be. It supports MANY protocols, is very efficient and amazingly versatile.
 # 
+# 
+
 # ## Examples
 # The basic structure of attacks doesnt really change unless youre doing something special.
 # 
@@ -33,15 +35,39 @@
 # - -t 16 : use 16 threads
 # - -I : dont wait, just override the restore file
 # 
+# ### FTP
+# This example is taken form the [TryHackMe "Agent Sudo" room](https://tryhackme.com/room/agentsudoctf)
+# 
+# > hydra -l chris -P /usr/share/wordlists/rockyou.txt ftp ://10.10.61.220 -vv  
+# 
+# ![Hydra_ExampleFTP.png](../images/Tools/Hydra_ExampleFTP.png)
+# 
+# Breaking this down, we have
+# 
+# - hydra : run hydra
+# - -l : use the specific login 'chris'
+# - -P : use the 'rockyou' password list
+# - ftp ://10.10.61.220 : the target we want to brute force (ignore the space, its to break the link in my page)
+# - -vv : very verbose, optional
+# 
 # <hr>
 
 # ## Web Forms
 # 
 # We can also use hydra to attack a web form login (instead of the time limited burpsuite). Unfortunately we can only use 1 wordlist though so its a 'sniper' attack. We can swap the user/password to use a wordlist but it's for the user here.
 # 
-# > hydra -L < file> -p < known password> [ip] http-post-form "/url.ext:log=^USER^&pwd=theknownpassword:Invalid username" -t 30
+# > hydra -L < file> -p < known password> [ip] http-post-form "/[url.ext]:log=^USER^&pwd=theknownpassword:Invalid username" -t 30
+# 
+# ![Hydra_WebForm.png](../images/Tools/Hydra_WebForm.png)
 # 
 # - ^USER^ is where the defined username will be put
 # - ^PASS^ is where the defind password will be put
+# - You dont need the port or http/s
 # 
 # So, why did we do all of this? In this case it is an attack where the browser reports back if the user or password is invalid. As we are iteratting through users, its the invalid username response we care about (if it changes).
+
+# In[ ]:
+
+
+
+

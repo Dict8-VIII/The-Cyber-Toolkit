@@ -8,7 +8,7 @@
 # * You must define where to FUZZ, with the FUZZ keyword in the directory
 # * You must define which codes to ignore explicitly (or you get every check)
 # 
-# ![WFuzz-Example.png](../images/WFuzz-Example.png)
+# ![WFuzz_Example.png](../images/Tools/WFuzz_Example.png)
 
 # In[ ]:
 

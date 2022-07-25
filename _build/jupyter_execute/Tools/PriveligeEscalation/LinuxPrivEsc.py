@@ -117,8 +117,6 @@
 # - -type f: of type file
 # - 2>/dev/null: linux speak for "send errors to the null box" (ignore errors)
 # 
-# An example of this can be found in the [JnrPenTester Path LinuxPrivEsc Page](../../JnrPenTester/LinuxPrivEsc_task9.ipynb)
-# 
 # <hr>
 
 # ## Capabilities
@@ -156,10 +154,8 @@
 # 
 # <hr>
 
-# ## Tools
+# ## Tools To Add
 # 
-# - LinPeas: https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS
-# - LinEnum: https://github.com/rebootuser/LinEnum
 # - LES (Linux Exploit Suggester): https://github.com/mzet-/linux-exploit-suggester
 # - Linux Smart Enumeration: https://github.com/diego-treitos/linux-smart-enumeration
 # - Linux Priv Checker: https://github.com/linted/linuxprivchecker

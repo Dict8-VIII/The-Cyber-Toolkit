@@ -49,6 +49,26 @@
 # <hr>
 # 
 
+# ## Issues
+# 
+# Sometimes we can get the "entering extended passive mode" line, and the FTP server just hangs waiting. Theres a few ways around this
+# 
+# > WAIT!!!
+# 
+# Just wait... breathe... if there is no error, you probably just need to wait....
+# 
+# > epsv
+# 
+# This turns off extending passive mode. Sometimes helps, sometimes doesnt
+# 
+# > passive
+# 
+# Swaps the state of passive mode, makes things do the worky
+# 
+# ![FTP_Passive.png](../images/HackerCraft/FTP_Passive.png)
+# 
+# <hr>
+
 # In[ ]:
 
 

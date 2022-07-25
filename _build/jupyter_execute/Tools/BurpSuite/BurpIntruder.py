@@ -45,10 +45,10 @@
 # ## Macros
 # Macros are a way to automate some tasks, or allow other automated tasks to proceed. The example used here is directly from the "extra mile" task in [TryHackMe's Burp Suite Intruder room](https://tryhackme.com/room/burpsuiteintruder). In this example, we are trying to automate a password bruteforce, but the POST request also looks for a token given in your GET request for the site. This changes on each attempt so cannot be reused for multiple attempts.
 # 
-# In the GET request, the token can be found hidden in the form.
+# In the GET request, the token can be found hidden in the form.<br>
 # ![JnrPen-BurpIntruder_GetForm.png](../../images/JnrPen-BurpIntruder_GetForm.png)
 # 
-# This is then given in the POST when a login is attempted.
+# This is then given in the POST when a login is attempted.<br>
 # ![JnrPen-BurpIntruder_POSTForm.png](../../images/JnrPen-BurpIntruder_PostForm.png)
 # 
 # > The session cookie is the same, it changes each attempt.
@@ -64,22 +64,25 @@
 # ### Create a Macro to grab the tokens
 # Our first step is to automate grabbing the tokens. Make sure you have a get request in your history before running this.
 # 
-# - Jump to the "Project Options" tab, select "Sessions" and select to "Add" a new Macro.
+# - Jump to the "Project Options" tab, select "Sessions" and select to "Add" a new Macro.<br>
 # ![JnrPen-BurpIntruder_AddMacro.png](../../images/JnrPen-BurpIntruder_AddMacro.png)
 # - Select your GET request to the login Page, click OK
-# - Give the Macro a name and clicek "OK" to finish!
-# [JnrPen-BurpIntruder_NameMacro.png](../../images/JnrPen-BurpIntruder_NameMacro.png)
+# - Give the Macro a name and clicek "OK" to finish<br>
+# ![JnrPen-BurpIntruder_NameMacro.png](../../images/JnrPen-BurpIntruder_NameMacro.png)
 # 
 # ### Set up Session Handling
 # We've got the macro to GET the page, now we need to use it. 
 # 
-# - In the "Sessions" tab, click to "Add" a new "Session Handling Rule". Name it and swap to the "Scope" tab ![JnrPen-BurpIntruder_AddRule.png](../../images/JnrPen-BurpIntruder_AddRule.png)
+# - In the "Sessions" tab, click to "Add" a new "Session Handling Rule". Name it and swap to the "Scope" tab<br>
+# ![JnrPen-BurpIntruder_AddRule.png](../../images/JnrPen-BurpIntruder_AddRule.png)
 # 
-# - Now we need to set the scope of our macro. Technically we are just using intruder today so could be generic with this, but its good to know the full process. Set your scope to intruder only, Set a custom scope (or your defined target if you've added one), then add the values for the custom sccope (if youare using custom). Jump back to the "Details" tab.![JnrPen-BurpIntruder_SetScope.png](../../images/JnrPen-BurpIntruder_SetScope.png)
+# - Now we need to set the scope of our macro. Technically we are just using intruder today so could be generic with this, but its good to know the full process. Set your scope to intruder only, Set a custom scope (or your defined target if you've added one), then add the values for the custom sccope (if youare using custom). Jump back to the "Details" tab.<br>
+# ![JnrPen-BurpIntruder_SetScope.png](../../images/JnrPen-BurpIntruder_SetScope.png)
 # 
 # - Click to "Add" a Rule action and select "Run a macro"
 # 
-# - Select the Macro to run (dont click add). Update only the paramater "loginToken" and Update only the session cookie. These are the two values we need to pull from the 'new' get request. Click OK then OK again to complete the Macro. ![JnrPen-BurpIntruder_PutTogether.png](../../images/JnrPen-BurpIntruder_PutTogether.png)
+# - Select the Macro to run (dont click add). Update only the paramater "loginToken" and Update only the session cookie. These are the two values we need to pull from the 'new' get request. Click OK then OK again to complete the Macro.<br>
+# ![JnrPen-BurpIntruder_PutTogether.png](../../images/JnrPen-BurpIntruder_PutTogether.png)
 # 
 # ### ???
 # Something something

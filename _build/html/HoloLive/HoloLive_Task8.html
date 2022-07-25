@@ -184,6 +184,26 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PracticeRooms/AgentSudo.html">
+   Agent Sudo
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PracticeRooms/MrRobot.html">
+   MR Robot CTF room
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PracticeRooms/Terminator.html">
+   Terminator
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PracticeRooms/Overpass.html">
+   Overpass
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -361,6 +381,36 @@ const thebe_selector_output = ".output, .cell_output"
    Nessus
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Impacket.html">
+   Impacket
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/BloodHound.html">
+   BloodHound
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Kerbrute.html">
+   Kerbrute
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Evil-WinRM.html">
+   Evil-WinRM
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Binwalk.html">
+   Binwalk
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Yara.html">
+   Yara
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -368,6 +418,33 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Craft/MITRE/MITRE.html">
+   Mitre
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Craft/MITRE/MITRE_ATT%26CK.html">
+     Mitre ATT&amp;CK
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Craft/MITRE/MITRE_CAR.html">
+     MITRE CARs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Craft/MITRE/MITRE_Defend.html">
+     MITRE Defend
+    </a>
+   </li>
+  </ul>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../Craft/TheBasics.html">
    The Basics
@@ -385,7 +462,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../Craft/WindowsFun.html">
-   Windows ‘fun’ stuff
+   Windows ‘Fun’ Stuff
   </a>
  </li>
  <li class="toctree-l1">
@@ -448,6 +525,16 @@ const thebe_selector_output = ".output, .cell_output"
    Email Protocols
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/Steganography.html">
+   Steganography
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/Kali.html">
+   Kali
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -459,8 +546,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../KillChain/Killchain_Overview.html">
    Killchain Overview
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -655,6 +742,11 @@ title="Print to PDF"
    Task 8 - Initial Recon
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-8-further-investigation">
+   Task 8 - Further Investigation
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -679,6 +771,11 @@ title="Print to PDF"
    Task 8 - Initial Recon
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-8-further-investigation">
+   Task 8 - Further Investigation
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -693,34 +790,37 @@ title="Print to PDF"
 <h1>HoloLive Walkthrough - Task 8<a class="headerlink" href="#hololive-walkthrough-task-8" title="Permalink to this headline">#</a></h1>
 <section id="task-8-initial-recon">
 <h2>Task 8 - Initial Recon<a class="headerlink" href="#task-8-initial-recon" title="Permalink to this headline">#</a></h2>
-<p>Now for the actual question. First we are asked to scan the network, on the scoped ranges “10.200.x.0/24 and 192.168.100.0/24”. We cant scan a ‘x’ however, so how do we know what range to look for? This is easier than it sounds, it’s given in the image at the top of the page; in my case 10.200.129.0/24. This also gives the answer to the first octet (.33 in my case).</p>
-<p><img alt="Hololive-Task8_NetworkMap.png" src="../_images/Hololive-Task8_NetworkMap.png" /></p>
-<p>To get the octet the RIGHT way however, you should rely on the network scan. Following the provided details, it looks like this for me</p>
-<p><img alt="Hololive - Task8 nmap scan.png" src="../_images/Hololive-Task8_NmapScan.png" /></p>
-<p>Once the scan starts, you’ll quickly find the open ports found. By now, you should know that 80 is the standard HTTP port</p>
-<p><img alt="Hololive - Task8 nmap ports found.png" src="../_images/Hololive-Task8_NmapPortsFound.png" /></p>
+<p>Now for the actual question. First we are asked to scan the network, on the scoped ranges “10.200.x.0/24 and 192.168.100.0/24”. We cant scan a ‘x’ however, so how do we know what range to look for? This is easier than it sounds, it’s given in the image at the top of the page; in my case 10.200.129.0/24. This also gives the answer to the first octet (.33 in my case).<br></p>
+<p><img alt="Task8_NetworkMap.png" src="../_images/Task8_NetworkMap.png" /><br></p>
+<p>To get the octet the RIGHT way however, you should rely on the network scan. Following the provided details, it looks like this for me. <br></p>
+<p><img alt="Task8 nmap scan.png" src="../_images/Task8_NmapScan.png" /><br></p>
+<p>Once the scan starts, you’ll quickly find the open ports found. By now, you should know that 80 is the standard HTTP port<br></p>
+<p><img alt="Task8 nmap ports found.png" src="../_images/Task8_NmapPortsFound.png" /><br></p>
 <blockquote>
-<div><p>Note: If you arent finding anything with your scan, even though you are sure the syntax is correct, you may have made the same dumb mistake I did, check your network is running <img alt="Hololive - Task8 NetworkState.png" src="../_images/Hololive-Task8_NetworkState.png" /></p>
+<div><p>Note: If you arent finding anything with your scan, even though you are sure the syntax is correct, you may have made the same dumb mistake I did, check your network is running <img alt="Task8 NetworkState.png" src="../_images/Task8_NetworkState.png" /></p>
 </div></blockquote>
 <p>Now that we have our webserver, theres no point running the full scan we had for the whole subnet. Kill the existing scan and run a much more focused one.</p>
-<p><img alt="Hololive - Task8 nmap scan targeted.png" src="../_images/Hololive-Task8_NmapScanTargeted.png" /></p>
+<p><img alt="Task8 nmap scan targeted.png" src="../_images/Task8_NmapScanTargeted.png" /></p>
 <p>This is going to take a while, why not take a break? Source: <a class="reference external" href="https://xkcd.com/303/">https://xkcd.com/303/</a></p>
 <div class="cell tag_remove_input docutils container">
 <div class="cell_output docutils container">
 <img alt="../_images/HoloLive_Task8_2_0.png" src="../_images/HoloLive_Task8_2_0.png" />
 </div>
 </div>
+<hr>
+</section>
+<section id="task-8-further-investigation">
+<h2>Task 8 - Further Investigation<a class="headerlink" href="#task-8-further-investigation" title="Permalink to this headline">#</a></h2>
 <p>Now that we’re done with that, jump back through your logs to see what we found. Here you can see another port hiding in the non-standard range. Count your open ports for the server to get your next answer</p>
-<p><img alt="Hololive-Task8_ExtraPort.png" src="../_images/Hololive-Task8_ExtraPort.png" /></p>
+<p><img alt="Task8_ExtraPort.png" src="../_images/Task8_ExtraPort.png" /></p>
 <p>Awesome, now we have scanned all the things, time to answer some specific questions
 We’re asked about the CME (Content Management Environment? Is this supposed to be CMS?) of the web server. We know this sits on port 80, so lets take an agressive look at it specifically.
 Note: this is also in the previous scan, but if you killed it already, this is a shorter scan for the single port</p>
-<p><img alt="Hololive-Task8_NetworkMap.png" src="../_images/Hololive-Task8_Port80.png" /></p>
+<p><img alt="Task8_Port80.png" src="../_images/Task8_Port80.png" /></p>
 <p>This gives us a nice block of data on the webserver</p>
-<p><img alt="Hololive-Task8_NetworkMap.png" src="../_images/Hololive-Task8_Port80Results.png" /></p>
+<p><img alt="Task8_NetworkMap.png" src="../_images/Task8_Port80Results.png" /></p>
 <p>Extract out your data to answer each of the 3 next questions</p>
-<hr class="docutils" />
-</section>
+<hr></section>
 </section>
 
     <script type="text/x-thebe-config">

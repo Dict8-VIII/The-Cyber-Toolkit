@@ -38,7 +38,9 @@ parts:
       - file: Tools/BurpSuite/BurpIntruder
     - file: Tools/Wireshark/Wireshark
      # sections:
-      
+    - file: Tools/Programs/MyPrograms
+      sections:
+      - file: Tools/Programs/WebBruteForce
     - file: Tools/Nmap
     - file: Tools/Metasploit
       sections:
@@ -52,6 +54,7 @@ parts:
     - file: Tools/Wfuzz
     - file: Tools/Nikto
     - file: Tools/HashCat
+    - file: Tools/HashID
     - file: Tools/Hydra
     - file: Tools/TCPDump
     - file: Tools/Ettercap
@@ -69,7 +72,7 @@ parts:
       - file: Craft/MITRE/MITRE_ATT&CK
       - file: Craft/MITRE/MITRE_CAR
       - file: Craft/MITRE/MITRE_Defend
-      - file: Craft/MITRE/MITRE_Enagage
+      - file: Craft/MITRE/MITRE_Engage
     - file: Craft/TheBasics
     - file: Craft/TheOSIModel
     - file: Craft/LinuxFun

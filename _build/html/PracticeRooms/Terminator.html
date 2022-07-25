@@ -1,0 +1,1080 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Terminator &#8212; The Cyber Toolkit</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/.ipynb_checkpoints/custom-checkpoint.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Overpass" href="Overpass.html" />
+    <link rel="prev" title="MR Robot CTF room" href="MrRobot.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', '305129232', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">The Cyber Toolkit</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    The Cyber Toolkit
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  TryHackMe Rooms / Walkthrough
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../HoloLive/HoloLive.html">
+   HoloLive
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../HoloLive/HoloLive_Task8.html">
+     HoloLive Walkthrough - Task 8
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../HoloLive/HoloLive_Task9.html">
+     HoloLive Walkthrough - Task 9
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../HoloLive/HoloLive_Task10.html">
+     HoloLive Walkthrough - Task 10
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../JnrPenTester/JnrPenTester.html">
+   Jr Pen Tester Path
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../JnrPenTester/FileInclusion.html">
+     File Inclusion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../JnrPenTester/JnrPenTester_BurpSuite.html">
+     Burp Suite
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../JnrPenTester/LinuxPrivEsc_task8.html">
+     Exploiting the SUID Bit
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="AgentSudo.html">
+   Agent Sudo
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="MrRobot.html">
+   MR Robot CTF room
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Terminator
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Overpass.html">
+   Overpass
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tools
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Tools/PriveligeEscalation/PriveligeEscalation.html">
+   Privelige Escalation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../Tools/PriveligeEscalation/LinuxPrivEsc.html">
+     Linux Privelige Escalation
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Tools/PriveligeEscalation/LinEnum.html">
+       LinEnum
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Tools/PriveligeEscalation/LinPeas.html">
+       LinPeas
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Tools/PriveligeEscalation/LES.html">
+       Linux Exploit Suggester
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../Tools/PriveligeEscalation/WindowsPrivEsc.html">
+     Windows PrivEsc
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Tools/PriveligeEscalation/Powerup.html">
+       Powerup
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Tools/BurpSuite/Burp.html">
+   Burp Suite
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tools/BurpSuite/BurpRepeater.html">
+     Burp Suite - Repeater
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tools/BurpSuite/BurpIntruder.html">
+     Burp Suite - Intruder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Wireshark/Wireshark.html">
+   Wireshark
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Tools/Programs/MyPrograms.html">
+   My Programs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tools/Programs/WebBruteForce.html">
+     Web Brute Force Program
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Nmap.html">
+   Nmap
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Tools/Metasploit.html">
+   Metasploit Framework
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tools/Msfvenom.html">
+     Msfvenom
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tools/SearchSploit.html">
+     Searchsploit
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/CyberChef.html">
+   Cyberchef
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/NFS.html">
+   NFS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/John.html">
+   John The Ripper
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Netcat.html">
+   Netcat
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/GoBuster.html">
+   Gobuster
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Wfuzz.html">
+   WFUZZ
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Nikto.html">
+   Nikto
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/HashCat.html">
+   Hashcat
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/HashID.html">
+   HashID
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Hydra.html">
+   Hydra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/TCPDump.html">
+   TCPDump
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Ettercap.html">
+   Ettercap &amp; Bettercap
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Nessus.html">
+   Nessus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Impacket.html">
+   Impacket
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/BloodHound.html">
+   BloodHound
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Kerbrute.html">
+   Kerbrute
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Evil-WinRM.html">
+   Evil-WinRM
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Binwalk.html">
+   Binwalk
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Yara.html">
+   Yara
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Hacker Craft
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Craft/MITRE/MITRE.html">
+   Mitre
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Craft/MITRE/MITRE_ATT%26CK.html">
+     Mitre ATT&amp;CK
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Craft/MITRE/MITRE_CAR.html">
+     MITRE CARs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Craft/MITRE/MITRE_Defend.html">
+     MITRE Defend
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Craft/MITRE/MITRE_Engage.html">
+     MITRE Engage
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/TheBasics.html">
+   The Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/TheOSIModel.html">
+   The OSI Model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/LinuxFun.html">
+   Linux Fun
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/WindowsFun.html">
+   Windows ‘Fun’ Stuff
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/SQLinjection.html">
+   SQL Injection
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/ssh.html">
+   SSH
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/XSS.html">
+   XSS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/LFI.html">
+   LFI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/UploadVulns.html">
+   Upload Vulnerabilities
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/DHCP.html">
+   DHCP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/ShellStabalise.html">
+   Stabilizing a shell
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/FileTransfer.html">
+   File Transfer to Machines
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/Telnet.html">
+   Telnet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/HTTP.html">
+   HTTP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/FTP.html">
+   FTP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/EmailProtocol.html">
+   Email Protocols
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/Steganography.html">
+   Steganography
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/Kali.html">
+   Kali
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  The Cyber Killchain
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../KillChain/Killchain_Overview.html">
+   Killchain Overview
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../KillChain/Killchain_InfoGathering.html">
+     Killchain - Info Gathering
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Non Hacking Notes
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Other/FormattingNotes.html">
+   Formatting Notes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Other/ThingsToDo.html">
+   Things to Do
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/Dict8-VIII/The-Cyber-Toolkit/master?urlpath=tree/PracticeRooms/Terminator.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/PracticeRooms/Terminator.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-steps">
+   First steps
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#imap-pop3">
+     IMAP / POP3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#smb">
+   SMB
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-the-found-passwords">
+     Using the Found Passwords
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#website-enumeration">
+   Website Enumeration
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exploring">
+     Exploring
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#back-to-smb">
+   Back to SMB
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#now-what">
+   Now What?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#privesc">
+   PrivEsc
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Terminator</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-steps">
+   First steps
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#imap-pop3">
+     IMAP / POP3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#smb">
+   SMB
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-the-found-passwords">
+     Using the Found Passwords
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#website-enumeration">
+   Website Enumeration
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exploring">
+     Exploring
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#back-to-smb">
+   Back to SMB
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#now-what">
+   Now What?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#privesc">
+   PrivEsc
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="terminator">
+<h1>Terminator<a class="headerlink" href="#terminator" title="Permalink to this headline">#</a></h1>
+<p>Gobuster after, to get where its used (squirrelmail)</p>
+<p>This is a Terminator themed room, at the “easy” level</p>
+<section id="first-steps">
+<h2>First steps<a class="headerlink" href="#first-steps" title="Permalink to this headline">#</a></h2>
+<p>As normal, lets start with an Nmap scan of the server<br>
+<img alt="Terminator_Nmap.png" src="../_images/Terminator_Nmap.png" /><br></p>
+<p>Ok, a few things to look at today</p>
+<ul class="simple">
+<li><p>22 FTP</p></li>
+<li><p>80 Web Server</p></li>
+<li><p>110 POP3</p></li>
+<li><p>139 NetBios (Samba)</p></li>
+<li><p>143 IMAP</p></li>
+<li><p>445 NetBios (samba)</p></li>
+</ul>
+<section id="imap-pop3">
+<h3>IMAP / POP3<a class="headerlink" href="#imap-pop3" title="Permalink to this headline">#</a></h3>
+<p>I’ve never played with these before so I started here. IMAP didnt allow authentication over unsecure (requires SSL/TLS), a non starter for me atm. POP3 couldnt really get me anywhere. Skipping past these for now</p>
+<hr>
+</section>
+</section>
+<section id="smb">
+<h2>SMB<a class="headerlink" href="#smb" title="Permalink to this headline">#</a></h2>
+<p>Ok, SMB tends to give away a bit, so lets go there next. Nmap has a built in enum script for this:<br>
+<img alt="Terminator_NmapEnumShares.png" src="../_images/Terminator_NmapEnumShares.png" /> <br></p>
+<p>Now we’re getting somewhere. Both the anonymous and IPC directorys have anonymous access, im going to start with the anonymous one.<br>
+<img alt="Terminator_SMBaccess.png" src="../_images/Terminator_SMBaccess.png" /><br>
+Which was indeed very interesting. I’ve grabbed the txt files in the initial directory and the log1 file from the logs directory. These look a lot like passwords, which the attention.txt file supports:<br>
+<img alt="Terminator_SMBfiles.png" src="../_images/Terminator_SMBfiles.png" /></p>
+<section id="using-the-found-passwords">
+<h3>Using the Found Passwords<a class="headerlink" href="#using-the-found-passwords" title="Permalink to this headline">#</a></h3>
+<p>Now that we have a list of passwords, lets try use these against the share we dont have a login for:<br>
+Aaaand, I got nothing using the username</p>
+<ul class="simple">
+<li><p>MilesDyson</p></li>
+<li><p>Miles</p></li>
+</ul>
+<p>What else have we got?</p>
+<hr>
+</section>
+</section>
+<section id="website-enumeration">
+<h2>Website Enumeration<a class="headerlink" href="#website-enumeration" title="Permalink to this headline">#</a></h2>
+<p>So we have a user and password, but nowhere to put it…. thats annoying… Lets move on to the website enumeration. I’m a fan of gobuster so I’ll start there<br>
+<img alt="Terminator_GoBusterScan.png" src="../_images/Terminator_GoBusterScan.png" /><br></p>
+<ul class="simple">
+<li><p>No luck in the /Admin or /ai pages</p></li>
+</ul>
+<p>SquirrelMail is an interesting one though, its asks for a username and password. Burp makes short work of that…<br>
+<img alt="Terminator_BurpSquirrelMail.png" src="../_images/Terminator_BurpSquirrelMail.png" /><br>
+“cyborg007haloterminator”… nice….</p>
+<section id="exploring">
+<h3>Exploring<a class="headerlink" href="#exploring" title="Permalink to this headline">#</a></h3>
+<p>So, we have a webmail box…<br>
+<img alt="Terminator_Inbox.png" src="../_images/Terminator_Inbox.png" /><br></p>
+<ul class="simple">
+<li><p>Nothing in the Drafts, sent or Trash</p></li>
+<li><p>2 emails look a bit noisy… cyberchef gives one back as a string from the other, might be something for later</p></li>
+<li><p>The other one is a password reset for SMB… well thats helpful:
+)s{A&amp;2Z=F^n_E.B`</p></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="back-to-smb">
+<h2>Back to SMB<a class="headerlink" href="#back-to-smb" title="Permalink to this headline">#</a></h2>
+<p>Lets try this back in Miles SMB share:<br>
+<img alt="Terminator_MilesDirectory.png" src="../_images/Terminator_MilesDirectory.png" /><br></p>
+<p>Ok, wasnt expecting that… Lets see what’s in “notes”<br>
+<img alt="Terminator_Notes.png" src="../_images/Terminator_Notes.png" /><br></p>
+<p>Well that looks Important. “Get” it then take a look<br>
+<img alt="Terminator_Important.png" src="../_images/Terminator_Important.png" /> <br>
+Nice /45kra24zxs28v3yd</p>
+<hr>
+</section>
+<section id="now-what">
+<h2>Now What?<a class="headerlink" href="#now-what" title="Permalink to this headline">#</a></h2>
+<p>Ok, we’ve sorta hit a dead end now. That page wasnt very fun. That being said, it was mentioned that this directory is a beta version. Maybe there is more in this subdirectory?<br>
+<img alt="Terminator_GobusterAgain.png" src="../_images/Terminator_GobusterAgain.png" /><br></p>
+<p>Hey, look at that, theres a new admin page. Cuppa CMS<br>
+<img alt="Terminator_Cuppa.png" src="../_images/Terminator_Cuppa.png" /><br></p>
+<p>None of our logins work here either. Any known exploits with it?<br>
+<img alt="Terminator_ExploitDB.png" src="../_images/Terminator_ExploitDB.png" /><br></p>
+<p>Thats a yes, looks like a Local File Inclusion exploit which includes an example for the etc/passwd file, so lets grab that</p>
+<blockquote>
+<div><p><a class="reference external" href="http://10.10.252.2/45kra24zxs28v3yd/administrator/alerts/alertConfigField.php?urlConfig=../../../../../../../../../etc/passwd">http://10.10.252.2/45kra24zxs28v3yd/administrator/alerts/alertConfigField.php?urlConfig=../../../../../../../../../etc/passwd</a></p>
+</div></blockquote>
+<p>We cant get the shadow file though, so what else can we do? How about a Remote File inclusion? Grab a PHP reverse shell file and host a HTTP server<br></p>
+<p><img alt="Terminator_ReverseFileHosted.png" src="../_images/Terminator_ReverseFileHosted.png" /><br></p>
+<p>Host a reverse shell listener based on your config<br>
+<img alt="Terminator_Listening.png" src="../_images/Terminator_Listening.png" /><br></p>
+<p>And use the exploit to pull your reverse shell file<br>
+<img alt="Terminator_ExploitLink.png" src="../_images/Terminator_ExploitLink.png" /><br></p>
+<p>If we’ve done it all correct, we should now get a reverse shell<br>
+<img alt="Terminator_ReverseShell.png" src="../_images/Terminator_ReverseShell.png" /><br></p>
+<p>All the Woot :-)<br>
+The user flag is in /home/milesdyson/user.txt<br></p>
+<hr>
+</section>
+<section id="privesc">
+<h2>PrivEsc<a class="headerlink" href="#privesc" title="Permalink to this headline">#</a></h2>
+<p>Time for some Privelige Escalation :-)</p>
+<ul class="simple">
+<li><p>Sudo -l : Nope</p></li>
+<li><p>SUID/GUID : Nope</p></li>
+<li><p>passwd/shadow files : Nope (only passwd)</p></li>
+<li><p>LinPeas : Nope, includes a 95% exploit but couldnt find much on this</p></li>
+<li><p>LinEnum : Victory</p></li>
+</ul>
+<p>LinEnum has given us a PrivEsc point, there is a job that runs every minute in a directory that we can access<br>
+<img alt="Terminator_Crontab.png" src="../_images/Terminator_Crontab.png" /><br></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./PracticeRooms"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="MrRobot.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">MR Robot CTF room</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Overpass.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Overpass</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Paul Williams<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

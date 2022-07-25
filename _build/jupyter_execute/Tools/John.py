@@ -14,6 +14,7 @@
 # ## What can we crack?
 # 
 # Well, a lot. Following the above format, pretty much any hash thats in your wordlist. For some hash types, they need to be converted to the format that john expects.
+# There is also a useful toold for Identifying the hashes: [HashID](HashID.ipynb)
 # 
 # ### Linux Logins
 # So, youve got a low level account and want to escalate. As linux stores its credentails across 2 files, theres a process to merge them. Oddly enough, as they are in the shadow file, the program is called 'unshadow'
