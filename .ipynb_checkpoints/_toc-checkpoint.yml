@@ -20,6 +20,7 @@ parts:
     - file: PracticeRooms/MrRobot
     - file: PracticeRooms/Terminator
     - file: PracticeRooms/Overpass
+    - file: PracticeRooms/LazyAdmin
   - caption: Tools
     chapters:
     - file: Tools/PriveligeEscalation/PriveligeEscalation
@@ -36,11 +37,11 @@ parts:
       sections:
       - file: Tools/BurpSuite/BurpRepeater
       - file: Tools/BurpSuite/BurpIntruder
-    - file: Tools/Wireshark/Wireshark
-     # sections:
     - file: Tools/Programs/MyPrograms
       sections:
       - file: Tools/Programs/WebBruteForce
+    - file: Tools/Wireshark/Wireshark
+     # sections:
     - file: Tools/Nmap
     - file: Tools/Metasploit
       sections:
