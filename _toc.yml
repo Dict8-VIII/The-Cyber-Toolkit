@@ -21,6 +21,7 @@ parts:
     - file: PracticeRooms/Terminator
     - file: PracticeRooms/Overpass
     - file: PracticeRooms/LazyAdmin
+    - file: PracticeRooms/Startup
   - caption: Tools
     chapters:
     - file: Tools/PriveligeEscalation/PriveligeEscalation
