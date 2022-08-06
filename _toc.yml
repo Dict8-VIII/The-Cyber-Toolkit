@@ -68,6 +68,7 @@ parts:
     - file: Tools/Evil-WinRM
     - file: Tools/Binwalk
     - file: Tools/Yara
+    - file: Tools/OpenVAS
   - caption: Hacker Craft
     chapters:
     - file: Craft/MITRE/MITRE
