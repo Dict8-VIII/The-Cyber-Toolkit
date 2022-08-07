@@ -23,6 +23,7 @@ parts:
     - file: PracticeRooms/LazyAdmin
     - file: PracticeRooms/Startup
     - file: PracticeRooms/Ninja
+    - file: PracticeRooms/Lian_Yu
   - caption: Tools
     chapters:
     - file: Tools/PriveligeEscalation/PriveligeEscalation
