@@ -43,6 +43,7 @@ parts:
     - file: Tools/Programs/MyPrograms
       sections:
       - file: Tools/Programs/WebBruteForce
+      - file: Tools/Programs/FileDownloader
     - file: Tools/Wireshark/Wireshark
      # sections:
     - file: Tools/Nmap
