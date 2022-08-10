@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>MR Robot CTF room &#8212; The Cyber Toolkit</title>
+    <title>Mr Robot &#8212; The Cyber Toolkit</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -191,7 +191,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   MR Robot CTF room
+   Mr Robot
   </a>
  </li>
  <li class="toctree-l1">
@@ -202,6 +202,26 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="Overpass.html">
    Overpass
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="LazyAdmin.html">
+   LazyAdmin
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Startup.html">
+   Startup
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Ninja.html">
+   Ninja
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lian_Yu.html">
+   Lian_Yu
   </a>
  </li>
 </ul>
@@ -289,11 +309,6 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Tools/Wireshark/Wireshark.html">
-   Wireshark
-  </a>
- </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Tools/Programs/MyPrograms.html">
    My Programs
@@ -309,7 +324,17 @@ const thebe_selector_output = ".output, .cell_output"
      Web Brute Force Program
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tools/Programs/FileDownloader.html">
+     File Downloader
+    </a>
+   </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Wireshark/Wireshark.html">
+   Wireshark
+  </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../Tools/Nmap.html">
@@ -431,6 +456,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../Tools/Yara.html">
    Yara
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/OpenVAS.html">
+   OpenVAS
   </a>
  </li>
 </ul>
@@ -817,7 +847,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>MR Robot CTF room</h1>
+                <h1>Mr Robot</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -881,8 +911,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="mr-robot-ctf-room">
-<h1>MR Robot CTF room<a class="headerlink" href="#mr-robot-ctf-room" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="mr-robot">
+<h1>Mr Robot<a class="headerlink" href="#mr-robot" title="Permalink to this headline">#</a></h1>
 <p>This page is the walkthrough for the Mr Robot CTF Room. It’s a moderate level room and very little guidance is given in the task itself. It does include a walkthrough by DarkStar, but I like that youre expected to have some independance when challenging the room. The flags have multiple steps between them, so you arent even quite sure if youre on the right path.</p>
 <p>For this room, I learned about using Hydra to brute force a web page, instead of Burpsuite so thats quite helpful. I’m a bit unhappy about the password brute forcing though. The dictionary is quite large and the webserver doesnt seem to handle this very well (I’m not even sure if you could completed the dictionary in a 2hr window as the password is near the end). I even wrote my own program to bruteforce the password at a custom speed but the server couldnt keep up with this either. In Darkstar’s walkthrough he doesnt even show it running, just says what the resulting password is.</p>
 <p>If youre attempting the room for the first time and want to do it without the walkthrough, reverse your password dictionary and start from the bottom. It just saves time….</p>
@@ -942,7 +972,7 @@ And that didnt work… but wait, theres more! Our error actually gives us tha we
 <p>Lets modify Hydra to now search for the password<br>
 <img alt="MrRobot_HydraPassword.png" src="../_images/MrRobot_HydraPassword.png" /><br></p>
 <p>Unfortuanely, theres about 860K entries, and trying to put these through the web server in 2 hrs just doesnt seem possible. The web server doesnt handle the requests that quickly.<br>
-I made my own program to brute force the website, it can be found <a class="reference internal" href="../Tools/Programs/WebBruteForce.html"><span class="doc std std-doc">here</span></a> (I used 3.1). If you want to try it yourself, I suggest hardcoding the checkpoing to 856000 to avoid the massive wait. Eventually you get this: <br>
+I made my own program to brute force the website, it can be found <a class="reference internal" href="../Tools/Programs/WebBruteForce.html"><span class="doc std std-doc">here</span></a> (I used 3.1). If you want to try it yourself, I suggest hardcoding the checkpoint to 856000 to avoid the massive wait. Eventually you get this: <br>
 <img alt="MrRobot_FoundPassword.png" src="../_images/MrRobot_FoundPassword.png" /><br>
 <br>
 Using the discovered User and Password, we can now log into the website</p>

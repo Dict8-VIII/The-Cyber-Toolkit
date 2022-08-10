@@ -10,7 +10,7 @@
 # * add last modified to sections
 # * Finish "The Basics"
 # ** Add attacks in a separate sections
-# ~~* HackerCraft: Add the general process (OSINT, Info Gathering, expl, escalation, covering/maintaining)~~ Removed as working on Killchain now
+# * ~~HackerCraft: Add the general process (OSINT, Info Gathering, expl, escalation, covering/maintaining)~~ Removed as working on Killchain now
 # * write python program for SQL injection
 # * JNR Pen tester page is empty
 # * Mention more on HoloLive
@@ -23,9 +23,20 @@
 # * Add my "TryHackMe" account
 # * Dark Mode
 # * I'm sure the google analytics ID is wrong
-# * Mitre's ATT&CK looks interesting...
+# * ~~Mitre's ATT&CK looks interesting...~~ It was
 # * Nmap has external 3rd party services? "Checks using a third-party service, such as Geoplugin and Virustotal"
 # * Nessus - vulnerability scanner. Theres rooms for it too
 # * LinuxPrivesc task 8 - try a write as SUID
 # * https://github.com/rafax00/Bruteforcer
 # * Expand on yara rules
+# * Finish Agent SUDO
+# * Finish Terminator
+# * Finish LazyAdmin
+# * Document ISAC https://tryhackme.com/room/introtoisac
+# * OpenVAS looks fun, try it out.
+
+# In[ ]:
+
+
+
+

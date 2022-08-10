@@ -1,0 +1,86 @@
+Traceback (most recent call last):
+  File "C:\Users\paulj\AppData\Local\Programs\Python\Python310\lib\site-packages\jupyter_cache\executors\utils.py", line 51, in single_nb_execution
+    executenb(
+  File "C:\Users\paulj\AppData\Local\Programs\Python\Python310\lib\site-packages\nbclient\client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "C:\Users\paulj\AppData\Local\Programs\Python\Python310\lib\site-packages\nbclient\util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "C:\Users\paulj\AppData\Local\Programs\Python\Python310\lib\site-packages\nbclient\util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "C:\Users\paulj\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 646, in run_until_complete
+    return future.result()
+  File "C:\Users\paulj\AppData\Local\Programs\Python\Python310\lib\site-packages\nbclient\client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\paulj\AppData\Local\Programs\Python\Python310\lib\site-packages\nbclient\client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\paulj\AppData\Local\Programs\Python\Python310\lib\site-packages\nbclient\client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+'''
+This python script opens a file named urls.txt in the  current folder and
+downloads each url sequentually. Downloaded files are saved into the current folder.
+
+Requirements
+* In urls.txt URLs must be one per line and no line can be blank
+* The URL must not use GET parameters (e.g. http://server/retrieve?file=myfile)
+* urls.txt must be stored in the same folder as this file
+* You must have read and write permission to this folder
+
+v2.0 : 04/06/22
+Additional function to allow selection of file save location
+'''
+
+import os
+import urllib.request
+
+#Links moved above the chdir, to ensure it can be in the current location
+#Could just add it to the path...
+links = open('urls.txt', 'r')
+
+# Addition of where to save the file(s)
+save_location = input("Hello. Where would you like to store the files [leave empty for current directory]:")
+if (save_location == ""):
+    save_location = os.getcwd()
+    
+os.chdir(save_location)
+
+for link in links:
+
+    #Get one line of text (e.g. http://server/files/grades.doc),
+    # then get the filename from the end of the URL
+    link = link.strip()
+    filename = link.rsplit('/', 1)[-1]
+
+    #Does this file exist in this folder? If not, download it
+    if not (os.path.isfile(filename)):
+        #print('Downloading: ' + filename )
+        print("Downloading", link, "and saving as", save_location+filename)
+        try:
+            urllib.request.urlretrieve(link, filename)
+            print("File size was", os.path.getsize(filename))
+        except Exception as inst:
+            print(inst)
+            print('  Encountered unknown error. Continuing.')
+    
+    #File exists; don't download
+    else:
+        print("This file exists already.")
+
+#End of program
+print("Finished downloading.")
+------------------
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mFileNotFoundError[0m                         Traceback (most recent call last)
+Input [1;32mIn [1][0m, in [0;36m<cell line: 20>[1;34m()[0m
+[0;32m     16[0m [38;5;28;01mimport[39;00m [38;5;21;01murllib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mrequest[39;00m
+[0;32m     18[0m [38;5;66;03m#Links moved above the chdir, to ensure it can be in the current location[39;00m
+[0;32m     19[0m [38;5;66;03m#Could just add it to the path...[39;00m
+[1;32m---> 20[0m links [38;5;241m=[39m [38;5;28;43mopen[39;49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43murls.txt[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[38;5;124;43m'[39;49m[38;5;124;43mr[39;49m[38;5;124;43m'[39;49m[43m)[49m
+[0;32m     22[0m [38;5;66;03m# Addition of where to save the file(s)[39;00m
+[0;32m     23[0m save_location [38;5;241m=[39m [38;5;28minput[39m([38;5;124m"[39m[38;5;124mHello. Where would you like to store the files [leave empty for current directory]:[39m[38;5;124m"[39m)
+
+[1;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'urls.txt'
+FileNotFoundError: [Errno 2] No such file or directory: 'urls.txt'
+

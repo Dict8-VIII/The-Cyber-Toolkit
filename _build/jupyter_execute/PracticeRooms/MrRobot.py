@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # MR Robot CTF room
+# # Mr Robot
 # 
 # This page is the walkthrough for the Mr Robot CTF Room. It's a moderate level room and very little guidance is given in the task itself. It does include a walkthrough by DarkStar, but I like that youre expected to have some independance when challenging the room. The flags have multiple steps between them, so you arent even quite sure if youre on the right path.
 # 
@@ -71,7 +71,7 @@
 # ![MrRobot_HydraPassword.png](../images/PracticeRooms/MrRobot_HydraPassword.png)<br>
 # 
 # Unfortuanely, theres about 860K entries, and trying to put these through the web server in 2 hrs just doesnt seem possible. The web server doesnt handle the requests that quickly.<br>
-# I made my own program to brute force the website, it can be found [here](../Tools/Programs/WebBruteForce.ipynb) (I used 3.1). If you want to try it yourself, I suggest hardcoding the checkpoing to 856000 to avoid the massive wait. Eventually you get this: <br>
+# I made my own program to brute force the website, it can be found [here](../Tools/Programs/WebBruteForce.ipynb) (I used 3.1). If you want to try it yourself, I suggest hardcoding the checkpoint to 856000 to avoid the massive wait. Eventually you get this: <br>
 # ![MrRobot_FoundPassword.png](../images/PracticeRooms/MrRobot_FoundPassword.png)<br>
 # <br>
 # Using the discovered User and Password, we can now log into the website

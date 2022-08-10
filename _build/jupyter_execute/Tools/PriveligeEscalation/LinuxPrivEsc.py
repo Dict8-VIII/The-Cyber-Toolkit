@@ -135,6 +135,12 @@
 # 
 # <hr>
 
+# ## Crontabs
+# 
+# Found in /var/spool/cron/crontabs, it is a txt file that linux uses similar to 'task scheduler' in windows.
+# 
+# <hr>
+
 # ## Exploiting
 # 
 # So you've found a path that may lead to PrivEsc, great... now what? Unless you've found sudo rights on a shell, you'll probably need to leverage the path to turn it to an escalation.
