@@ -24,6 +24,7 @@ parts:
     - file: PracticeRooms/Startup
     - file: PracticeRooms/Ninja
     - file: PracticeRooms/Lian_Yu
+    - file: PracticeRooms/Tomghost
   - caption: Tools
     chapters:
     - file: Tools/PriveligeEscalation/PriveligeEscalation
@@ -71,6 +72,7 @@ parts:
     - file: Tools/Binwalk
     - file: Tools/Yara
     - file: Tools/OpenVAS
+    - file: Tools/Splunk
   - caption: Hacker Craft
     chapters:
     - file: Craft/MITRE/MITRE
@@ -81,6 +83,7 @@ parts:
       - file: Craft/MITRE/MITRE_Engage
     - file: Craft/TheBasics
     - file: Craft/TheOSIModel
+    - file: Craft/OWASP10
     - file: Craft/LinuxFun
     - file: Craft/WindowsFun
     - file: Craft/SQLinjection
