@@ -96,7 +96,7 @@
 # Now, how do we get root? Start with the trivial<br>
 # ![Tomghost_sudoable.png](../images/PracticeRooms/Tomghost_sudoable.png)
 # 
-# Honestly, I wasnt expecting that to work. GTFO bins has an excape for zip<br>
+# Honestly, I wasnt expecting that to work. GTFO bins has an escape for zip<br>
 # ![Tomghost_gtfo.png](../images/PracticeRooms/Tomghost_gtfo.png)<br>
 # 
 # So do it<br>

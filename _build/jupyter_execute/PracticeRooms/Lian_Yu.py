@@ -117,6 +117,7 @@
 # Start by seeing what we can run as root...<br>
 # Ok, pkexec... GTFOBins has a command for that... And it works<br>
 # Grab the root flag.<br>
+# This is all sumarised below, it felt a bit excessive to screenshot every step so its all together.
 # ![Lian_Yu_Rootflag.png](../images/PracticeRooms/Lian_Yu_Rootflag.png)<br>
 # 
 # <hr>

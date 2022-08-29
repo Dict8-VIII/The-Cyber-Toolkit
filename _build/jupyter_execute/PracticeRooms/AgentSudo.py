@@ -82,3 +82,7 @@
 
 # ### Steghide
 # So we have a password, but what's it for? We dont have another user yet so probably not for FTP/SSH. But we DO have another image that 'looked' normal. As it's a JPG, there is a specific tool for hiding content : steghide (it's also used for wav files btw).
+# 
+# <hr>
+# 
+# I'm still working on documenting this...

@@ -129,7 +129,9 @@
 # LinEnum has given us a PrivEsc point, there is a job that runs every minute in a directory that we can access<br>
 # ![Terminator_Crontab.png](../images/PracticeRooms/Terminator_Crontab.png)<br>
 # 
+# <hr>
 # 
+# Still documenting this one...
 It runs TAR on all files in the directory
 create a .sh that will run what we want (cp /bin/bash /tmp/shell && chmod +s /tmp/shell)
 create 2 files
