@@ -224,6 +224,11 @@ const thebe_selector_output = ".output, .cell_output"
    Lian_Yu
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Tomghost.html">
+   Tomghost
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -331,6 +336,33 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Tools/SysInternals/SysInternals.html">
+   SysInternals
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tools/SysInternals/File_and_Disk.html">
+     File and Disk Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tools/SysInternals/ProcessUtils.html">
+     Process Utilities
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tools/SysInternals/Misc.html">
+     Misc Tools
+    </a>
+   </li>
+  </ul>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../Tools/Wireshark/Wireshark.html">
    Wireshark
@@ -345,8 +377,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Tools/Metasploit.html">
    Metasploit Framework
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -463,6 +495,16 @@ const thebe_selector_output = ".output, .cell_output"
    OpenVAS
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Splunk.html">
+   Splunk
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/ReverseEngineering.html">
+   Reverse Engineering
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -474,8 +516,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Craft/MITRE/MITRE.html">
    Mitre
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -510,6 +552,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../Craft/TheOSIModel.html">
    The OSI Model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/OWASP10.html">
+   OWASP Top 10 - 2021
   </a>
  </li>
  <li class="toctree-l1">
@@ -592,6 +639,11 @@ const thebe_selector_output = ".output, .cell_output"
    Kali
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/CiscoProgramming.html">
+   Cisco Programming
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -603,8 +655,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../KillChain/Killchain_Overview.html">
    Killchain Overview
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -849,10 +901,10 @@ title="Print to PDF"
 <hr><section id="first-steps">
 <h2>First Steps<a class="headerlink" href="#first-steps" title="Permalink to this headline">#</a></h2>
 <p>So, we’ve got an IP, lest start with a scan. Nmap gives us 2 ports on the standard scan. <br>
-<img alt="LazyAdmin_Nmap.png" src="../images/PracticeRooms/LazyAdmin_Nmap.png" /><br></p>
+<img alt="LazyAdmin_Nmap.png" src="../_images/LazyAdmin_Nmap.png" /><br></p>
 <p>So we have HTTP and SSH. SSH tends to be a later stage step, so lets bring up the HTTP connection. It looks to be the default page. Guess where the Lazy in the room came from…<br></p>
 <p>Nothing looks obvious here, lets spin up GoBuster and Nikto. For me, GoBuster gave the first bit of useful info, a /content directory.<br>
-<img alt="LazyAdmin_GoBuster.png" src="../images/PracticeRooms/LazyAdmin_GoBuster.png" /><br></p>
+<img alt="LazyAdmin_GoBuster.png" src="../_images/LazyAdmin_GoBuster.png" /><br></p>
 <p>Bring up this page brings us a default page for “sweetrice”, a CMS system. Great. Theres a few pages on Exploit-DB about sweetrice, but for the sake of investigation I didnt start here. If you want to skip ahead, go to the end of the chapter and use the login in the /content/as directory.<br></p>
 <p>Running GoBuster on the /content directory gives us a few more sub directories</p>
 <ul class="simple">
@@ -863,27 +915,27 @@ title="Print to PDF"
 <li><p>/attachment</p></li>
 </ul>
 <p>These are more interesting than the content page. A few are browsable directories and the /as is a login page. <br>
-<img alt="LazyAdmin_LoginPage.png" src="../images/PracticeRooms/LazyAdmin_LoginPage.png" /><br></p>
+<img alt="LazyAdmin_LoginPage.png" src="../_images/LazyAdmin_LoginPage.png" /><br></p>
 <p>As we dont have any logins yet, lets start with directory browsing. The images page is boring, /inc gives us some fun data though. We get version 1.5.1 from the Lastest.txt file (good England there…) but the backup directory also looking quite tasty. We have a SQL backup in there.<br>
-<img alt="LazyAdmin_BackupLocation.png" src="../images/PracticeRooms/LazyAdmin_BackupLocation.png" /><br></p>
+<img alt="LazyAdmin_BackupLocation.png" src="../_images/LazyAdmin_BackupLocation.png" /><br></p>
 <p>Using your tool of choice, examining the backup drops all the tables then repopulates them. A weird backup process but OK… However when we examine the file, the repopulation includes the Admin account in the database. Cool. I just threw it into crackstation and it came back with a password.<br>
-<img alt="LazyAdmin_BackupDetails.png" src="../images/PracticeRooms/LazyAdmin_BackupDetails.png" /><br></p>
+<img alt="LazyAdmin_BackupDetails.png" src="../_images/LazyAdmin_BackupDetails.png" /><br></p>
 <p>The file can be a bit hard to read, but the Admin Account is “manager” with the password “Password123”. Throw it into your login page and we are now connected</p>
 <hr></section>
 <section id="getting-to-a-shell">
 <h2>Getting to a Shell<a class="headerlink" href="#getting-to-a-shell" title="Permalink to this headline">#</a></h2>
-<p>jump to ads, add a new one and copy the reverse shell script. name code. Start listener and navigate
-<img alt="LazyAdmin_AdsExploit.png" src="PracticeRooms/attachment:67199436-6fc2-4f43-91fb-ba811e7027ea.png" /></p>
+<p>jump to ads, add a new one and copy the reverse shell script. name code. Start listener and navigate<br>
+<img alt="LazyAdmin_AdsExploit.png" src="../_images/LazyAdmin_AdsExploit.png" /><br></p>
 <p><a class="reference external" href="http://10.10.221.72/content/inc/ads/code.php">http://10.10.221.72/content/inc/ads/code.php</a></p>
-<p>user flag is in itguy’s folder
-<img alt="LazyAdmin_UserFlag.png" src="PracticeRooms/attachment:8fd395bf-5590-4de6-b1ff-97ca3988b3a4.png" /></p>
-<p>theres a sql login: rice:randompass</p>
-<p>can run sudo -l, gives a perl script with sh running…. helpful.. but its only root writable
-<img alt="LazyAdmin_Sudo.png" src="PracticeRooms/attachment:833c7555-302d-41cf-8a19-e86e776e3384.png" /></p>
-<p>The shell itslef runs somethign else though. which we can write too
-<img alt="LazyAdmin_copySH.png" src="PracticeRooms/attachment:cc0cf9a7-5e4f-4e28-b7f8-6abf30ca60c4.png" /></p>
-<p>It keeps not allowing sudo even though we have NoPasword enabled…. annoying. Fix is here
-<img alt="LazyAdmin_GetRoot.png" src="PracticeRooms/attachment:0caceea0-7ef8-4a5d-8d05-cdd7966cdb5c.png" /></p>
+<p>user flag is in itguy’s folder<br>
+<img alt="LazyAdmin_UserFlag.png" src="../_images/LazyAdmin_UserFlag.png" /><br></p>
+<p>theres a sql login: rice:randompass<br></p>
+<p>can run sudo -l, gives a perl script with sh running…. helpful.. but its only root writable<br>
+<img alt="LazyAdmin_Sudo.png" src="../_images/LazyAdmin_Sudo.png" /><br></p>
+<p>The shell itslef runs somethign else though. which we can write too<br>
+<img alt="LazyAdmin_copySH.png" src="../_images/LazyAdmin_copySH.png" /><br></p>
+<p>It keeps not allowing sudo even though we have NoPasword enabled…. annoying. Fix is here<br>
+<img alt="LazyAdmin_GetRoot.png" src="../_images/LazyAdmin_GetRoot.png" /><br></p>
 <p>flag is /root/root.txt</p>
 </section>
 </section>

@@ -224,6 +224,11 @@ const thebe_selector_output = ".output, .cell_output"
    Lian_Yu
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Tomghost.html">
+   Tomghost
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -331,6 +336,33 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Tools/SysInternals/SysInternals.html">
+   SysInternals
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tools/SysInternals/File_and_Disk.html">
+     File and Disk Tools
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tools/SysInternals/ProcessUtils.html">
+     Process Utilities
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tools/SysInternals/Misc.html">
+     Misc Tools
+    </a>
+   </li>
+  </ul>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../Tools/Wireshark/Wireshark.html">
    Wireshark
@@ -345,8 +377,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Tools/Metasploit.html">
    Metasploit Framework
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -463,6 +495,16 @@ const thebe_selector_output = ".output, .cell_output"
    OpenVAS
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Splunk.html">
+   Splunk
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/ReverseEngineering.html">
+   Reverse Engineering
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -474,8 +516,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Craft/MITRE/MITRE.html">
    Mitre
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -510,6 +552,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../Craft/TheOSIModel.html">
    The OSI Model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/OWASP10.html">
+   OWASP Top 10 - 2021
   </a>
  </li>
  <li class="toctree-l1">
@@ -592,6 +639,11 @@ const thebe_selector_output = ".output, .cell_output"
    Kali
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/CiscoProgramming.html">
+   Cisco Programming
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -603,8 +655,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../KillChain/Killchain_Overview.html">
    Killchain Overview
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -883,7 +935,7 @@ title="Print to PDF"
 <hr><section id="first-steps">
 <h2>First Steps<a class="headerlink" href="#first-steps" title="Permalink to this headline">#</a></h2>
 <p>We’re given an IP, lets start with Nmap.<br>
-<img alt="Startup_Nmap.png" src="../images/PracticeRooms/Startup_Nmap.png" /><br></p>
+<img alt="Startup_Nmap.png" src="../_images/Startup_Nmap.png" /><br></p>
 <p>So, we are given</p>
 <ul class="simple">
 <li><p>80 : Http</p></li>
@@ -894,7 +946,7 @@ title="Print to PDF"
 <section id="http">
 <h3>HTTP<a class="headerlink" href="#http" title="Permalink to this headline">#</a></h3>
 <p>I like to start here, as its normally the most accessible. Opening the home page doesnt give anything particually interesting. Lets spin up GoBuster and see what else is hiding.<br>
-<img alt="Startup_GoBuster.png" src="../images/PracticeRooms/Startup_GoBuster.png" /><br></p>
+<img alt="Startup_GoBuster.png" src="../_images/Startup_GoBuster.png" /><br></p>
 <p>Looks like we get a /files.</p>
 <ul class="simple">
 <li><p>Important.jpg is an “Among Us” meme</p></li>
@@ -906,23 +958,23 @@ title="Print to PDF"
 <section id="ftp">
 <h3>FTP<a class="headerlink" href="#ftp" title="Permalink to this headline">#</a></h3>
 <p>So we had an open FTP port previously. Looks like its accessible by anonymous… Lets take a look.<br>
-<img alt="Startup_FTPanonymous.png" src="../images/PracticeRooms/Startup_FTPanonymous.png" /><br></p>
+<img alt="Startup_FTPanonymous.png" src="../_images/Startup_FTPanonymous.png" /><br></p>
 <p>Huh, that looks like our /files directory… Push up a remote shell PHP (I swapped directories just because its easier to send the file).<br>
-<img alt="Startup_SendFTP.png" src="../images/PracticeRooms/Startup_SendFTP.png" /><br></p>
+<img alt="Startup_SendFTP.png" src="../_images/Startup_SendFTP.png" /><br></p>
 <p>Start up your listener and launch the remote shell.<br>
-<img alt="Startup_GetReverseShell.png" src="../images/PracticeRooms/Startup_GetReverseShell.png" /><br></p>
+<img alt="Startup_GetReverseShell.png" src="../_images/Startup_GetReverseShell.png" /><br></p>
 <p>The answer for the first question is in the recipe.txt file. <br></p>
 <hr></section>
 </section>
 <section id="escalation-lateral">
 <h2>Escalation - Lateral<a class="headerlink" href="#escalation-lateral" title="Permalink to this headline">#</a></h2>
 <p>So we have a remote shell now, lets see what we can find. The Incidents folder in the / directory is different, and looks to include a ‘suspicious.pcapng’ file. Has someone been here before? Pull it down and lets take a look. Copy the suspicous file to the ‘ftp’ folder then jump in from there.</p>
-<p><img alt="Startup_CopySuspicous.png" src="../images/PracticeRooms/Startup_CopySuspicous.png" /><br>
-<img alt="Startup_GetSuspicious.png" src="../images/PracticeRooms/Startup_GetSuspicious.png" /><br></p>
+<p><img alt="Startup_CopySuspicous.png" src="../_images/Startup_CopySuspicous.png" /><br>
+<img alt="Startup_GetSuspicious.png" src="../_images/Startup_GetSuspicious.png" /><br></p>
 <p>Someone has been here before<br>
-<img alt="Startup_ShellGetRequest.png" src="../images/PracticeRooms/Startup_ShellGetRequest.png" /></p>
+<img alt="Startup_ShellGetRequest.png" src="../_images/Startup_ShellGetRequest.png" /></p>
 <p>Right click the next entry and select follow -&gt; TCP Stream<br>
-<img alt="Startup_OtherHistory.png" src="../images/PracticeRooms/Startup_OtherHistory.png" /><br></p>
+<img alt="Startup_OtherHistory.png" src="../_images/Startup_OtherHistory.png" /><br></p>
 <p>So, what did they do?</p>
 <ul class="simple">
 <li><p>Listed the directory (ls -la)</p></li>
@@ -931,7 +983,7 @@ title="Print to PDF"
 <li><p>tried to use a password to see what lennie can run (c4ntg3t3n0ughsp1c3)</p></li>
 </ul>
 <p>Well they messed up, lennie doesnt have sudo rights. But WE know we can swap to lennie and use the password.<br></p>
-<p><img alt="Startup_BeLennie.png" src="../images/PracticeRooms/Startup_BeLennie.png" /></p>
+<p><img alt="Startup_BeLennie.png" src="../_images/Startup_BeLennie.png" /></p>
 <p>And that gives us our first user flag.</p>
 <hr></section>
 <section id="escalation-vertical">
@@ -956,9 +1008,9 @@ title="Print to PDF"
 <li><p>startup_list.txt. Anyone readable but root writable. Empty</p></li>
 </ul>
 <p>So we have a script that runs as root, that calls a file we own… time to modify the <a class="reference external" href="http://print.sh">print.sh</a> file. I know we’re after the /root/root.txt file, so i’m just going to copy that somewhere and make it anyone readable. In the real world we would copy and set SUID on a /bin/bash copy or create a new reverse shell.<br>
-<img alt="Startup_EditPrintFile.png" src="../images/PracticeRooms/Startup_EditPrintFile.png" /><br></p>
+<img alt="Startup_EditPrintFile.png" src="../_images/Startup_EditPrintFile.png" /><br></p>
 <p>We then just have to wait for the script to run again. A bit more investigation would show there is a cron job that runs for this but I’m more interested in the results.<br>
-<img alt="Startup_RootTXT.png" src="../images/PracticeRooms/Startup_RootTXT.png" /><br></p>
+<img alt="Startup_RootTXT.png" src="../_images/Startup_RootTXT.png" /><br></p>
 <p>So, a bit of a fail on the security side there….</p>
 <hr></section>
 </section>

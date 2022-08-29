@@ -9,7 +9,7 @@
 # ## First Steps
 # 
 # We're given an IP, lets start with Nmap.<br>
-# ![Startup_Nmap.png](../../images/PracticeRooms/Startup_Nmap.png)<br>
+# ![Startup_Nmap.png](../images/PracticeRooms/Startup_Nmap.png)<br>
 # 
 # So, we are given 
 # - 80 : Http
@@ -20,7 +20,7 @@
 # 
 # ### HTTP
 # I like to start here, as its normally the most accessible. Opening the home page doesnt give anything particually interesting. Lets spin up GoBuster and see what else is hiding.<br>
-# ![Startup_GoBuster.png](../../images/PracticeRooms/Startup_GoBuster.png)<br>
+# ![Startup_GoBuster.png](../images/PracticeRooms/Startup_GoBuster.png)<br>
 # 
 # Looks like we get a /files.
 # - Important.jpg is an "Among Us" meme
@@ -32,13 +32,13 @@
 # 
 # ### FTP
 # So we had an open FTP port previously. Looks like its accessible by anonymous... Lets take a look.<br>
-# ![Startup_FTPanonymous.png](../../images/PracticeRooms/Startup_FTPanonymous.png)<br>
+# ![Startup_FTPanonymous.png](../images/PracticeRooms/Startup_FTPanonymous.png)<br>
 # 
 # Huh, that looks like our /files directory... Push up a remote shell PHP (I swapped directories just because its easier to send the file).<br>
-# ![Startup_SendFTP.png](../../images/PracticeRooms/Startup_SendFTP.png)<br>
+# ![Startup_SendFTP.png](../images/PracticeRooms/Startup_SendFTP.png)<br>
 # 
 # Start up your listener and launch the remote shell.<br>
-# ![Startup_GetReverseShell.png](../../images/PracticeRooms/Startup_GetReverseShell.png)<br>
+# ![Startup_GetReverseShell.png](../images/PracticeRooms/Startup_GetReverseShell.png)<br>
 # 
 # The answer for the first question is in the recipe.txt file. <br>
 # 
@@ -48,14 +48,14 @@
 # 
 # So we have a remote shell now, lets see what we can find. The Incidents folder in the / directory is different, and looks to include a 'suspicious.pcapng' file. Has someone been here before? Pull it down and lets take a look. Copy the suspicous file to the 'ftp' folder then jump in from there.
 # 
-# ![Startup_CopySuspicous.png](../../images/PracticeRooms/Startup_CopySuspicous.png)<br>
-# ![Startup_GetSuspicious.png](../../images/PracticeRooms/Startup_GetSuspicious.png)<br>
+# ![Startup_CopySuspicous.png](../images/PracticeRooms/Startup_CopySuspicous.png)<br>
+# ![Startup_GetSuspicious.png](../images/PracticeRooms/Startup_GetSuspicious.png)<br>
 # 
 # Someone has been here before<br>
-# ![Startup_ShellGetRequest.png](../../images/PracticeRooms/Startup_ShellGetRequest.png)
+# ![Startup_ShellGetRequest.png](../images/PracticeRooms/Startup_ShellGetRequest.png)
 # 
 # Right click the next entry and select follow -> TCP Stream<br>
-# ![Startup_OtherHistory.png](../../images/PracticeRooms/Startup_OtherHistory.png)<br>
+# ![Startup_OtherHistory.png](../images/PracticeRooms/Startup_OtherHistory.png)<br>
 # 
 # So, what did they do?
 # - Listed the directory (ls -la)
@@ -65,7 +65,7 @@
 # 
 # Well they messed up, lennie doesnt have sudo rights. But WE know we can swap to lennie and use the password.<br>
 # 
-# ![Startup_BeLennie.png](../../images/PracticeRooms/Startup_BeLennie.png)
+# ![Startup_BeLennie.png](../images/PracticeRooms/Startup_BeLennie.png)
 # 
 # And that gives us our first user flag.
 # 
@@ -90,10 +90,10 @@
 # - startup_list.txt. Anyone readable but root writable. Empty
 # 
 # So we have a script that runs as root, that calls a file we own... time to modify the print.sh file. I know we're after the /root/root.txt file, so i'm just going to copy that somewhere and make it anyone readable. In the real world we would copy and set SUID on a /bin/bash copy or create a new reverse shell.<br>
-# ![Startup_EditPrintFile.png](../../images/PracticeRooms/Startup_EditPrintFile.png)<br>
+# ![Startup_EditPrintFile.png](../images/PracticeRooms/Startup_EditPrintFile.png)<br>
 # 
 # We then just have to wait for the script to run again. A bit more investigation would show there is a cron job that runs for this but I'm more interested in the results.<br>
-# ![Startup_RootTXT.png](../../images/PracticeRooms/Startup_RootTXT.png)<br>
+# ![Startup_RootTXT.png](../images/PracticeRooms/Startup_RootTXT.png)<br>
 # 
 # So, a bit of a fail on the security side there....
 # <hr>

@@ -12,12 +12,12 @@
 # ** Add attacks in a separate sections
 # * ~~HackerCraft: Add the general process (OSINT, Info Gathering, expl, escalation, covering/maintaining)~~ Removed as working on Killchain now
 # * write python program for SQL injection
-# * JNR Pen tester page is empty
+# * ~~JNR Pen tester page is empty~~ I'm removing it
 # * Mention more on HoloLive
 # * Add intro page about WHY cyber security is important
 # * Nmap - Add examples and videos
 # * Add people who helped (Giraffe Academy, The Cyber Mentor)
-# * Add my linked In page
+# * ~~Add my linked In page~~ Added
 # * Remove the default Links
 # * Explore "Hack the Box", add here
 # * Add my "TryHackMe" account
@@ -29,11 +29,15 @@
 # * LinuxPrivesc task 8 - try a write as SUID
 # * https://github.com/rafax00/Bruteforcer
 # * Expand on yara rules
-# * Finish Agent SUDO
-# * Finish Terminator
-# * Finish LazyAdmin
+# * Finish Agent SUDO Page
+# * Finish Terminator Page
+# * Finish LazyAdmin Page
+# * ~~Finish TomgHost Page~~ Done
 # * Document ISAC https://tryhackme.com/room/introtoisac
-# * OpenVAS looks fun, try it out.
+# * Document MISP https://tryhackme.com/room/misp
+# * OpenVAS looks fun, try it out
+# * Build process flow for Core windows processes https://tryhackme.com/room/btwindowsinternals
+# * Finish SysInternals Tools
 
 # In[ ]:
 

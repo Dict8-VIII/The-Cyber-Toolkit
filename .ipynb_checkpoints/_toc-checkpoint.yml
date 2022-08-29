@@ -45,9 +45,11 @@ parts:
       sections:
       - file: Tools/Programs/WebBruteForce
       - file: Tools/Programs/FileDownloader
-    - file: Tools/Programs/SysInternals/SysInternals
+    - file: Tools/SysInternals/SysInternals
       sections:
-      - file: Tools/Programs/SysInternals/File_and_Disk
+      - file: Tools/SysInternals/File_and_Disk
+      - file: Tools/SysInternals/ProcessUtils
+      - file: Tools/SysInternals/Misc
     - file: Tools/Wireshark/Wireshark
     - file: Tools/Nmap
     - file: Tools/Metasploit
@@ -75,6 +77,7 @@ parts:
     - file: Tools/Yara
     - file: Tools/OpenVAS
     - file: Tools/Splunk
+    - file: Tools/ReverseEngineering
   - caption: Hacker Craft
     chapters:
     - file: Craft/MITRE/MITRE
@@ -102,7 +105,7 @@ parts:
     - file: Craft/EmailProtocol
     - file: Craft/Steganography
     - file: Craft/Kali
-    
+    - file: Craft/CiscoProgramming
   - caption: The Cyber Killchain
     chapters:
     - file: KillChain/Killchain_Overview

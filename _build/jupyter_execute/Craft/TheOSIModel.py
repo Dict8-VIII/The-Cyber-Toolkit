@@ -16,10 +16,16 @@
 # 2 Data Link Layer<br>
 # 1 Physical layer<br>
 # 
-# ### Application Layer
+# <hr>
+
+# ## Application Layer
+# 
 # HTTP, FTP, SMTP, POP3, IMAP
 # 
-# ### Presentation Layer
+# <hr>
+
+# ## Presentation Layer
+# 
 # SSL, TLS
 # 
 # HTTP	80	HTTPS	443 <br>
@@ -28,24 +34,58 @@
 # POP3	110	POP3S	995 <br>
 # IMAP	143	IMAPS	993 <br>
 # 
-# ### Session Layer
+# <hr>
+
+# ## Session Layer
 # 
-# ### Transport Layer
+# <hr>
+
+# ## Transport Layer
+# 
 # TCP, UDP
 # 
-# ### Network Layer
+# <hr>
+
+# ## Network Layer
+# 
 # IPv4, IPv6, routing
 # 
-# ### Data Link Layer
-# MAC, ARP
+# <hr>
+
+# ## Data Link Layer
 # 
+# MAC, ARP
+# Is actually made up of 2 sub layers
+# 
+# - LLC: Logical Link Controller. Used for encapsulation
+# - MAC: Media Access Control
+# 
+# IEE 802.11
+# 
+# 1. ?
+# 2. ?
+# 3. Ethernet (3u:Fast Ethernet, 3z:gigabit over firbre, 3ab:Gigabit over copper, 3ae:10GB over Fibre)
+# 4. ?
+# 5. ?
+# 6. ?
+# 11. Wireless
+# 
+# ### 802.11.3
+# 
+# Unicast - 1 to one on MAC
+# Broadcast - 1 to all
+# Multicast - 1 to group
+# 
+# ARP - Address Resolution Protocol
+# 
+# Store and forward switch - get the whole frame then forward after. Can run the checks
+# Cut through - Send as you get it, faster but cant check
+# Fragment free - send in 64bite groups
+# <hr>
+
 # ### Physical layer
+# 
 # Ethernet, Wi-Fi, Fibre, Pigeon etc
 # 1,0,1,1,0,1,0,0
 # 
-
-# In[ ]:
-
-
-
-
+# <hr>
