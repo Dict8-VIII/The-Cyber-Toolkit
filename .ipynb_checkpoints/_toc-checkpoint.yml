@@ -47,7 +47,7 @@ parts:
       - file: Tools/Programs/FileDownloader
     - file: Tools/Programs/SysInternals/SysInternals
       sections:
-      - file: Tools/Programs/SysInternals/SigCheck
+      - file: Tools/Programs/SysInternals/File_and_Disk
     - file: Tools/Wireshark/Wireshark
     - file: Tools/Nmap
     - file: Tools/Metasploit
