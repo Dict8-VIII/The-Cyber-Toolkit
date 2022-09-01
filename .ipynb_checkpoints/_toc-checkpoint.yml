@@ -25,6 +25,7 @@ parts:
     - file: PracticeRooms/Ninja
     - file: PracticeRooms/Lian_Yu
     - file: PracticeRooms/Tomghost
+    - file: PracticeRooms/Ignite
   - caption: Tools
     chapters:
     - file: Tools/PriveligeEscalation/PriveligeEscalation
