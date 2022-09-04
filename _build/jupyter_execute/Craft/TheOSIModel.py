@@ -48,7 +48,7 @@
 
 # ## Network Layer
 # 
-# IPv4, IPv6, routing
+# IPv4, IPv6, , ARP, ICMP, routing
 # 
 # <hr>
 
@@ -60,7 +60,7 @@
 # - LLC: Logical Link Controller. Used for encapsulation
 # - MAC: Media Access Control
 # 
-# IEE 802.11
+# IEE 802.?
 # 
 # 1. ?
 # 2. ?
@@ -69,8 +69,9 @@
 # 5. ?
 # 6. ?
 # 11. Wireless
+# 15. Bluetooth
 # 
-# ### 802.11.3
+# ### 802.3
 # 
 # Unicast - 1 to one on MAC
 # Broadcast - 1 to all
@@ -85,7 +86,7 @@
 
 # ### Physical layer
 # 
-# Ethernet, Wi-Fi, Fibre, Pigeon etc
+# Ethernet, Wi-Fi, Fibre, RS232, Pigeon etc
 # 1,0,1,1,0,1,0,0
 # 
 # <hr>

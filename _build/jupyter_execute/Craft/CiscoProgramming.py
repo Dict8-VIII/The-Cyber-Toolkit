@@ -26,6 +26,12 @@
 # interface GigabitEthernet 15
 # - set to use port 15
 # 
+# ### General Syntax
+# 
+# - ! : Comment line
+# - erase startup-config : clear the startup config
+# - reload : restart the router and reload config
+# 
 # <hr>
 SHOW: S220
 
@@ -286,9 +292,9 @@ voice               Voice management
 # interface vlan 1<br> 
 # ip address IP SUB<br>
 # no shutdown<br>
+# 
+# <hr>
 
-# In[ ]:
-
-
-
-
+# ## Router
+# 
+# 
