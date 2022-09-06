@@ -73,6 +73,7 @@ parts:
     - file: Tools/Impacket
     - file: Tools/BloodHound
     - file: Tools/Kerbrute
+    - file: Tools/Rubeus
     - file: Tools/Evil-WinRM
     - file: Tools/Binwalk
     - file: Tools/Yara
@@ -107,6 +108,7 @@ parts:
     - file: Craft/Steganography
     - file: Craft/Kali
     - file: Craft/CiscoProgramming
+    - file: Craft/Kerberos
   - caption: The Cyber Killchain
     chapters:
     - file: KillChain/Killchain_Overview
