@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Evil-WinRM" href="Evil-WinRM.html" />
+    <link rel="next" title="Rubeus" href="Rubeus.html" />
     <link rel="prev" title="BloodHound" href="BloodHound.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -481,6 +481,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="Rubeus.html">
+   Rubeus
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="Evil-WinRM.html">
    Evil-WinRM
   </a>
@@ -508,6 +513,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="ReverseEngineering.html">
    Reverse Engineering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Mimikatz.html">
+   MimiKatz
   </a>
  </li>
 </ul>
@@ -647,6 +657,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../Craft/CiscoProgramming.html">
    Cisco Programming
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/Kerberos.html">
+   Kerberos Attacks
   </a>
  </li>
 </ul>
@@ -907,15 +922,22 @@ title="Print to PDF"
 <h2>Install<a class="headerlink" href="#install" title="Permalink to this headline">#</a></h2>
 <p>You will need to pull the files from github, and likely run as root to be able to write the files.</p>
 <blockquote>
-<div><p>cd /opt/kerbrute <br>
-wget <a class="reference external" href="https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64">https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64</a> <br>
+<div><p>sudo mkdir /opt/kerbrute <br>
+cd /opt/kerbrute <br>
+sudo wget <a class="reference external" href="https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64">https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64</a> <br>
 chmod +x kerbrute_linux_amd64 <br></p>
+</div></blockquote>
+<p>When running kerbrute, you will need to make sure the domain is a part of your DNS resolution (or hosts file). On linux this is in your /etc/hosts file.</p>
+<blockquote>
+<div><p>[ip] domain.TLD <br>
+10.0.0.1 <a class="reference external" href="http://ATTACK.me">ATTACK.me</a></p>
 </div></blockquote>
 </section>
 <section id="running">
 <h2>Running<a class="headerlink" href="#running" title="Permalink to this headline">#</a></h2>
 <p>You can now run the software from the coppied directory. Red is the Domain, Blue is the IP of the target to try log in to</p>
-<p><img alt="Kerbrute_Run.png" src="../_images/Kerbrute_Run.png" /></p>
+<p><img alt="Kerbrute_Run.png" src="../_images/Kerbrute_Run.png" /><br>
+<img alt="Kerbrute_Results.png" src="../_images/Kerbrute_Results.png" /><br></p>
 <hr></section>
 </section>
 
@@ -953,10 +975,10 @@ chmod +x kerbrute_linux_amd64 <br></p>
             <p class="prev-next-title">BloodHound</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Evil-WinRM.html" title="next page">
+    <a class='right-next' id="next-link" href="Rubeus.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Evil-WinRM</p>
+        <p class="prev-next-title">Rubeus</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

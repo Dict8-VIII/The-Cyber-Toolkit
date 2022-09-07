@@ -80,6 +80,7 @@ parts:
     - file: Tools/OpenVAS
     - file: Tools/Splunk
     - file: Tools/ReverseEngineering
+    - file: Tools/Mimikatz
   - caption: Hacker Craft
     chapters:
     - file: Craft/MITRE/MITRE

