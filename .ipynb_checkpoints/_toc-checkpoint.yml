@@ -57,6 +57,7 @@ parts:
       sections:
       - file: Tools/Msfvenom
       - file: Tools/SearchSploit
+      - file: Tools/Armitage
     - file: Tools/CyberChef
     - file: Tools/NFS
     - file: Tools/John
@@ -81,6 +82,8 @@ parts:
     - file: Tools/Splunk
     - file: Tools/ReverseEngineering
     - file: Tools/Mimikatz
+    - file: Tools/Recon-ng
+    - file: TOols/Maltego
   - caption: Hacker Craft
     chapters:
     - file: Craft/MITRE/MITRE
@@ -115,6 +118,7 @@ parts:
     - file: KillChain/Killchain_Overview
       sections:
       - file: KillChain/Killchain_InfoGathering
+      - file: KillCHain/Killchain_Weaponization
   - caption: Non Hacking Notes
     chapters:
     - file: Other/FormattingNotes
