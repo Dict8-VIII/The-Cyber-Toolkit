@@ -4,6 +4,8 @@
 # # Agent Sudo
 # 
 # This is an "Easy" level room that comes with a bit of everything. Scanning, Hashing, brute force and steganography. I havent seen a lot here that actually covers steganography so it was a bit of googling for me.
+# 
+# <hr>
 
 # ## First Steps
 # 
@@ -69,20 +71,53 @@
 # 
 # ### Cracking the Zip
 # John does this in his sleep. I've already done it so the password doesnt show, "alien"<br>
-# ![AgentSudo_ZipCracking.png](../images/PracticeRooms/AgentSudo_ZipCracking.png)
+# ![AgentSudo_ZipCracking.png](../images/PracticeRooms/AgentSudo_ZipCracking.png)<br>
 # 
 # We can now extract the zip and take a look
 # 
 # > 7z e 8702.zip
 # 
 # We now have a populated "to_agentR.txt"<br>
-# ![AgentSudo_ToR.png](../images/PracticeRooms/AgentSudo_ToR.png)
+# ![AgentSudo_ToR.png](../images/PracticeRooms/AgentSudo_ToR.png)<br>
 # 
 # 
-
+# ### Decode the Data
+# So, we have a string, 'QXJlYTUx', thats got to be an encoding of some sort, time for cyberchef. Its all characters so my guess would be base64 encoded.<br>
+# 
+# ![AgentSudo_CyberChef.png](../images/PracticeRooms/AgentSudo_CyberChef.png)<br>
+# 
 # ### Steghide
-# So we have a password, but what's it for? We dont have another user yet so probably not for FTP/SSH. But we DO have another image that 'looked' normal. As it's a JPG, there is a specific tool for hiding content : steghide (it's also used for wav files btw).
+# Hmm, another password. We still dont have anything fun from that JPG, but we have a password now. Does it work with Steghide?
+# ![AgentSudo_Steghide.png](../images/PracticeRooms/AgentSudo_Steghide.png)<br>
+# 
+# Thats a yes :-)
 # 
 # <hr>
+
+# ## Connect and Escalate
 # 
-# I'm still working on documenting this...
+# So, from the above we now have a user and password. Can SSH to the machine now.
+# > ssh james@10.10.217.248
+# 
+# What can we run as root?<br>
+# ![AgentSudo_SudoList.png](../images/PracticeRooms/AgentSudo_SudoList.png)<br>
+# 
+# Interesting, can run sudo, but not(!) as root. We can check the version of sudo though:
+# 
+# > sudo -V
+# 
+# This gives us version 1.8.21p2. Exploit DB gives us an exploit that looks about right.<br>
+# ![AgentSudo_ExploitDB.png](../images/PracticeRooms/AgentSudo_ExploitDB.png)
+# 
+# The code is nice an easy too.<br>
+# ![AgentSudo_Escalate.png](../images/PracticeRooms/AgentSudo_Escalate.png)<br>
+# 
+# The flag can be found in /root/root.txt, which includes the answers for the remaining questions.
+# 
+# <hr>
+
+# In[ ]:
+
+
+
+

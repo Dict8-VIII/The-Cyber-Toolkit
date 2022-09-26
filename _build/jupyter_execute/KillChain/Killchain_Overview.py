@@ -18,6 +18,9 @@
 # 3. Exploitation
 # 4. Privilege Escalation
 # 5. Post Exploitation
+# 
+# ## Useful Links
+# https://github.com/infosecn1nja/Red-Teaming-Toolkit
 
 # In[ ]:
 

@@ -22,15 +22,30 @@
 
 # ## Passive Information Gathering
 # 
+# ### Social Media
+# Dont underestimate this one. Posts about technology, projects, clients, staff etc can all be valuable information. Also, just because the offical social media page may be well looked after, doesnt mean that all the tagged staff are so cautious.
+# 
+# ### Job Adds
+# Another one that should be overlooked, job adds can give away the technology and structure of an organisation. Are they looking for SQL Admins? MongoDB? Python3? Web admins?
+# 
 # ### Dorking (Google)
-# How's your google-fu? Google is a great source for public data and it's free. What more could you want? Theres a few options with Dorking
+# How's your google-fu? Google is a great source for public data and it's free. What more could you want? Theres a few options with Dorking. Theres even a full list of search term https://www.exploit-db.com/google-hacking-database
 # 
-# - site:*.domain - This will return all sites Google's spider has with the domain. Pairing this with "password" could possibly return password files on the site. Remember if you then connect to the site to retrieve the file/page, then you are now in "active" recon.
-# 
-# - Searching for Job applications. These tend to include the infrastructure the site runs on, especially for IT positions (i.e. Must have excellent knowledge in Windows SERVER 2019 and PHP).
+# - "search Query"
+#   - Search the exact term
+# - [query] filetype:pdf
+#   - search for files of the defined type with the query
+# - [query] site:[domain]
+#   - only run the query agains the specific domain (can include *)
+# - [query] -site[domain]
+#   - as above, but exclude from the specified domain
+# - [query] intitle:[text]
+#   - return query results that include [text] in the title
+# - [query] inurl:[text]
+#   - return query results that include [text] in the url
 # 
 # ### Favicon
-# This is a weird one, the little icon on the site's URL can also be used to determine the OS running behind the server. This is ACTIVE.
+# This is a weird one, the little icon on the site's URL can also be used to determine the OS running behind the server.
 # 
 # ### crt.sh (cert domain history)
 # 
@@ -66,8 +81,14 @@
 # 
 # Types are the same as NSLookup, the DNS record types.
 # 
+# ### Host
+# An alternative to DIG / NSLookup, but is mainly for IP addresses
+# > host [DNS name]
+# 
+# 
 # ### DNSDumpster
 # [DNSDumpster](https://dnsdumpster.com/) is a website that combines all of the above DNS queries, and also puts them in easy to read formats tables and graphs. It can be used to discover extra subdomains and tries to resolve all names, IPs and even geo location. It looks quite helpful...
+# 
 # 
 # ### Shodan.io
 # A great website for analysing a target. Shodan builds a collection of device properties in the same way that a search engine builds a collection of pages. It pulls data such as:
@@ -76,8 +97,14 @@
 # - GeoLocation
 # - Hardware Type
 # 
-# ### Social Media
-# Facebook, Linked in, Job searches etc
+# ### Shodan via cmd
+# Theres also a command line version of shodan, but you need to create an account and register an API key. Full instructions are here https://cli.shodan.io/
+# 
+# ### Recon-ng
+# Theres a whole page on this one, its [here](../Tools/Recon-ng.ipynb)
+# 
+# ### Maltego
+# Again, a whole other page on this one. [I'm here](../Tools/Maltego.ipynb)
 # 
 # <hr>
 

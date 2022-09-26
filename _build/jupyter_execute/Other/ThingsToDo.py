@@ -29,7 +29,7 @@
 # * LinuxPrivesc task 8 - try a write as SUID
 # * https://github.com/rafax00/Bruteforcer
 # * Expand on yara rules
-# * Finish Agent SUDO Page
+# * ~~Finish Agent SUDO Page~~ Done
 # * Finish Terminator Page
 # * Finish LazyAdmin Page
 # * ~~Finish TomgHost Page~~ Done

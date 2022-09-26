@@ -83,7 +83,7 @@ parts:
     - file: Tools/ReverseEngineering
     - file: Tools/Mimikatz
     - file: Tools/Recon-ng
-    - file: TOols/Maltego
+    - file: Tools/Maltego
   - caption: Hacker Craft
     chapters:
     - file: Craft/MITRE/MITRE
@@ -118,7 +118,7 @@ parts:
     - file: KillChain/Killchain_Overview
       sections:
       - file: KillChain/Killchain_InfoGathering
-      - file: KillCHain/Killchain_Weaponization
+      - file: KillChain/Killchain_Weaponization
   - caption: Non Hacking Notes
     chapters:
     - file: Other/FormattingNotes

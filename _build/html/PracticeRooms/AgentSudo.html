@@ -398,6 +398,11 @@ const thebe_selector_output = ".output, .cell_output"
      Searchsploit
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Tools/Armitage.html">
+     Armitage
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -518,6 +523,16 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../Tools/Mimikatz.html">
    MimiKatz
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Recon-ng.html">
+   Recon-ng
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Tools/Maltego.html">
+   Maltego
   </a>
  </li>
 </ul>
@@ -684,6 +699,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../KillChain/Killchain_InfoGathering.html">
      Killchain - Info Gathering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../KillChain/Killchain_Weaponization.html">
+     Killchain - Weaponization
     </a>
    </li>
   </ul>
@@ -902,11 +922,21 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#decode-the-data">
+     Decode the Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#steghide">
      Steghide
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connect-and-escalate">
+   Connect and Escalate
+  </a>
  </li>
 </ul>
 
@@ -963,11 +993,21 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#decode-the-data">
+     Decode the Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#steghide">
      Steghide
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connect-and-escalate">
+   Connect and Escalate
+  </a>
  </li>
 </ul>
 
@@ -982,7 +1022,7 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="agent-sudo">
 <h1>Agent Sudo<a class="headerlink" href="#agent-sudo" title="Permalink to this headline">#</a></h1>
 <p>This is an “Easy” level room that comes with a bit of everything. Scanning, Hashing, brute force and steganography. I havent seen a lot here that actually covers steganography so it was a bit of googling for me.</p>
-<section id="first-steps">
+<hr><section id="first-steps">
 <h2>First Steps<a class="headerlink" href="#first-steps" title="Permalink to this headline">#</a></h2>
 <p>As normal, we can start with a scan. Nmap for the standard ports is a good start<br>
 <img alt="AgentSudo_NmapScan.png" src="../_images/AgentSudo_NmapScan.png" /> <br></p>
@@ -1037,21 +1077,44 @@ title="Print to PDF"
 <section id="cracking-the-zip">
 <h3>Cracking the Zip<a class="headerlink" href="#cracking-the-zip" title="Permalink to this headline">#</a></h3>
 <p>John does this in his sleep. I’ve already done it so the password doesnt show, “alien”<br>
-<img alt="AgentSudo_ZipCracking.png" src="../_images/AgentSudo_ZipCracking.png" /></p>
+<img alt="AgentSudo_ZipCracking.png" src="../_images/AgentSudo_ZipCracking.png" /><br></p>
 <p>We can now extract the zip and take a look</p>
 <blockquote>
 <div><p>7z e 8702.zip</p>
 </div></blockquote>
 <p>We now have a populated “to_agentR.txt”<br>
-<img alt="AgentSudo_ToR.png" src="../_images/AgentSudo_ToR.png" /></p>
+<img alt="AgentSudo_ToR.png" src="../_images/AgentSudo_ToR.png" /><br></p>
+</section>
+<section id="decode-the-data">
+<h3>Decode the Data<a class="headerlink" href="#decode-the-data" title="Permalink to this headline">#</a></h3>
+<p>So, we have a string, ‘QXJlYTUx’, thats got to be an encoding of some sort, time for cyberchef. Its all characters so my guess would be base64 encoded.<br></p>
+<p><img alt="AgentSudo_CyberChef.png" src="../_images/AgentSudo_CyberChef.png" /><br></p>
 </section>
 <section id="steghide">
 <h3>Steghide<a class="headerlink" href="#steghide" title="Permalink to this headline">#</a></h3>
-<p>So we have a password, but what’s it for? We dont have another user yet so probably not for FTP/SSH. But we DO have another image that ‘looked’ normal. As it’s a JPG, there is a specific tool for hiding content : steghide (it’s also used for wav files btw).</p>
-<hr>
-<p>I’m still working on documenting this…</p>
+<p>Hmm, another password. We still dont have anything fun from that JPG, but we have a password now. Does it work with Steghide?
+<img alt="AgentSudo_Steghide.png" src="../_images/AgentSudo_Steghide.png" /><br></p>
+<p>Thats a yes :-)</p>
+<hr></section>
 </section>
-</section>
+<section id="connect-and-escalate">
+<h2>Connect and Escalate<a class="headerlink" href="#connect-and-escalate" title="Permalink to this headline">#</a></h2>
+<p>So, from the above we now have a user and password. Can SSH to the machine now.</p>
+<blockquote>
+<div><p>ssh <a class="reference external" href="mailto:james&#37;&#52;&#48;10&#46;10&#46;217&#46;248">james<span>&#64;</span>10<span>&#46;</span>10<span>&#46;</span>217<span>&#46;</span>248</a></p>
+</div></blockquote>
+<p>What can we run as root?<br>
+<img alt="AgentSudo_SudoList.png" src="../_images/AgentSudo_SudoList.png" /><br></p>
+<p>Interesting, can run sudo, but not(!) as root. We can check the version of sudo though:</p>
+<blockquote>
+<div><p>sudo -V</p>
+</div></blockquote>
+<p>This gives us version 1.8.21p2. Exploit DB gives us an exploit that looks about right.<br>
+<img alt="AgentSudo_ExploitDB.png" src="../_images/AgentSudo_ExploitDB.png" /></p>
+<p>The code is nice an easy too.<br>
+<img alt="AgentSudo_Escalate.png" src="../_images/AgentSudo_Escalate.png" /><br></p>
+<p>The flag can be found in /root/root.txt, which includes the answers for the remaining questions.</p>
+<hr></section>
 </section>
 
     <script type="text/x-thebe-config">
