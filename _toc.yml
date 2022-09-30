@@ -123,3 +123,4 @@ parts:
     chapters:
     - file: Other/FormattingNotes
     - file: Other/ThingsToDo
+    - file: Other/CloudAzure
