@@ -124,3 +124,4 @@ parts:
     - file: Other/FormattingNotes
     - file: Other/ThingsToDo
     - file: Other/CloudAzure
+    - file: Other/CTFpages
