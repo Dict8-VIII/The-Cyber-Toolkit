@@ -51,6 +51,9 @@ parts:
       - file: Tools/SysInternals/File_and_Disk
       - file: Tools/SysInternals/ProcessUtils
       - file: Tools/SysInternals/Misc
+    - file: Tools/BlueTeam/Blueteam
+      sections:
+      - file: Tools/BlueTeam/Blueteam
     - file: Tools/Wireshark/Wireshark
     - file: Tools/Nmap
     - file: Tools/Metasploit
