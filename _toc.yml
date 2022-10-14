@@ -51,9 +51,9 @@ parts:
       - file: Tools/SysInternals/File_and_Disk
       - file: Tools/SysInternals/ProcessUtils
       - file: Tools/SysInternals/Misc
-    - file: Tools/BlueTeam/Blueteam
+    - file: Tools/BlueTeam/BlueTeam
       sections:
-      - file: Tools/BlueTeam/Blueteam
+      - file: Tools/BlueTeam/WindowsEventViewer
     - file: Tools/Wireshark/Wireshark
     - file: Tools/Nmap
     - file: Tools/Metasploit
@@ -95,7 +95,11 @@ parts:
       - file: Craft/MITRE/MITRE_CAR
       - file: Craft/MITRE/MITRE_Defend
       - file: Craft/MITRE/MITRE_Engage
-    - file: Craft/TheBasics
+    - file: Craft/TheBasics/TheBasics
+      sections:
+      - file: Craft/TheBasics/Threats
+      - file: Craft/TheBasics/Attacks
+      - file: Craft/TheBasics/Vulnerabilities
     - file: Craft/TheOSIModel
     - file: Craft/OWASP10
     - file: Craft/LinuxFun

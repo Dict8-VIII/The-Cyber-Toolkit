@@ -9,7 +9,7 @@
 # * XSS looks quite empty
 # * add last modified to sections
 # * Finish "The Basics"
-# ** Add attacks in a separate sections
+# ** ~~Add attacks in a separate sections~~ done
 # * ~~HackerCraft: Add the general process (OSINT, Info Gathering, expl, escalation, covering/maintaining)~~ Removed as working on Killchain now
 # * write python program for SQL injection
 # * ~~JNR Pen tester page is empty~~ I'm removing it
@@ -38,6 +38,7 @@
 # * OpenVAS looks fun, try it out
 # * Build process flow for Core windows processes https://tryhackme.com/room/btwindowsinternals
 # * Finish SysInternals Tools
+# * Investigate https://osintframework.com/
 
 # In[ ]:
 
