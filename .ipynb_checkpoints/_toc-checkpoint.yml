@@ -87,6 +87,7 @@ parts:
     - file: Tools/Mimikatz
     - file: Tools/Recon-ng
     - file: Tools/Maltego
+    - file: Tools/OSquery
   - caption: Hacker Craft
     chapters:
     - file: Craft/MITRE/MITRE
