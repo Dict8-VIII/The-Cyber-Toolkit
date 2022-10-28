@@ -122,6 +122,7 @@ parts:
     - file: Craft/Steganography
     - file: Craft/Kali
     - file: Craft/CiscoProgramming
+    - file: Craft/Passwords
   - caption: The Cyber Killchain
     chapters:
     - file: KillChain/Killchain_Overview

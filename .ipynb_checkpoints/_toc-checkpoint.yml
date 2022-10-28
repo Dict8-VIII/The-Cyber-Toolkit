@@ -106,6 +106,7 @@ parts:
     - file: Craft/LinuxFun
     - file: Craft/WindowsFun
     - file: Craft/WindowsAD
+    - file: Craft/Kerberos
     - file: Craft/SQLinjection
     - file: Craft/ssh
     - file: Craft/XSS
@@ -121,7 +122,7 @@ parts:
     - file: Craft/Steganography
     - file: Craft/Kali
     - file: Craft/CiscoProgramming
-    - file: Craft/Kerberos
+    - file: Craft/Passwords
   - caption: The Cyber Killchain
     chapters:
     - file: KillChain/Killchain_Overview
