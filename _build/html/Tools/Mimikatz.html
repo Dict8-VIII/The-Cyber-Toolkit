@@ -552,6 +552,11 @@ const thebe_selector_output = ".output, .cell_output"
    Maltego
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="OSquery.html">
+   OS Query
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -639,6 +644,16 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/WindowsAD.html">
+   Windows Active Directory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Craft/Kerberos.html">
+   Kerberos Attacks
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../Craft/SQLinjection.html">
    SQL Injection
   </a>
@@ -714,8 +729,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/Kerberos.html">
-   Kerberos Attacks
+  <a class="reference internal" href="../Craft/Passwords.html">
+   Passwords
   </a>
  </li>
 </ul>
@@ -972,6 +987,23 @@ title="Print to PDF"
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#i-ve-got-a-golden-ticket">
+   I’ve Got a Golden Ticket
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-use-it">
+     How to use it?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#skeleton-keys">
+   Skeleton Keys
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -1028,6 +1060,23 @@ title="Print to PDF"
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#i-ve-got-a-golden-ticket">
+   I’ve Got a Golden Ticket
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-use-it">
+     How to use it?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#skeleton-keys">
+   Skeleton Keys
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -1043,11 +1092,16 @@ title="Print to PDF"
 <p>Mimikatz is a post-exploit tool used for dumping user credentials once you already have access to a Windows machine. It can use these tickets.</p>
 <section id="install">
 <h2>Install<a class="headerlink" href="#install" title="Permalink to this headline">#</a></h2>
-<p>Good question…. Looks to be an EXE you can copy….</p>
+<p>Mimikatz is a part of the standard repositories so can be pulled easily</p>
+<blockquote>
+<div><p>sudo apt install mimikatz</p>
+</div></blockquote>
 </section>
 <section id="running">
 <h2>Running<a class="headerlink" href="#running" title="Permalink to this headline">#</a></h2>
-<p>From Windows CMD, just run the EXE. This will update your terminal to “mimikat #” and the below commands must be run inside this environment.</p>
+<p>From Windows CMD, just run the EXE. This will update your terminal to “mimikat #” and the below commands must be run inside this environment.<br></p>
+<p>If you have installed it from the standard repo, and run this in kali it will print the install directory contents, get the exe on the target, it’s a post exploit tool…<br>
+<img alt="Mimikatz_Install.png" src="../_images/Mimikatz_Install.png" /></p>
 <hr></section>
 <section id="pass-the-ticket">
 <h2>Pass The Ticket<a class="headerlink" href="#pass-the-ticket" title="Permalink to this headline">#</a></h2>
@@ -1082,6 +1136,46 @@ title="Print to PDF"
 </div></blockquote>
 <hr></section>
 </section>
+<section id="i-ve-got-a-golden-ticket">
+<h2>I’ve Got a Golden Ticket<a class="headerlink" href="#i-ve-got-a-golden-ticket" title="Permalink to this headline">#</a></h2>
+<p>A golden ticket is fundamentally the ability to create a service ticket for anything. (A silver ticket is the same for a single service/client/user). If you’ve got a golden ticket, its fundamentally a domain admin, even if domain admin doesnt have rights. Again, we start by checking our privilege<br></p>
+<blockquote>
+<div><p>privilege::debug</p>
+</div></blockquote>
+<p>We can then dump the hash and identifier which will be used to create the Golden Ticket. The top command is for a golden ticket, the second for a silver ticket for the administrator account.</p>
+<blockquote>
+<div><p>lsadump::lsa /inject /name:krbtgt <br>
+lsadump::lsa /inject /name:administratr <br></p>
+</div></blockquote>
+<p><img alt="Mimikatz_DumpedGolden.png" src="../_images/Mimikatz_DumpedGolden.png" /><br></p>
+<p>Next, we pass the data to mimikatz to create the ticket. There are 3 bits of data we need for this.<br>
+<img alt="Mimikatz_DumpedData.png" src="../_images/Mimikatz_DumpedData.png" /><br></p>
+<ol class="simple">
+<li><p>SID - This is the RED box above</p></li>
+<li><p>NTLM - This is the ticket of the ‘user’</p></li>
+<li><p>RID - We’re going to change this to 500 for a golden ticket (or the right level for the silver ticket).</p></li>
+</ol>
+<p>Plug it into the create function and you’ll have a ticket<br></p>
+<p><img alt="Mimikatz_CreateGolden.png" src="../_images/Mimikatz_CreateGolden.png" /><br></p>
+<section id="how-to-use-it">
+<h3>How to use it?<a class="headerlink" href="#how-to-use-it" title="Permalink to this headline">#</a></h3>
+<p>So, now what? You can use this directly in mimkatz now. The below will launch a cmd terminal using the ticket. Do your thing :-)</p>
+<blockquote>
+<div><p>misc::cmd</p>
+</div></blockquote>
+<hr></section>
+</section>
+<section id="skeleton-keys">
+<h2>Skeleton Keys<a class="headerlink" href="#skeleton-keys" title="Permalink to this headline">#</a></h2>
+<p>Skeletons… Dead skeletons…<br>
+A skeleton key is a ‘quieter’ back door, which runs in memory on a DC. It only works on Kerberos RC4 encryption. Simply, it creates a ‘second’ password for the accounts in the system. Your normal login will work, but so will the password with the hash “60BA4FCADC466C7A033C178194C03DF6”. Thats ‘mimikatz’ for those of you who dont read hashes….<br></p>
+<p>On the domain controller, you ened to run mimikatz with a really difficult command, its looks like this:</p>
+<blockquote>
+<div><p>misc::skeleton</p>
+</div></blockquote>
+<p>I know right… So difficult. If this is all OK you can now use the password ‘mimikatz’ for any user in the domain… spooky<br></p>
+<p><img alt="spooky-season-skeleton-dance.gif" src="../_images/spooky-season-skeleton-dance.gif" /><br></p>
+<hr></section>
 </section>
 
     <script type="text/x-thebe-config">

@@ -39,6 +39,7 @@
 # * Build process flow for Core windows processes https://tryhackme.com/room/btwindowsinternals
 # * Finish SysInternals Tools
 # * Investigate https://osintframework.com/
+# * Add domain structure to WindowsAD Page
 
 # In[ ]:
 

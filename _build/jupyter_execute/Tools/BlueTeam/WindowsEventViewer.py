@@ -58,5 +58,64 @@
 # ### Grouping - Application and Services Logs
 # This grouping is specific to applications, depending on how they choose to logs. Some may log by manufacturer/owner (I.E. Microsoft) while others may be application specific (OpenSSH).
 # 
+# <hr>
+
+# ## Get WinEvent
+# 
+# Get-WinEvent is the powershell equivilent of using the GUI 'Event Viewer'. It replaces the Get-EventLog cmdlet. Generally it has the below format and it returns events in the order newest -> older.
+# > Get-WinEvent -Logname Application
+# 
+# 
+# ### Filtering
+# In general, you can pipe the output to another powershell cmdlet, but this isnt very efficent as it will still load everything before filtering
+# > Get-WinEvent -LogName Application | Where-Object { $_.ProviderName -Match 'WLMS' }
+# 
+# A better option is to use a filter hash table, which filters each line BEFORE it is picked up
+# > Get-WinEvent -FIlterHashTable @{ ProviderName='WLMS' } -Logname Application
+# 
+# You can also add multiple filters by separating with a ; (or entering each on a different line.
+# 
+# <hr>
 
 # ## XPath
+# 
+# Xpath, or XML Path, is a query language that is used to query the XML components of an result set. Fortunately for us, the Windows Event Log supports part of XPath 1.0.<br>
+# 
+# 
+# If you take a look at an event in Event Viewer, swapping to the XML view will give the details that XPath can use.<br>
+# This can then be provided to the FilterXPath arguement (instead of a filterHashTable from above). For example, to find the below options.
+# 
+# ![EventViewer_XPathXML.png](../../images/Tools/Blueteam/EventViewer_XPathXML.png)<br>
+# 
+# To build the query<br>
+# 
+# 0. Start with a '*/
+# 1. Add the next level down, a System/
+# 2. Add a sub level component, in this case EventID=10116
+# 3. You can then add more components with an and or close with another '
+# 
+# This means our query ends up as
+# > Get-WinEvent -LogName System -FilterXPath '*/System/EventID=10116'
+# 
+# ### EventData
+# Event data works slighly differently, in which we must use a property of the DATA to filter. Again take the below example<br>
+# ![EventViewer_XPathXMLeventdata.png](../../images/Tools/Blueteam/EventViewer_XPathXMLeventdata.png)<br>
+# 
+# To build the query<br>
+# 
+# 0. start with a '*/
+# 1. Add the next level down, a EventData/
+# 2. Add the Data name, Data[@Name="param3"]
+# 3. Add the value to search for. = "auto start"
+# 4. Again, you can add more or finsh with a '
+# 
+# Our query is now
+# >Get-WinEvent -Logname system -FilterXPath '*/Eventdata/Data[@name="param3"]="autostart"'
+# 
+# 
+
+# In[ ]:
+
+
+
+

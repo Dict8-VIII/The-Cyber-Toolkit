@@ -135,6 +135,12 @@
 # 
 # Basically if you've logged into a machine and it hasnt rebooted, your ticket may be stored in memory. This can be dumped and used to impersonate your account without knowing your password.
 # 
-# This one is in MimiKatz. 
+# This one is in [MimiKatz](../Tools/Mimikatz.ipynb). 
 # 
 # <hr>
+
+# In[ ]:
+
+
+
+
