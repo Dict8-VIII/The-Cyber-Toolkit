@@ -51,9 +51,11 @@ parts:
       - file: Tools/SysInternals/File_and_Disk
       - file: Tools/SysInternals/ProcessUtils
       - file: Tools/SysInternals/Misc
+      - file: Tools/SysInternals/Sysmon
     - file: Tools/BlueTeam/BlueTeam
       sections:
       - file: Tools/BlueTeam/WindowsEventViewer
+      - file: Tools/BlueTeam/Splunk
     - file: Tools/Wireshark/Wireshark
     - file: Tools/Nmap
     - file: Tools/Metasploit
@@ -82,7 +84,6 @@ parts:
     - file: Tools/Binwalk
     - file: Tools/Yara
     - file: Tools/OpenVAS
-    - file: Tools/Splunk
     - file: Tools/ReverseEngineering
     - file: Tools/Mimikatz
     - file: Tools/Recon-ng
