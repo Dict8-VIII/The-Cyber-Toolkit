@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Wireshark" href="../Wireshark/Wireshark.html" />
+    <link rel="next" title="Splunk" href="Splunk.html" />
     <link rel="prev" title="Blue Team" href="BlueTeam.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -366,6 +366,11 @@ const thebe_selector_output = ".output, .cell_output"
      Misc Tools
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../SysInternals/Sysmon.html">
+     Sysmon
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
@@ -381,6 +386,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Event Viewer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Splunk.html">
+     Splunk
     </a>
    </li>
   </ul>
@@ -528,11 +538,6 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Splunk.html">
-   Splunk
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../ReverseEngineering.html">
    Reverse Engineering
   </a>
@@ -555,6 +560,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../OSquery.html">
    OS Query
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../SocialEngineeringToolkit.html">
+   Social Engineering Toolkit (SET)
   </a>
  </li>
 </ul>
@@ -1148,7 +1158,7 @@ Contains events logged by applications that create a custom log. Using a custom 
 </section>
 <section id="xpath">
 <h2>XPath<a class="headerlink" href="#xpath" title="Permalink to this headline">#</a></h2>
-<p>Xpath, or XML Path, is a query language that is used to query the XML components of an result set. Fortunately for us, the Windows Event Log supports part of XPath 1.0.<br></p>
+<p>Xpath, or XML Path, is a query language that is used to query the XML components of an result set. Fortunately for us, the Windows Event Log supports part of XPath 1.0 when using the Get-WinEvent cmdlet<br></p>
 <p>If you take a look at an event in Event Viewer, swapping to the XML view will give the details that XPath can use.<br>
 This can then be provided to the FilterXPath arguement (instead of a filterHashTable from above). For example, to find the below options.</p>
 <p><img alt="EventViewer_XPathXML.png" src="../../_images/EventViewer_XPathXML.png" /><br></p>
@@ -1179,7 +1189,7 @@ This can then be provided to the FilterXPath arguement (instead of a filterHashT
 <blockquote>
 <div><p>Get-WinEvent -Logname system -FilterXPath ‘*/Eventdata/Data[&#64;name=”param3”]=”autostart”’</p>
 </div></blockquote>
-</section>
+<hr></section>
 </section>
 </section>
 
@@ -1217,10 +1227,10 @@ This can then be provided to the FilterXPath arguement (instead of a filterHashT
             <p class="prev-next-title">Blue Team</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../Wireshark/Wireshark.html" title="next page">
+    <a class='right-next' id="next-link" href="Splunk.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Wireshark</p>
+        <p class="prev-next-title">Splunk</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -40,6 +40,7 @@
 # * Finish SysInternals Tools
 # * Investigate https://osintframework.com/
 # * Add domain structure to WindowsAD Page
+# * Spend some time on SET (Social Engineering Toolkit)
 
 # In[ ]:
 

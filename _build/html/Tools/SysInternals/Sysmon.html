@@ -6,55 +6,55 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Splunk &#8212; The Cyber Toolkit</title>
+    <title>Sysmon &#8212; The Cyber Toolkit</title>
     
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/.ipynb_checkpoints/custom-checkpoint.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/.ipynb_checkpoints/custom-checkpoint.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Reverse Engineering" href="ReverseEngineering.html" />
-    <link rel="prev" title="OpenVAS" href="OpenVAS.html" />
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Blue Team" href="../BlueTeam/BlueTeam.html" />
+    <link rel="prev" title="Misc Tools" href="Misc.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -99,19 +99,19 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="bd-sidebar noprint" id="site-navigation">
     <div class="bd-sidebar__content">
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+    <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
         
       
       
-      <img src="../_static/logo.png" class="logo" alt="logo">
+      <img src="../../_static/logo.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">The Cyber Toolkit</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -119,7 +119,7 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../intro.html">
+                <a class="reference internal" href="../../intro.html">
                     The Cyber Toolkit
                 </a>
             </li>
@@ -131,7 +131,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../HoloLive/HoloLive.html">
+  <a class="reference internal" href="../../HoloLive/HoloLive.html">
    HoloLive
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -141,24 +141,24 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../HoloLive/HoloLive_Task8.html">
+    <a class="reference internal" href="../../HoloLive/HoloLive_Task8.html">
      HoloLive Walkthrough - Task 8
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../HoloLive/HoloLive_Task9.html">
+    <a class="reference internal" href="../../HoloLive/HoloLive_Task9.html">
      HoloLive Walkthrough - Task 9
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../HoloLive/HoloLive_Task10.html">
+    <a class="reference internal" href="../../HoloLive/HoloLive_Task10.html">
      HoloLive Walkthrough - Task 10
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../JnrPenTester/JnrPenTester.html">
+  <a class="reference internal" href="../../JnrPenTester/JnrPenTester.html">
    Jr Pen Tester Path
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -168,69 +168,69 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../JnrPenTester/FileInclusion.html">
+    <a class="reference internal" href="../../JnrPenTester/FileInclusion.html">
      File Inclusion
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../JnrPenTester/JnrPenTester_BurpSuite.html">
+    <a class="reference internal" href="../../JnrPenTester/JnrPenTester_BurpSuite.html">
      Burp Suite
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../JnrPenTester/LinuxPrivEsc_task8.html">
+    <a class="reference internal" href="../../JnrPenTester/LinuxPrivEsc_task8.html">
      Exploiting the SUID Bit
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../PracticeRooms/AgentSudo.html">
+  <a class="reference internal" href="../../PracticeRooms/AgentSudo.html">
    Agent Sudo
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../PracticeRooms/MrRobot.html">
+  <a class="reference internal" href="../../PracticeRooms/MrRobot.html">
    Mr Robot
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../PracticeRooms/Terminator.html">
+  <a class="reference internal" href="../../PracticeRooms/Terminator.html">
    Terminator
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../PracticeRooms/Overpass.html">
+  <a class="reference internal" href="../../PracticeRooms/Overpass.html">
    Overpass
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../PracticeRooms/LazyAdmin.html">
+  <a class="reference internal" href="../../PracticeRooms/LazyAdmin.html">
    LazyAdmin
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../PracticeRooms/Startup.html">
+  <a class="reference internal" href="../../PracticeRooms/Startup.html">
    Startup
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../PracticeRooms/Ninja.html">
+  <a class="reference internal" href="../../PracticeRooms/Ninja.html">
    Ninja
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../PracticeRooms/Lian_Yu.html">
+  <a class="reference internal" href="../../PracticeRooms/Lian_Yu.html">
    Lian_Yu
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../PracticeRooms/Tomghost.html">
+  <a class="reference internal" href="../../PracticeRooms/Tomghost.html">
    Tomghost
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../PracticeRooms/Ignite.html">
+  <a class="reference internal" href="../../PracticeRooms/Ignite.html">
    Ignite
   </a>
  </li>
@@ -242,7 +242,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="PriveligeEscalation/PriveligeEscalation.html">
+  <a class="reference internal" href="../PriveligeEscalation/PriveligeEscalation.html">
    Privelige Escalation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -252,7 +252,7 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="PriveligeEscalation/LinuxPrivEsc.html">
+    <a class="reference internal" href="../PriveligeEscalation/LinuxPrivEsc.html">
      Linux Privelige Escalation
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
@@ -262,24 +262,24 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="PriveligeEscalation/LinEnum.html">
+      <a class="reference internal" href="../PriveligeEscalation/LinEnum.html">
        LinEnum
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="PriveligeEscalation/LinPeas.html">
+      <a class="reference internal" href="../PriveligeEscalation/LinPeas.html">
        LinPeas
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="PriveligeEscalation/LES.html">
+      <a class="reference internal" href="../PriveligeEscalation/LES.html">
        Linux Exploit Suggester
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="PriveligeEscalation/WindowsPrivEsc.html">
+    <a class="reference internal" href="../PriveligeEscalation/WindowsPrivEsc.html">
      Windows PrivEsc
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
@@ -289,7 +289,7 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="PriveligeEscalation/Powerup.html">
+      <a class="reference internal" href="../PriveligeEscalation/Powerup.html">
        Powerup
       </a>
      </li>
@@ -298,7 +298,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="BurpSuite/Burp.html">
+  <a class="reference internal" href="../BurpSuite/Burp.html">
    Burp Suite
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
@@ -308,19 +308,19 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="BurpSuite/BurpRepeater.html">
+    <a class="reference internal" href="../BurpSuite/BurpRepeater.html">
      Burp Suite - Repeater
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="BurpSuite/BurpIntruder.html">
+    <a class="reference internal" href="../BurpSuite/BurpIntruder.html">
      Burp Suite - Intruder
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Programs/MyPrograms.html">
+  <a class="reference internal" href="../Programs/MyPrograms.html">
    My Programs
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
@@ -330,46 +330,51 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="Programs/WebBruteForce.html">
+    <a class="reference internal" href="../Programs/WebBruteForce.html">
      Web Brute Force Program
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Programs/FileDownloader.html">
+    <a class="reference internal" href="../Programs/FileDownloader.html">
      File Downloader
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="SysInternals/SysInternals.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="SysInternals.html">
    SysInternals
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
   <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="SysInternals/File_and_Disk.html">
+    <a class="reference internal" href="File_and_Disk.html">
      File and Disk Tools
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="SysInternals/ProcessUtils.html">
+    <a class="reference internal" href="ProcessUtils.html">
      Process Utilities
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="SysInternals/Misc.html">
+    <a class="reference internal" href="Misc.html">
      Misc Tools
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Sysmon
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="BlueTeam/BlueTeam.html">
+  <a class="reference internal" href="../BlueTeam/BlueTeam.html">
    Blue Team
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
@@ -379,24 +384,29 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="BlueTeam/WindowsEventViewer.html">
+    <a class="reference internal" href="../BlueTeam/WindowsEventViewer.html">
      Event Viewer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../BlueTeam/Splunk.html">
+     Splunk
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Wireshark/Wireshark.html">
+  <a class="reference internal" href="../Wireshark/Wireshark.html">
    Wireshark
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Nmap.html">
+  <a class="reference internal" href="../Nmap.html">
    Nmap
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Metasploit.html">
+  <a class="reference internal" href="../Metasploit.html">
    Metasploit Framework
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
@@ -406,155 +416,155 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="Msfvenom.html">
+    <a class="reference internal" href="../Msfvenom.html">
      Msfvenom
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="SearchSploit.html">
+    <a class="reference internal" href="../SearchSploit.html">
      Searchsploit
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Armitage.html">
+    <a class="reference internal" href="../Armitage.html">
      Armitage
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="CyberChef.html">
+  <a class="reference internal" href="../CyberChef.html">
    Cyberchef
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="NFS.html">
+  <a class="reference internal" href="../NFS.html">
    NFS
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="John.html">
+  <a class="reference internal" href="../John.html">
    John The Ripper
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Netcat.html">
+  <a class="reference internal" href="../Netcat.html">
    Netcat
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="GoBuster.html">
+  <a class="reference internal" href="../GoBuster.html">
    Gobuster
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Wfuzz.html">
+  <a class="reference internal" href="../Wfuzz.html">
    WFUZZ
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Nikto.html">
+  <a class="reference internal" href="../Nikto.html">
    Nikto
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="HashCat.html">
+  <a class="reference internal" href="../HashCat.html">
    Hashcat
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="HashID.html">
+  <a class="reference internal" href="../HashID.html">
    HashID
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Hydra.html">
+  <a class="reference internal" href="../Hydra.html">
    Hydra
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="TCPDump.html">
+  <a class="reference internal" href="../TCPDump.html">
    TCPDump
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Ettercap.html">
+  <a class="reference internal" href="../Ettercap.html">
    Ettercap &amp; Bettercap
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Nessus.html">
+  <a class="reference internal" href="../Nessus.html">
    Nessus
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Impacket.html">
+  <a class="reference internal" href="../Impacket.html">
    Impacket
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="BloodHound.html">
+  <a class="reference internal" href="../BloodHound.html">
    BloodHound
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Kerbrute.html">
+  <a class="reference internal" href="../Kerbrute.html">
    Kerbrute
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Rubeus.html">
+  <a class="reference internal" href="../Rubeus.html">
    Rubeus
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Evil-WinRM.html">
+  <a class="reference internal" href="../Evil-WinRM.html">
    Evil-WinRM
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Binwalk.html">
+  <a class="reference internal" href="../Binwalk.html">
    Binwalk
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Yara.html">
+  <a class="reference internal" href="../Yara.html">
    Yara
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="OpenVAS.html">
+  <a class="reference internal" href="../OpenVAS.html">
    OpenVAS
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Splunk
-  </a>
- </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="ReverseEngineering.html">
+  <a class="reference internal" href="../ReverseEngineering.html">
    Reverse Engineering
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Mimikatz.html">
+  <a class="reference internal" href="../Mimikatz.html">
    MimiKatz
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Recon-ng.html">
+  <a class="reference internal" href="../Recon-ng.html">
    Recon-ng
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Maltego.html">
+  <a class="reference internal" href="../Maltego.html">
    Maltego
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="OSquery.html">
+  <a class="reference internal" href="../OSquery.html">
    OS Query
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../SocialEngineeringToolkit.html">
+   Social Engineering Toolkit (SET)
   </a>
  </li>
 </ul>
@@ -565,7 +575,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Craft/MITRE/MITRE.html">
+  <a class="reference internal" href="../../Craft/MITRE/MITRE.html">
    Mitre
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
@@ -575,29 +585,29 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Craft/MITRE/MITRE_ATT%26CK.html">
+    <a class="reference internal" href="../../Craft/MITRE/MITRE_ATT%26CK.html">
      Mitre ATT&amp;CK
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Craft/MITRE/MITRE_CAR.html">
+    <a class="reference internal" href="../../Craft/MITRE/MITRE_CAR.html">
      MITRE CARs
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Craft/MITRE/MITRE_Defend.html">
+    <a class="reference internal" href="../../Craft/MITRE/MITRE_Defend.html">
      MITRE Defend
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Craft/MITRE/MITRE_Engage.html">
+    <a class="reference internal" href="../../Craft/MITRE/MITRE_Engage.html">
      MITRE Engage
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Craft/TheBasics/TheBasics.html">
+  <a class="reference internal" href="../../Craft/TheBasics/TheBasics.html">
    The Basics
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
@@ -607,129 +617,129 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Craft/TheBasics/Threats.html">
+    <a class="reference internal" href="../../Craft/TheBasics/Threats.html">
      Threats
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Craft/TheBasics/Attacks.html">
+    <a class="reference internal" href="../../Craft/TheBasics/Attacks.html">
      Attacks
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Craft/TheBasics/Vulnerabilities.html">
+    <a class="reference internal" href="../../Craft/TheBasics/Vulnerabilities.html">
      Vulnerabilities
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/TheOSIModel.html">
+  <a class="reference internal" href="../../Craft/TheOSIModel.html">
    The OSI Model
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/OWASP10.html">
+  <a class="reference internal" href="../../Craft/OWASP10.html">
    OWASP Top 10 - 2021
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/LinuxFun.html">
+  <a class="reference internal" href="../../Craft/LinuxFun.html">
    Linux Fun
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/WindowsFun.html">
+  <a class="reference internal" href="../../Craft/WindowsFun.html">
    Windows ‘Fun’ Stuff
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/WindowsAD.html">
+  <a class="reference internal" href="../../Craft/WindowsAD.html">
    Windows Active Directory
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/Kerberos.html">
+  <a class="reference internal" href="../../Craft/Kerberos.html">
    Kerberos Attacks
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/SQLinjection.html">
+  <a class="reference internal" href="../../Craft/SQLinjection.html">
    SQL Injection
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/ssh.html">
+  <a class="reference internal" href="../../Craft/ssh.html">
    SSH
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/XSS.html">
+  <a class="reference internal" href="../../Craft/XSS.html">
    XSS
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/LFI.html">
+  <a class="reference internal" href="../../Craft/LFI.html">
    LFI
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/UploadVulns.html">
+  <a class="reference internal" href="../../Craft/UploadVulns.html">
    Upload Vulnerabilities
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/DHCP.html">
+  <a class="reference internal" href="../../Craft/DHCP.html">
    DHCP
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/ShellStabalise.html">
+  <a class="reference internal" href="../../Craft/ShellStabalise.html">
    Stabilizing a shell
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/FileTransfer.html">
+  <a class="reference internal" href="../../Craft/FileTransfer.html">
    File Transfer to Machines
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/Telnet.html">
+  <a class="reference internal" href="../../Craft/Telnet.html">
    Telnet
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/HTTP.html">
+  <a class="reference internal" href="../../Craft/HTTP.html">
    HTTP
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/FTP.html">
+  <a class="reference internal" href="../../Craft/FTP.html">
    FTP
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/EmailProtocol.html">
+  <a class="reference internal" href="../../Craft/EmailProtocol.html">
    Email Protocols
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/Steganography.html">
+  <a class="reference internal" href="../../Craft/Steganography.html">
    Steganography
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/Kali.html">
+  <a class="reference internal" href="../../Craft/Kali.html">
    Kali
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/CiscoProgramming.html">
+  <a class="reference internal" href="../../Craft/CiscoProgramming.html">
    Cisco Programming
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Craft/Passwords.html">
+  <a class="reference internal" href="../../Craft/Passwords.html">
    Passwords
   </a>
  </li>
@@ -741,7 +751,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../KillChain/Killchain_Overview.html">
+  <a class="reference internal" href="../../KillChain/Killchain_Overview.html">
    Killchain Overview
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
@@ -751,12 +761,12 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../KillChain/Killchain_InfoGathering.html">
+    <a class="reference internal" href="../../KillChain/Killchain_InfoGathering.html">
      Killchain - Info Gathering
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../KillChain/Killchain_Weaponization.html">
+    <a class="reference internal" href="../../KillChain/Killchain_Weaponization.html">
      Killchain - Weaponization
     </a>
    </li>
@@ -770,22 +780,22 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../Other/FormattingNotes.html">
+  <a class="reference internal" href="../../Other/FormattingNotes.html">
    Formatting Notes
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Other/ThingsToDo.html">
+  <a class="reference internal" href="../../Other/ThingsToDo.html">
    Things to Do
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Other/CloudAzure.html">
+  <a class="reference internal" href="../../Other/CloudAzure.html">
    Cloud Providers - Azure
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Other/CTFpages.html">
+  <a class="reference internal" href="../../Other/CTFpages.html">
    CTF Links
   </a>
  </li>
@@ -848,7 +858,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/Dict8-VIII/The-Cyber-Toolkit/master?urlpath=tree/Tools/Splunk.ipynb"
+        <a href="https://mybinder.org/v2/gh/Dict8-VIII/The-Cyber-Toolkit/master?urlpath=tree/Tools/SysInternals/Sysmon.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -858,7 +868,7 @@ title="Launch on Binder"
 
 <span class="headerbtn__icon-container">
   
-    <img src="../_static/images/logo_binder.svg">
+    <img src="../../_static/images/logo_binder.svg">
   </span>
 <span class="headerbtn__text-container">Binder</span>
 </a>
@@ -891,7 +901,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/Tools/Splunk.ipynb"
+        <a href="../../_sources/Tools/SysInternals/Sysmon.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -951,25 +961,40 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#installation">
-   Installation
+  <a class="reference internal nav-link" href="#config-file">
+   Config File
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#spl-search-programming-language">
-   SPL - Search Programming Language
+  <a class="reference internal nav-link" href="#event-groups">
+   Event Groups
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#search-terms">
-     Search Terms
+    <a class="reference internal nav-link" href="#process-creation">
+     1: Process Creation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#network-connection">
+     3: Network Connection
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#image-loaded">
+     7: Image Loaded
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#user-accounts">
-   User Accounts
+  <a class="reference internal nav-link" href="#remote-thread">
+   8: Remote Thread
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#file-created">
+   11: File Created
   </a>
  </li>
 </ul>
@@ -981,7 +1006,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Splunk</h1>
+                <h1>Sysmon</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -992,25 +1017,40 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#installation">
-   Installation
+  <a class="reference internal nav-link" href="#config-file">
+   Config File
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#spl-search-programming-language">
-   SPL - Search Programming Language
+  <a class="reference internal nav-link" href="#event-groups">
+   Event Groups
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#search-terms">
-     Search Terms
+    <a class="reference internal nav-link" href="#process-creation">
+     1: Process Creation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#network-connection">
+     3: Network Connection
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#image-loaded">
+     7: Image Loaded
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#user-accounts">
-   User Accounts
+  <a class="reference internal nav-link" href="#remote-thread">
+   8: Remote Thread
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#file-created">
+   11: File Created
   </a>
  </li>
 </ul>
@@ -1023,60 +1063,64 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="splunk">
-<h1>Splunk<a class="headerlink" href="#splunk" title="Permalink to this headline">#</a></h1>
-<section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
-<ol class="simple">
-<li><p>Head to <a class="reference external" href="https://www.splunk.com/">https://www.splunk.com/</a> and create a free account</p></li>
-<li><p>Download from the same location (or wget, they provide a nice link)</p></li>
-<li><p>Chmod +x [file]</p></li>
-<li><p>Install</p></li>
-</ol>
+  <section class="tex2jax_ignore mathjax_ignore" id="sysmon">
+<h1>Sysmon<a class="headerlink" href="#sysmon" title="Permalink to this headline">#</a></h1>
+<p>Sysmon is a part of the SysInternals package, and is an expanded version of the windows event logs. It provides more details and a more granluar control system. The Events within Sysmon are still stored in the event logs here:</p>
 <blockquote>
-<div><p>sudo dpkg -i [file]</p>
+<div><p>Applications and Services Logs/Microsoft/WIndows/Sysmon/Operational</p>
 </div></blockquote>
-<ol class="simple">
-<li><p>Its now installed in /opt/splunk</p></li>
-<li><p>Can now launch by running the below in the /opt/splunk/bin directory (need sudo on first run)</p></li>
-</ol>
-<blockquote>
-<div><p>./splunk start –accept-license</p>
-</div></blockquote>
-<ol class="simple">
-<li><p>You’ll be asked for the first admin account. Default is ‘admin’ with your password</p></li>
-<li><p>Your service is now started at localhost:8000</p></li>
-</ol>
-<hr></section>
-<section id="spl-search-programming-language">
-<h2>SPL - Search Programming Language<a class="headerlink" href="#spl-search-programming-language" title="Permalink to this headline">#</a></h2>
-<p>SPL Consists of 5 components</p>
-<ol class="simple">
-<li><p>Search Terms</p></li>
-<li><p>Commands</p></li>
-<li><p>Functions</p></li>
-<li><p>Arguements</p></li>
-<li><p>Clauses</p></li>
-</ol>
-<p>When running a search, you can have one or more of these. The are separated by pipes in the search (as an AND)<br></p>
-<section id="search-terms">
-<h3>Search Terms<a class="headerlink" href="#search-terms" title="Permalink to this headline">#</a></h3>
-<p>Wildcard * are supported <br>
-Boolean (AND, OR, NOT) are supported <br>
-“Quotes” are supported <br>
-Can escape quotes in search with a \ <br>
-Can do () to make order of events (like (x and y) OR Z) <br></p>
-<p>When you search, it reads results into ram. Each command is a separate query so results are ‘cleared’ when removed.</p>
+<p>Once Sysmon is installed, it persists through restarts and its primary purpose is to integrate with a SIEM system. Thats not to say you cant monitor it internally, its just where it can really shine. Sysmon itself can record multiple event types (29ish at the time of writing) and you can write either include or exclude rules to filter which events are captured. These rules are stored in the Sysmon config file. Filtering at the monitor can reduce the amount of analysis needed at the SIEM end, however if the rules are not well created it can also hide malicious activity. If starting out, its great to start with a template and configure for your environment (once you know what youre doing). THM recommended <a class="reference external" href="https://github.com/SwiftOnSecurity/sysmon-config/blob/master/sysmonconfig-export.xml">this one by SwiftOnSecurity</a>.</p>
+<hr><section id="config-file">
+<h2>Config File<a class="headerlink" href="#config-file" title="Permalink to this headline">#</a></h2>
+<p>The config file is a .XML file. Within the XML is nested rules stored in groups, and each group is defined a matching type. The group then has its individual rules defined. The General structure is:</p>
+<p>Sysmon Schemaversion</p>
 <ul class="simple">
-<li><p>RENAME : renames a table result</p></li>
-<li><p>DEDUP : removes duplicates based on a key (or key column)</p></li>
+<li><p>Some global rules</p>
+<ul>
+<li><p>Event Filtering</p>
+<ul>
+<li><p>RuleGroup name = “” groupRelation=”or”</p>
+<ul>
+<li><p>ProcessCreate onmatch=”exclude”</p>
+<ul>
+<li><p>rule 1</p></li>
+<li><p>rule 2</p></li>
+<li><p>rule 3</p></li>
 </ul>
+</li>
+<li><p>/ProcessCreate</p></li>
+</ul>
+</li>
+<li><p>/RuleGroup</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>This is a very simple config file, which looks for the ‘process created’ event and excludes them from the logs. In this section we would have the ‘trusted’ applications, most likely the windows ones or BAU applications (such as chrome, office etc). Obviously some of these can still be malicious so should be carefully considered. In a ‘full’ config file, you would expect to have rules for all off the Event groups below.</p>
 <hr></section>
+<section id="event-groups">
+<h2>Event Groups<a class="headerlink" href="#event-groups" title="Permalink to this headline">#</a></h2>
+<p>As above, the config file can filter multiple event groups, but which should we be looking for?</p>
+<section id="process-creation">
+<h3>1: Process Creation<a class="headerlink" href="#process-creation" title="Permalink to this headline">#</a></h3>
+<p>As above, this event can be used to filter out ‘safe’ processes or include known ‘bad’ processes. Likely we would want to exclude known, not include what may be unknown. Part of excluding ‘safe’ processes is that we can also identify if a fake process is run by being mispelt or programs being launched from a non-standard location. Below we are excluding chrome and windows media player.</p>
 </section>
-<section id="user-accounts">
-<h2>User Accounts<a class="headerlink" href="#user-accounts" title="Permalink to this headline">#</a></h2>
-<p>Theres multiple leves for the web portal. Main ones are Power and User.<br>
-The default account is setup during first run (above)</p>
+<section id="network-connection">
+<h3>3: Network Connection<a class="headerlink" href="#network-connection" title="Permalink to this headline">#</a></h3>
+<p>This time we are looking for an application making a network connection, or known malicious ports. When we’re red teaming, this is part of why we dont use standard ports even on the red side, it’s too easy to pick up.</p>
+</section>
+<section id="image-loaded">
+<h3>7: Image Loaded<a class="headerlink" href="#image-loaded" title="Permalink to this headline">#</a></h3>
+<p>It says image, but what it really means is a DLL being loaded by a process. As pretty much everything uses a .dll file. The below is an example of an “ImageLoaded” tag, but it also includes Image, SIgned and Signatures.</p>
+</section>
+</section>
+<section id="remote-thread">
+<h2>8: Remote Thread<a class="headerlink" href="#remote-thread" title="Permalink to this headline">#</a></h2>
+<p>This event occurs when a process tries to inject code into another process. Theres 2 ways to approach this event below. The first is looking for a specific memory address ending, and the second is looking for processes that doent also have a parent process when this is done. There are legitimate times this event can be triggered, but these two options are pretty red flags.</p>
+</section>
+<section id="file-created">
+<h2>11: File Created<a class="headerlink" href="#file-created" title="Permalink to this headline">#</a></h2>
 </section>
 </section>
 
@@ -1093,7 +1137,7 @@ The default account is setup during first run (above)</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./Tools"
+            path: "./Tools\SysInternals"
         },
         predefinedOutput: true
     }
@@ -1107,17 +1151,17 @@ The default account is setup during first run (above)</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="OpenVAS.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Misc.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">OpenVAS</p>
+            <p class="prev-next-title">Misc Tools</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="ReverseEngineering.html" title="next page">
+    <a class='right-next' id="next-link" href="../BlueTeam/BlueTeam.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Reverse Engineering</p>
+        <p class="prev-next-title">Blue Team</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -1142,7 +1186,7 @@ The default account is setup during first run (above)</p>
     </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
 
   </body>

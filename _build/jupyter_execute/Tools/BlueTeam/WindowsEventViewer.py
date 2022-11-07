@@ -79,7 +79,7 @@
 
 # ## XPath
 # 
-# Xpath, or XML Path, is a query language that is used to query the XML components of an result set. Fortunately for us, the Windows Event Log supports part of XPath 1.0.<br>
+# Xpath, or XML Path, is a query language that is used to query the XML components of an result set. Fortunately for us, the Windows Event Log supports part of XPath 1.0 when using the Get-WinEvent cmdlet<br>
 # 
 # 
 # If you take a look at an event in Event Viewer, swapping to the XML view will give the details that XPath can use.<br>
@@ -112,7 +112,7 @@
 # Our query is now
 # >Get-WinEvent -Logname system -FilterXPath '*/Eventdata/Data[@name="param3"]="autostart"'
 # 
-# 
+# <hr>
 
 # In[ ]:
 
