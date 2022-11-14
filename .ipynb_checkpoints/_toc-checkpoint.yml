@@ -51,11 +51,11 @@ parts:
       - file: Tools/SysInternals/File_and_Disk
       - file: Tools/SysInternals/ProcessUtils
       - file: Tools/SysInternals/Misc
+      - file: Tools/SysInternals/Sysmon
     - file: Tools/BlueTeam/BlueTeam
       sections:
       - file: Tools/BlueTeam/WindowsEventViewer
       - file: Tools/BlueTeam/Splunk
-      - file: Tools/BlueTeam/Sysmon
     - file: Tools/Wireshark/Wireshark
     - file: Tools/Nmap
     - file: Tools/Metasploit
@@ -90,6 +90,7 @@ parts:
     - file: Tools/Maltego
     - file: Tools/OSquery
     - file: Tools/SocialEngineeringToolkit
+    - file: Tools/PowerShell
   - caption: Hacker Craft
     chapters:
     - file: Craft/MITRE/MITRE

@@ -90,6 +90,7 @@ parts:
     - file: Tools/Maltego
     - file: Tools/OSquery
     - file: Tools/SocialEngineeringToolkit
+    - file: Tools/PowerShell
   - caption: Hacker Craft
     chapters:
     - file: Craft/MITRE/MITRE
