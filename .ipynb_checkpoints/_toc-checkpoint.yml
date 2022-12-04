@@ -91,6 +91,7 @@ parts:
     - file: Tools/OSquery
     - file: Tools/SocialEngineeringToolkit
     - file: Tools/PowerShell
+    - file: Tools/grep
   - caption: Hacker Craft
     chapters:
     - file: Craft/MITRE/MITRE
