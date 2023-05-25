@@ -127,6 +127,7 @@ parts:
     - file: Craft/Kali
     - file: Craft/CiscoProgramming
     - file: Craft/Passwords
+    - file: Craft/RequestForgery
   - caption: The Cyber Killchain
     chapters:
     - file: KillChain/Killchain_Overview
