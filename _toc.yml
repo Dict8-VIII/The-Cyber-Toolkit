@@ -105,6 +105,7 @@ parts:
       - file: Craft/TheBasics/Threats
       - file: Craft/TheBasics/Attacks
       - file: Craft/TheBasics/Vulnerabilities
+    - file: Craft/Frameworks
     - file: Craft/TheOSIModel
     - file: Craft/OWASP10
     - file: Craft/LinuxFun
