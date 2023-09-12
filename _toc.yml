@@ -56,6 +56,7 @@ parts:
       sections:
       - file: Tools/BlueTeam/WindowsEventViewer
       - file: Tools/BlueTeam/Splunk
+      - file: Tools/BlueTeam/OpenVAS
     - file: Tools/Wireshark/Wireshark
     - file: Tools/Nmap
     - file: Tools/Metasploit
@@ -83,7 +84,6 @@ parts:
     - file: Tools/Evil-WinRM
     - file: Tools/Binwalk
     - file: Tools/Yara
-    - file: Tools/OpenVAS
     - file: Tools/ReverseEngineering
     - file: Tools/Mimikatz
     - file: Tools/Recon-ng
