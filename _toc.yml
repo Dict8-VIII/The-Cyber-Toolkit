@@ -58,6 +58,7 @@ parts:
       - file: Tools/BlueTeam/WindowsEventViewer
       - file: Tools/BlueTeam/Splunk
       - file: Tools/BlueTeam/OpenVAS
+      - file: Tools/BlueTeam/Nessus
     - file: Tools/Wireshark/Wireshark
     - file: Tools/Nmap
     - file: Tools/Metasploit
@@ -77,7 +78,6 @@ parts:
     - file: Tools/Hydra
     - file: Tools/TCPDump
     - file: Tools/Ettercap
-    - file: Tools/Nessus
     - file: Tools/Impacket
     - file: Tools/BloodHound
     - file: Tools/Kerbrute
