@@ -136,8 +136,9 @@ parts:
       sections:
       - file: KillChain/Killchain_InfoGathering
       - file: KillChain/Killchain_Weaponization
-  - caption: HomeLab/HomeLab
+  - caption: Home Lab Setup
     chapters:
+    - file: HomeLab/HomeLab
     - file: HomeLab/OpenKylin
   - caption: Non Hacking Notes
     chapters:
