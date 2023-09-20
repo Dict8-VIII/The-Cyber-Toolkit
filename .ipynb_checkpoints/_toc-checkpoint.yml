@@ -61,6 +61,7 @@ parts:
       - file: Tools/BlueTeam/Nessus
     - file: Tools/Wireshark/Wireshark
     - file: Tools/Nmap
+    - file: Tools/Nping
     - file: Tools/Metasploit
       sections:
       - file: Tools/Msfvenom
