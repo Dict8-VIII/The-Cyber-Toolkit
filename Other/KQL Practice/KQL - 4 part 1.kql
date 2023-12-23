@@ -1,0 +1,7 @@
+﻿Primes
+| sort by Numbers desc
+| where Numbers < 50000000
+| project Numbers, previous = prev(Numbers)
+| project Numbers, previous, total = Numbers + previous + 1
+| join kind=inner Primes on $left.total == $right.Numbers
+| sort by total
