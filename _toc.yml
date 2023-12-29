@@ -27,6 +27,10 @@ parts:
     - file: PracticeRooms/Tomghost
     - file: PracticeRooms/Ignite
     - file: PracticeRooms/Labtainers/Labtainers
+    - file: PracticeRooms/SideQuest2023
+      sections:
+      - file: PracticeRooms/AoCsidequest/AoCsq1
+      - file: PracticeRooms/AoCsidequest/AoCsq2
   - caption: Tools
     chapters:
     - file: Tools/PriveligeEscalation/PriveligeEscalation
