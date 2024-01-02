@@ -65,6 +65,7 @@ parts:
       - file: Tools/BlueTeam/Nessus
       - file: Tools/BlueTeam/KQL/
         sections:
+        - file: Tools/BlueTeam/KQL/Detective_S1_C0
         - file: Tools/BlueTeam/KQL/Detective_S1_C1
         - file: Tools/BlueTeam/KQL/Detective_S1_C4
     - file: Tools/Wireshark/Wireshark
