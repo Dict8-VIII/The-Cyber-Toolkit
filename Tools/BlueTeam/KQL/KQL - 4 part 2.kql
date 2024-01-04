@@ -1,6 +1,0 @@
-﻿nyc_trees
-| where spc_common in ("'Schubert' chokecherry", "Turkish hazelnut", "American linden")
-| project tree_id, spc_common, tree_dbh, latitude, longitude, cell = geo_point_to_h3cell(longitude, latitude, 10)
-| project tree_id, spc_common, cell, tree_dbh
-| 
-//| summarize by cell
