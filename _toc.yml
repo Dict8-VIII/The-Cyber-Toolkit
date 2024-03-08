@@ -41,6 +41,7 @@ parts:
         - file: Tools/PriveligeEscalation/LinPeas
         - file: Tools/PriveligeEscalation/LES
       - file: Tools/PriveligeEscalation/WindowsPrivEsc
+      - file: Tools/PriveligeEscalation/WindowsPersistence
         sections:
         - file: Tools/PriveligeEscalation/Powerup
     - file: Tools/BurpSuite/Burp
