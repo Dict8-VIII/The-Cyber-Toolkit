@@ -141,6 +141,7 @@ parts:
     - file: Craft/CiscoProgramming
     - file: Craft/Passwords
     - file: Craft/RequestForgery
+    - file: Craft/ThreatIntelligence
   - caption: The Cyber Killchain
     chapters:
     - file: KillChain/Killchain_Overview
