@@ -64,11 +64,14 @@ parts:
       - file: Tools/BlueTeam/Splunk
       - file: Tools/BlueTeam/OpenVAS
       - file: Tools/BlueTeam/Nessus
-      - file: Tools/BlueTeam/KQL/
+      - file: Tools/BlueTeam/MalwareAnalysis/oleid
+      - file: Tools/BlueTeam/KQL
         sections:
         - file: Tools/BlueTeam/KQL/Detective_S1_C0
         - file: Tools/BlueTeam/KQL/Detective_S1_C1
+        - file: Tools/BlueTeam/KQL/Detective_S1_C2
         - file: Tools/BlueTeam/KQL/Detective_S1_C4
+        - file: Tools/BlueTeam/KQL/Detective_S1_C5
     - file: Tools/Wireshark/Wireshark
     - file: Tools/Nmap
     - file: Tools/Nping
@@ -104,6 +107,7 @@ parts:
     - file: Tools/SocialEngineeringToolkit
     - file: Tools/PowerShell
     - file: Tools/grep
+    
   - caption: Hacker Craft
     chapters:
     - file: Craft/MITRE/MITRE
