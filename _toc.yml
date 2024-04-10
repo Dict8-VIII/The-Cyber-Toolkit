@@ -134,6 +134,7 @@ parts:
     - file: Craft/LFI
     - file: Craft/UploadVulns
     - file: Craft/DHCP
+    - file: Craft/DNS
     - file: Craft/ShellStabalise
     - file: Craft/FileTransfer
     - file: Craft/Telnet
