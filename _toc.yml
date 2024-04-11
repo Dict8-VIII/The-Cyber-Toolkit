@@ -73,6 +73,7 @@ parts:
         - file: Tools/BlueTeam/KQL/Detective_S1_C4
         - file: Tools/BlueTeam/KQL/Detective_S1_C5
       - file: Tools/BlueTeam/MS_Purview/Purview
+        sections:
         - file: Tools/BlueTeam/MS_Purview/InformationProtectionScanner
         - file: Tools/BlueTeam/MS_Purview/IntegrationRuntime
     - file: Tools/Wireshark/Wireshark
