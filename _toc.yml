@@ -65,6 +65,7 @@ parts:
       - file: Tools/BlueTeam/OpenVAS
       - file: Tools/BlueTeam/Nessus
       - file: Tools/BlueTeam/MalwareAnalysis/oleid
+      - file: Tools/BlueTeam/MS365Encryption
       - file: Tools/BlueTeam/KQL
         sections:
         - file: Tools/BlueTeam/KQL/Detective_S1_C0
@@ -76,6 +77,8 @@ parts:
         sections:
         - file: Tools/BlueTeam/MS_Purview/InformationProtectionScanner
         - file: Tools/BlueTeam/MS_Purview/IntegrationRuntime
+        - file: Tools/BlueTeam/MS_Purview/CompliancePortal
+        
     - file: Tools/Wireshark/Wireshark
     - file: Tools/Nmap
     - file: Tools/Nping
