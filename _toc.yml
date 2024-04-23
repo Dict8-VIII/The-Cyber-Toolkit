@@ -164,6 +164,7 @@ parts:
   - caption: Home Lab Setup
     chapters:
     - file: HomeLab/HomeLab
+    - file: HomeLab/BuildingSnort
     - file: HomeLab/OpenKylin
   - caption: Non Hacking Notes
     chapters:
