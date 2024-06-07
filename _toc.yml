@@ -66,6 +66,7 @@ parts:
       - file: Tools/BlueTeam/Nessus
       - file: Tools/BlueTeam/MalwareAnalysis/oleid
       - file: Tools/BlueTeam/MS365Encryption
+      - file: Tools/BlueTeam/Snort
       - file: Tools/BlueTeam/KQL
         sections:
         - file: Tools/BlueTeam/KQL/Detective_S1_C0

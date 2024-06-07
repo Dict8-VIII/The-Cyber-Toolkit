@@ -234,6 +234,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../OpenVAS.html">OpenVAS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Nessus.html">Nessus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../MalwareAnalysis/oleid.html">Oletools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MS365Encryption.html">Microsoft 365 Encryption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Snort.html">Snort</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../KQL.html">Kusto Query Language (KQL)</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../KQL/Detective_S1_C0.html">Kusto Detective Agency Season 1 (Challenge 0)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../KQL/Detective_S1_C1.html">Kusto Detective Agency Season 1 (Challenge 1)</a></li>
@@ -245,6 +247,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Microsoft Purview</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="InformationProtectionScanner.html">Information Protection Scanner</a></li>
 <li class="toctree-l3"><a class="reference internal" href="IntegrationRuntime.html">Integration Runtime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CompliancePortal.html">Compliance Portal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SensitivityLabels.html">Sensitivity Labels</a></li>
 </ul>
 </li>
 </ul>
@@ -339,6 +343,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Home Lab Setup</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../HomeLab/HomeLab.html">HomeLab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../HomeLab/BuildingSnort.html">Building Snort</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../HomeLab/OpenKylin.html">OpenKylin</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Non Hacking Notes</span></p>
@@ -517,7 +522,12 @@ document.write(`
 <li><p>Data Scanning in the cloud (Via the governance portal)</p></li>
 <li><p>Data Scanning on Prem (Information Protection Scanner &amp; IntegrationRuntime)</p></li>
 </ul>
-<p>Many of these are cross product, but it can help to think of them as separate products… or not.</p>
+<p>Many of these are cross product, but it can help to think of them as separate products… or not. Some extra features of Purview also require additional add-ons (included at the E5 level):</p>
+<ul class="simple">
+<li><p>Advanced Message Encryption</p></li>
+<li><p>Information Rights Management</p></li>
+<li><p>Azure Rights Management Service (RMS)</p></li>
+</ul>
 <hr><section id="azure-access">
 <h2>Azure Access<a class="headerlink" href="#azure-access" title="Permalink to this heading">#</a></h2>
 <p>These pages will be quite limited. I dont have access to an enterprise level environment and I’m using the free Azure account. I’m building these notes following the SC-400 course on <a class="reference external" href="http://learn.microsoft.com">learn.microsoft.com</a>. I don’t recommend the course on it’s own. It is entirely theoretical (and a bit sales-y if I’m honest), and you aren’t given access to a test environment to try out the solution. That being said, I find I’ve learned more by simply having to install each product, maybe it will help you too. If you want to go more in-depth than I do, you’ll need an office or MS 365 account subscription.</p>

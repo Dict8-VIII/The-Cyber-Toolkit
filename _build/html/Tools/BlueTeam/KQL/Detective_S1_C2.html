@@ -234,6 +234,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../OpenVAS.html">OpenVAS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Nessus.html">Nessus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../MalwareAnalysis/oleid.html">Oletools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MS365Encryption.html">Microsoft 365 Encryption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Snort.html">Snort</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="../KQL.html">Kusto Query Language (KQL)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="Detective_S1_C0.html">Kusto Detective Agency Season 1 (Challenge 0)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Detective_S1_C1.html">Kusto Detective Agency Season 1 (Challenge 1)</a></li>
@@ -245,6 +247,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 has-children"><a class="reference internal" href="../MS_Purview/Purview.html">Microsoft Purview</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../MS_Purview/InformationProtectionScanner.html">Information Protection Scanner</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../MS_Purview/IntegrationRuntime.html">Integration Runtime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../MS_Purview/CompliancePortal.html">Compliance Portal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../MS_Purview/SensitivityLabels.html">Sensitivity Labels</a></li>
 </ul>
 </li>
 </ul>
@@ -339,6 +343,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Home Lab Setup</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../HomeLab/HomeLab.html">HomeLab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../HomeLab/BuildingSnort.html">Building Snort</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../HomeLab/OpenKylin.html">OpenKylin</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Non Hacking Notes</span></p>
@@ -556,6 +561,26 @@ I really should pass the variable through here instead of running it in two sepa
 </section>
 <section id="final-script">
 <h2>Final Script<a class="headerlink" href="#final-script" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#let fraud=Votes</span>
+<span class="c1">#| where vote == &#39;Poppy&#39;</span>
+<span class="c1">#| summarize count() by via_ip, Length=bin(Timestamp, 10s)</span>
+<span class="c1">#| where count_ &gt; 10</span>
+<span class="c1">#| summarize fake=sum(count_)</span>
+<span class="c1">#;</span>
+<span class="c1">#fraud //2497919</span>
+<span class="c1">#</span>
+<span class="c1">#Votes</span>
+<span class="c1">#| summarize Kastor=countif(vote==&#39;Kastor&#39;), Gaul=countif(vote==&#39;Gaul&#39;), Poppy=countif(vote==&#39;Poppy&#39;), Willie=countif(vote==&#39;Willie&#39;)</span>
+<span class="c1">#| project K=Kastor, G=Gaul, P=(Poppy-2497919), W=Willie</span>
+<span class="c1">#| project K, G, P, W, Total=K+G+P+W</span>
+<span class="c1">#| project Kastor=todouble(K)*100/Total, Gaul=todouble(G)*100/Total, Poppy=todouble(P)*100/Total, Willie=todouble(W)*100/Total</span>
+<span class="c1">#// remember these arent in the same order as the answer request!</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
