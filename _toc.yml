@@ -166,6 +166,7 @@ parts:
     chapters:
     - file: HomeLab/HomeLab
     - file: HomeLab/BuildingSnort
+    - file: HomeLab/BuildingSplunk
     - file: HomeLab/OpenKylin
   - caption: Non Hacking Notes
     chapters:
