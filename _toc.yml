@@ -4,6 +4,114 @@
 format: jb-book
 root: intro
 parts:
+  - caption: Goals
+    chapters:
+    - file: Goals/DFIR/DFIR_Home
+      sections:
+        - file: Goals/DFIR/WindowsEventViewer
+    - file: Goals/EDR/EDR_Home
+      sections:
+        - file: Goals/EDR/Snort
+        - file: Goals/EDR/Splunk
+        - file: Goals/EDR/Yara
+    - file: Goals/General/General_Home
+        - file: Goals/General/CiscoProgramming
+        - file: Goals/General/CyberChef
+        - file: Goals/General/DHCP
+        - file: Goals/General/DNS
+        - file: Goals/General/EmailProtocol
+        - file: Goals/General/FileTransfer
+        - file: Goals/General/FTP
+        - file: Goals/General/grep
+        - file: Goals/General/HTTP
+        - file: Goals/General/Kali
+        - file: Goals/General/Kerberos
+        - file: Goals/General/NFS
+        - file: Goals/General/OWASP10
+        - file: Goals/General/Passwords
+        - file: Goals/General/Powershell
+        - file: Goals/General/SSH
+        - file: Goals/General/Telnet
+        - file: Goals/General/TheOSIModel
+        - file: Goals/General/UploadVulns
+        - file: Goals/General/WindowsAD
+    - file: Goals/Hashes/Hashes_Home
+        - file: Goals/Hashes/HashCat
+        - file: Goals/Hashes/HashID
+        - file: Goals/Hashes/Hydra
+        - file: Goals/Hashes/John
+    - file: Goals/MalwareAnalysis/MalwareAnalysis_Home
+        - file: Goals/MalwareAnalysis/OleTools
+        - file: Goals/MalwareAnalysis/ReverseEngineering
+    - file: Goals/NetworkMonitoring/NetworkMonitoring_Home
+        - file: Goals/NetworkMonitoring/TCPDump
+        - file: Goals/NetworkMonitoring/Tshark
+        - file: Goals/NetworkMonitoring/Wireshark
+    - file: Goals/Purview/Purview_Home
+        - file: Goals/Purview/CompliancePortal
+        - file: Goals/Purview/InformationProtectionScanner
+        - file: Goals/Purview/IntegrationRuntime
+        - file: Goals/Purview/KQL
+        - file: Goals/Purview/MS365Encryption
+        - file: Goals/Purview/SensitivityLabels
+    - file: Goals/RedTeam/RedTeam_Home
+        - file: Goals/RedTeam/Collection/Collection_Home
+            - sections:
+                file: Goals/RedTeam/Collection/Mimikatz
+        - file: Goals/RedTeam/CredentialAccess/CredentialAccess_Home
+        - file: Goals/RedTeam/Discovery/Discovery_Home
+        - file: Goals/RedTeam/Execution/Execution_Home
+        - file: Goals/RedTeam/InitialAccess/InitialAccess_Home
+            sections:
+                - file: Goals/RedTeam/InitialAccess/Netcat
+                - file: Goals/RedTeam/InitialAccess/SocialEngineeringToolkit
+        - file: Goals/RedTeam/LateralMovement/LateralMovement_Home
+            sections:
+                - file: Goals/RedTeam/LateralMovement/Rubeus
+        - file: Goals/RedTeam/Persistence/Persistence_Home
+        - file: Goals/RedTeam/PrivilegeEscalation/PrivilegeEscalation_Home
+            sections:
+                - file: Goals/RedTeam/PrivilegeEscalation/BloodHound
+                - file: Goals/RedTeam/PrivilegeEscalation/LES
+                - file: Goals/RedTeam/PrivilegeEscalation/LinEnum
+                - file: Goals/RedTeam/PrivilegeEscalation/LinPeas
+                - file: Goals/RedTeam/PrivilegeEscalation/LinuxPrivEsc
+                - file: Goals/RedTeam/PrivilegeEscalation/Powerup
+                - file: Goals/RedTeam/PrivilegeEscalation/WindowsPersistence
+                - file: Goals/RedTeam/PrivilegeEscalation/WindowsPrivEsc
+        - file: Goals/RedTeam/Recon/Recon_Home
+            sections:
+                - file: Goals/RedTeam/Recon/Maltego
+                - file: Goals/RedTeam/Recon/Nmap
+                - file: Goals/RedTeam/Recon/Nping
+                - file: Goals/RedTeam/Recon/Recon-ng
+    - file: Goals/Steganography/Steganography_Home
+        - file: Goals/Steganography/Binwalk
+    - file: Goals/ThreatHunting/ThreatHunting_Home
+        sections:
+            - file: Goals/ThreatHunting/SysInternals/SysInternals_Home
+                sections:
+                    - file: Goals/ThreatHunting/SysInternals/FileAndDisk
+                    - file: Goals/ThreatHunting/SysInternals/Misc
+                    - file: Goals/ThreatHunting/SysInternals/ProcessUtils
+                    - file: Goals/ThreatHunting/SysInternals/Sysmon
+    - file: Goals/ThreatIntelligence/ThreatIntelligence_Home
+    - file: Goals/VulnerabilityManagement/VulnerabilityManagement_Home
+        - file: Goals/VulnerabilityManagement/Nessus
+        - file: Goals/VulnerabilityManagement/OpenVAS
+    - file: Goals/WebExploitation/WebExploitation_Home
+        - file: Goals/WebExploitation/BurpSuite/Burpsuite_Home
+            - sections:
+                - file: Goals/WebExploitation/BurpSuite/BurpIntruder
+                - file: Goals/WebExploitation/BurpSuite/BurpRepeater
+        - file: Goals/WebExploitation/GoBuster
+        - file: Goals/WebExploitation/LFI
+        - file: Goals/WebExploitation/Nikto
+        - file: Goals/WebExploitation/RequestForgery
+        - file: Goals/WebExploitation/SQLInjection
+        - file: Goals/WebExploitation/Wfuzz
+        - file: Goals/WebExploitation/XSS
+    
   - caption: Walkthroughs
     chapters:
     - file: PracticeRooms/HoloLive/HoloLive
