@@ -14,6 +14,12 @@ parts:
         - file: Goals/EDR/Snort
         - file: Goals/EDR/Splunk
         - file: Goals/EDR/Yara
+        - file: Goals/EDR/SysInternals/SysInternals_Home
+                sections:
+                    - file: Goals/EDR/SysInternals/FileAndDisk
+                    - file: Goals/EDR/SysInternals/Misc
+                    - file: Goals/EDR/SysInternals/ProcessUtils
+                    - file: Goals/EDR/SysInternals/Sysmon
     - file: Goals/General/General_Home
         - file: Goals/General/CiscoProgramming
         - file: Goals/General/CyberChef
@@ -87,14 +93,6 @@ parts:
                 - file: Goals/RedTeam/Recon/Recon-ng
     - file: Goals/Steganography/Steganography_Home
         - file: Goals/Steganography/Binwalk
-    - file: Goals/ThreatHunting/ThreatHunting_Home
-        sections:
-            - file: Goals/ThreatHunting/SysInternals/SysInternals_Home
-                sections:
-                    - file: Goals/ThreatHunting/SysInternals/FileAndDisk
-                    - file: Goals/ThreatHunting/SysInternals/Misc
-                    - file: Goals/ThreatHunting/SysInternals/ProcessUtils
-                    - file: Goals/ThreatHunting/SysInternals/Sysmon
     - file: Goals/ThreatIntelligence/ThreatIntelligence_Home
     - file: Goals/VulnerabilityManagement/VulnerabilityManagement_Home
         - file: Goals/VulnerabilityManagement/Nessus
