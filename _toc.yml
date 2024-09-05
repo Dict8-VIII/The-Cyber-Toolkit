@@ -9,6 +9,8 @@ parts:
     - file: Goals/DFIR/DFIR_Home
       sections:
         - file: Goals/DFIR/WindowsEventViewer
+        - file: Goals/DFIR/WindowsProcesses
+        - file: Goals/DFIR/WindowsRegistry
     - file: Goals/EDR/EDR_Home
       sections:
         - file: Goals/EDR/Snort
