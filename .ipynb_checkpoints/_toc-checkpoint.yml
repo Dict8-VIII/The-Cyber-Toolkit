@@ -14,7 +14,6 @@ parts:
         - file: Goals/DFIR/WindowsRegistry
     - file: Goals/EDR/EDR_Home
       sections:
-        - file: Goals/EDR/Snort
         - file: Goals/EDR/Splunk
         - file: Goals/EDR/Yara
         - file: Goals/EDR/SysInternals/SysInternals_Home
@@ -53,6 +52,7 @@ parts:
         - file: Goals/MalwareAnalysis/OleTools
         - file: Goals/MalwareAnalysis/ReverseEngineering
     - file: Goals/NetworkMonitoring/NetworkMonitoring_Home
+        - file: Goals/NetworkMonitoring/Snort
         - file: Goals/NetworkMonitoring/TCPDump
         - file: Goals/NetworkMonitoring/Tshark
         - file: Goals/NetworkMonitoring/Wireshark
