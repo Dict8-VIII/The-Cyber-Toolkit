@@ -8,6 +8,7 @@ parts:
     chapters:
     - file: Goals/DFIR/DFIR_Home
       sections:
+        - file: Goals/DFIR/KAPE
         - file: Goals/DFIR/WindowsEventViewer
         - file: Goals/DFIR/WindowsProcesses
         - file: Goals/DFIR/WindowsRegistry
