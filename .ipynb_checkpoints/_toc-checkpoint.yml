@@ -17,12 +17,17 @@ parts:
         - file: Goals/EDR/Splunk
         - file: Goals/EDR/Yara
         - file: Goals/EDR/SysInternals/SysInternals_Home
-                sections:
-                    - file: Goals/EDR/SysInternals/FileAndDisk
-                    - file: Goals/EDR/SysInternals/Misc
-                    - file: Goals/EDR/SysInternals/ProcessUtils
-                    - file: Goals/EDR/SysInternals/Sysmon
+          sections:
+            - file: Goals/EDR/SysInternals/FileAndDisk
+            - file: Goals/EDR/SysInternals/Misc
+            - file: Goals/EDR/SysInternals/ProcessUtils
+            - file: Goals/EDR/SysInternals/Sysmon
     - file: Goals/General/General_Home
+        - file: Goals/General/TheBasics/TheBasics_Home
+          sections:
+            - file: Goals/General/TheBasics/Attacks
+            - file: Goals/General/TheBasics/Threats
+            - file: Goals/General/TheBasics/Vulnerabilities
         - file: Goals/General/CiscoProgramming
         - file: Goals/General/CyberChef
         - file: Goals/General/DHCP
@@ -43,6 +48,18 @@ parts:
         - file: Goals/General/TheOSIModel
         - file: Goals/General/UploadVulns
         - file: Goals/General/WindowsAD
+        - file: Goals/General/Frameworks/Frameworks_Home
+            sections:
+              - file: Goals/General/Frameworks/MITRE
+              - file: Goals/General/Frameworks/MITRE_ATT&CK
+              - file: Goals/General/Frameworks/MITRE_CAR
+              - file: Goals/General/Frameworks/MITRE_DEFEND
+              - file: Goals/General/Frameworks/MITRE_Engage
+              - file: Goals/General/Frameworks/Killchain_Home
+              - file: Goals/General/Frameworks/Killchain_InfoGathering
+              - file: Goals/General/Frameworks/Killchain_Weaponization
+              
+          
     - file: Goals/Hashes/Hashes_Home
         - file: Goals/Hashes/HashCat
         - file: Goals/Hashes/HashID
