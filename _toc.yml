@@ -1,6 +1,4 @@
 # Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
-
 format: jb-book
 root: intro
 parts:
@@ -9,6 +7,7 @@ parts:
     - file: Goals/DFIR/DFIR_Home
       sections:
         - file: Goals/DFIR/KAPE
+        - file: Goals/DFIR/Volatility
         - file: Goals/DFIR/WindowsEventViewer
         - file: Goals/DFIR/WindowsProcesses
         - file: Goals/DFIR/WindowsRegistry
@@ -23,57 +22,60 @@ parts:
             - file: Goals/EDR/SysInternals/ProcessUtils
             - file: Goals/EDR/SysInternals/Sysmon
     - file: Goals/General/General_Home
-        - file: Goals/General/TheBasics/TheBasics_Home
-          sections:
-            - file: Goals/General/TheBasics/Attacks
-            - file: Goals/General/TheBasics/Threats
-            - file: Goals/General/TheBasics/Vulnerabilities
-        - file: Goals/General/CiscoProgramming
-        - file: Goals/General/CyberChef
-        - file: Goals/General/DHCP
-        - file: Goals/General/DNS
-        - file: Goals/General/EmailProtocol
-        - file: Goals/General/FileTransfer
-        - file: Goals/General/FTP
-        - file: Goals/General/grep
-        - file: Goals/General/HTTP
-        - file: Goals/General/Kali
-        - file: Goals/General/Kerberos
-        - file: Goals/General/NFS
-        - file: Goals/General/OWASP10
-        - file: Goals/General/Passwords
-        - file: Goals/General/Powershell
-        - file: Goals/General/SSH
-        - file: Goals/General/Telnet
-        - file: Goals/General/TheOSIModel
-        - file: Goals/General/UploadVulns
-        - file: Goals/General/WindowsAD
-        - file: Goals/General/Frameworks/Frameworks_Home
-            sections:
-              - file: Goals/General/Frameworks/MITRE
-              - file: Goals/General/Frameworks/MITRE_ATT&CK
-              - file: Goals/General/Frameworks/MITRE_CAR
-              - file: Goals/General/Frameworks/MITRE_DEFEND
-              - file: Goals/General/Frameworks/MITRE_Engage
-              - file: Goals/General/Frameworks/Killchain_Home
-              - file: Goals/General/Frameworks/Killchain_InfoGathering
-              - file: Goals/General/Frameworks/Killchain_Weaponization
-              
-          
+      sections:
+      - file: Goals/General/TheBasics/TheBasics_Home
+        sections:
+          - file: Goals/General/TheBasics/Attacks
+          - file: Goals/General/TheBasics/Threats
+          - file: Goals/General/TheBasics/Vulnerabilities
+      - file: Goals/General/CiscoProgramming
+      - file: Goals/General/CyberChef
+      - file: Goals/General/DHCP
+      - file: Goals/General/DNS
+      - file: Goals/General/EmailProtocol
+      - file: Goals/General/FileTransfer
+      - file: Goals/General/FTP
+      - file: Goals/General/grep
+      - file: Goals/General/HTTP
+      - file: Goals/General/Kali
+      - file: Goals/General/Kerberos
+      - file: Goals/General/NFS
+      - file: Goals/General/OWASP10
+      - file: Goals/General/Passwords
+      - file: Goals/General/Powershell
+      - file: Goals/General/SSH
+      - file: Goals/General/Telnet
+      - file: Goals/General/TheOSIModel
+      - file: Goals/General/UploadVulns
+      - file: Goals/General/WindowsAD
+      - file: Goals/General/Frameworks/Frameworks_Home
+        sections:
+          - file: Goals/General/Frameworks/MITRE_Home
+          - file: Goals/General/Frameworks/MITRE_ATT&CK
+          - file: Goals/General/Frameworks/MITRE_CAR
+          - file: Goals/General/Frameworks/MITRE_Defend
+          - file: Goals/General/Frameworks/MITRE_Engage
+          - file: Goals/General/Frameworks/Killchain_Home
+          - file: Goals/General/Frameworks/Killchain_InfoGathering
+          - file: Goals/General/Frameworks/Killchain_Weaponization
     - file: Goals/Hashes/Hashes_Home
+      sections:
         - file: Goals/Hashes/HashCat
         - file: Goals/Hashes/HashID
         - file: Goals/Hashes/Hydra
         - file: Goals/Hashes/John
     - file: Goals/MalwareAnalysis/MalwareAnalysis_Home
+      sections:
         - file: Goals/MalwareAnalysis/OleTools
         - file: Goals/MalwareAnalysis/ReverseEngineering
     - file: Goals/NetworkMonitoring/NetworkMonitoring_Home
+      sections:
         - file: Goals/NetworkMonitoring/Snort
         - file: Goals/NetworkMonitoring/TCPDump
         - file: Goals/NetworkMonitoring/Tshark
         - file: Goals/NetworkMonitoring/Wireshark
     - file: Goals/Purview/Purview_Home
+      sections:
         - file: Goals/Purview/CompliancePortal
         - file: Goals/Purview/InformationProtectionScanner
         - file: Goals/Purview/IntegrationRuntime
@@ -81,47 +83,51 @@ parts:
         - file: Goals/Purview/MS365Encryption
         - file: Goals/Purview/SensitivityLabels
     - file: Goals/RedTeam/RedTeam_Home
+      sections:
         - file: Goals/RedTeam/Collection/Collection_Home
-            - sections:
-                file: Goals/RedTeam/Collection/Mimikatz
+          sections:
+            - file: Goals/RedTeam/Collection/Mimikatz
         - file: Goals/RedTeam/CredentialAccess/CredentialAccess_Home
         - file: Goals/RedTeam/Discovery/Discovery_Home
         - file: Goals/RedTeam/Execution/Execution_Home
         - file: Goals/RedTeam/InitialAccess/InitialAccess_Home
-            sections:
-                - file: Goals/RedTeam/InitialAccess/Netcat
-                - file: Goals/RedTeam/InitialAccess/SocialEngineeringToolkit
+          sections:
+            - file: Goals/RedTeam/InitialAccess/Netcat
+            - file: Goals/RedTeam/InitialAccess/SocialEngineeringToolkit
         - file: Goals/RedTeam/LateralMovement/LateralMovement_Home
-            sections:
-                - file: Goals/RedTeam/LateralMovement/Rubeus
+          sections:
+            - file: Goals/RedTeam/LateralMovement/Rubeus
         - file: Goals/RedTeam/Persistence/Persistence_Home
         - file: Goals/RedTeam/PrivilegeEscalation/PrivilegeEscalation_Home
-            sections:
-                - file: Goals/RedTeam/PrivilegeEscalation/BloodHound
-                - file: Goals/RedTeam/PrivilegeEscalation/LES
-                - file: Goals/RedTeam/PrivilegeEscalation/LinEnum
-                - file: Goals/RedTeam/PrivilegeEscalation/LinPeas
-                - file: Goals/RedTeam/PrivilegeEscalation/LinuxPrivEsc
-                - file: Goals/RedTeam/PrivilegeEscalation/Powerup
-                - file: Goals/RedTeam/PrivilegeEscalation/WindowsPersistence
-                - file: Goals/RedTeam/PrivilegeEscalation/WindowsPrivEsc
+          sections:
+            - file: Goals/RedTeam/PrivilegeEscalation/BloodHound
+            - file: Goals/RedTeam/PrivilegeEscalation/LES
+            - file: Goals/RedTeam/PrivilegeEscalation/LinEnum
+            - file: Goals/RedTeam/PrivilegeEscalation/LinPeas
+            - file: Goals/RedTeam/PrivilegeEscalation/LinuxPrivEsc
+            - file: Goals/RedTeam/PrivilegeEscalation/Powerup
+            - file: Goals/RedTeam/PrivilegeEscalation/WindowsPersistence
+            - file: Goals/RedTeam/PrivilegeEscalation/WindowsPrivEsc
         - file: Goals/RedTeam/Recon/Recon_Home
-            sections:
-                - file: Goals/RedTeam/Recon/Maltego
-                - file: Goals/RedTeam/Recon/Nmap
-                - file: Goals/RedTeam/Recon/Nping
-                - file: Goals/RedTeam/Recon/Recon-ng
+          sections:
+            - file: Goals/RedTeam/Recon/Maltego
+            - file: Goals/RedTeam/Recon/Nmap
+            - file: Goals/RedTeam/Recon/Nping
+            - file: Goals/RedTeam/Recon/Recon-ng
     - file: Goals/Steganography/Steganography_Home
+      sections:
         - file: Goals/Steganography/Binwalk
     - file: Goals/ThreatIntelligence/ThreatIntelligence_Home
     - file: Goals/VulnerabilityManagement/VulnerabilityManagement_Home
+      sections:
         - file: Goals/VulnerabilityManagement/Nessus
         - file: Goals/VulnerabilityManagement/OpenVAS
     - file: Goals/WebExploitation/WebExploitation_Home
+      sections:
         - file: Goals/WebExploitation/BurpSuite/Burpsuite_Home
-            - sections:
-                - file: Goals/WebExploitation/BurpSuite/BurpIntruder
-                - file: Goals/WebExploitation/BurpSuite/BurpRepeater
+          sections:
+            - file: Goals/WebExploitation/BurpSuite/BurpIntruder
+            - file: Goals/WebExploitation/BurpSuite/BurpRepeater
         - file: Goals/WebExploitation/GoBuster
         - file: Goals/WebExploitation/LFI
         - file: Goals/WebExploitation/Nikto
@@ -129,7 +135,6 @@ parts:
         - file: Goals/WebExploitation/SQLInjection
         - file: Goals/WebExploitation/Wfuzz
         - file: Goals/WebExploitation/XSS
-    
   - caption: Walkthroughs
     chapters:
     - file: PracticeRooms/HoloLive/HoloLive

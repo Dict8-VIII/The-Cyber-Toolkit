@@ -72,7 +72,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'HomeLab/BuildingSnort';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="OpenKylin" href="OpenKylin.html" />
+    <link rel="next" title="Building Splunk" href="BuildingSplunk.html" />
     <link rel="prev" title="HomeLab" href="HomeLab.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -164,18 +164,145 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">TryHackMe Rooms / Walkthrough</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Goals</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../HoloLive/HoloLive.html">HoloLive</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../HoloLive/HoloLive_Task8.html">HoloLive Walkthrough - Task 8</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../HoloLive/HoloLive_Task9.html">HoloLive Walkthrough - Task 9</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../HoloLive/HoloLive_Task10.html">HoloLive Walkthrough - Task 10</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/DFIR/DFIR_Home.html">Digital Forensics and Incident Response</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/DFIR/KAPE.html">KAPE - Kroll Artifact Parser and Extractor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/DFIR/WindowsEventViewer.html">Event Viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/DFIR/WindowsProcesses.html">Windows Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/DFIR/WindowsRegistry.html">Windows Registry</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../JnrPenTester/JnrPenTester.html">Jr Pen Tester Path</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../JnrPenTester/FileInclusion.html">File Inclusion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../JnrPenTester/JnrPenTester_BurpSuite.html">Burp Suite</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../JnrPenTester/LinuxPrivEsc_task8.html">Exploiting the SUID Bit</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/EDR/EDR_Home.html">Endpoint Detection &amp; Response</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/EDR/Splunk.html">Splunk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/EDR/Yara.html">Yara</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/EDR/SysInternals/SysInternals_Home.html">SysInternals</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/EDR/SysInternals/FileAndDisk.html">File and Disk Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/EDR/SysInternals/Misc.html">Misc Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/EDR/SysInternals/ProcessUtils.html">Process Utilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/EDR/SysInternals/Sysmon.html">Sysmon</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/General/General_Home.html">General Education Topics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/General/TheBasics/TheBasics_Home.html">The Basics</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/General/TheBasics/Attacks.html">Attacks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/General/TheBasics/Threats.html">Threats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/General/TheBasics/Vulnerabilities.html">Vulnerabilities</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/General/CiscoProgramming.html">Cisco Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/General/CyberChef.html">Cyberchef</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/General/DHCP.html">DHCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/General/DNS.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/General/EmailProtocol.html">Email Protocols</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/General/FileTransfer.html">File Transfer to Machines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/General/FTP.html">FTP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/General/grep.html">Grep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/General/HTTP.html">HTTP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/General/Kali.html">Kali</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/General/Kerberos.html">Kerberos Attacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/General/NFS.html">NFS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/General/OWASP10.html">OWASP Top 10 - 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/General/Passwords.html">Passwords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/General/SSH.html">SSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/General/Telnet.html">Telnet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/General/TheOSIModel.html">The OSI Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/General/UploadVulns.html">Upload Vulnerabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/General/WindowsAD.html">Windows Active Directory</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/General/Frameworks/Frameworks_Home.html">Frameworks</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/General/Frameworks/MITRE_ATT%26CK.html">Mitre ATT&amp;CK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/General/Frameworks/MITRE_CAR.html">MITRE CARs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/General/Frameworks/MITRE_Engage.html">MITRE Engage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/General/Frameworks/Killchain_Home.html">Killchain Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/General/Frameworks/Killchain_InfoGathering.html">Killchain - Info Gathering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/General/Frameworks/Killchain_Weaponization.html">Killchain - Weaponization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/Hashes/Hashes_Home.html">Hashes</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/Hashes/HashCat.html">Hashcat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/Hashes/HashID.html">HashID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/Hashes/Hydra.html">Hydra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/Hashes/John.html">John The Ripper</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/MalwareAnalysis/MalwareAnalysis_Home.html">Malware Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/MalwareAnalysis/OleTools.html">Oletools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/MalwareAnalysis/ReverseEngineering.html">Reverse Engineering</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/NetworkMonitoring/NetworkMonitoring_Home.html">Network Monitoring</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/NetworkMonitoring/Snort.html">Snort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/NetworkMonitoring/TCPDump.html">TCPDump</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/NetworkMonitoring/Tshark.html">TShark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/NetworkMonitoring/Wireshark.html">Wireshark</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/Purview/Purview_Home.html">Microsoft Purview</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/Purview/CompliancePortal.html">Compliance Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/Purview/InformationProtectionScanner.html">Information Protection Scanner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/Purview/IntegrationRuntime.html">Integration Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/Purview/KQL.html">Kusto Query Language (KQL)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/Purview/MS365Encryption.html">Microsoft 365 Encryption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/Purview/SensitivityLabels.html">Sensitivity Labels</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/RedTeam/RedTeam_Home.html">Red Teaming</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/RedTeam/Collection/Collection_Home.html">Collection_Home</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/Collection/Mimikatz.html">MimiKatz</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/RedTeam/CredentialAccess/CredentialAccess_Home.html">Credential Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/RedTeam/Discovery/Discovery_Home.html">Discovery Home</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/RedTeam/Execution/Execution_Home.html">Execution</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/RedTeam/InitialAccess/InitialAccess_Home.html">Initial Access</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/InitialAccess/Netcat.html">Netcat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/InitialAccess/SocialEngineeringToolkit.html">Social Engineering Toolkit (SET)</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/RedTeam/LateralMovement/LateralMovement_Home.html">Lateral Movement</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/LateralMovement/Rubeus.html">Rubeus</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/RedTeam/Persistence/Persistence_Home.html">Persistence</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/RedTeam/Recon/Recon_Home.html">Recon</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/Recon/Maltego.html">Maltego</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/Recon/Nmap.html">Nmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/Recon/Nping.html">Nping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/Recon/Recon-ng.html">Recon-ng</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/Steganography/Steganography_Home.html">Steganography</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/Steganography/Binwalk.html">Binwalk</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Goals/ThreatIntelligence/ThreatIntelligence_Home.html">Threat Intelligence</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/VulnerabilityManagement/VulnerabilityManagement_Home.html">Vulnerability Management</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/VulnerabilityManagement/Nessus.html">Nessus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/VulnerabilityManagement/OpenVAS.html">OpenVAS</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/WebExploitation/WebExploitation_Home.html">Web Exploitation</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/WebExploitation/GoBuster.html">Gobuster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/WebExploitation/LFI.html">LFI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/WebExploitation/Nikto.html">Nikto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/WebExploitation/RequestForgery.html">Request Forgeries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/WebExploitation/Wfuzz.html">WFUZZ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/WebExploitation/XSS.html">XSS</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Walkthroughs</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../PracticeRooms/HoloLive/HoloLive.html">HoloLive</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/HoloLive/HoloLive_Task8.html">HoloLive Walkthrough - Task 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/HoloLive/HoloLive_Task9.html">HoloLive Walkthrough - Task 9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/HoloLive/HoloLive_Task10.html">HoloLive Walkthrough - Task 10</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../PracticeRooms/AgentSudo.html">Agent Sudo</a></li>
@@ -189,154 +316,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../PracticeRooms/Tomghost.html">Tomghost</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PracticeRooms/Ignite.html">Ignite</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PracticeRooms/Labtainers/Labtainers.html">Labtainers</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../PracticeRooms/SideQuest2023.html">Advent Of Cyber Side Quest 2023</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../PracticeRooms/SideQuest2023.html">Advent Of Cyber Side Quest 2023</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/AoCsidequest/AoCsq1.html">Advent Of Cyber - Side Quest 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/AoCsidequest/AoCsq2.html">Advent Of Cyber - Side Quest 2</a></li>
-</ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tools</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Tools/PriveligeEscalation/PriveligeEscalation.html">Privelige Escalation</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../Tools/PriveligeEscalation/LinuxPrivEsc.html">Linux Privelige Escalation</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Tools/PriveligeEscalation/LinEnum.html">LinEnum</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tools/PriveligeEscalation/LinPeas.html">LinPeas</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tools/PriveligeEscalation/LES.html">Linux Exploit Suggester</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../Tools/PriveligeEscalation/WindowsPrivEsc.html">Windows PrivEsc</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../Tools/PriveligeEscalation/WindowsPersistence.html">Windows Persistence</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Tools/PriveligeEscalation/Powerup.html">Powerup</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Tools/BurpSuite/Burp.html">Burp Suite</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Tools/BurpSuite/BurpRepeater.html">Burp Suite - Repeater</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tools/BurpSuite/BurpIntruder.html">Burp Suite - Intruder</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Tools/Programs/MyPrograms.html">My Programs</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Tools/Programs/WebBruteForce.html">Web Brute Force Program</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tools/Programs/FileDownloader.html">File Downloader</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Tools/SysInternals/SysInternals.html">SysInternals</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Tools/SysInternals/File_and_Disk.html">File and Disk Tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tools/SysInternals/ProcessUtils.html">Process Utilities</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tools/SysInternals/Misc.html">Misc Tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tools/SysInternals/Sysmon.html">Sysmon</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Tools/BlueTeam/BlueTeam.html">Blue Team</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Tools/BlueTeam/WindowsEventViewer.html">Event Viewer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tools/BlueTeam/Splunk.html">Splunk</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tools/BlueTeam/OpenVAS.html">OpenVAS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tools/BlueTeam/Nessus.html">Nessus</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tools/BlueTeam/MalwareAnalysis/oleid.html">Oletools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tools/BlueTeam/MS365Encryption.html">Microsoft 365 Encryption</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tools/BlueTeam/Snort.html">Snort</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../Tools/BlueTeam/KQL.html">Kusto Query Language (KQL)</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Tools/BlueTeam/KQL/Detective_S1_C0.html">Kusto Detective Agency Season 1 (Challenge 0)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tools/BlueTeam/KQL/Detective_S1_C1.html">Kusto Detective Agency Season 1 (Challenge 1)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tools/BlueTeam/KQL/Detective_S1_C2.html">Kusto Detective Agency Season 1 (Challenge 2)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tools/BlueTeam/KQL/Detective_S1_C4.html">Kusto Detective Agency Season 1 (Challenge 4)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tools/BlueTeam/KQL/Detective_S1_C5.html">Kusto Detective Agency Season 1 (Challenge 5)</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../Tools/BlueTeam/MS_Purview/Purview.html">Microsoft Purview</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Tools/BlueTeam/MS_Purview/InformationProtectionScanner.html">Information Protection Scanner</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tools/BlueTeam/MS_Purview/IntegrationRuntime.html">Integration Runtime</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tools/BlueTeam/MS_Purview/CompliancePortal.html">Compliance Portal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tools/BlueTeam/MS_Purview/SensitivityLabels.html">Sensitivity Labels</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/Wireshark/Wireshark.html">Wireshark</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/Nmap.html">Nmap</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/Nping.html">Nping</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Tools/Metasploit.html">Metasploit Framework</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Tools/Msfvenom.html">Msfvenom</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tools/SearchSploit.html">Searchsploit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Tools/Armitage.html">Armitage</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/CyberChef.html">Cyberchef</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/NFS.html">NFS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/John.html">John The Ripper</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/Netcat.html">Netcat</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/GoBuster.html">Gobuster</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/Wfuzz.html">WFUZZ</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/Nikto.html">Nikto</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/HashCat.html">Hashcat</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/HashID.html">HashID</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/Hydra.html">Hydra</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/TCPDump.html">TCPDump</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/Ettercap.html">Ettercap &amp; Bettercap</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/Impacket.html">Impacket</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/BloodHound.html">BloodHound</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/Kerbrute.html">Kerbrute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/Rubeus.html">Rubeus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/Evil-WinRM.html">Evil-WinRM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/Binwalk.html">Binwalk</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/Yara.html">Yara</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/ReverseEngineering.html">Reverse Engineering</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/Mimikatz.html">MimiKatz</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/Recon-ng.html">Recon-ng</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/Maltego.html">Maltego</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/OSquery.html">OS Query</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/SocialEngineeringToolkit.html">Social Engineering Toolkit (SET)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/PowerShell.html">PowerShell</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Tools/grep.html">Grep</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Hacker Craft</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Craft/MITRE/MITRE.html">Mitre</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Craft/MITRE/MITRE_ATT%26CK.html">Mitre ATT&amp;CK</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Craft/MITRE/MITRE_CAR.html">MITRE CARs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Craft/MITRE/MITRE_Defend.html">MITRE Defend</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Craft/MITRE/MITRE_Engage.html">MITRE Engage</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Craft/TheBasics/TheBasics.html">The Basics</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Craft/TheBasics/Threats.html">Threats</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Craft/TheBasics/Attacks.html">Attacks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Craft/TheBasics/Vulnerabilities.html">Vulnerabilities</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/Frameworks.html">Frameworks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/TheOSIModel.html">The OSI Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/OWASP10.html">OWASP Top 10 - 2021</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/LinuxFun.html">Linux Fun</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/WindowsFun.html">Windows ‘Fun’ Stuff</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/WindowsAD.html">Windows Active Directory</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/Kerberos.html">Kerberos Attacks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/SQLinjection.html">SQL Injection</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/ssh.html">SSH</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/XSS.html">XSS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/LFI.html">LFI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/UploadVulns.html">Upload Vulnerabilities</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/DHCP.html">DHCP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/DNS.html">DNS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/ShellStabalise.html">Stabilizing a shell</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/FileTransfer.html">File Transfer to Machines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/Telnet.html">Telnet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/HTTP.html">HTTP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/FTP.html">FTP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/EmailProtocol.html">Email Protocols</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/Steganography.html">Steganography</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/Kali.html">Kali</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/CiscoProgramming.html">Cisco Programming</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/Passwords.html">Passwords</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/RequestForgery.html">Request Forgeries</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Craft/ThreatIntelligence.html">Threat Intelligence</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Cyber Killchain</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../KillChain/Killchain_Overview.html">Killchain Overview</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../KillChain/Killchain_InfoGathering.html">Killchain - Info Gathering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../KillChain/Killchain_Weaponization.html">Killchain - Weaponization</a></li>
 </ul>
 </li>
 </ul>
@@ -344,6 +326,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="HomeLab.html">HomeLab</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Building Snort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BuildingSplunk.html">Building Splunk</a></li>
 <li class="toctree-l1"><a class="reference internal" href="OpenKylin.html">OpenKylin</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Non Hacking Notes</span></p>
@@ -499,7 +482,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-ubuntu-box">Building the Ubuntu Box</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#promiscous-switch">Promiscous Switch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#promiscuous-switch">Promiscuous Switch</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-docker">Building Docker</a><ul class="nav section-nav flex-column">
@@ -527,6 +510,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#return-of-the-traffic-capture">Return of the Traffic Capture</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#traffic-capture-the-third">Traffic Capture the Third</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rules">Rules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#snort-on-ubuntu">Snort On Ubuntu</a></li>
 </ul>
             </nav>
         </div>
@@ -549,23 +533,30 @@ document.write(`
 <li><p>Installing SnortV3</p></li>
 <li><p>I will test with Wireshark and Metaspoit to confirm operation</p></li>
 </ul>
-<p>If you want to build from source: <a class="reference external" href="https://shape.host/resources/how-to-install-and-configure-snort-3-intrusion-detection-system-on-ubuntu-22-04">https://shape.host/resources/how-to-install-and-configure-snort-3-intrusion-detection-system-on-ubuntu-22-04</a><br></p>
-<p>Full disclosure. Before going down this path I had never used containers before. I’m recording what works for me but it’s entirely possible (probable) there is a better or more efficent way of achieving this build. I’ll update as I know more but this is where I am now.</p>
-<hr><section id="building-the-ubuntu-box">
+<p>If you want to build f</p>
+<ul class="simple">
+<li><p>Use this for installing the dependencies: rom source: <a class="reference external" href="https://shape.host/resources/how-to-install-and-configure-snort-3-intrusion-detection-system-on-ubun">https://shape.host/resources/how-to-install-and-configure-snort-3-intrusion-detection-system-on-ubun</a></p></li>
+<li><p>Use this for installing snort: <a class="reference external" href="https://docs.snort.org/start/installation">https://docs.snort.org/start/installation</a><br></p></li>
+<li><p>For Snort2: It’s actually in the apt respositories too, sudo apt install snort.tu-22-04<br></p></li>
+</ul>
+<p>Full disclosure. Before going down this path I had never used containers before. I’m recording what works for me but it’s entirely possible (probable) there is a better or more efficient way of achieving this build. I’ll update as I know more but this is where I am now.</p>
+<hr>
+<section id="building-the-ubuntu-box">
 <h2>Building the Ubuntu Box<a class="headerlink" href="#building-the-ubuntu-box" title="Permalink to this heading">#</a></h2>
 <p>For this lab, I’m building a Docker Box on Ubuntu. Technically you can run multiple solutions on Docker, but I’m still old when it comes to separation of services. Besides, we’ll be doing things to the network &amp; Docker that are really bad practice.</p>
-<p>I’m building a VM with 2xCPU, 4GB RAM and 32GB Storage. As always I have thin provisioned my VMs as I normally overprovision for the VM requirements. A key section here is that I’ve allocated the NIC to my INTERNAL network. This INTERNAL is internal to the virtual enviroment and isolated from my EXTERNAL home network via the pfSense router. Don’t want those two things mixing…</p>
+<p>I’m building a VM with 2xCPU, 4GB RAM and 32GB Storage. As always I have thin provisioned my VMs as I normally overprovision for the VM requirements. A key section here is that I’ve allocated the NIC to my INTERNAL network. This INTERNAL is internal to the virtual environment and isolated from my EXTERNAL home network via the pfSense router. Don’t want those two things mixing…</p>
 <p><img alt="Snort_VMspecs.png" src="../_images/Snort_VMspecs.png" /></p>
 <p>For the OS install, just follow the defaults (I’ll go through from a minimal installation). Remember to store your passwords in a password manager :-). While you’re waiting for the wheels to spin, we need to make a change to the virtual network.</p>
-<section id="promiscous-switch">
-<h3>Promiscous Switch<a class="headerlink" href="#promiscous-switch" title="Permalink to this heading">#</a></h3>
-<p>While I’m sure you know this, for packet sniffing to run, we need to recieve the packets. Who would have thought. The problem with this is that virtual switches, well, switch traffic between specific ports. Data between 2 VMs on the same virtual switch is sent between just those two VMs; our sniffer gets left out of the conversation. To bypass this, we need to tell the vSwitch to send data to everyone on the vSwitch (functionally turning the switch into a hub). Most NICs will just drop the traffic they recieve as it’s not for their MAC, however our sniffer will also be configured to pick this up. If this sounds excessive, you are correct, in a large vSwitch you will end up with data everywhere, bad practice.
+<section id="promiscuous-switch">
+<h3>Promiscuous Switch<a class="headerlink" href="#promiscuous-switch" title="Permalink to this heading">#</a></h3>
+<p>While I’m sure you know this, for packet sniffing to run, we need to receive the packets. Who would have thought. The problem with this is that virtual switches, well, switch traffic between specific ports. Data between 2 VMs on the same virtual switch is sent between just those two VMs; our sniffer gets left out of the conversation. To bypass this, we need to tell the vSwitch to send data to everyone on the vSwitch (functionally turning the switch into a hub). Most NICs will just drop the traffic they receive as it’s not for their MAC, however our sniffer will also be configured to pick this up. If this sounds excessive, you are correct, in a large vSwitch you will end up with data everywhere, bad practice.
 Instead we can assign this mode to the Port Group; Internal as you saw earlier.<br></p>
 <p><img alt="Snort_PortGroup.png" src="../_images/Snort_PortGroup.png" /><br></p>
-<p>You can then set Promiscous mode under security.<br>
+<p>You can then set Promiscuous mode under security.<br>
 <img alt="Snort_PortGroupPromiscous.png" src="../_images/Snort_PortGroupPromiscous.png" /><br></p>
 <p>Now all we need to do is wait for the VM to finish building…..</p>
-<hr></section>
+<hr>
+</section>
 </section>
 <section id="building-docker">
 <h2>Building Docker<a class="headerlink" href="#building-docker" title="Permalink to this heading">#</a></h2>
@@ -574,7 +565,7 @@ Instead we can assign this mode to the Port Group; Internal as you saw earlier.<
 <li><p>If there are any updates, run them (you’ll be prompted)</p></li>
 <li><p>Let Firefox install</p></li>
 </ul>
-<p>We also need to ensure virtualisation is available to docker. Basically allowing the VM to host VMs itself. This technology is known by different names depending on your host CPU (Intel V-T or AMD ….). Fortunately for us, it’s the same thing to VMware. Shut down your VM then edit it’s settings.<br></p>
+<p>We also need to ensure virtualisation is available to docker. Basically, allowing the VM to host VMs itself. This technology is known by different names depending on your host CPU (Intel V-T or AMD ….). Fortunately for us, it’s the same thing to VMware. Shut down your VM then edit it’s settings.<br></p>
 <p>Check the ‘Hardware Virtualisation’ checkbox then save and start your VM back up.</p>
 <p><img alt="Snort_CPUflag.png" src="../_images/Snort_CPUflag.png" /><br></p>
 <section id="install">
@@ -584,11 +575,11 @@ Instead we can assign this mode to the Port Group; Internal as you saw earlier.<
 <li><p>here: <a class="reference external" href="https://docs.docker.com/desktop/install/linux-install/">https://docs.docker.com/desktop/install/linux-install/</a></p></li>
 <li><p>and here: <a class="reference external" href="https://docs.docker.com/desktop/install/linux-install/">https://docs.docker.com/desktop/install/linux-install/</a></p></li>
 </ul>
-<p>On your Host machine, download the .deb package and open the download location. Right click in the window and select “Open in Terminal”. We’ll do pretty much everything from the terminal because thats how things are done in linux.<br>
+<p>On your Host machine, download the .deb package and open the download location. Right click in the window and select “Open in Terminal”. We’ll do pretty much everything from the terminal because that’s how things are done in linux.<br>
 <img alt="Snort_deb.png" src="../_images/Snort_deb.png" /><br></p>
 <p>Add the package repository, the script can be found on the engine page: <a class="reference external" href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository</a><br>
 Make sure you run step 1 only, the first blob of text. Just copy the blob and right click the terminal to paste it to the terminal. Hit enter to run and accept the install.</p>
-<p>Next we run an update to make sure we pull the latest details from the repositories.<br>
+<p>Next we run an update to make sure we pull the latest details from the repositories. <br>
 <img alt="Snort_AptUpdate.png" src="../_images/Snort_AptUpdate.png" /><br></p>
 <p>Then install the deb package we just downloaded. Tab complete will help you here instead of typing it in…<br>
 <img alt="Snort_DockerInstalldeb.png" src="../_images/Snort_DockerInstalldeb.png" /><br></p>
@@ -606,7 +597,8 @@ Start the service:</p>
 <blockquote>
 <div><p>systemctl –user enable docker-desktop</p>
 </div></blockquote>
-<hr></section>
+<hr>
+</section>
 </section>
 <section id="install-snort3-container">
 <h2>Install Snort3 Container<a class="headerlink" href="#install-snort3-container" title="Permalink to this heading">#</a></h2>
@@ -640,7 +632,7 @@ Start the service:</p>
 <blockquote>
 <div><p>sudo apt-get install wireshark</p>
 </div></blockquote>
-<p>I allow non-root users to capture for wireshark. We’re far enough back in the network that I’m not too worried about this. We’ve also got the whole port group permiscuous, so if someone was going to sniff traffic they would do it elsewhere.</p>
+<p>I allow non-root users to capture for wireshark. We’re far enough back in the network that I’m not too worried about this. We’ve also got the whole port group promiscuous, so if someone was going to sniff traffic they would do it elsewhere.</p>
 </section>
 </section>
 <section id="background">
@@ -648,16 +640,16 @@ Start the service:</p>
 <p>Before we get into this test, I think it makes sense to understand what we are testing and why. I’m using this diagram in Layer3, however it’s actually in Layer 2. We’ll be using IPs for the test so i think this makes it clearer. Just FYI for those who care.<br>
 Functionally, our local network looks like this. We have a few VMs that share a single virtual switch.<br>
 <img alt="Snort_TestingNetwork.png" src="../_images/Snort_TestingNetwork.png" /><br></p>
-<p>When traffic is sent between devices, a switch only sends the data to the intended target. For example, traffic from our kalibox to the Domain Controller will go from the Kalibox, to the switch, then the switch to the Domain Controller. No other devices even get the data on the network. This is known as a Unicast on the network, as only one devices recieves the data. This is great for traffic managmenet and security, as only the intended device (and the switch) recieves the data. This is the default setup for a vSwitch (and inherited by the port group).<br>
+<p>When traffic is sent between devices, a switch only sends the data to the intended target. For example, traffic from our Kali box to the Domain Controller will go from the Kali box, to the switch, then the switch to the Domain Controller. No other devices even get the data on the network. This is known as a Unicast on the network, as only one devices receives the data. This is great for traffic management and security, as only the intended device (and the switch) receives the data. This is the default setup for a vSwitch (and inherited by the port group).<br>
 <img alt="Snort_TestingUnicast.png" src="../_images/Snort_TestingUnicast.png" /><br></p>
-<p>This is great, except for one glaring problem. How would our IDS monitor traffic it doesn’t recieve? We can’t monitor data we don’t have. The “Permiscouous” mode we set earlier changes this operation on the internal port group. Instead of the data only going to the intended target in the switch, it is sent to all devices in the port group. The NIC then blocks or processes the packet, depending on it’s configuration. <br>
+<p>This is great, except for one glaring problem. How would our IDS monitor traffic it doesn’t receive? We can’t monitor data we don’t have. The “Promiscuous” mode we set earlier changes this operation on the internal port group. Instead of the data only going to the intended target in the switch, it is sent to all devices in the port group. The NIC then blocks or processes the packet, depending on it’s configuration. <br>
 <img alt="Snort_Testing_PermiscousSwitch.png" src="../_images/Snort_Testing_PermiscousSwitch.png" /><br></p>
 <p>We’re getting closer, but in order for our applications to recieve the data, we also need our local NIC to be set permiscous. While the switch may send us the packet, our device won’t process it unless the NIC is also set to recieve all packets, even those not destined for it.<br>
 <img alt="Snort_NICdiagram.png" src="../_images/Snort_NICdiagram.png" /><br></p>
 <p>Make sense? OK let’s get started.</p>
 <section id="testing-data">
 <h3>Testing Data<a class="headerlink" href="#testing-data" title="Permalink to this heading">#</a></h3>
-<p>To launch wireshark, just run wireshark in the terminal. You need sudo to pick up the NICS</p>
+<p>To launch wireshark, just run wireshark in the terminal. You need sudo to pick up the NICs</p>
 <blockquote>
 <div><p>sudo wireshark</p>
 </div></blockquote>
@@ -665,14 +657,15 @@ Functionally, our local network looks like this. We have a few VMs that share a 
 <img alt="Snort_WiresharkAdapter.png" src="../_images/Snort_WiresharkAdapter.png" /><br></p>
 <p>The capture starts automatically, lets stop this for now.<br>
 <img alt="Snort_StopRecording.png" src="../_images/Snort_StopRecording.png" /><br></p>
-<p>You should see some traffic captured already. If not, make sure you have the correct adaptor connected. Lets simulate some traffic for capture. Really it can be anything, but I like to be as close to realistic as possible, so lets simulate a port scan. For this I jump into my kali box and run a very loud -A scan. This scan is from .12 to .201. Start your caputure again by clicking the blue shark fin next to the ‘stop’ above, ignore your changes from before then run the scan. You can stop the scan and then wireshark after a few seconds.</p>
+<p>You should see some traffic captured already. If not, make sure you have the correct adaptor connected. Lets simulate some traffic for capture. Really it can be anything, but I like to be as close to realistic as possible, so lets simulate a port scan. For this I jump into my kali box and run a very loud -A scan. This scan is from .12 to .201. Start your capture again by clicking the blue shark fin next to the ‘stop’ above, ignore your changes from before then run the scan. You can stop the scan and then wireshark after a few seconds.</p>
 <blockquote>
 <div><p>sudo nmap -sV 10.0.0.201 -A -v</p>
 </div></blockquote>
 <p>Reviewing our captured data, we can see plenty of data hitting our Snort box, even though the neither the source or destination match our IP. <br>
 <img alt="Snort_WiresharkCapture.png" src="../_images/Snort_WiresharkCapture.png" /><br></p>
-<p>From this, we can logically assume that data is getting to our VM. Any future issues with recieving data on the Snort Container should focus on the container or OS, not the underlying network.</p>
-<hr></section>
+<p>From this, we can logically assume that data is getting to our VM. Any future issues with receiving data on the Snort Container should focus on the container or OS, not the underlying network.</p>
+<hr>
+</section>
 </section>
 <section id="traffic-capture-nic">
 <h2>Traffic Capture - NIC<a class="headerlink" href="#traffic-capture-nic" title="Permalink to this heading">#</a></h2>
@@ -683,13 +676,13 @@ Functionally, our local network looks like this. We have a few VMs that share a 
 <div><p>ip link show | grep “state UP” <br></p>
 </div></blockquote>
 <p><img alt="Snort_LinkState.png" src="../_images/Snort_LinkState.png" /><br></p>
-<p>this will give us the NIC to capture traffic on. eth0 in this case. To capture traffic it SHOULD be as easy as telling Snort to listen on the interface<br></p>
+<p>this will give us the NIC to capture traffic on. eth0 in this case. To capture traffic, it SHOULD be as easy as telling Snort to listen on the interface<br></p>
 <blockquote>
 <div><p>snort -i eth0<br></p>
 </div></blockquote>
 <p>As you’ve probably guessed by my outraged line above, this isn’t the case. If you run the above it will say you’re not permitted to run the command.<br>
 <img alt="Snort_OperationNotPermitted.png" src="../_images/Snort_OperationNotPermitted.png" /><br></p>
-<p>This is because you need to be root to listen on an interface in permiscous mode. Snorty is not that… You also can’t swap to root unless you know the password. I haven’t been able to find this so option 2…</p>
+<p>This is because you need to be root to listen on an interface in promiscuous mode. Snorty is not that… You also can’t swap to root unless you know the password. I haven’t been able to find this so option 2…</p>
 </section>
 <section id="how-it-is">
 <h3>How it is<a class="headerlink" href="#how-it-is" title="Permalink to this heading">#</a></h3>
@@ -697,7 +690,7 @@ Functionally, our local network looks like this. We have a few VMs that share a 
 <blockquote>
 <div><p>docker exec -it -u root snort3 bash<br></p>
 </div></blockquote>
-<p>This will drop you in as the root user. Handy. Unfortunately you dont have the paths linked as root so you will need to run snort from the folder.<br></p>
+<p>This will drop you in as the root user. Handy. Unfortunately you don’t have the paths linked as root so you will need to run snort from the folder.<br></p>
 <blockquote>
 <div><p>cd /home/snorty/snort3/bin<br></p>
 </div></blockquote>
@@ -706,16 +699,17 @@ Functionally, our local network looks like this. We have a few VMs that share a 
 <div><p>./snort<br></p>
 </div></blockquote>
 <p><img alt="Snort_AsRoot.png" src="../_images/Snort_AsRoot.png" /><br></p>
-<p>So, now what? Well we are listening but don’t know what for. Time to get your ThreatIntel on!</p>
-<hr></section>
+<p>So, now what? Well we are listening but don’t know what  for. Time to get your ThreatIntel on!</p>
+<hr>
+</section>
 </section>
 <section id="return-of-the-traffic-capture">
 <h2>Return of the Traffic Capture<a class="headerlink" href="#return-of-the-traffic-capture" title="Permalink to this heading">#</a></h2>
 <p>So, let’s dive into our NIC on the container now. First, check the current state of the NIC<br>
 <img alt="Snort_DefaultState.png" src="../_images/Snort_DefaultState.png" /><br></p>
-<p>Well theres your problem. The VM is set promiscuous, but the container isn’t…. We can set the NIC promiscuous using the below.<br>
+<p>Well there’s your problem. The VM is set promiscuous, but the container isn’t…. We can set the NIC promiscuous using the below. <br>
 <img alt="Snort_SetContainerPromisc.png" src="../_images/Snort_SetContainerPromisc.png" /><br></p>
-<p>OK… I guess we can’t. A quick google search tells you the RTNETLINK not permitted is because of container security. You’re not supposed to be able to change the NIC settings from within a container. It makes sense to prevent containers being escaped, but right now it’s kind of annoying. The correct action is to change the docker-config file, but we only have the final image - not the original code. So, what can we do? Fortunately we can override this when running the container. This is a good time to remember that ‘running’ a container is where we create a container from an image. We’re about to lose all our data from the old container: hope you’re smarter than me and havent done too much with it yet.</p>
+<p>OK… I guess we can’t. A quick google search tells you the RTNETLINK not permitted is because of container security. You’re not supposed to be able to change the NIC settings from within a container. It makes sense to prevent containers being escaped, but right now it’s kind of annoying. The correct action is to change the docker-config file, but we only have the final image - not the original code. So, what can we do? Fortunately, we can override this when running the container. This is a good time to remember that ‘running’ a container is where we create a container from an image. We’re about to lose all our data from the old container: hope you’re smarter than me and haven’t done too much with it yet.</p>
 <p>Exit the container<br></p>
 <blockquote>
 <div><p>exit<br></p>
@@ -746,12 +740,12 @@ docker remove snort3<br></p>
 <img alt="Snort_HostNetwork.png" src="../_images/Snort_HostNetwork.png" /><br></p>
 <p>Then we can try our capture again. 3rd time’s the charm…<br>
 <img alt="Snort_FirstCaptured.png" src="../_images/Snort_FirstCaptured.png" /><br></p>
-<p>Woohoo!! I’m actually running a ping across the network for other devices on the switch, so some traffic is expected. Is it capturing for this chain or my actual host? Who knows? Lets find out….</p>
+<p>Woohoo!! I’m actually running a ping across the network for other devices on the switch, so some traffic is expected. Is it capturing for this chain or my actual host? Who knows? Let’s find out….</p>
 <hr></section>
 <section id="rules">
 <h2>Rules<a class="headerlink" href="#rules" title="Permalink to this heading">#</a></h2>
-<p>One of the strengths of Snort is it’s wide adoption across the world. There are the ‘premium’ detection rules (which require a subscription), or the community generated rules; which are 30 days delayed. I think the community can write rules here too, don’t quote me on that.</p>
-<p>The rules can be pulled from the Snort downloads page &amp; coppied to your container. I just pulled them using wget (after installing it) to my /tmp folder.</p>
+<p>One of the strengths of Snort is its wide adoption across the world. There are the ‘premium’ detection rules (which require a subscription), or the community generated rules; which are 30 days delayed. I think the community can write rules here too, don’t quote me on that.</p>
+<p>The rules can be pulled from the Snort downloads page &amp; copied to your container. I just pulled them using wget (after installing it) to my /tmp folder.</p>
 <p>First install wget (it’s not included in the standard container)<br>
 <img alt="Snort_InstallWget.png" src="../_images/Snort_InstallWget.png" /><br></p>
 <p>Try and get the current rule set from Snort downloads.<br>
@@ -766,9 +760,14 @@ docker remove snort3<br></p>
 <img alt="Snort_FoundRules.png" src="../_images/Snort_FoundRules.png" /><br></p>
 <p>For those of you playing along at home, you can start a sniff with this ruleset by running the below.<br>
 <img alt="Snort_StartCapture.png" src="../_images/Snort_StartCapture.png" /><br></p>
-<p>From here, I have dropped the rule set in the same directory as the snort binary, so you’ll see it here from now on. The default location (if you dont set any rules) is in the home/snorty/snort3/etc/rules folder. I’m explicitly defining at this stage, but you may not want to bother</p>
+<p>From here, I have dropped the rule set in the same directory as the snort binary, so you’ll see it here from now on. The default location (if you don’t set any rules) is in the home/snorty/snort3/etc/rules folder. I’m explicitly defining at this stage, but you may not want to bother</p>
 <p>WIP, getting through the ‘container’ wall has been fun…</p>
-<hr></section>
+<hr>
+</section>
+<section id="snort-on-ubuntu">
+<h2>Snort On Ubuntu<a class="headerlink" href="#snort-on-ubuntu" title="Permalink to this heading">#</a></h2>
+<p><img alt="Snort_StartOnUbuntu.png" src="../_images/Snort_StartOnUbuntu.png" /></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -812,11 +811,11 @@ docker remove snort3<br></p>
       </div>
     </a>
     <a class="right-next"
-       href="OpenKylin.html"
+       href="BuildingSplunk.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">OpenKylin</p>
+        <p class="prev-next-title">Building Splunk</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -839,7 +838,7 @@ docker remove snort3<br></p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-ubuntu-box">Building the Ubuntu Box</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#promiscous-switch">Promiscous Switch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#promiscuous-switch">Promiscuous Switch</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-docker">Building Docker</a><ul class="nav section-nav flex-column">
@@ -867,6 +866,7 @@ docker remove snort3<br></p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#return-of-the-traffic-capture">Return of the Traffic Capture</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#traffic-capture-the-third">Traffic Capture the Third</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rules">Rules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#snort-on-ubuntu">Snort On Ubuntu</a></li>
 </ul>
   </nav></div>
 
