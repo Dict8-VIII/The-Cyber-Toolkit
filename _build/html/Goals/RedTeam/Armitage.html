@@ -166,6 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../DFIR/DFIR_Home.html">Digital Forensics and Incident Response</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../DFIR/KAPE.html">KAPE - Kroll Artifact Parser and Extractor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DFIR/Volatility.html">Volatility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../DFIR/WindowsEventViewer.html">Event Viewer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../DFIR/WindowsProcesses.html">Windows Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../DFIR/WindowsRegistry.html">Windows Registry</a></li>
@@ -204,14 +205,17 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../General/NFS.html">NFS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../General/OWASP10.html">OWASP Top 10 - 2021</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../General/Passwords.html">Passwords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../General/PowerShell.html">PowerShell</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../General/SSH.html">SSH</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../General/Telnet.html">Telnet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../General/TheOSIModel.html">The OSI Model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../General/UploadVulns.html">Upload Vulnerabilities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../General/WindowsAD.html">Windows Active Directory</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../General/Frameworks/Frameworks_Home.html">Frameworks</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../General/Frameworks/MITRE_Home.html">Mitre</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../General/Frameworks/MITRE_ATT%26CK.html">Mitre ATT&amp;CK</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../General/Frameworks/MITRE_CAR.html">MITRE CARs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../General/Frameworks/MITRE_Defend.html">MITRE Defend</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../General/Frameworks/MITRE_Engage.html">MITRE Engage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../General/Frameworks/Killchain_Home.html">Killchain Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../General/Frameworks/Killchain_InfoGathering.html">Killchain - Info Gathering</a></li>
@@ -510,10 +514,10 @@ document.write(`
 <div><p>git clone <a class="gitlab reference external" href="https://gitlab.com/kalilinux/packages/armitage.git">kalilinux/packages/armitage.git</a> &amp;&amp; cd armitage <br>
 bash <a class="reference external" href="http://package.sh">package.sh</a></p>
 </div></blockquote>
-<p><img alt="Armitage_Clone.png" src="Goals/images/Tools/Armitage_Clone.png" /><br>
-<img alt="Armitage_Build.png" src="Goals/images/Tools/Armitage_Build.png" /><br></p>
+<p><img alt="Armitage_Clone.png" src="../../_images/Armitage_Clone.png" /><br>
+<img alt="Armitage_Build.png" src="../../_images/Armitage_Build.png" /><br></p>
 <p>Files should now be in ./release/unix/<br>
-<img alt="Armitage_Built.png" src="Goals/images/Tools/Armitage_Built.png" /><br></p>
+<img alt="Armitage_Built.png" src="../../_images/Armitage_Built.png" /><br></p>
 <p>The fun files here are:</p>
 <ul class="simple">
 <li><p>TeamServer: Creates a server for the team to use. It must be passed<br></p>
@@ -567,31 +571,31 @@ same with teamserver</p>
 </ul>
 </li>
 </ul>
-<p><img alt="Armitage_Connect.png" src="Goals/images/Tools/Armitage_Connect.png" /><br></p>
+<p><img alt="Armitage_Connect.png" src="../../_images/Armitage_Connect.png" /><br></p>
 <hr>
 </section>
 <section id="make-it-do-fun-things">
 <h2>Make It Do Fun Things<a class="headerlink" href="#make-it-do-fun-things" title="Permalink to this heading">#</a></h2>
 <section id="start-a-scan">
 <h3>Start a Scan<a class="headerlink" href="#start-a-scan" title="Permalink to this heading">#</a></h3>
-<p><img alt="Armitage_StartScan.png" src="Goals/images/Tools/Armitage_StartScan.png" /><br></p>
+<p><img alt="Armitage_StartScan.png" src="../../_images/Armitage_StartScan.png" /><br></p>
 <p>You’ll get a window for a target, can do an IP or a subnet. Quick or OS detection doesnt give the -vv option though….<br>
 I did “10.10.247.213”<br>
 After a while, the scan completes and I get a new host on my display<br></p>
-<p><img alt="Armitage_NewHost.png" src="Goals/images/Tools/Armitage_NewHost.png" /><br></p>
+<p><img alt="Armitage_NewHost.png" src="../../_images/Armitage_NewHost.png" /><br></p>
 </section>
 <section id="run-exploits">
 <h3>Run Exploits<a class="headerlink" href="#run-exploits" title="Permalink to this heading">#</a></h3>
 <p>You can now open exploits and pick your attack. Drag drop the attack to the host and you can now set your arguments and let it run<br>
-<img alt="Armitage_StartEternalBlue.png" src="Goals/images/Tools/Armitage_StartEternalBlue.png" /><br></p>
+<img alt="Armitage_StartEternalBlue.png" src="../../_images/Armitage_StartEternalBlue.png" /><br></p>
 <p>If it works, it gets all Thor-d<br>
-<img alt="Armitage_exploited.png" src="Goals/images/Tools/Armitage_exploited.png" /><br></p>
+<img alt="Armitage_exploited.png" src="../../_images/Armitage_exploited.png" /><br></p>
 </section>
 <section id="run-post-modules">
 <h3>Run POST modules<a class="headerlink" href="#run-post-modules" title="Permalink to this heading">#</a></h3>
 <p>You can then right click and take control of the shell<br>
 Most of the time, you will want to excalate this to a meterpreter shell. Right click the host and select your shell, then Post. It will expand your tree to show the post modules. Under manager is the shell_to_meterpreter module. Run it and will attempt to create a second shell for meterpreter.<br>
-<img alt="Armitage_Meterpreter.png" src="Goals/images/Tools/Armitage_Meterpreter.png" /><br></p>
+<img alt="Armitage_Meterpreter.png" src="../../_images/Armitage_Meterpreter.png" /><br></p>
 <hr></section>
 </section>
 </section>

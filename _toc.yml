@@ -42,7 +42,7 @@ parts:
       - file: Goals/General/NFS
       - file: Goals/General/OWASP10
       - file: Goals/General/Passwords
-      - file: Goals/General/Powershell
+      - file: Goals/General/PowerShell
       - file: Goals/General/SSH
       - file: Goals/General/Telnet
       - file: Goals/General/TheOSIModel

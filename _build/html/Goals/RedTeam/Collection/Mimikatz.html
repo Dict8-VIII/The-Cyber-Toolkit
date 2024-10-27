@@ -168,6 +168,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../DFIR/DFIR_Home.html">Digital Forensics and Incident Response</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/KAPE.html">KAPE - Kroll Artifact Parser and Extractor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../DFIR/Volatility.html">Volatility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/WindowsEventViewer.html">Event Viewer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/WindowsProcesses.html">Windows Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/WindowsRegistry.html">Windows Registry</a></li>
@@ -206,14 +207,17 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../General/NFS.html">NFS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/OWASP10.html">OWASP Top 10 - 2021</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/Passwords.html">Passwords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/PowerShell.html">PowerShell</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/SSH.html">SSH</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/Telnet.html">Telnet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/TheOSIModel.html">The OSI Model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/UploadVulns.html">Upload Vulnerabilities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/WindowsAD.html">Windows Active Directory</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../General/Frameworks/Frameworks_Home.html">Frameworks</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_Home.html">Mitre</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_ATT%26CK.html">Mitre ATT&amp;CK</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_CAR.html">MITRE CARs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_Defend.html">MITRE Defend</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_Engage.html">MITRE Engage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/Killchain_Home.html">Killchain Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/Killchain_InfoGathering.html">Killchain - Info Gathering</a></li>
@@ -520,7 +524,7 @@ document.write(`
 <h2>Running<a class="headerlink" href="#running" title="Permalink to this heading">#</a></h2>
 <p>From Windows CMD, just run the EXE. This will update your terminal to “mimikat #” and the below commands must be run inside this environment.<br></p>
 <p>If you have installed it from the standard repo, and run this in kali it will print the install directory contents, get the exe on the target, it’s a post exploit tool…<br>
-<img alt="Mimikatz_Install.png" src="Goals/RedTeam/images/Tools/Mimikatz_Install.png" /></p>
+<img alt="Mimikatz_Install.png" src="../../../_images/Mimikatz_Install.png" /></p>
 <hr></section>
 <section id="pass-the-ticket">
 <h2>Pass The Ticket<a class="headerlink" href="#pass-the-ticket" title="Permalink to this heading">#</a></h2>
@@ -566,16 +570,16 @@ document.write(`
 <div><p>lsadump::lsa /inject /name:krbtgt <br>
 lsadump::lsa /inject /name:administratr <br></p>
 </div></blockquote>
-<p><img alt="Mimikatz_DumpedGolden.png" src="Goals/RedTeam/images/Tools/Mimikatz_DumpedGolden.png" /><br></p>
+<p><img alt="Mimikatz_DumpedGolden.png" src="../../../_images/Mimikatz_DumpedGolden.png" /><br></p>
 <p>Next, we pass the data to mimikatz to create the ticket. There are 3 bits of data we need for this.<br>
-<img alt="Mimikatz_DumpedData.png" src="Goals/RedTeam/images/Tools/Mimikatz_DumpedData.png" /><br></p>
+<img alt="Mimikatz_DumpedData.png" src="../../../_images/Mimikatz_DumpedData.png" /><br></p>
 <ol class="arabic simple">
 <li><p>SID - This is the RED box above</p></li>
 <li><p>NTLM - This is the ticket of the ‘user’</p></li>
 <li><p>RID - We’re going to change this to 500 for a golden ticket (or the right level for the silver ticket).</p></li>
 </ol>
 <p>Plug it into the create function and you’ll have a ticket<br></p>
-<p><img alt="Mimikatz_CreateGolden.png" src="Goals/RedTeam/images/Tools/Mimikatz_CreateGolden.png" /><br></p>
+<p><img alt="Mimikatz_CreateGolden.png" src="../../../_images/Mimikatz_CreateGolden.png" /><br></p>
 <section id="how-to-use-it">
 <h3>How to use it?<a class="headerlink" href="#how-to-use-it" title="Permalink to this heading">#</a></h3>
 <p>So, now what? You can use this directly in mimkatz now. The below will launch a cmd terminal using the ticket. Do your thing :-)</p>
@@ -593,7 +597,7 @@ A skeleton key is a ‘quieter’ back door, which runs in memory on a DC. It on
 <div><p>misc::skeleton</p>
 </div></blockquote>
 <p>I know right… So difficult. If this is all OK you can now use the password ‘mimikatz’ for any user in the domain… spooky<br></p>
-<p><img alt="spooky-season-skeleton-dance.gif" src="Goals/RedTeam/images/Generic/spooky-season-skeleton-dance.gif" /><br></p>
+<p><img alt="spooky-season-skeleton-dance.gif" src="../../../_images/spooky-season-skeleton-dance.gif" /><br></p>
 <hr></section>
 </section>
 

@@ -72,6 +72,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Goals/General/Frameworks/MITRE_Home';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Mitre ATT&amp;CK" href="MITRE_ATT%26CK.html" />
+    <link rel="prev" title="Frameworks" href="Frameworks_Home.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -163,9 +165,10 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Goals</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../DFIR/DFIR_Home.html">Digital Forensics and Incident Response</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/KAPE.html">KAPE - Kroll Artifact Parser and Extractor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../DFIR/Volatility.html">Volatility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/WindowsEventViewer.html">Event Viewer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/WindowsProcesses.html">Windows Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/WindowsRegistry.html">Windows Registry</a></li>
@@ -183,7 +186,7 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../General_Home.html">General Education Topics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../General_Home.html">General Education Topics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="../TheBasics/TheBasics_Home.html">The Basics</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../TheBasics/Attacks.html">Attacks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../TheBasics/Threats.html">Threats</a></li>
@@ -204,14 +207,17 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../NFS.html">NFS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../OWASP10.html">OWASP Top 10 - 2021</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Passwords.html">Passwords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PowerShell.html">PowerShell</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../SSH.html">SSH</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Telnet.html">Telnet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../TheOSIModel.html">The OSI Model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../UploadVulns.html">Upload Vulnerabilities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../WindowsAD.html">Windows Active Directory</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="Frameworks_Home.html">Frameworks</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="Frameworks_Home.html">Frameworks</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Mitre</a></li>
 <li class="toctree-l3"><a class="reference internal" href="MITRE_ATT%26CK.html">Mitre ATT&amp;CK</a></li>
 <li class="toctree-l3"><a class="reference internal" href="MITRE_CAR.html">MITRE CARs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MITRE_Defend.html">MITRE Defend</a></li>
 <li class="toctree-l3"><a class="reference internal" href="MITRE_Engage.html">MITRE Engage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Killchain_Home.html">Killchain Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Killchain_InfoGathering.html">Killchain - Info Gathering</a></li>
@@ -525,6 +531,24 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Frameworks_Home.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Frameworks</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="MITRE_ATT%26CK.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Mitre ATT&amp;CK</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>

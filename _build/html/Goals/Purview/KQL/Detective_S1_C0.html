@@ -166,6 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../DFIR/DFIR_Home.html">Digital Forensics and Incident Response</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/KAPE.html">KAPE - Kroll Artifact Parser and Extractor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../DFIR/Volatility.html">Volatility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/WindowsEventViewer.html">Event Viewer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/WindowsProcesses.html">Windows Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/WindowsRegistry.html">Windows Registry</a></li>
@@ -204,14 +205,17 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../General/NFS.html">NFS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/OWASP10.html">OWASP Top 10 - 2021</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/Passwords.html">Passwords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/PowerShell.html">PowerShell</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/SSH.html">SSH</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/Telnet.html">Telnet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/TheOSIModel.html">The OSI Model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/UploadVulns.html">Upload Vulnerabilities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/WindowsAD.html">Windows Active Directory</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../General/Frameworks/Frameworks_Home.html">Frameworks</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_Home.html">Mitre</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_ATT%26CK.html">Mitre ATT&amp;CK</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_CAR.html">MITRE CARs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_Defend.html">MITRE Defend</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_Engage.html">MITRE Engage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/Killchain_Home.html">Killchain Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/Killchain_InfoGathering.html">Killchain - Info Gathering</a></li>
@@ -485,9 +489,9 @@ document.write(`
 <h1>Kusto Detective Agency Season 1 (Challenge 0)<a class="headerlink" href="#kusto-detective-agency-season-1-challenge-0" title="Permalink to this heading">#</a></h1>
 <p>The first challenge is pretty much just getting set up. Follow the instructions as they are given to you until you have the database imported. While this challenge is trivial, take the time to understand what is going on and follow general best practices for investigating the data provided.<br></p>
 <p>We should start by trying to understand the data we are working with. Our table is “Onboarding”, which we can see in the provided script<br>
-<img alt="KDA_S1_C0_import.png" src="images/Tools/BlueTeam/KQL/KDA_S1_C0_import.png" /><br></p>
+<img alt="KDA_S1_C0_import.png" src="../../../_images/KDA_S1_C0_import.png" /><br></p>
 <p>We can also see it in our data explorer view. If you expand the table you will see the columns and their associated types. In this case, it’s very simple. However when approaching any new data you should always take time to understand what you’re working with. One of the worst feelings is spending ages trying to extract data from a table then finding the result is already present in another column.<br>
-<img alt="KDA_S1_C0_columns.png" src="images/Tools/BlueTeam/KQL/KDA_S1_C0_columns.png" /><br></p>
+<img alt="KDA_S1_C0_columns.png" src="../../../_images/KDA_S1_C0_columns.png" /><br></p>
 <p>So, now we know we’ve only got one column, lets take a look at the data. We COULD simply query the entire table<br></p>
 <blockquote>
 <div><p>Onboarding<br></p>
@@ -497,13 +501,13 @@ document.write(`
 <div><p>Onboarding<br>
 | top 100 by Score<br></p>
 </div></blockquote>
-<p><img alt="KDA_S1_C0_top.png" src="images/Tools/BlueTeam/KQL/KDA_S1_C0_top.png" /><br></p>
+<p><img alt="KDA_S1_C0_top.png" src="../../../_images/KDA_S1_C0_top.png" /><br></p>
 <p>So, our data is jus a list of random scores &lt; 10 million. To sum them, we use the summarize command.<br></p>
 <blockquote>
 <div><p>Onboarding<br>
 | summarize sum(Score)<br></p>
 </div></blockquote>
-<p><img alt="KDA_S1_C0_sum.png" src="images/Tools/BlueTeam/KQL/KDA_S1_C0_sum.png" /><br></p>
+<p><img alt="KDA_S1_C0_sum.png" src="../../../_images/KDA_S1_C0_sum.png" /><br></p>
 <p>This will provide you the answer to the first challenge. They get harder, promise :-)</p>
 <hr></section>
 

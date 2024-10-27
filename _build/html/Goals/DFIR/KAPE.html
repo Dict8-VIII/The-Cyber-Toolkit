@@ -72,7 +72,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Goals/DFIR/KAPE';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Event Viewer" href="WindowsEventViewer.html" />
+    <link rel="next" title="Volatility" href="Volatility.html" />
     <link rel="prev" title="Digital Forensics and Incident Response" href="DFIR_Home.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -168,6 +168,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="DFIR_Home.html">Digital Forensics and Incident Response</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">KAPE - Kroll Artifact Parser and Extractor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Volatility.html">Volatility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="WindowsEventViewer.html">Event Viewer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="WindowsProcesses.html">Windows Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="WindowsRegistry.html">Windows Registry</a></li>
@@ -206,14 +207,17 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../General/NFS.html">NFS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../General/OWASP10.html">OWASP Top 10 - 2021</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../General/Passwords.html">Passwords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../General/PowerShell.html">PowerShell</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../General/SSH.html">SSH</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../General/Telnet.html">Telnet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../General/TheOSIModel.html">The OSI Model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../General/UploadVulns.html">Upload Vulnerabilities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../General/WindowsAD.html">Windows Active Directory</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../General/Frameworks/Frameworks_Home.html">Frameworks</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../General/Frameworks/MITRE_Home.html">Mitre</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../General/Frameworks/MITRE_ATT%26CK.html">Mitre ATT&amp;CK</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../General/Frameworks/MITRE_CAR.html">MITRE CARs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../General/Frameworks/MITRE_Defend.html">MITRE Defend</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../General/Frameworks/MITRE_Engage.html">MITRE Engage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../General/Frameworks/Killchain_Home.html">Killchain Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../General/Frameworks/Killchain_InfoGathering.html">Killchain - Info Gathering</a></li>
@@ -482,6 +486,9 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-gui">Using the GUI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-terminal">Using the Terminal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-mode">Batch Mode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-components">Useful Components</a></li>
 </ul>
             </nav>
         </div>
@@ -510,7 +517,35 @@ The second use case is to consolidate the outputs from the target collection to 
 VSCs are volume shadow copies, you can confirm if you want to collect and consolodate from these as well. <br>
 you can also transfer the data to a remote location such as sftp<br></p>
 </div></blockquote>
-</section>
+<hr></section>
+<section id="using-the-terminal">
+<h2>Using the Terminal<a class="headerlink" href="#using-the-terminal" title="Permalink to this heading">#</a></h2>
+<p>As you have seen above, the GUI just launches the terminal anyway, so why not skip the middle man. From the KAPE directory we run kape.exe with the below arguements<br></p>
+<blockquote>
+<div><p>–tsource <target source> : i.e. C:\ <br>
+–tdest <target destination> : i.e. D:\targets <br>
+–tflush : clears the target destination directory <br>
+–target <target name> : The targets to collect i.e. SANS <br>
+–mflush : clears the module directory <br>
+–module <module names> : the modules to run, i.e. EZparser <br></p>
+</div></blockquote>
+<hr></section>
+<section id="batch-mode">
+<h2>Batch Mode<a class="headerlink" href="#batch-mode" title="Permalink to this heading">#</a></h2>
+<p>It’s called batch mode, but really it’s an ‘autorun’ task. This is helpful if you want to perform planned tasks, or delegate to less technical people (or computers). To create a batch file, copy the terminal command to a txt file (without the ./kape.exe) and save it as an _kape.cli file. Leave the file in the root directory of the kape folder. Whenvever the kape exe is run, it will execute the batch files found. You’ll probably want these copying to a network location.</p>
+<hr></section>
+<section id="useful-components">
+<h2>Useful Components<a class="headerlink" href="#useful-components" title="Permalink to this heading">#</a></h2>
+<p>This is just a list of components I’ve found helpful in my journey. Your mileage may vary.<br></p>
+<p>Targets:<br></p>
+<blockquote>
+<div><p>SANS : a collection of registry extractions <br></p>
+</div></blockquote>
+<p>Modules: <br></p>
+<blockquote>
+<div><p>EZparser : creates a collection of .csv files from the target <br></p>
+</div></blockquote>
+<hr></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -554,11 +589,11 @@ you can also transfer the data to a remote location such as sftp<br></p>
       </div>
     </a>
     <a class="right-next"
-       href="WindowsEventViewer.html"
+       href="Volatility.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Event Viewer</p>
+        <p class="prev-next-title">Volatility</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -581,6 +616,9 @@ you can also transfer the data to a remote location such as sftp<br></p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-gui">Using the GUI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-terminal">Using the Terminal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-mode">Batch Mode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-components">Useful Components</a></li>
 </ul>
   </nav></div>
 

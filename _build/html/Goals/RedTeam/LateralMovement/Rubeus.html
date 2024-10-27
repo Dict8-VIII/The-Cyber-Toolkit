@@ -168,6 +168,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../DFIR/DFIR_Home.html">Digital Forensics and Incident Response</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/KAPE.html">KAPE - Kroll Artifact Parser and Extractor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../DFIR/Volatility.html">Volatility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/WindowsEventViewer.html">Event Viewer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/WindowsProcesses.html">Windows Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/WindowsRegistry.html">Windows Registry</a></li>
@@ -206,14 +207,17 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../General/NFS.html">NFS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/OWASP10.html">OWASP Top 10 - 2021</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/Passwords.html">Passwords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/PowerShell.html">PowerShell</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/SSH.html">SSH</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/Telnet.html">Telnet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/TheOSIModel.html">The OSI Model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/UploadVulns.html">Upload Vulnerabilities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/WindowsAD.html">Windows Active Directory</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../General/Frameworks/Frameworks_Home.html">Frameworks</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_Home.html">Mitre</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_ATT%26CK.html">Mitre ATT&amp;CK</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_CAR.html">MITRE CARs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_Defend.html">MITRE Defend</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_Engage.html">MITRE Engage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/Killchain_Home.html">Killchain Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/Killchain_InfoGathering.html">Killchain - Info Gathering</a></li>
@@ -511,7 +515,7 @@ document.write(`
 <h2>Harvesting<a class="headerlink" href="#harvesting" title="Permalink to this heading">#</a></h2>
 <section id="basic">
 <h3>Basic<a class="headerlink" href="#basic" title="Permalink to this heading">#</a></h3>
-<p><img alt="Rubeus_Harvest.png" src="Goals/RedTeam/images/Tools/Rubeus_Harvest.png" /><br></p>
+<p><img alt="Rubeus_Harvest.png" src="../../../_images/Rubeus_Harvest.png" /><br></p>
 <hr>
 </section>
 <section id="for-kerberoasting">
@@ -520,9 +524,9 @@ document.write(`
 <blockquote>
 <div><p>Rubeus.exe kerberoast</p>
 </div></blockquote>
-<p><img alt="Ruebus_kerberoasting.png" src="Goals/RedTeam/images/Tools/Ruebus_kerberoasting.png" /><br></p>
+<p><img alt="Ruebus_kerberoasting.png" src="../../../_images/Ruebus_kerberoasting.png" /><br></p>
 <p>Once you have the hashes dumped, copy to a hash.txt file and crack it against a wordlist using hashcat mode 13100. NOTE: the hash is the entire dumped string, not just the password hash itself (grab everything that is dumped in the ‘Hash” field) <br>
-<img alt="Ruebus_HashcatKerberoast.png" src="Goals/RedTeam/images/Tools/Ruebus_HashcatKerberoast.png" /><br></p>
+<img alt="Ruebus_HashcatKerberoast.png" src="../../../_images/Ruebus_HashcatKerberoast.png" /><br></p>
 <hr>
 </section>
 <section id="for-as-rep-roasting">
@@ -530,9 +534,9 @@ document.write(`
 <blockquote>
 <div><p>Rubeuse asreproast (AS REP ROAST)</p>
 </div></blockquote>
-<p><img alt="Rubeus_ASREP-roast.png" src="Goals/RedTeam/images/Tools/Rubeus_ASREP-roast.png" /><br></p>
+<p><img alt="Rubeus_ASREP-roast.png" src="../../../_images/Rubeus_ASREP-roast.png" /><br></p>
 <p>This time, once you have the hashes dumped you need to modify them so hashcat can do its thing. Add a 23(dollar) after (dollar)krb5asrep(dollar) so that your hash looks something like this<br>
-<img alt="Rubeus_Add23.png" src="Goals/RedTeam/images/Tools/Rubeus_Add23.png" /><br></p>
+<img alt="Rubeus_Add23.png" src="../../../_images/Rubeus_Add23.png" /><br></p>
 <p>You can then attack with mode 18200</p>
 <blockquote>
 <div><p>hashcat 0m 18200 -a 0 hash.txt wordlist.txt –force</p>
@@ -543,7 +547,7 @@ document.write(`
 <h2>Spraying<a class="headerlink" href="#spraying" title="Permalink to this heading">#</a></h2>
 <p>Instead of trying to brute force passwords for a user, you can instead bruteforce users for a specific password. If the password is correct, you get the .kirbi TGT.<br>
 Example from <a class="reference external" href="https://tryhackme.com/room/attackingkerberos">https://tryhackme.com/room/attackingkerberos</a> <br></p>
-<p><img alt="Rubeus_Spray.png" src="Goals/RedTeam/images/Tools/Rubeus_Spray.png" /><br></p>
+<p><img alt="Rubeus_Spray.png" src="../../../_images/Rubeus_Spray.png" /><br></p>
 <hr></section>
 </section>
 

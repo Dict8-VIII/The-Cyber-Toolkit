@@ -168,6 +168,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../DFIR/DFIR_Home.html">Digital Forensics and Incident Response</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/KAPE.html">KAPE - Kroll Artifact Parser and Extractor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../DFIR/Volatility.html">Volatility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/WindowsEventViewer.html">Event Viewer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/WindowsProcesses.html">Windows Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/WindowsRegistry.html">Windows Registry</a></li>
@@ -206,14 +207,17 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../General/NFS.html">NFS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/OWASP10.html">OWASP Top 10 - 2021</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/Passwords.html">Passwords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/PowerShell.html">PowerShell</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/SSH.html">SSH</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/Telnet.html">Telnet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/TheOSIModel.html">The OSI Model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/UploadVulns.html">Upload Vulnerabilities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/WindowsAD.html">Windows Active Directory</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../General/Frameworks/Frameworks_Home.html">Frameworks</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_Home.html">Mitre</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_ATT%26CK.html">Mitre ATT&amp;CK</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_CAR.html">MITRE CARs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_Defend.html">MITRE Defend</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_Engage.html">MITRE Engage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/Killchain_Home.html">Killchain Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/Killchain_InfoGathering.html">Killchain - Info Gathering</a></li>
@@ -515,14 +519,14 @@ document.write(`
 <div><p>Shelves<br>
 | top 1000 by total_weight<br></p>
 </div></blockquote>
-<p><img alt="KDA_S1_C1_shelves.png" src="images/Tools/BlueTeam/KQL/KDA_S1_C1_shelves.png" /><br></p>
+<p><img alt="KDA_S1_C1_shelves.png" src="../../../_images/KDA_S1_C1_shelves.png" /><br></p>
 <p>So we’ve come across our first problem. The rf_ids (the books per shelf) are stored in a list/array. As we will need to look these up in the ‘Books’ table in the near future, we have to separate these out. The mv-expand command can do this for us. <br></p>
 <blockquote>
 <div><p>Shelves<br>
 | top 1000 by total_weight<br>
 | mv-expand rf_ids to typeof(string)<br></p>
 </div></blockquote>
-<p><img alt="KDA_S1_C1_expand.png" src="images/Tools/BlueTeam/KQL/KDA_S1_C1_expand.png" /><br></p>
+<p><img alt="KDA_S1_C1_expand.png" src="Images/Goals/Purview/KDA_S1_C1_expand.png" /><br></p>
 <p>Now, this may look like more data to work with, but it allows us to add the data for each book and then summarise it to find differences in the future. If it’s not making sense, just stick with me for now, it will make sense soon. What we have now is the list of all shelved books, and what shelf they are in. We also have the total weight, but it’s unnecessary data at this point, lets get rid of it for now by only selecting the columns we need.<br></p>
 <blockquote>
 <div><p>Shelves<br>
@@ -542,7 +546,7 @@ document.write(`
 | lookup Books on \<span class="math notranslate nohighlight">\(left.rf_ids==\\\)</span>right.rf_id<br>
 | project shelf, rf_ids, weight_gram<br></p>
 </div></blockquote>
-<p><img alt="KDA_S1_C1_lookup.png" src="images/Tools/BlueTeam/KQL/KDA_S1_C1_lookup.png" /><br></p>
+<p><img alt="KDA_S1_C1_lookup.png" src="../../../_images/KDA_S1_C1_lookup.png" /><br></p>
 <p>With the lookup command, we have introduced the \<span class="math notranslate nohighlight">\(left and \\\)</span>right variables. This is sort of inherited from joins (which we’ll get to later), but to put it simply; Left is what we currently have &amp; Right is what we are adding. In this case, we had our cleaned data (the left) and looked it up in the books table (the right data). We grabbed the rf_ids from the current data, and looked for this value in the right (new) data, then added this to our current data.<br>
 As this brings in the entire found row, I also cleaned up the results to only have the rows we care about (shelf, rf_ids and weight_gram). Honestly we dont need the rf_ids any more but it’s a sanity check for me that we still have multiple books.</p>
 </section>
@@ -558,7 +562,7 @@ As this brings in the entire found row, I also cleaned up the results to only ha
 | project shelf, rf_ids, weight_gram<br>
 | summarize sum(weight_gram) by shelf<br></p>
 </div></blockquote>
-<p><img alt="KDA_S1_C1_summarize.png" src="images/Tools/BlueTeam/KQL/KDA_S1_C1_summarize.png" /><br></p>
+<p><img alt="KDA_S1_C1_summarize.png" src="../../../_images/KDA_S1_C1_summarize.png" /><br></p>
 <p>You’ll remember that in the lookup, we have our ‘current’ data on the left, NOT the original table. With that in mind, we can now lookup the total_weight from the shelves table and compare these to find our mismatch. Again we will use the lookup and then clean up the results. In this case, I’ve also used the project command to calculate a new column which is the difference between the two values.</p>
 <blockquote>
 <div><p>Shelves<br>
@@ -571,7 +575,7 @@ As this brings in the entire found row, I also cleaned up the results to only ha
 | lookup Shelves on \<span class="math notranslate nohighlight">\(left.shelf==\\\)</span>right.shelf<br>
 | project shelf, sum_weight_gram, total_weight, difference = abs(total_weight - sum_weight)<br></p>
 </div></blockquote>
-<p><img alt="KDA_S1_C1_difference.png" src="images/Tools/BlueTeam/KQL/KDA_S1_C1_difference.png" /><br></p>
+<p><img alt="KDA_S1_C1_difference.png" src="../../../_images/KDA_S1_C1_difference.png" /><br></p>
 <p>Lastly, we can sort by the difference to find our ‘sus’ shelf (and remove the all except the top 1000 from our initial setup).<br></p>
 <blockquote>
 <div><p>Shelves<br>
@@ -585,7 +589,7 @@ As this brings in the entire found row, I also cleaned up the results to only ha
 | order by difference<br>
 | top 1000 by difference<br></p>
 </div></blockquote>
-<p><img alt="KDA_S1_C1_result.png" src="images/Tools/BlueTeam/KQL/KDA_S1_C1_result.png" /><br></p>
+<p><img alt="KDA_S1_C1_result.png" src="../../../_images/KDA_S1_C1_result.png" /><br></p>
 <p>Thats a pretty clear result to me.<br></p>
 <hr>
 </section>

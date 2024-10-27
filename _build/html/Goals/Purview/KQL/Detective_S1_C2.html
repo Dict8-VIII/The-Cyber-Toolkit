@@ -166,6 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../DFIR/DFIR_Home.html">Digital Forensics and Incident Response</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/KAPE.html">KAPE - Kroll Artifact Parser and Extractor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../DFIR/Volatility.html">Volatility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/WindowsEventViewer.html">Event Viewer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/WindowsProcesses.html">Windows Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/WindowsRegistry.html">Windows Registry</a></li>
@@ -204,14 +205,17 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../General/NFS.html">NFS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/OWASP10.html">OWASP Top 10 - 2021</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/Passwords.html">Passwords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/PowerShell.html">PowerShell</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/SSH.html">SSH</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/Telnet.html">Telnet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/TheOSIModel.html">The OSI Model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/UploadVulns.html">Upload Vulnerabilities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../General/WindowsAD.html">Windows Active Directory</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../General/Frameworks/Frameworks_Home.html">Frameworks</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_Home.html">Mitre</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_ATT%26CK.html">Mitre ATT&amp;CK</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_CAR.html">MITRE CARs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_Defend.html">MITRE Defend</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_Engage.html">MITRE Engage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/Killchain_Home.html">Killchain Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/Killchain_InfoGathering.html">Killchain - Info Gathering</a></li>
@@ -507,19 +511,19 @@ This challenge introdcude the bin function (binary). Finding high activity in sh
 <section id="investigating-the-data">
 <h3>Investigating the Data<a class="headerlink" href="#investigating-the-data" title="Permalink to this heading">#</a></h3>
 <p>We’ve brought in the Votes table, select the first 1000 to take a look<br>
-<img alt="KDA_S1_C2_top.png" src="images/Tools/BlueTeam/KQL/KDA_S1_C2_top.png" /><br></p>
+<img alt="KDA_S1_C2_top.png" src="../../../_images/KDA_S1_C2_top.png" /><br></p>
 <p>Taking a look at the first 1000, should start with the low hanging fruit. Is the voter hash repeated?<br>
-<img alt="KDA_S1_C2_Hash.png" src="images/Tools/BlueTeam/KQL/KDA_S1_C2_Hash.png" /><br></p>
+<img alt="KDA_S1_C2_Hash.png" src="../../../_images/KDA_S1_C2_Hash.png" /><br></p>
 <p>9 collisions in 5 million votes, I’ll put that down to expected (and not enough for voter fraud). It could also be that someone is generating hashes randomly to brute force<br>
 How about that voter IP column?<br>
-<img alt="KDA_S1_C2_viaIP.png" src="images/Tools/BlueTeam/KQL/KDA_S1_C2_viaIP.png" /><br></p>
+<img alt="KDA_S1_C2_viaIP.png" src="../../../_images/KDA_S1_C2_viaIP.png" /><br></p>
 <p>Normally I would think we’re on to something here, but the hints tell us that votes are done via proxy in local areas. So once again this is probably expected.</p>
 </section>
 <section id="introducing-bias">
 <h3>Introducing Bias<a class="headerlink" href="#introducing-bias" title="Permalink to this heading">#</a></h3>
 <p>Lets introduce some bias and assume fraud did happen. In an election it’s probably not the most moral thing; but in cyber there is a whole mindset of assuming you’ve been breached.<br>
 Lets see where the votes came from, and order them by time.<br>
-<img alt="KDA_S1_C2_Poppy1000.png" src="images/Tools/BlueTeam/KQL/KDA_S1_C2_Poppy1000.png" /><br></p>
+<img alt="KDA_S1_C2_Poppy1000.png" src="../../../_images/KDA_S1_C2_Poppy1000.png" /><br></p>
 <p>OK, thats suspicious. So many votes in the first second of the polls opening, at the same address (which also happens to be the first URL). 10 seconds later it swaps to the next ip in the list and the same action repeats. Clearly something is sus here….<br></p>
 </section>
 <section id="calculating-the-fraud">
@@ -527,14 +531,14 @@ Lets see where the votes came from, and order them by time.<br>
 <p>So, someone is loading as many votes as possible to a server every 10 seconds, then moving on to the next. Let’s work out the votes where there were more than 10, in a 10 second window, in a single IP. We can then count these and treat them as fake votes.<br>
 Now, there may be perfectly legitimate votes in this time that we are bypassing. In the grand scheme, these are rounding errors so I’m not too worried about this.<br>
 Time to introduce the bin function. Which does exactly that.<br></p>
-<p><img alt="KDA_S1_C2_fakeVotes.png" src="images/Tools/BlueTeam/KQL/KDA_S1_C2_fakeVotes.png" /><br></p>
+<p><img alt="KDA_S1_C2_fakeVotes.png" src="../../../_images/KDA_S1_C2_fakeVotes.png" /><br></p>
 <p>2.5 million votes? that looks like fraud to me.</p>
 </section>
 <section id="removing-the-fraud">
 <h3>Removing the fraud<a class="headerlink" href="#removing-the-fraud" title="Permalink to this heading">#</a></h3>
 <p>We can now work out how many votes each nominee had. Assuming there was no fraud for the others, they are just their own count, and we reduce the Poppy votes by the fraud amount.<br>
 We have to multiply by 100 then divide over the total to get the percentage (cant get a partial int)<br>
-<img alt="KDA_S1_C2_Final.png" src="images/Tools/BlueTeam/KQL/KDA_S1_C2_Final.png" /><br>
+<img alt="KDA_S1_C2_Final.png" src="../../../_images/KDA_S1_C2_Final.png" /><br>
 <br>
 I really should pass the variable through here instead of running it in two separate calculations, but I honestly had trouble here.</p>
 <hr>

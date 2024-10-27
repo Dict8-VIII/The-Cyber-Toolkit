@@ -168,6 +168,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Digital Forensics and Incident Response</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="KAPE.html">KAPE - Kroll Artifact Parser and Extractor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Volatility.html">Volatility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="WindowsEventViewer.html">Event Viewer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="WindowsProcesses.html">Windows Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="WindowsRegistry.html">Windows Registry</a></li>
@@ -206,14 +207,17 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../General/NFS.html">NFS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../General/OWASP10.html">OWASP Top 10 - 2021</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../General/Passwords.html">Passwords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../General/PowerShell.html">PowerShell</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../General/SSH.html">SSH</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../General/Telnet.html">Telnet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../General/TheOSIModel.html">The OSI Model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../General/UploadVulns.html">Upload Vulnerabilities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../General/WindowsAD.html">Windows Active Directory</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../General/Frameworks/Frameworks_Home.html">Frameworks</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../General/Frameworks/MITRE_Home.html">Mitre</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../General/Frameworks/MITRE_ATT%26CK.html">Mitre ATT&amp;CK</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../General/Frameworks/MITRE_CAR.html">MITRE CARs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../General/Frameworks/MITRE_Defend.html">MITRE Defend</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../General/Frameworks/MITRE_Engage.html">MITRE Engage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../General/Frameworks/Killchain_Home.html">Killchain Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../General/Frameworks/Killchain_InfoGathering.html">Killchain - Info Gathering</a></li>
@@ -529,20 +533,35 @@ In this chapter, we will be focusing on the Windows environment, simply because 
 Autopsy - Autopsy is a GUI only tool that can run on a live device or using an image<br>
 FTK Imager - FTK Imager is another GUI only tool that runs in a live or image processing mode<br></p>
 </div></blockquote>
+<p>For Memory preservation, there are specific tools used for memry extraction on physical devices.</p>
+<blockquote>
+<div><p>FTK Imager (as above, it can do both)<br>
+Redline<br>
+DumpIt.exe<br>
+win32dd.exe (64bit)<br>
+fastdump<br></p>
+</div></blockquote>
+<p>If running in a virtual environment, you can grab the memory file directly as well these files are<br></p>
+<blockquote>
+<div><p>Vmware -&gt; .vmem<br>
+HyperV -&gt; .bin<br>
+Parallels -&gt; .mem<br>
+VirtualBox -&gt; .sav (this is partial only)<br></p>
+</div></blockquote>
 </section>
 <section id="analysis">
 <h3>Analysis<a class="headerlink" href="#analysis" title="Permalink to this heading">#</a></h3>
 <p>This is where the ‘meat’ of the forensics comes in. Here a copy of the ‘original copy’ is used for investigation of the artifacts. This is where we try to understand what occured and gather evidence for later documentation. Why a ‘copy of the original copy’? Simply because we don’t work on the original data in order to preserve it’s integrity.<br>
-As we would expect from a ‘meaty’ topic, there are plenty of tools to assist with this stage. Don’t rely on the tools completely though, they will only present the data that has been found. It is up to the analyst to determine what is relevant, what is unexpected, and what can be ignored. This can only been done efficiently if you also have the understanding of how the system works. As such, I’ve included topics on some ‘living off the land’ (LotL) tools, if you want to solidify this understanding.</p>
-<p>Consolidation Tools<br></p>
-<blockquote>
-<div><p>…<br></p>
-</div></blockquote>
+As we would expect from a ‘meaty’ topic, there are plenty of tools to assist with this stage. Don’t rely on the tools completely though, they will only present the data that has been found. It is up to the analyst to determine what is relevant, what is unexpected, and what can be ignored. This can only been done efficiently if you also have the understanding of how the system works. As such, I’ve included topics on some ‘living off the land’ (LotL) tools, if you want to solidify this understanding.<br></p>
 <p>Living off the Land Tools<br></p>
 <blockquote>
 <div><p><a href = "WindowsEventViewer.ipynb">Windows Event Viewer</a> <br>
 <a href = "WindowsRegistry.ipynb">Windows Registry</a><br>
 Process Explorer (Part of SysInternals)</p>
+</div></blockquote>
+<p>Memory Analysis<br></p>
+<blockquote>
+<div><p>Volatility<br></p>
 </div></blockquote>
 </section>
 <section id="documentation-presentation">
