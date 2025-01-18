@@ -72,6 +72,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'MyPrograms/FileDownloader';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Web Brute Force Program" href="WebBruteForce.html" />
+    <link rel="prev" title="My Programs" href="MyPrograms.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -170,6 +172,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Goals/DFIR/WindowsEventViewer.html">Event Viewer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/DFIR/WindowsProcesses.html">Windows Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/DFIR/WindowsRegistry.html">Windows Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/DFIR/Zimmerman.html">Zimmerman</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/EDR/EDR_Home.html">Endpoint Detection &amp; Response</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -204,6 +207,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Goals/General/Kerberos.html">Kerberos Attacks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/General/NFS.html">NFS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/General/OWASP10.html">OWASP Top 10 - 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/General/OSquery.html">OS Query</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/General/Passwords.html">Passwords</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/General/PowerShell.html">PowerShell</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/General/SSH.html">SSH</a></li>
@@ -258,19 +262,45 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/RedTeam/CredentialAccess/CredentialAccess_Home.html">Credential Access</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Goals/RedTeam/Discovery/Discovery_Home.html">Discovery Home</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Goals/RedTeam/Execution/Execution_Home.html">Execution</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/RedTeam/InitialAccess/InitialAccess_Home.html">Initial Access</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/InitialAccess/Netcat.html">Netcat</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/InitialAccess/SocialEngineeringToolkit.html">Social Engineering Toolkit (SET)</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/RedTeam/Discovery/Discovery_Home.html">Discovery Home</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/Discovery/Ettercap.html">Ettercap &amp; Bettercap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/Discovery/Impacket.html">Impacket</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/RedTeam/LateralMovement/LateralMovement_Home.html">Lateral Movement</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/RedTeam/Execution/Execution_Home.html">Execution</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/Execution/Armitage.html">Armitage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/Execution/Metasploit.html">Metasploit Framework</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/Execution/Msfvenom.html">Msfvenom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/Execution/SearchSploit.html">Searchsploit</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/RedTeam/InitialAccess/InitialAccess_Home.html">Initial Access</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/InitialAccess/Netcat.html">Netcat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/InitialAccess/SocialEngineeringToolkit.html">Social Engineering Toolkit (SET)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/InitialAccess/StabiliseShell.html">Stabilising a shell</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/RedTeam/LateralMovement/LateralMovement_Home.html">Lateral Movement</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/LateralMovement/Kerbrute.html">Kerbrute</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/LateralMovement/Rubeus.html">Rubeus</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/RedTeam/Persistence/Persistence_Home.html">Persistence</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/RedTeam/Recon/Recon_Home.html">Recon</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/RedTeam/PrivilegeEscalation/PrivilegeEscalation_Home.html">Privelige Escalation</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/PrivilegeEscalation/BloodHound.html">BloodHound</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/PrivilegeEscalation/Evil-WinRM.html">Evil-WinRM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/PrivilegeEscalation/LES.html">Linux Exploit Suggester</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/PrivilegeEscalation/LinEnum.html">LinEnum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/PrivilegeEscalation/LinPeas.html">LinPeas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/PrivilegeEscalation/LinuxFun.html">Linux Fun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/PrivilegeEscalation/LinuxPrivEsc.html">Linux Privelige Escalation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/PrivilegeEscalation/Powerup.html">Powerup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/PrivilegeEscalation/WindowsFun.html">Windows ‘Fun’ Stuff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/PrivilegeEscalation/WindowsPersistence.html">Windows Persistence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/PrivilegeEscalation/WindowsPrivEsc.html">Windows PrivEsc</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/RedTeam/Recon/Recon_Home.html">Recon</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/Recon/Maltego.html">Maltego</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/Recon/Nmap.html">Nmap</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/Recon/Nping.html">Nping</a></li>
@@ -279,32 +309,73 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/Steganography/Steganography_Home.html">Steganography</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/Steganography/Steganography_Home.html">Steganography</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/Steganography/Binwalk.html">Binwalk</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Goals/ThreatIntelligence/ThreatIntelligence_Home.html">Threat Intelligence</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/VulnerabilityManagement/VulnerabilityManagement_Home.html">Vulnerability Management</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/VulnerabilityManagement/VulnerabilityManagement_Home.html">Vulnerability Management</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/VulnerabilityManagement/Nessus.html">Nessus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/VulnerabilityManagement/OpenVAS.html">OpenVAS</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/WebExploitation/WebExploitation_Home.html">Web Exploitation</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/WebExploitation/WebExploitation_Home.html">Web Exploitation</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/WebExploitation/BurpSuite/BurpSuite_Home.html">Burp Suite</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/WebExploitation/BurpSuite/BurpIntruder.html">Burp Suite - Intruder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/WebExploitation/BurpSuite/BurpRepeater.html">Burp Suite - Repeater</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/WebExploitation/GoBuster.html">Gobuster</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/WebExploitation/LFI.html">LFI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/WebExploitation/Nikto.html">Nikto</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/WebExploitation/RequestForgery.html">Request Forgeries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/WebExploitation/SQLinjection.html">SQL Injection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/WebExploitation/Wfuzz.html">WFUZZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/WebExploitation/XSS.html">XSS</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Walkthroughs</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Home Lab Setup</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../PracticeRooms/HoloLive/HoloLive.html">HoloLive</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1"><a class="reference internal" href="../HomeLab/HomeLab.html">HomeLab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HomeLab/BuildingSnort.html">Building Snort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HomeLab/BuildingSnortv2.html">Building Snort V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HomeLab/BuildingSplunk.html">Building Splunk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HomeLab/OpenKylin.html">OpenKylin</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">My Programs</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="MyPrograms.html">My Programs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">File Downloader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebBruteForce.html">Web Brute Force Program</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Other (Mainly things I still need to do...)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Other/FormattingNotes.html">Formatting Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Other/ThingsToDo.html">Things to Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Other/CloudAzure.html">Cloud Providers - Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Other/CTFpages.html">CTF Links</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Practice Rooms</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../PracticeRooms/SideQuest2023.html">Advent Of Cyber Side Quest 2023</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/AoCsidequest/AoCsq1.html">Advent Of Cyber - Side Quest 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/AoCsidequest/AoCsq2.html">Advent Of Cyber - Side Quest 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../PracticeRooms/HoloLive/HoloLive.html">HoloLive</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/HoloLive/HoloLive_Task8.html">HoloLive Walkthrough - Task 8</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/HoloLive/HoloLive_Task9.html">HoloLive Walkthrough - Task 9</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/HoloLive/HoloLive_Task10.html">HoloLive Walkthrough - Task 10</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../PracticeRooms/KustoDetectiveAgency/Detective_S1_C0.html">Kusto Detective Agency Season 1 (Challenge 0)</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-26"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/KustoDetectiveAgency/Detective_S1_C1.html">Kusto Detective Agency Season 1 (Challenge 1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/KustoDetectiveAgency/Detective_S1_C2.html">Kusto Detective Agency Season 1 (Challenge 2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/KustoDetectiveAgency/Detective_S1_C4.html">Kusto Detective Agency Season 1 (Challenge 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/KustoDetectiveAgency/Detective_S1_C5.html">Kusto Detective Agency Season 1 (Challenge 5)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../PracticeRooms/AgentSudo.html">Agent Sudo</a></li>
@@ -318,25 +389,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../PracticeRooms/Tomghost.html">Tomghost</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PracticeRooms/Ignite.html">Ignite</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PracticeRooms/Labtainers/Labtainers.html">Labtainers</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../PracticeRooms/SideQuest2023.html">Advent Of Cyber Side Quest 2023</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/AoCsidequest/AoCsq1.html">Advent Of Cyber - Side Quest 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/AoCsidequest/AoCsq2.html">Advent Of Cyber - Side Quest 2</a></li>
-</ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Home Lab Setup</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../HomeLab/HomeLab.html">HomeLab</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../HomeLab/BuildingSnort.html">Building Snort</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../HomeLab/BuildingSplunk.html">Building Splunk</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../HomeLab/OpenKylin.html">OpenKylin</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Non Hacking Notes</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Other/FormattingNotes.html">Formatting Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Other/ThingsToDo.html">Things to Do</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Other/CloudAzure.html">Cloud Providers - Azure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Other/CTFpages.html">CTF Links</a></li>
 </ul>
 
     </div>
@@ -500,165 +552,7 @@ document.write(`
 <section id="v1-0">
 <h2>V1.0<a class="headerlink" href="#v1-0" title="Permalink to this heading">#</a></h2>
 <p>This is actually a uni assignment that I finished at 2.0. Renamed as 1.0</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">This python script opens a file named urls.txt in the  current folder and</span>
-<span class="sd">downloads each url sequentually. Downloaded files are saved into the current folder.</span>
-
-<span class="sd">Requirements</span>
-<span class="sd">* In urls.txt URLs must be one per line and no line can be blank</span>
-<span class="sd">* The URL must not use GET parameters (e.g. http://server/retrieve?file=myfile)</span>
-<span class="sd">* urls.txt must be stored in the same folder as this file</span>
-<span class="sd">* You must have read and write permission to this folder</span>
-
-<span class="sd">v2.0 : 04/06/22</span>
-<span class="sd">Additional function to allow selection of file save location</span>
-<span class="sd">&#39;&#39;&#39;</span>
-
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">urllib.request</span>
-
-<span class="c1">#Links moved above the chdir, to ensure it can be in the current location</span>
-<span class="c1">#Could just add it to the path...</span>
-<span class="n">links</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;urls.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-
-<span class="c1"># Addition of where to save the file(s)</span>
-<span class="n">save_location</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Hello. Where would you like to store the files [leave empty for current directory]:&quot;</span><span class="p">)</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">save_location</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">):</span>
-    <span class="n">save_location</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
-    
-<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">save_location</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">links</span><span class="p">:</span>
-
-    <span class="c1">#Get one line of text (e.g. http://server/files/grades.doc),</span>
-    <span class="c1"># then get the filename from the end of the URL</span>
-    <span class="n">link</span> <span class="o">=</span> <span class="n">link</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-    <span class="n">filename</span> <span class="o">=</span> <span class="n">link</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-
-    <span class="c1">#Does this file exist in this folder? If not, download it</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filename</span><span class="p">)):</span>
-        <span class="c1">#print(&#39;Downloading: &#39; + filename )</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Downloading&quot;</span><span class="p">,</span> <span class="n">link</span><span class="p">,</span> <span class="s2">&quot;and saving as&quot;</span><span class="p">,</span> <span class="n">save_location</span><span class="o">+</span><span class="n">filename</span><span class="p">)</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">link</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File size was&quot;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
-        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">inst</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">inst</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;  Encountered unknown error. Continuing.&#39;</span><span class="p">)</span>
-    
-    <span class="c1">#File exists; don&#39;t download</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This file exists already.&quot;</span><span class="p">)</span>
-
-<span class="c1">#End of program</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Finished downloading.&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">20</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="kn">import</span> <span class="nn">urllib.request</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="c1">#Links moved above the chdir, to ensure it can be in the current location</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="c1">#Could just add it to the path...</span>
-<span class="ne">---&gt; </span><span class="mi">20</span> <span class="n">links</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;urls.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="c1"># Addition of where to save the file(s)</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="n">save_location</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Hello. Where would you like to store the files [leave empty for current directory]:&quot;</span><span class="p">)</span>
-
-<span class="nn">File ~\AppData\Local\Programs\Python\Python311\Lib\site-packages\IPython\core\interactiveshell.py:284,</span> in <span class="ni">_modified_open</span><span class="nt">(file, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">277</span> <span class="k">if</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}:</span>
-<span class="g g-Whitespace">    </span><span class="mi">278</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">279</span>         <span class="sa">f</span><span class="s2">&quot;IPython won&#39;t let you open fd=</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> by default &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">280</span>         <span class="s2">&quot;as it is likely to crash IPython. If you know what you are doing, &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">281</span>         <span class="s2">&quot;you can use builtins&#39; open.&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">282</span>     <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">284</span> <span class="k">return</span> <span class="n">io_open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;urls.txt&#39;
-</pre></div>
-</div>
-</div>
-</div>
 <p>V2.0</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">This python script opens a file named urls.txt in the  current folder and</span>
-<span class="sd">downloads each url sequentually. Downloaded files are saved into the current folder.</span>
-
-<span class="sd">Requirements</span>
-<span class="sd">* In urls.txt URLs must be one per line and no line can be blank</span>
-<span class="sd">* The URL must not use GET parameters (e.g. http://server/retrieve?file=myfile)</span>
-<span class="sd">* urls.txt must be stored in the same folder as this file</span>
-<span class="sd">* You must have read and write permission to this folder</span>
-
-<span class="sd">v2.0 : 04/06/22</span>
-<span class="sd">Additional function to allow selection of file save location</span>
-<span class="sd">&#39;&#39;&#39;</span>
-
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">urllib.request</span>
-
-<span class="c1">#Links moved above the chdir, to ensure it can be in the current location</span>
-<span class="c1">#Could just add it to the path...</span>
-<span class="c1">#links = open(&#39;urls.txt&#39;, &#39;r&#39;)</span>
-
-<span class="c1"># Addition of where to save the file(s)</span>
-<span class="n">save_location</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Hello. Where would you like to store the files [leave empty for current directory]:&quot;</span><span class="p">)</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">save_location</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">):</span>
-    <span class="n">save_location</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
-    
-<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">save_location</span><span class="p">)</span>
-
-<span class="n">arguements_list</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Darebin&#39;</span><span class="p">,</span> <span class="s1">&#39;Hume&#39;</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">arguement</span> <span class="ow">in</span> <span class="n">arguements_list</span><span class="p">:</span>
-    <span class="n">target</span> <span class="o">=</span> <span class="s2">&quot;https://victorianwomenshealthatlas.net.au/reports/factsheets/Sexual</span><span class="si">%20a</span><span class="s2">nd%20Reproductive%20Health/&quot;</span> <span class="o">+</span> <span class="n">arguement</span> <span class="o">+</span> <span class="s2">&quot;/VWHAtlas</span><span class="si">%20F</span><span class="s2">act%20Sheet%20Sexual</span><span class="si">%20a</span><span class="s2">nd%20Reproductive%20Health%20&quot;</span> <span class="o">+</span> <span class="n">arguement</span> <span class="o">+</span> <span class="s2">&quot;.pdf&quot;</span>
-    
-    <span class="c1">#link = link.strip()</span>
-    <span class="n">filename</span> <span class="o">=</span> <span class="n">target</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Target: &quot;</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File: &quot;</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
-
-
-
-    <span class="c1">#Does this file exist in this folder? If not, download it</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filename</span><span class="p">)):</span>
-        <span class="c1">#print(&#39;Downloading: &#39; + filename )</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Downloading&quot;</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="s2">&quot;and saving as&quot;</span><span class="p">,</span> <span class="n">save_location</span><span class="o">+</span><span class="n">filename</span><span class="p">)</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File size was&quot;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">filename</span><span class="p">))</span>
-        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">inst</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">inst</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;  Encountered unknown error. Continuing.&#39;</span><span class="p">)</span>
-    
-    <span class="c1">#File exists; don&#39;t download</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This file exists already.&quot;</span><span class="p">)</span>
-
-<span class="c1">#End of program</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Finished downloading.&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Target:  https://victorianwomenshealthatlas.net.au/reports/factsheets/Sexual%20and%20Reproductive%20Health/Darebin/VWHAtlas%20Fact%20Sheet%20Sexual%20and%20Reproductive%20Health%20Darebin.pdf
-File:  VWHAtlas%20Fact%20Sheet%20Sexual%20and%20Reproductive%20Health%20Darebin.pdf
-Downloading https://victorianwomenshealthatlas.net.au/reports/factsheets/Sexual%20and%20Reproductive%20Health/Darebin/VWHAtlas%20Fact%20Sheet%20Sexual%20and%20Reproductive%20Health%20Darebin.pdf and saving as C:\Users\paulj\Documents\The-Cyber-Toolkit\Tools\ProgramsVWHAtlas%20Fact%20Sheet%20Sexual%20and%20Reproductive%20Health%20Darebin.pdf
-File size was 700149
-Target:  https://victorianwomenshealthatlas.net.au/reports/factsheets/Sexual%20and%20Reproductive%20Health/Hume/VWHAtlas%20Fact%20Sheet%20Sexual%20and%20Reproductive%20Health%20Hume.pdf
-File:  VWHAtlas%20Fact%20Sheet%20Sexual%20and%20Reproductive%20Health%20Hume.pdf
-Downloading https://victorianwomenshealthatlas.net.au/reports/factsheets/Sexual%20and%20Reproductive%20Health/Hume/VWHAtlas%20Fact%20Sheet%20Sexual%20and%20Reproductive%20Health%20Hume.pdf and saving as C:\Users\paulj\Documents\The-Cyber-Toolkit\Tools\ProgramsVWHAtlas%20Fact%20Sheet%20Sexual%20and%20Reproductive%20Health%20Hume.pdf
-File size was 699841
-Finished downloading.
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 </section>
 
@@ -693,6 +587,24 @@ Finished downloading.
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="MyPrograms.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">My Programs</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="WebBruteForce.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Web Brute Force Program</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>

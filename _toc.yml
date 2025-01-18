@@ -11,6 +11,7 @@ parts:
         - file: Goals/DFIR/WindowsEventViewer
         - file: Goals/DFIR/WindowsProcesses
         - file: Goals/DFIR/WindowsRegistry
+        - file: Goals/DFIR/Zimmerman
     - file: Goals/EDR/EDR_Home
       sections:
         - file: Goals/EDR/Splunk
@@ -41,6 +42,7 @@ parts:
       - file: Goals/General/Kerberos
       - file: Goals/General/NFS
       - file: Goals/General/OWASP10
+      - file: Goals/General/OSquery
       - file: Goals/General/Passwords
       - file: Goals/General/PowerShell
       - file: Goals/General/SSH
@@ -89,23 +91,36 @@ parts:
             - file: Goals/RedTeam/Collection/Mimikatz
         - file: Goals/RedTeam/CredentialAccess/CredentialAccess_Home
         - file: Goals/RedTeam/Discovery/Discovery_Home
+          sections:
+          - file: Goals/RedTeam/Discovery/Ettercap
+          - file: Goals/RedTeam/Discovery/Impacket
         - file: Goals/RedTeam/Execution/Execution_Home
+          sections:
+            - file: Goals/RedTeam/Execution/Armitage
+            - file: Goals/RedTeam/Execution/Metasploit
+            - file: Goals/RedTeam/Execution/Msfvenom
+            - file: Goals/RedTeam/Execution/SearchSploit
         - file: Goals/RedTeam/InitialAccess/InitialAccess_Home
           sections:
             - file: Goals/RedTeam/InitialAccess/Netcat
             - file: Goals/RedTeam/InitialAccess/SocialEngineeringToolkit
+            - file: Goals/RedTeam/InitialAccess/StabiliseShell
         - file: Goals/RedTeam/LateralMovement/LateralMovement_Home
           sections:
+            - file: Goals/RedTeam/LateralMovement/Kerbrute
             - file: Goals/RedTeam/LateralMovement/Rubeus
         - file: Goals/RedTeam/Persistence/Persistence_Home
         - file: Goals/RedTeam/PrivilegeEscalation/PrivilegeEscalation_Home
           sections:
             - file: Goals/RedTeam/PrivilegeEscalation/BloodHound
+            - file: Goals/RedTeam/PrivilegeEscalation/Evil-WinRM
             - file: Goals/RedTeam/PrivilegeEscalation/LES
             - file: Goals/RedTeam/PrivilegeEscalation/LinEnum
             - file: Goals/RedTeam/PrivilegeEscalation/LinPeas
+            - file: Goals/RedTeam/PrivilegeEscalation/LinuxFun
             - file: Goals/RedTeam/PrivilegeEscalation/LinuxPrivEsc
             - file: Goals/RedTeam/PrivilegeEscalation/Powerup
+            - file: Goals/RedTeam/PrivilegeEscalation/WindowsFun
             - file: Goals/RedTeam/PrivilegeEscalation/WindowsPersistence
             - file: Goals/RedTeam/PrivilegeEscalation/WindowsPrivEsc
         - file: Goals/RedTeam/Recon/Recon_Home
@@ -124,7 +139,7 @@ parts:
         - file: Goals/VulnerabilityManagement/OpenVAS
     - file: Goals/WebExploitation/WebExploitation_Home
       sections:
-        - file: Goals/WebExploitation/BurpSuite/Burpsuite_Home
+        - file: Goals/WebExploitation/BurpSuite/BurpSuite_Home
           sections:
             - file: Goals/WebExploitation/BurpSuite/BurpIntruder
             - file: Goals/WebExploitation/BurpSuite/BurpRepeater
@@ -132,16 +147,45 @@ parts:
         - file: Goals/WebExploitation/LFI
         - file: Goals/WebExploitation/Nikto
         - file: Goals/WebExploitation/RequestForgery
-        - file: Goals/WebExploitation/SQLInjection
+        - file: Goals/WebExploitation/SQLinjection
         - file: Goals/WebExploitation/Wfuzz
         - file: Goals/WebExploitation/XSS
-  - caption: Walkthroughs
+  - caption: Home Lab Setup
     chapters:
+    - file: HomeLab/HomeLab
+    - file: HomeLab/BuildingSnort
+    - file: HomeLab/BuildingSnortv2
+    - file: HomeLab/BuildingSplunk
+    - file: HomeLab/OpenKylin
+  - caption: My Programs
+    chapters:
+    - file: MyPrograms/MyPrograms
+      sections:
+      - file: MyPrograms/FileDownloader
+      - file: MyPrograms/WebBruteForce
+  - caption: Other (Mainly things I still need to do...)
+    chapters:
+    - file: Other/FormattingNotes
+    - file: Other/ThingsToDo
+    - file: Other/CloudAzure
+    - file: Other/CTFpages
+  - caption: Practice Rooms
+    chapters:
+    - file: PracticeRooms/SideQuest2023
+      sections:
+      - file: PracticeRooms/AoCsidequest/AoCsq1
+      - file: PracticeRooms/AoCsidequest/AoCsq2
     - file: PracticeRooms/HoloLive/HoloLive
       sections:
       - file: PracticeRooms/HoloLive/HoloLive_Task8
       - file: PracticeRooms/HoloLive/HoloLive_Task9
       - file: PracticeRooms/HoloLive/HoloLive_Task10
+    - file: PracticeRooms/KustoDetectiveAgency/Detective_S1_C0
+      sections:
+      - file: PracticeRooms/KustoDetectiveAgency/Detective_S1_C1
+      - file: PracticeRooms/KustoDetectiveAgency/Detective_S1_C2
+      - file: PracticeRooms/KustoDetectiveAgency/Detective_S1_C4
+      - file: PracticeRooms/KustoDetectiveAgency/Detective_S1_C5
     - file: PracticeRooms/AgentSudo
     - file: PracticeRooms/MrRobot
     - file: PracticeRooms/Terminator
@@ -153,19 +197,3 @@ parts:
     - file: PracticeRooms/Tomghost
     - file: PracticeRooms/Ignite
     - file: PracticeRooms/Labtainers/Labtainers
-    - file: PracticeRooms/SideQuest2023
-      sections:
-      - file: PracticeRooms/AoCsidequest/AoCsq1
-      - file: PracticeRooms/AoCsidequest/AoCsq2
-  - caption: Home Lab Setup
-    chapters:
-    - file: HomeLab/HomeLab
-    - file: HomeLab/BuildingSnort
-    - file: HomeLab/BuildingSplunk
-    - file: HomeLab/OpenKylin
-  - caption: Non Hacking Notes
-    chapters:
-    - file: Other/FormattingNotes
-    - file: Other/ThingsToDo
-    - file: Other/CloudAzure
-    - file: Other/CTFpages

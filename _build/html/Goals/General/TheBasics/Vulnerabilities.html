@@ -172,6 +172,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/WindowsEventViewer.html">Event Viewer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/WindowsProcesses.html">Windows Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../DFIR/WindowsRegistry.html">Windows Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../DFIR/Zimmerman.html">Zimmerman</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../EDR/EDR_Home.html">Endpoint Detection &amp; Response</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -206,6 +207,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Kerberos.html">Kerberos Attacks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../NFS.html">NFS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../OWASP10.html">OWASP Top 10 - 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OSquery.html">OS Query</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Passwords.html">Passwords</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../PowerShell.html">PowerShell</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../SSH.html">SSH</a></li>
@@ -260,19 +262,45 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../RedTeam/CredentialAccess/CredentialAccess_Home.html">Credential Access</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../RedTeam/Discovery/Discovery_Home.html">Discovery Home</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../RedTeam/Execution/Execution_Home.html">Execution</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../RedTeam/InitialAccess/InitialAccess_Home.html">Initial Access</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../RedTeam/InitialAccess/Netcat.html">Netcat</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../RedTeam/InitialAccess/SocialEngineeringToolkit.html">Social Engineering Toolkit (SET)</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../RedTeam/Discovery/Discovery_Home.html">Discovery Home</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../RedTeam/Discovery/Ettercap.html">Ettercap &amp; Bettercap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../RedTeam/Discovery/Impacket.html">Impacket</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../RedTeam/LateralMovement/LateralMovement_Home.html">Lateral Movement</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../RedTeam/Execution/Execution_Home.html">Execution</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../RedTeam/Execution/Armitage.html">Armitage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../RedTeam/Execution/Metasploit.html">Metasploit Framework</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../RedTeam/Execution/Msfvenom.html">Msfvenom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../RedTeam/Execution/SearchSploit.html">Searchsploit</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../RedTeam/InitialAccess/InitialAccess_Home.html">Initial Access</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../RedTeam/InitialAccess/Netcat.html">Netcat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../RedTeam/InitialAccess/SocialEngineeringToolkit.html">Social Engineering Toolkit (SET)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../RedTeam/InitialAccess/StabiliseShell.html">Stabilising a shell</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../RedTeam/LateralMovement/LateralMovement_Home.html">Lateral Movement</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../RedTeam/LateralMovement/Kerbrute.html">Kerbrute</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../RedTeam/LateralMovement/Rubeus.html">Rubeus</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../RedTeam/Persistence/Persistence_Home.html">Persistence</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../RedTeam/Recon/Recon_Home.html">Recon</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../RedTeam/PrivilegeEscalation/PrivilegeEscalation_Home.html">Privelige Escalation</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../RedTeam/PrivilegeEscalation/BloodHound.html">BloodHound</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../RedTeam/PrivilegeEscalation/Evil-WinRM.html">Evil-WinRM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../RedTeam/PrivilegeEscalation/LES.html">Linux Exploit Suggester</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../RedTeam/PrivilegeEscalation/LinEnum.html">LinEnum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../RedTeam/PrivilegeEscalation/LinPeas.html">LinPeas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../RedTeam/PrivilegeEscalation/LinuxFun.html">Linux Fun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../RedTeam/PrivilegeEscalation/LinuxPrivEsc.html">Linux Privelige Escalation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../RedTeam/PrivilegeEscalation/Powerup.html">Powerup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../RedTeam/PrivilegeEscalation/WindowsFun.html">Windows ‘Fun’ Stuff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../RedTeam/PrivilegeEscalation/WindowsPersistence.html">Windows Persistence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../RedTeam/PrivilegeEscalation/WindowsPrivEsc.html">Windows PrivEsc</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../RedTeam/Recon/Recon_Home.html">Recon</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../RedTeam/Recon/Maltego.html">Maltego</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../RedTeam/Recon/Nmap.html">Nmap</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../RedTeam/Recon/Nping.html">Nping</a></li>
@@ -281,32 +309,73 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Steganography/Steganography_Home.html">Steganography</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Steganography/Steganography_Home.html">Steganography</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Steganography/Binwalk.html">Binwalk</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../ThreatIntelligence/ThreatIntelligence_Home.html">Threat Intelligence</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../VulnerabilityManagement/VulnerabilityManagement_Home.html">Vulnerability Management</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../VulnerabilityManagement/VulnerabilityManagement_Home.html">Vulnerability Management</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../VulnerabilityManagement/Nessus.html">Nessus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../VulnerabilityManagement/OpenVAS.html">OpenVAS</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../WebExploitation/WebExploitation_Home.html">Web Exploitation</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../WebExploitation/WebExploitation_Home.html">Web Exploitation</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../WebExploitation/BurpSuite/BurpSuite_Home.html">Burp Suite</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../WebExploitation/BurpSuite/BurpIntruder.html">Burp Suite - Intruder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../WebExploitation/BurpSuite/BurpRepeater.html">Burp Suite - Repeater</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../WebExploitation/GoBuster.html">Gobuster</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../WebExploitation/LFI.html">LFI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../WebExploitation/Nikto.html">Nikto</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../WebExploitation/RequestForgery.html">Request Forgeries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../WebExploitation/SQLinjection.html">SQL Injection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../WebExploitation/Wfuzz.html">WFUZZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../WebExploitation/XSS.html">XSS</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Walkthroughs</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Home Lab Setup</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../PracticeRooms/HoloLive/HoloLive.html">HoloLive</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../HomeLab/HomeLab.html">HomeLab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../HomeLab/BuildingSnort.html">Building Snort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../HomeLab/BuildingSnortv2.html">Building Snort V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../HomeLab/BuildingSplunk.html">Building Splunk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../HomeLab/OpenKylin.html">OpenKylin</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">My Programs</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../MyPrograms/MyPrograms.html">My Programs</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../MyPrograms/FileDownloader.html">File Downloader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../MyPrograms/WebBruteForce.html">Web Brute Force Program</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Other (Mainly things I still need to do...)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../Other/FormattingNotes.html">Formatting Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Other/ThingsToDo.html">Things to Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Other/CloudAzure.html">Cloud Providers - Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Other/CTFpages.html">CTF Links</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Practice Rooms</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../PracticeRooms/SideQuest2023.html">Advent Of Cyber Side Quest 2023</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../PracticeRooms/AoCsidequest/AoCsq1.html">Advent Of Cyber - Side Quest 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../PracticeRooms/AoCsidequest/AoCsq2.html">Advent Of Cyber - Side Quest 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../PracticeRooms/HoloLive/HoloLive.html">HoloLive</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../PracticeRooms/HoloLive/HoloLive_Task8.html">HoloLive Walkthrough - Task 8</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../PracticeRooms/HoloLive/HoloLive_Task9.html">HoloLive Walkthrough - Task 9</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../PracticeRooms/HoloLive/HoloLive_Task10.html">HoloLive Walkthrough - Task 10</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../PracticeRooms/KustoDetectiveAgency/Detective_S1_C0.html">Kusto Detective Agency Season 1 (Challenge 0)</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-26"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../PracticeRooms/KustoDetectiveAgency/Detective_S1_C1.html">Kusto Detective Agency Season 1 (Challenge 1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../PracticeRooms/KustoDetectiveAgency/Detective_S1_C2.html">Kusto Detective Agency Season 1 (Challenge 2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../PracticeRooms/KustoDetectiveAgency/Detective_S1_C4.html">Kusto Detective Agency Season 1 (Challenge 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../PracticeRooms/KustoDetectiveAgency/Detective_S1_C5.html">Kusto Detective Agency Season 1 (Challenge 5)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../PracticeRooms/AgentSudo.html">Agent Sudo</a></li>
@@ -320,25 +389,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../../../PracticeRooms/Tomghost.html">Tomghost</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../PracticeRooms/Ignite.html">Ignite</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../PracticeRooms/Labtainers/Labtainers.html">Labtainers</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../PracticeRooms/SideQuest2023.html">Advent Of Cyber Side Quest 2023</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../PracticeRooms/AoCsidequest/AoCsq1.html">Advent Of Cyber - Side Quest 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../PracticeRooms/AoCsidequest/AoCsq2.html">Advent Of Cyber - Side Quest 2</a></li>
-</ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Home Lab Setup</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../../HomeLab/HomeLab.html">HomeLab</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../HomeLab/BuildingSnort.html">Building Snort</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../HomeLab/BuildingSplunk.html">Building Splunk</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../HomeLab/OpenKylin.html">OpenKylin</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Non Hacking Notes</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../../Other/FormattingNotes.html">Formatting Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../Other/ThingsToDo.html">Things to Do</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../Other/CloudAzure.html">Cloud Providers - Azure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../Other/CTFpages.html">CTF Links</a></li>
 </ul>
 
     </div>

