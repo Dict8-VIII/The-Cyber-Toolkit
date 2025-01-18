@@ -1,21 +1,191 @@
 # Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
-
 format: jb-book
 root: intro
 parts:
-  - caption: TryHackMe Rooms / Walkthrough
+  - caption: Goals
     chapters:
-    - file: HoloLive/HoloLive
+    - file: Goals/DFIR/DFIR_Home
       sections:
-      - file: HoloLive/HoloLive_Task8
-      - file: HoloLive/HoloLive_Task9
-      - file: HoloLive/HoloLive_Task10
-    - file: JnrPenTester/JnrPenTester
+        - file: Goals/DFIR/KAPE
+        - file: Goals/DFIR/Volatility
+        - file: Goals/DFIR/WindowsEventViewer
+        - file: Goals/DFIR/WindowsProcesses
+        - file: Goals/DFIR/WindowsRegistry
+        - file: Goals/DFIR/Zimmerman
+    - file: Goals/EDR/EDR_Home
       sections:
-      - file: JnrPenTester/FileInclusion
-      - file: JnrPenTester/JnrPenTester_BurpSuite
-      - file: JnrPenTester/LinuxPrivEsc_task8
+        - file: Goals/EDR/Splunk
+        - file: Goals/EDR/Yara
+        - file: Goals/EDR/SysInternals/SysInternals_Home
+          sections:
+            - file: Goals/EDR/SysInternals/FileAndDisk
+            - file: Goals/EDR/SysInternals/Misc
+            - file: Goals/EDR/SysInternals/ProcessUtils
+            - file: Goals/EDR/SysInternals/Sysmon
+    - file: Goals/General/General_Home
+      sections:
+      - file: Goals/General/TheBasics/TheBasics_Home
+        sections:
+          - file: Goals/General/TheBasics/Attacks
+          - file: Goals/General/TheBasics/Threats
+          - file: Goals/General/TheBasics/Vulnerabilities
+      - file: Goals/General/CiscoProgramming
+      - file: Goals/General/CyberChef
+      - file: Goals/General/DHCP
+      - file: Goals/General/DNS
+      - file: Goals/General/EmailProtocol
+      - file: Goals/General/FileTransfer
+      - file: Goals/General/FTP
+      - file: Goals/General/grep
+      - file: Goals/General/HTTP
+      - file: Goals/General/Kali
+      - file: Goals/General/Kerberos
+      - file: Goals/General/NFS
+      - file: Goals/General/OWASP10
+      - file: Goals/General/OSquery
+      - file: Goals/General/Passwords
+      - file: Goals/General/PowerShell
+      - file: Goals/General/SSH
+      - file: Goals/General/Telnet
+      - file: Goals/General/TheOSIModel
+      - file: Goals/General/UploadVulns
+      - file: Goals/General/WindowsAD
+      - file: Goals/General/Frameworks/Frameworks_Home
+        sections:
+          - file: Goals/General/Frameworks/MITRE_Home
+          - file: Goals/General/Frameworks/MITRE_ATT&CK
+          - file: Goals/General/Frameworks/MITRE_CAR
+          - file: Goals/General/Frameworks/MITRE_Defend
+          - file: Goals/General/Frameworks/MITRE_Engage
+          - file: Goals/General/Frameworks/Killchain_Home
+          - file: Goals/General/Frameworks/Killchain_InfoGathering
+          - file: Goals/General/Frameworks/Killchain_Weaponization
+    - file: Goals/Hashes/Hashes_Home
+      sections:
+        - file: Goals/Hashes/HashCat
+        - file: Goals/Hashes/HashID
+        - file: Goals/Hashes/Hydra
+        - file: Goals/Hashes/John
+    - file: Goals/MalwareAnalysis/MalwareAnalysis_Home
+      sections:
+        - file: Goals/MalwareAnalysis/OleTools
+        - file: Goals/MalwareAnalysis/ReverseEngineering
+    - file: Goals/NetworkMonitoring/NetworkMonitoring_Home
+      sections:
+        - file: Goals/NetworkMonitoring/Snort
+        - file: Goals/NetworkMonitoring/TCPDump
+        - file: Goals/NetworkMonitoring/Tshark
+        - file: Goals/NetworkMonitoring/Wireshark
+    - file: Goals/Purview/Purview_Home
+      sections:
+        - file: Goals/Purview/CompliancePortal
+        - file: Goals/Purview/InformationProtectionScanner
+        - file: Goals/Purview/IntegrationRuntime
+        - file: Goals/Purview/KQL
+        - file: Goals/Purview/MS365Encryption
+        - file: Goals/Purview/SensitivityLabels
+    - file: Goals/RedTeam/RedTeam_Home
+      sections:
+        - file: Goals/RedTeam/Collection/Collection_Home
+          sections:
+            - file: Goals/RedTeam/Collection/Mimikatz
+        - file: Goals/RedTeam/CredentialAccess/CredentialAccess_Home
+        - file: Goals/RedTeam/Discovery/Discovery_Home
+          sections:
+          - file: Goals/RedTeam/Discovery/Ettercap
+          - file: Goals/RedTeam/Discovery/Impacket
+        - file: Goals/RedTeam/Execution/Execution_Home
+          sections:
+            - file: Goals/RedTeam/Execution/Armitage
+            - file: Goals/RedTeam/Execution/Metasploit
+            - file: Goals/RedTeam/Execution/Msfvenom
+            - file: Goals/RedTeam/Execution/SearchSploit
+        - file: Goals/RedTeam/InitialAccess/InitialAccess_Home
+          sections:
+            - file: Goals/RedTeam/InitialAccess/Netcat
+            - file: Goals/RedTeam/InitialAccess/SocialEngineeringToolkit
+            - file: Goals/RedTeam/InitialAccess/StabiliseShell
+        - file: Goals/RedTeam/LateralMovement/LateralMovement_Home
+          sections:
+            - file: Goals/RedTeam/LateralMovement/Kerbrute
+            - file: Goals/RedTeam/LateralMovement/Rubeus
+        - file: Goals/RedTeam/Persistence/Persistence_Home
+        - file: Goals/RedTeam/PrivilegeEscalation/PrivilegeEscalation_Home
+          sections:
+            - file: Goals/RedTeam/PrivilegeEscalation/BloodHound
+            - file: Goals/RedTeam/PrivilegeEscalation/Evil-WinRM
+            - file: Goals/RedTeam/PrivilegeEscalation/LES
+            - file: Goals/RedTeam/PrivilegeEscalation/LinEnum
+            - file: Goals/RedTeam/PrivilegeEscalation/LinPeas
+            - file: Goals/RedTeam/PrivilegeEscalation/LinuxFun
+            - file: Goals/RedTeam/PrivilegeEscalation/LinuxPrivEsc
+            - file: Goals/RedTeam/PrivilegeEscalation/Powerup
+            - file: Goals/RedTeam/PrivilegeEscalation/WindowsFun
+            - file: Goals/RedTeam/PrivilegeEscalation/WindowsPersistence
+            - file: Goals/RedTeam/PrivilegeEscalation/WindowsPrivEsc
+        - file: Goals/RedTeam/Recon/Recon_Home
+          sections:
+            - file: Goals/RedTeam/Recon/Maltego
+            - file: Goals/RedTeam/Recon/Nmap
+            - file: Goals/RedTeam/Recon/Nping
+            - file: Goals/RedTeam/Recon/Recon-ng
+    - file: Goals/Steganography/Steganography_Home
+      sections:
+        - file: Goals/Steganography/Binwalk
+    - file: Goals/ThreatIntelligence/ThreatIntelligence_Home
+    - file: Goals/VulnerabilityManagement/VulnerabilityManagement_Home
+      sections:
+        - file: Goals/VulnerabilityManagement/Nessus
+        - file: Goals/VulnerabilityManagement/OpenVAS
+    - file: Goals/WebExploitation/WebExploitation_Home
+      sections:
+        - file: Goals/WebExploitation/BurpSuite/BurpSuite_Home
+          sections:
+            - file: Goals/WebExploitation/BurpSuite/BurpIntruder
+            - file: Goals/WebExploitation/BurpSuite/BurpRepeater
+        - file: Goals/WebExploitation/GoBuster
+        - file: Goals/WebExploitation/LFI
+        - file: Goals/WebExploitation/Nikto
+        - file: Goals/WebExploitation/RequestForgery
+        - file: Goals/WebExploitation/SQLinjection
+        - file: Goals/WebExploitation/Wfuzz
+        - file: Goals/WebExploitation/XSS
+  - caption: Home Lab Setup
+    chapters:
+    - file: HomeLab/HomeLab
+    - file: HomeLab/BuildingSnort
+    - file: HomeLab/BuildingSnortv2
+    - file: HomeLab/BuildingSplunk
+    - file: HomeLab/OpenKylin
+  - caption: My Programs
+    chapters:
+    - file: MyPrograms/MyPrograms
+      sections:
+      - file: MyPrograms/FileDownloader
+      - file: MyPrograms/WebBruteForce
+  - caption: Other (Mainly things I still need to do...)
+    chapters:
+    - file: Other/FormattingNotes
+    - file: Other/ThingsToDo
+    - file: Other/CloudAzure
+    - file: Other/CTFpages
+  - caption: Practice Rooms
+    chapters:
+    - file: PracticeRooms/SideQuest2023
+      sections:
+      - file: PracticeRooms/AoCsidequest/AoCsq1
+      - file: PracticeRooms/AoCsidequest/AoCsq2
+    - file: PracticeRooms/HoloLive/HoloLive
+      sections:
+      - file: PracticeRooms/HoloLive/HoloLive_Task8
+      - file: PracticeRooms/HoloLive/HoloLive_Task9
+      - file: PracticeRooms/HoloLive/HoloLive_Task10
+    - file: PracticeRooms/KustoDetectiveAgency/Detective_S1_C0
+      sections:
+      - file: PracticeRooms/KustoDetectiveAgency/Detective_S1_C1
+      - file: PracticeRooms/KustoDetectiveAgency/Detective_S1_C2
+      - file: PracticeRooms/KustoDetectiveAgency/Detective_S1_C4
+      - file: PracticeRooms/KustoDetectiveAgency/Detective_S1_C5
     - file: PracticeRooms/AgentSudo
     - file: PracticeRooms/MrRobot
     - file: PracticeRooms/Terminator
@@ -27,150 +197,3 @@ parts:
     - file: PracticeRooms/Tomghost
     - file: PracticeRooms/Ignite
     - file: PracticeRooms/Labtainers/Labtainers
-    - file: PracticeRooms/SideQuest2023
-      sections:
-      - file: PracticeRooms/AoCsidequest/AoCsq1
-      - file: PracticeRooms/AoCsidequest/AoCsq2
-  - caption: Tools
-    chapters:
-    - file: Tools/PriveligeEscalation/PriveligeEscalation
-      sections:
-      - file: Tools/PriveligeEscalation/LinuxPrivEsc
-        sections:
-        - file: Tools/PriveligeEscalation/LinEnum
-        - file: Tools/PriveligeEscalation/LinPeas
-        - file: Tools/PriveligeEscalation/LES
-      - file: Tools/PriveligeEscalation/WindowsPrivEsc
-      - file: Tools/PriveligeEscalation/WindowsPersistence
-        sections:
-        - file: Tools/PriveligeEscalation/Powerup
-    - file: Tools/BurpSuite/Burp
-      sections:
-      - file: Tools/BurpSuite/BurpRepeater
-      - file: Tools/BurpSuite/BurpIntruder
-    - file: Tools/Programs/MyPrograms
-      sections:
-      - file: Tools/Programs/WebBruteForce
-      - file: Tools/Programs/FileDownloader
-    - file: Tools/SysInternals/SysInternals
-      sections:
-      - file: Tools/SysInternals/File_and_Disk
-      - file: Tools/SysInternals/ProcessUtils
-      - file: Tools/SysInternals/Misc
-      - file: Tools/SysInternals/Sysmon
-    - file: Tools/BlueTeam/BlueTeam
-      sections:
-      - file: Tools/BlueTeam/WindowsEventViewer
-      - file: Tools/BlueTeam/Splunk
-      - file: Tools/BlueTeam/OpenVAS
-      - file: Tools/BlueTeam/Nessus
-      - file: Tools/BlueTeam/MalwareAnalysis/oleid
-      - file: Tools/BlueTeam/MS365Encryption
-      - file: Tools/BlueTeam/Snort
-      - file: Tools/BlueTeam/KQL
-        sections:
-        - file: Tools/BlueTeam/KQL/Detective_S1_C0
-        - file: Tools/BlueTeam/KQL/Detective_S1_C1
-        - file: Tools/BlueTeam/KQL/Detective_S1_C2
-        - file: Tools/BlueTeam/KQL/Detective_S1_C4
-        - file: Tools/BlueTeam/KQL/Detective_S1_C5
-      - file: Tools/BlueTeam/MS_Purview/Purview
-        sections:
-        - file: Tools/BlueTeam/MS_Purview/InformationProtectionScanner
-        - file: Tools/BlueTeam/MS_Purview/IntegrationRuntime
-        - file: Tools/BlueTeam/MS_Purview/CompliancePortal
-        - file: Tools/BlueTeam/MS_Purview/SensitivityLabels
-        
-    - file: Tools/Wireshark/Wireshark
-    - file: Tools/Nmap
-    - file: Tools/Nping
-    - file: Tools/Metasploit
-      sections:
-      - file: Tools/Msfvenom
-      - file: Tools/SearchSploit
-      - file: Tools/Armitage
-    - file: Tools/CyberChef
-    - file: Tools/NFS
-    - file: Tools/John
-    - file: Tools/Netcat
-    - file: Tools/GoBuster
-    - file: Tools/Wfuzz
-    - file: Tools/Nikto
-    - file: Tools/HashCat
-    - file: Tools/HashID
-    - file: Tools/Hydra
-    - file: Tools/TCPDump
-    - file: Tools/Ettercap
-    - file: Tools/Impacket
-    - file: Tools/BloodHound
-    - file: Tools/Kerbrute
-    - file: Tools/Rubeus
-    - file: Tools/Evil-WinRM
-    - file: Tools/Binwalk
-    - file: Tools/Yara
-    - file: Tools/ReverseEngineering
-    - file: Tools/Mimikatz
-    - file: Tools/Recon-ng
-    - file: Tools/Maltego
-    - file: Tools/OSquery
-    - file: Tools/SocialEngineeringToolkit
-    - file: Tools/PowerShell
-    - file: Tools/grep
-    
-  - caption: Hacker Craft
-    chapters:
-    - file: Craft/MITRE/MITRE
-      sections:
-      - file: Craft/MITRE/MITRE_ATT&CK
-      - file: Craft/MITRE/MITRE_CAR
-      - file: Craft/MITRE/MITRE_Defend
-      - file: Craft/MITRE/MITRE_Engage
-    - file: Craft/TheBasics/TheBasics
-      sections:
-      - file: Craft/TheBasics/Threats
-      - file: Craft/TheBasics/Attacks
-      - file: Craft/TheBasics/Vulnerabilities
-    - file: Craft/Frameworks
-    - file: Craft/TheOSIModel
-    - file: Craft/OWASP10
-    - file: Craft/LinuxFun
-    - file: Craft/WindowsFun
-    - file: Craft/WindowsAD
-    - file: Craft/Kerberos
-    - file: Craft/SQLinjection
-    - file: Craft/ssh
-    - file: Craft/XSS
-    - file: Craft/LFI
-    - file: Craft/UploadVulns
-    - file: Craft/DHCP
-    - file: Craft/DNS
-    - file: Craft/ShellStabalise
-    - file: Craft/FileTransfer
-    - file: Craft/Telnet
-    - file: Craft/HTTP
-    - file: Craft/FTP
-    - file: Craft/EmailProtocol
-    - file: Craft/Steganography
-    - file: Craft/Kali
-    - file: Craft/CiscoProgramming
-    - file: Craft/Passwords
-    - file: Craft/RequestForgery
-    - file: Craft/ThreatIntelligence
-  - caption: The Cyber Killchain
-    chapters:
-    - file: KillChain/Killchain_Overview
-      sections:
-      - file: KillChain/Killchain_InfoGathering
-      - file: KillChain/Killchain_Weaponization
-  - caption: Home Lab Setup
-    chapters:
-    - file: HomeLab/HomeLab
-    - file: HomeLab/BuildingSnort
-    - file: HomeLab/BuildingSplunk
-    - file: HomeLab/OpenKylin
-  - caption: Non Hacking Notes
-    chapters:
-    - file: Other/FormattingNotes
-    - file: Other/ThingsToDo
-    - file: Other/CloudAzure
-    - file: Other/CTFpages

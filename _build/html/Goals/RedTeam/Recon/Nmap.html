@@ -1,0 +1,1071 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Nmap &#8212; The Cyber Toolkit</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/.ipynb_checkpoints/custom-checkpoint.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=305129232"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', '305129232');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Goals/RedTeam/Recon/Nmap';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Nping" href="Nping.html" />
+    <link rel="prev" title="Maltego" href="Maltego.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    The Cyber Toolkit
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Goals</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../DFIR/DFIR_Home.html">Digital Forensics and Incident Response</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../DFIR/KAPE.html">KAPE - Kroll Artifact Parser and Extractor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../DFIR/Volatility.html">Volatility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../DFIR/WindowsEventViewer.html">Event Viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../DFIR/WindowsProcesses.html">Windows Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../DFIR/WindowsRegistry.html">Windows Registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../DFIR/Zimmerman.html">Zimmerman</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../EDR/EDR_Home.html">Endpoint Detection &amp; Response</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../EDR/Splunk.html">Splunk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../EDR/Yara.html">Yara</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../EDR/SysInternals/SysInternals_Home.html">SysInternals</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../EDR/SysInternals/FileAndDisk.html">File and Disk Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../EDR/SysInternals/Misc.html">Misc Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../EDR/SysInternals/ProcessUtils.html">Process Utilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../EDR/SysInternals/Sysmon.html">Sysmon</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../General/General_Home.html">General Education Topics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../General/TheBasics/TheBasics_Home.html">The Basics</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../General/TheBasics/Attacks.html">Attacks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../General/TheBasics/Threats.html">Threats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../General/TheBasics/Vulnerabilities.html">Vulnerabilities</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/CiscoProgramming.html">Cisco Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/CyberChef.html">Cyberchef</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/DHCP.html">DHCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/DNS.html">DNS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/EmailProtocol.html">Email Protocols</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/FileTransfer.html">File Transfer to Machines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/FTP.html">FTP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/grep.html">Grep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/HTTP.html">HTTP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/Kali.html">Kali</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/Kerberos.html">Kerberos Attacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/NFS.html">NFS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/OWASP10.html">OWASP Top 10 - 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/OSquery.html">OS Query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/Passwords.html">Passwords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/PowerShell.html">PowerShell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/SSH.html">SSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/Telnet.html">Telnet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/TheOSIModel.html">The OSI Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/UploadVulns.html">Upload Vulnerabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../General/WindowsAD.html">Windows Active Directory</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../General/Frameworks/Frameworks_Home.html">Frameworks</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_Home.html">Mitre</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_ATT%26CK.html">Mitre ATT&amp;CK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_CAR.html">MITRE CARs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_Defend.html">MITRE Defend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/MITRE_Engage.html">MITRE Engage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/Killchain_Home.html">Killchain Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/Killchain_InfoGathering.html">Killchain - Info Gathering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../General/Frameworks/Killchain_Weaponization.html">Killchain - Weaponization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Hashes/Hashes_Home.html">Hashes</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Hashes/HashCat.html">Hashcat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Hashes/HashID.html">HashID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Hashes/Hydra.html">Hydra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Hashes/John.html">John The Ripper</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../MalwareAnalysis/MalwareAnalysis_Home.html">Malware Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../MalwareAnalysis/OleTools.html">Oletools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../MalwareAnalysis/ReverseEngineering.html">Reverse Engineering</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../NetworkMonitoring/NetworkMonitoring_Home.html">Network Monitoring</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../NetworkMonitoring/Snort.html">Snort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../NetworkMonitoring/TCPDump.html">TCPDump</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../NetworkMonitoring/Tshark.html">TShark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../NetworkMonitoring/Wireshark.html">Wireshark</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Purview/Purview_Home.html">Microsoft Purview</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Purview/CompliancePortal.html">Compliance Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Purview/InformationProtectionScanner.html">Information Protection Scanner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Purview/IntegrationRuntime.html">Integration Runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Purview/KQL.html">Kusto Query Language (KQL)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Purview/MS365Encryption.html">Microsoft 365 Encryption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Purview/SensitivityLabels.html">Sensitivity Labels</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../RedTeam_Home.html">Red Teaming</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Collection/Collection_Home.html">Collection_Home</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Collection/Mimikatz.html">MimiKatz</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../CredentialAccess/CredentialAccess_Home.html">Credential Access</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Discovery/Discovery_Home.html">Discovery Home</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Discovery/Ettercap.html">Ettercap &amp; Bettercap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Discovery/Impacket.html">Impacket</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Execution/Execution_Home.html">Execution</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Execution/Armitage.html">Armitage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Execution/Metasploit.html">Metasploit Framework</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Execution/Msfvenom.html">Msfvenom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Execution/SearchSploit.html">Searchsploit</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../InitialAccess/InitialAccess_Home.html">Initial Access</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../InitialAccess/Netcat.html">Netcat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../InitialAccess/SocialEngineeringToolkit.html">Social Engineering Toolkit (SET)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../InitialAccess/StabiliseShell.html">Stabilising a shell</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../LateralMovement/LateralMovement_Home.html">Lateral Movement</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../LateralMovement/Kerbrute.html">Kerbrute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../LateralMovement/Rubeus.html">Rubeus</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Persistence/Persistence_Home.html">Persistence</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../PrivilegeEscalation/PrivilegeEscalation_Home.html">Privelige Escalation</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../PrivilegeEscalation/BloodHound.html">BloodHound</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PrivilegeEscalation/Evil-WinRM.html">Evil-WinRM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PrivilegeEscalation/LES.html">Linux Exploit Suggester</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PrivilegeEscalation/LinEnum.html">LinEnum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PrivilegeEscalation/LinPeas.html">LinPeas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PrivilegeEscalation/LinuxFun.html">Linux Fun</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PrivilegeEscalation/LinuxPrivEsc.html">Linux Privelige Escalation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PrivilegeEscalation/Powerup.html">Powerup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PrivilegeEscalation/WindowsFun.html">Windows ‘Fun’ Stuff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PrivilegeEscalation/WindowsPersistence.html">Windows Persistence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PrivilegeEscalation/WindowsPrivEsc.html">Windows PrivEsc</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="Recon_Home.html">Recon</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Maltego.html">Maltego</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Nmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Nping.html">Nping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Recon-ng.html">Recon-ng</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Steganography/Steganography_Home.html">Steganography</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Steganography/Binwalk.html">Binwalk</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ThreatIntelligence/ThreatIntelligence_Home.html">Threat Intelligence</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../VulnerabilityManagement/VulnerabilityManagement_Home.html">Vulnerability Management</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../VulnerabilityManagement/Nessus.html">Nessus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../VulnerabilityManagement/OpenVAS.html">OpenVAS</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../WebExploitation/WebExploitation_Home.html">Web Exploitation</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../WebExploitation/BurpSuite/BurpSuite_Home.html">Burp Suite</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../WebExploitation/BurpSuite/BurpIntruder.html">Burp Suite - Intruder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../WebExploitation/BurpSuite/BurpRepeater.html">Burp Suite - Repeater</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../WebExploitation/GoBuster.html">Gobuster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../WebExploitation/LFI.html">LFI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../WebExploitation/Nikto.html">Nikto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../WebExploitation/RequestForgery.html">Request Forgeries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../WebExploitation/SQLinjection.html">SQL Injection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../WebExploitation/Wfuzz.html">WFUZZ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../WebExploitation/XSS.html">XSS</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Home Lab Setup</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../HomeLab/HomeLab.html">HomeLab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../HomeLab/BuildingSnort.html">Building Snort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../HomeLab/BuildingSnortv2.html">Building Snort V2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../HomeLab/BuildingSplunk.html">Building Splunk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../HomeLab/OpenKylin.html">OpenKylin</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">My Programs</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../MyPrograms/MyPrograms.html">My Programs</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../MyPrograms/FileDownloader.html">File Downloader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../MyPrograms/WebBruteForce.html">Web Brute Force Program</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Other (Mainly things I still need to do...)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../Other/FormattingNotes.html">Formatting Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Other/ThingsToDo.html">Things to Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Other/CloudAzure.html">Cloud Providers - Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Other/CTFpages.html">CTF Links</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Practice Rooms</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../PracticeRooms/SideQuest2023.html">Advent Of Cyber Side Quest 2023</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../PracticeRooms/AoCsidequest/AoCsq1.html">Advent Of Cyber - Side Quest 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../PracticeRooms/AoCsidequest/AoCsq2.html">Advent Of Cyber - Side Quest 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../PracticeRooms/HoloLive/HoloLive.html">HoloLive</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../PracticeRooms/HoloLive/HoloLive_Task8.html">HoloLive Walkthrough - Task 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../PracticeRooms/HoloLive/HoloLive_Task9.html">HoloLive Walkthrough - Task 9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../PracticeRooms/HoloLive/HoloLive_Task10.html">HoloLive Walkthrough - Task 10</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../PracticeRooms/KustoDetectiveAgency/Detective_S1_C0.html">Kusto Detective Agency Season 1 (Challenge 0)</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-26"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../PracticeRooms/KustoDetectiveAgency/Detective_S1_C1.html">Kusto Detective Agency Season 1 (Challenge 1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../PracticeRooms/KustoDetectiveAgency/Detective_S1_C2.html">Kusto Detective Agency Season 1 (Challenge 2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../PracticeRooms/KustoDetectiveAgency/Detective_S1_C4.html">Kusto Detective Agency Season 1 (Challenge 4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../PracticeRooms/KustoDetectiveAgency/Detective_S1_C5.html">Kusto Detective Agency Season 1 (Challenge 5)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../PracticeRooms/AgentSudo.html">Agent Sudo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../PracticeRooms/MrRobot.html">Mr Robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../PracticeRooms/Terminator.html">Terminator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../PracticeRooms/Overpass.html">Overpass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../PracticeRooms/LazyAdmin.html">LazyAdmin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../PracticeRooms/Startup.html">Startup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../PracticeRooms/Ninja.html">Ninja</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../PracticeRooms/Lian_Yu.html">Lian_Yu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../PracticeRooms/Tomghost.html">Tomghost</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../PracticeRooms/Ignite.html">Ignite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../PracticeRooms/Labtainers/Labtainers.html">Labtainers</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/Goals/RedTeam/Recon/Nmap.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Nmap</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-so-many-scan-options">Why so many scan options?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discovery">Discovery</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pr">-PR</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-pp-pm">-PE -PP -PM</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ps-pa">-PS -PA</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pn">-Pn</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#port-connect">Port Connect</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#st">-sT</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ss">-sS</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#su">-sU</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sn">-sN</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sf">-sF</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sx">-sX</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sm">-sM</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sa">-sA</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sw">-sW</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-scan">Custom Scan</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#si">-sI</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evasion">Evasion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spoof-ip-s">Spoof IP -S</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decoys-d">Decoys -D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fragmentation-f">Fragmentation -f</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zombie-scan-si">Zombie Scan (-sI)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nse-nmap-scripting-engine">NSE (Nmap Scripting Engine)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-scripts">Useful Scripts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nmap-vulners">Nmap-vulners</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#running">Running</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vulscan">Vulscan</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Installation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Running</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logging">Logging</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="nmap">
+<h1>Nmap<a class="headerlink" href="#nmap" title="Permalink to this heading">#</a></h1>
+<p>Nmap is a Scanning tool used for the enumeration stage of Pen Testing. It is very versatile and industry standard.</p>
+<p>Common usages</p>
+<ul class="simple">
+<li><p>Port Scanning</p></li>
+<li><p>Service Enum</p></li>
+<li><p>Running Nmap scripts for specific enum</p></li>
+</ul>
+<hr><section id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this heading">#</a></h2>
+<p>The general syntax of a nmap scan is:</p>
+<blockquote>
+<div><p>nmap [ip] [scan method] [MANY arguements] -vv</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>[ip] : The target server IP address</p></li>
+<li><p>-iL can replace this, where you provide a txt file of hosts (one per line)</p></li>
+<li><p>[scan method] : -s[something], there can be a number of arguements here</p>
+<ul>
+<li><p>-sT TCP Connect scan</p></li>
+<li><p>-sU UDP Connect Scan</p></li>
+<li><p>-sS sneaky stealth scan. Better known as a TCP SYN scan</p></li>
+<li><p>-sA is a ACK scan. This is more for understanding firewall rules.</p></li>
+<li><p>-sN is a NULL scan, set all flags ‘0’</p></li>
+<li><p>-sF is a FIN scan, and sets the FIN flag only</p></li>
+<li><p>-sX is an XMAS scan, it sets FIN, PSH and URG. Shiny….</p></li>
+<li><p>-sM is the Maimon scan, used against a particular OS (BSD, Berkley Software Distribution). It’s discontinued… but you never know.</p></li>
+<li><p>-sW is a Window Scan, it reads the response of a RST flag.</p></li>
+<li><p>-sV \t try to determine the service (and version)running behind the port. You can also add a –version-intensity [n 0-9] to decide how agressively to run this chec. This starts as a -sT</p></li>
+<li><p>-sI is an idle (zombie) scan. It requires a very specific case</p></li>
+<li><p>-sL \t List the targets that will be scanned, without scanning them. Commonly used with -n</p></li>
+<li><p>-sn dont port scan (can be combined with -PR)</p></li>
+</ul>
+</li>
+<li><p>[scope] (this is optional, default is first 1000 ports at T3)</p>
+<ul>
+<li><p>-p- scan all 65536 ports</p></li>
+<li><p>p1-1337 scan ports 1-1337 inclusive</p></li>
+<li><p>T0-5 The scan speed. 0 being the slowest and 5 being ‘insane’. 4 is good for CTF, 1 in ‘actual’</p></li>
+</ul>
+</li>
+<li><p>[arguements]</p>
+<ul>
+<li><p>–script [Nmap script]</p></li>
+<li><p>vuln [ip] Try determine known exploits</p></li>
+<li><p>-n Dont resolve DNS</p></li>
+<li><p>-O Try detect the OS of the target</p></li>
+<li><p>-PR ARP request only (better be on the same subnet)</p></li>
+<li><p>-PE Use ICMP Echo to discover hosts</p></li>
+<li><p>-PP Use ICMP timestamp instead of echo, useful if echo is blocked</p></li>
+<li><p>-PM Use ICMP address mask instead of echo, useful if echo is blocked</p></li>
+<li><p>-PS Uses TCP SYN to discover hosts. Can add a port or range (without spaces), default is on Port80</p></li>
+<li><p>-PA Uses TCP ACK to discover hosts (they should respond with a RST)</p></li>
+<li><p>-PU Uses a UDP PING</p></li>
+<li><p>-R Lookup DNS names for offline devices</p></li>
+<li><p>-F Fast mode, only scan best 100, not 1000</p></li>
+<li><p>-r Scan ports in order</p></li>
+<li><p>-t <n> The speed of the scan (for IDS evassion). 3 is normal, 1 is SLOW and 5 is ‘insane’</p></li>
+<li><p>-S For spoofing IP addresses</p></li>
+<li><p>-D For creating Decoys</p></li>
+<li><p>-f For fragmenting packets into 8bytes (or -ff for 16 bytes)</p></li>
+<li><p>-sC Run default scripts (or –script=default)</p></li>
+<li><p>-A An all (aggressive) scan. Is the same as “-sV -O -sC –traceroute”</p></li>
+</ul>
+</li>
+<li><p>-vv : VeryVerbose, stops you going crazy wondering if its working</p></li>
+</ul>
+<hr></section>
+<section id="why-so-many-scan-options">
+<h2>Why so many scan options?<a class="headerlink" href="#why-so-many-scan-options" title="Permalink to this heading">#</a></h2>
+<section id="discovery">
+<h3>Discovery<a class="headerlink" href="#discovery" title="Permalink to this heading">#</a></h3>
+<p>These are the scan types for target discovery (is there something on this IP worth investigating).</p>
+<section id="pr">
+<h4>-PR<a class="headerlink" href="#pr" title="Permalink to this heading">#</a></h4>
+<p>This arguement send a broadcast ARP request only. This is a great one to use as it’s not blocked by any firewalls (as it’s part of maintaining a network), but it requires you to be on the same subnet as your targets.</p>
+</section>
+<section id="pe-pp-pm">
+<h4>-PE -PP -PM<a class="headerlink" href="#pe-pp-pm" title="Permalink to this heading">#</a></h4>
+<p>These are ICMP Echo, Timestamp and Mask respectively. All run in the ICMP domain and are ways to work around a firewall. Echo tends to be blocked (and is by default most times). Timestamp and Mask requests are alternatives.</p>
+</section>
+<section id="ps-pa">
+<h4>-PS -PA<a class="headerlink" href="#ps-pa" title="Permalink to this heading">#</a></h4>
+<p>These are TCP discovery methods. -PS Uses a SYN request (on port 80 by default) and if it recieved back a response (SYNACK or RST) then treats the IP as active. It just waits for the response if run as priveliged user, or completes the handshake if not. -PA is an ACK message which will recieve a RST if the target is active (as its not part of an established message), and can only be run as priveliged user (otherwise it will run a SYN).</p>
+</section>
+<section id="pn">
+<h4>-Pn<a class="headerlink" href="#pn" title="Permalink to this heading">#</a></h4>
+<p>Dont discover, assume it is online</p>
+<hr></section>
+</section>
+<section id="port-connect">
+<h3>Port Connect<a class="headerlink" href="#port-connect" title="Permalink to this heading">#</a></h3>
+<p>Now that we know what targets to hit, we now have to decide how to confirm a port is open or closed. Because of annoying things like firewalls however, theres more to it. There are 6 possible states of a port scan. This is copied directly from <a class="reference external" href="https://tryhackme.com/room/nmap02">TryHackMe’s nmap02 Room</a></p>
+<ol class="arabic simple">
+<li><p>Open: indicates that a service is listening on the specified port.</p></li>
+<li><p>Closed: indicates that no service is listening on the specified port, although the port is accessible. By accessible, we mean that it is reachable and is not blocked by a firewall or other security appliances/programs.</p></li>
+<li><p>Filtered: means that Nmap cannot determine if the port is open or closed because the port is not accessible. This state is usually due to a firewall preventing Nmap from reaching that port. Nmap’s packets may be blocked from reaching the port; alternatively, the responses are blocked from reaching Nmap’s host.</p></li>
+<li><p>Unfiltered: means that Nmap cannot determine if the port is open or closed, although the port is accessible. This state is encountered when using an ACK scan -sA.</p></li>
+<li><p>Open|Filtered: This means that Nmap cannot determine whether the port is open or filtered.</p></li>
+<li><p>Closed|Filtered: This means that Nmap cannot decide whether a port is closed or filtered.</p></li>
+</ol>
+<section id="st">
+<h4>-sT<a class="headerlink" href="#st" title="Permalink to this heading">#</a></h4>
+<p>The sT scan is a TCP connect scan. Simply, Nmap attempts a full TCP 3way Handshake for each scanned port (and then kill it with a RST ACK if it completes). This is the only scan that doesnt require a priveliged account.</p>
+</section>
+<section id="ss">
+<h4>-sS<a class="headerlink" href="#ss" title="Permalink to this heading">#</a></h4>
+<p>The Sneaky Stealth Scan, or more accurately, the SYN scan. This requires a priveliged user and is mroe sneaky as it doesnt complete a connection (so is less likely to be logged). It starts with the SYN, Recieves a SYNACK and then sends a RST to kill the handshake. As you can guess, this is only more stealthy, but could still be logged.</p>
+</section>
+<section id="su">
+<h4>-sU<a class="headerlink" href="#su" title="Permalink to this heading">#</a></h4>
+<p>The sU scan is a UDP scan, which sort of runs opposite to the TCP scans. As UDP is stateless, we would expect no response if the port is open (as UDP ‘packets’ dont have a session or give a response, they are fire and forget).<br>
+A closed port however should give a ICMP “Destination Unreachable” response. This still searches for a TCP port, not UDP.</p>
+</section>
+<section id="sn">
+<h4>-sN<a class="headerlink" href="#sn" title="Permalink to this heading">#</a></h4>
+<p>The NULL scan sets all the flag bits to zero. If a port is open, we would expect no response, but if it’s closed then we would recieve a RST. A firewall would also give no response, so Nmap treats this as Open | Filtered.</p>
+</section>
+<section id="sf">
+<h4>-sF<a class="headerlink" href="#sf" title="Permalink to this heading">#</a></h4>
+<p>The FIN scan sends only the FIN flag in a port connect. Similar to the null scan, it is looking for no response to indicate an open port. Once again this can only return Open | Filtered.</p>
+</section>
+<section id="sx">
+<h4>-sX<a class="headerlink" href="#sx" title="Permalink to this heading">#</a></h4>
+<p>The XMAS scan is named after the lights on a christmas tree, it sets the FIN, PSH and URG flags (All the special case flags). If you had a warning system in the TCP protocol, it would light up everything. As with a NULL and FIN scan, it’s looking for no response, and gives Open | Filtered.</p>
+</section>
+<section id="sm">
+<h4>-sM<a class="headerlink" href="#sm" title="Permalink to this heading">#</a></h4>
+<p>The Maimon scan is a special case, but we like them. This sends a FIN/ACK message. On most OS, this will return a RST if the port is open or closed, not so helpful. Some BSD (Berkely Software Distribution) OS’ drop the packet however if the port is open. The BSD OS isnt widely used, but there are some interesting ones on <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_BSD_operating_systems">wikipedia</a>, such as FreeNAS and the PS3.</p>
+</section>
+<section id="sa">
+<h4>-sA<a class="headerlink" href="#sa" title="Permalink to this heading">#</a></h4>
+<p>This is an ACK scan, and by itself an ACK scan doesnt show much. It sets the ACK flag and a host should return RST whether the port is open or closed. However if there is a firewall in between, it will drop the packet. Therefore this scan is used for understanding what is allowed through a firewall. This scan returns an Unfiltered state for ‘allowed’ ports.</p>
+</section>
+<section id="sw">
+<h4>-sW<a class="headerlink" href="#sw" title="Permalink to this heading">#</a></h4>
+<p>A window (not WINDOWS) scan is similar to an ACK scan, however it examines the RST reponse to try determine more information about the port (such as if it’s open).</p>
+</section>
+<section id="custom-scan">
+<h4>Custom Scan<a class="headerlink" href="#custom-scan" title="Permalink to this heading">#</a></h4>
+<p>You can also create a custom scan, –scanflags [flags to set]</p>
+<blockquote>
+<div><p>for example: sudo nmap 127.0.0.1 –scanflags SYNACKURG</p>
+</div></blockquote>
+<p>Naturally, you will need to understand how to interpret these results yourself however.</p>
+</section>
+<section id="si">
+<h4>-sI<a class="headerlink" href="#si" title="Permalink to this heading">#</a></h4>
+<p>This is the idle scan and is a scan method that is used when trying to evade detection. I requires a ‘zombie’ machine which is Idle on the network. What this means is that it is transmitting NO data during the scan time, other than what we trigger. There are a few steps to this scan, but it is basically a masked TCP Connect (-sT) scan.</p>
+<ol class="arabic simple">
+<li><p>Send a SYNACK to the idle machine, from this we get back the current packet number ID of the zombie.</p></li>
+<li><p>Send a SYN packet to the target machine, with a spoofed IP of the zombie.</p></li>
+<li><p>The target will then communicate with the zombie based on its port state.</p></li>
+<li><p>Query the zombie again with a SYNACK, and compare the new packet number to the old one.</p></li>
+</ol>
+<p>If the port was closed on the target, it would have sent a RST packet to the zombie, which doesnt increase its counter. When we query the zombie again, it would have only increased its counter by 1 (us sending the SYNACK a second time).<br>
+If the port was open on the target, it would have sent a SYNACK to the zombie, which wouldh have responded to the target with a RST and increased its own counter. Would would have seen the counter increase by 2 on our second SYNACK. <br>
+If a firewall was blocking the port, we would have the same response as a closed port.</p>
+<hr></section>
+</section>
+</section>
+<section id="evasion">
+<h2>Evasion<a class="headerlink" href="#evasion" title="Permalink to this heading">#</a></h2>
+<section id="spoof-ip-s">
+<h3>Spoof IP -S<a class="headerlink" href="#spoof-ip-s" title="Permalink to this heading">#</a></h3>
+<p>Nmap supports spoofing the source IP of a packet scan, which sounds great but comes with a few requirements. First, you need to be able to listen to the responses to the Spoofed IP. Second, you will likely need to specify the network interface to use. If you want to spoof your MAC, this only makes sense if youre already on the subnet too.</p>
+<blockquote>
+<div><p>nmap -e [Net Interface] –spoof-mac [spoofed MAC] -S [spoofed IP] [target IP]</p>
+</div></blockquote>
+<hr>
+</section>
+<section id="decoys-d">
+<h3>Decoys -D<a class="headerlink" href="#decoys-d" title="Permalink to this heading">#</a></h3>
+<p>Decoys are another way to hide the source of the traffic. You list a group of IPs to show where the traffic is coming from, and NMAP will run these in parallel. You can also use RND which will randomly create an IP.</p>
+<blockquote>
+<div><p>nmap -D [fake IP1],[fake IP2],[real IP (ME)],[fake IP3]….many more</p>
+</div></blockquote>
+<hr>
+</section>
+<section id="fragmentation-f">
+<h3>Fragmentation -f<a class="headerlink" href="#fragmentation-f" title="Permalink to this heading">#</a></h3>
+<p>Fragmentation is a way to split up packets to make things more difficult for some firewalls, IDS and IPS. Adding a -f will split the packet into 8byte fragments and transmit these seperately. -ff will make it 16 bytes instead.</p>
+<hr>
+</section>
+<section id="zombie-scan-si">
+<h3>Zombie Scan (-sI)<a class="headerlink" href="#zombie-scan-si" title="Permalink to this heading">#</a></h3>
+<p>A zombie scan is a method that uses an “idle zombie” to communicate with the target, while spoofing your own IP to make the request appear to be coming from the idle host. More details are in the scan types above.</p>
+</section>
+</section>
+<section id="nse-nmap-scripting-engine">
+<h2>NSE (Nmap Scripting Engine)<a class="headerlink" href="#nse-nmap-scripting-engine" title="Permalink to this heading">#</a></h2>
+<p>Nmap comes with a lot of built in scripts for extending functionality (almost 600 at the time of writing). These are in the nmap share by default (/usr/share/nmap/scripts) and are named starting with the service/protocol they target. <br>
+You can run a category of scripts with –script=[category]. The defaults ones are</p>
+<ul class="simple">
+<li><p>auth (authenication related)</p></li>
+<li><p>broadcast (host discovery)</p></li>
+<li><p>brute (bruteforce password auditing… whatever that means)</p></li>
+<li><p>default (run the default scripts, also -sC)</p></li>
+<li><p>discovery (peforms some enumeration, such as DB tables and DNS)</p></li>
+<li><p>dos (detect if vulnerable to DoS)</p></li>
+<li><p>exploit (attempt to exploit services with known exploits)</p></li>
+<li><p>external (uses 3rd party services… I should look into this)</p></li>
+<li><p>fuzzer (runs fuzzing attacks)</p></li>
+<li><p>intrusive (runs agressing scripts like bruteforce and exploit)</p></li>
+<li><p>malware (scan for back doors… I like this)</p></li>
+<li><p>safe (safe to use on targets without crashing them?)</p></li>
+<li><p>version (more version detection)</p></li>
+<li><p>vuln (detect vulnerable services)</p></li>
+</ul>
+<p>If you want to run a single script, the format is slightly different</p>
+<blockquote>
+<div><p>nmap [ip] –script “script name.nse” -vv</p>
+</div></blockquote>
+<hr>
+</section>
+<section id="useful-scripts">
+<h2>Useful Scripts<a class="headerlink" href="#useful-scripts" title="Permalink to this heading">#</a></h2>
+<section id="nmap-vulners">
+<h3>Nmap-vulners<a class="headerlink" href="#nmap-vulners" title="Permalink to this heading">#</a></h3>
+<p>When running a -sV scan (version) detection, this takes the next step of matching the services against known vulnerabilities in those services.</p>
+<section id="installation">
+<h4>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h4>
+<p>You need to clone the github repo directly to the nmap scripts folder</p>
+<blockquote>
+<div><p>cd /usr/share/nmap/scripts <br>
+sudo git clone <a class="github reference external" href="https://github.com/vulnersCom/nmap-vulners.git">vulnersCom/nmap-vulners.git</a> <br></p>
+</div></blockquote>
+</section>
+<section id="running">
+<h4>Running<a class="headerlink" href="#running" title="Permalink to this heading">#</a></h4>
+<p>As above, this is an extension to the version detection scan. You need to drop the “nmap-” in the name too</p>
+<blockquote>
+<div><p>nmap -sV [target] –script vulners</p>
+</div></blockquote>
+<p><img alt="Nmap_VulnersScan.png" src="../../../_images/Nmap_VulnersScan.png" /></p>
+</section>
+</section>
+<section id="vulscan">
+<h3>Vulscan<a class="headerlink" href="#vulscan" title="Permalink to this heading">#</a></h3>
+<p>Similar to Nmap-vulners, vulscan takes the output from an -sV scan and extends it to vulnerability databases. It uses cve, osvdb, scipvuldb, secuiritytracker, exploitdb, openVAS, securityfocus &amp; xforce (at time of writing). These can be seen as .csv files in the scripts/vulscan folder.</p>
+<section id="id1">
+<h4>Installation<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<p>You need to clone the github repo directly to the nmap scripts folder</p>
+<blockquote>
+<div><p>cd /usr/share/nmap/scripts <br>
+sudo git clone <a class="github reference external" href="https://github.com/scipag/vulscan.git">scipag/vulscan.git</a></p>
+</div></blockquote>
+</section>
+<section id="id2">
+<h4>Running<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<p>Again, similar to Nmap-vulners. We need to pass the folder so it grabs the nse file (thanks Google).</p>
+<blockquote>
+<div><p>nmap -sV [target] –script vulscan/</p>
+</div></blockquote>
+<p><img alt="Nmap_Vulscan.png" src="../../../_images/Nmap_Vulscan.png" /></p>
+<p>As you can see, there is quite a bit of repetition, if you want to only run for a single db</p>
+<blockquote>
+<div><p>nmap -sV [target] –script vulscan/ –script-args vulscandb=exploitdb.csv</p>
+</div></blockquote>
+<hr>
+</section>
+</section>
+</section>
+<section id="logging">
+<h2>Logging<a class="headerlink" href="#logging" title="Permalink to this heading">#</a></h2>
+<p>When it gets messy, logs are a great thing to have. Theres a few modes for Nmap logging.</p>
+<ul class="simple">
+<li><p>-oN Normal</p></li>
+<li><p>-oG Grepable</p></li>
+<li><p>-oX XML</p></li>
+<li><p>-oA All of the above (separate files)</p></li>
+<li><p>-oS Script kiddie</p></li>
+</ul>
+<p>We dont to that here</p>
+<hr></section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h2>
+<p>Scan a target</p>
+<ul class="simple">
+<li><p>nmap 10.0.0.1</p></li>
+</ul>
+<p>Scan a range of targets</p>
+<ul class="simple">
+<li><p>nmap 10.0.0.1-255</p></li>
+<li><p>nmap 10.0.0.0/24</p></li>
+</ul>
+<p>Scan a range of targets with one port</p>
+<ul class="simple">
+<li><p>nmap 10.0.0.0/24 -p 22</p></li>
+</ul>
+<p>Scan a range of targets with one protocol</p>
+<ul class="simple">
+<li><p>nmap 10.0.0.0/24 -p http,https,ssh</p></li>
+</ul>
+<p>Scan a range of targets with multiple ports</p>
+<ul class="simple">
+<li><p>nmap 10.0.0.0/24 -p 1-1024</p></li>
+</ul>
+<p>Scan a range of targets with some on TCP and others on UDP</p>
+<ul class="simple">
+<li><p>nmap 10.0.0.0/24 -p U:53,T:21-25,80,443</p></li>
+</ul>
+<hr></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Goals\RedTeam\Recon"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Maltego.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Maltego</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Nping.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Nping</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-so-many-scan-options">Why so many scan options?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discovery">Discovery</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pr">-PR</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pe-pp-pm">-PE -PP -PM</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ps-pa">-PS -PA</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pn">-Pn</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#port-connect">Port Connect</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#st">-sT</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ss">-sS</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#su">-sU</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sn">-sN</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sf">-sF</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sx">-sX</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sm">-sM</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sa">-sA</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sw">-sW</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-scan">Custom Scan</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#si">-sI</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evasion">Evasion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spoof-ip-s">Spoof IP -S</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decoys-d">Decoys -D</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fragmentation-f">Fragmentation -f</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zombie-scan-si">Zombie Scan (-sI)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nse-nmap-scripting-engine">NSE (Nmap Scripting Engine)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-scripts">Useful Scripts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nmap-vulners">Nmap-vulners</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#running">Running</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vulscan">Vulscan</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Installation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Running</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logging">Logging</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Paul Williams
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
